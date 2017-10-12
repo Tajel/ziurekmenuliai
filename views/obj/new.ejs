@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Kuriamas Naujas Objektas</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/obj" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="doc" value="objektas" readonly>
+                </div>
+                                <!--<div class="form-group">-->
+                <!--    <input class="form-control" type="text" name="dvVadasPav" placeholder="darbu vadovo kodas">-->
+                <!--</div>-->
+                <div class="form-group">
+                    <select style="width: 100%; height: 34px" name="dvVadasPav" class="custom-select">
+                     <option  selected>Pasirinkite Darbu vadova</option> 
+                    <% allDv.forEach(function(dv){ %>
+                        <option><%= dv.dvVadasPav %></option>
+                    <% }); %>
+                </select>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="objkodas" placeholder="objekto kodas">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="objpav" placeholder="objekto pavadinimas">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
+                </div>
+            </form>
+            <a href="/obj">Atgal i Objektu sarasa</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

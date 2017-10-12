@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Transporto valdymo modulis</p>
+            
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <h4><a><%=autokrov.marke%></a></h4>
+                    <h4><a><%=autokrov.modelis%></a></h4>
+                    <h4><a><%=autokrov.valstnr%></a></h4>
+                    <p>
+                        <em>Submitted By <%= autokrov.author.username %></em>
+                    </p>
+                    <% if(currentUser && autokrov.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-xs btn-warning" href="/autokrov/<%= autokrov._id %>/edit">Edit</a>
+                        <form id="delete-form" action="/autokrov/<%= autokrov._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                    <% }%>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/autokrov/<%= autokrov._id %>/kellapas/new">Naujas keliones lapas</a>
+                </div>
+                <hr>
+                <% autokrov.kellapas.forEach(function(kellapas){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= autokrov.author.username %></strong>
+                            <span class="pull-right">10 days ago</span>
+                            <p>
+                                <%= autokrov.text %> 
+                            </p>
+                        <% if(currentUser && autokrov.author.id.equals(currentUser._id)){ %>
+                            <a class="btn btn-xs btn-warning" 
+                               href="/autokrov/<%=autokrov._id %>/kellapas/<%=kellapas._id %>/edit">Edit</a>
+                            <form id="delete-form" action="/autokrov/<%=transport._id %>/kellapas/<%=kellapas._id %>?_method=DELETE" method="POST">
+                                <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                            </form>
+                        <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-xs btn-default" href="/autokrov">Atgal</a>
+</div>
+
+<% include ../partials/footer %>

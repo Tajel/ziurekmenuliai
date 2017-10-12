@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Kuriama Naujas darbu vadovas </h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/dv" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="dv[doc]" value="darbvad" readonly>
+                </div>
+                <div class="form-group">
+                    <select style="width: 100%; height: 34px" name="dv[ipadkodas]" class="custom-select">
+                     <option  selected>Pasirinkite Padlinį</option> 
+                    <% pad.forEach(function(pad){ %>
+                        <option><%= pad.padkodas %></option>
+                        <!--<%console.log("data duomenys: " + pad)%>-->
+                        <!--<%console.log("Pdalinio duomenys:  " + pad.padkodas)%>-->
+                    <% }); %>
+                </select>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="dv[dvkodas]" placeholder="Darbu vadovo kodas">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="dv[dvVadasPav]" placeholder="Darbu vadovo vardas pavarde">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
+                </div>
+            </form>
+            <a href="/dv">Atgal i Darbu vadovu sarasa </a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>

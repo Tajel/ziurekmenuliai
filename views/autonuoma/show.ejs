@@ -1,0 +1,123 @@
+<% include ../partials/header %>
+<div class='container'>
+  <header class="jumbotron">
+      <div class="container">
+          <h1>Transporto valdymo modulis!</h1>
+          <h3>Detalūs NUOMOTOS transporto priemones duomenys</h3>
+      </div>
+  </header>
+</div>
+<div class="container ">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>1</th>
+        <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Markė:</td>
+        <td><strong><%=autonuoma.marke%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Modelis:</td>
+        <td><strong><%=autonuoma.modelis%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Valstybinis numers:</td>
+        <td><strong><%=autonuoma.valstnr%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Transporto pr tipas:</td>
+        <td><strong><%=autonuoma.itrtipas%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Transporto pr rūšis:</td>
+        <td><strong><%=autonuoma.itrrus%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Kategorija:</td>
+        <td><strong><%=autonuoma.itrkateg%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>ID:</td>
+        <td><strong><%=autonuoma.id%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Inventorinis numeris:</td>
+        <td><strong><%=autonuoma.inventnr%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Gamybos metai:</td>
+        <td><strong><%=autonuoma.gammetai%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Atsakingas asmuo:</td>
+        <td><strong><%=autonuoma.atsaking%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>Padalinys:</td>
+        <td><strong><%=autonuoma.ipadkodas%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>Kuro rūšis:</td>
+        <td><strong><%=autonuoma.ikurrusis%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>bazė:</td>
+        <td><strong><%=autonuoma.baze%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td>Civilinis draudimas:</td>
+        <td><strong><%=autonuoma.drcivil%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td>Kasko drudimas:</td>
+        <td><strong><%=autonuoma.drkasko%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">16</th>
+        <td>Kelių mokestis - Vinjetė:</td>
+        <td><strong><%=autonuoma.vinjet%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">17</th>
+        <td>Euro taršos lygis:</td>
+        <td><strong><%=autonuoma.euro%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">18</th>
+        <td>Pagrindinis paskirtas vairuotojas:</td>
+        <td><strong><%=autonuoma.ipagvair%></strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <% if(currentUser && autonuoma.author.id.equals(currentUser._id)){ %>
+  <a class="btn btn-xs btn-warning" href="/autonuoma/<%= autonuoma._id %>/edit">Redaguoti</a>
+  <form id="delete-form" action="/autonuoma/<%= autonuoma._id %>?_method=DELETE" method="POST">
+    <button class="btn btn-xs btn-danger">Istrinti</button>
+  </form>
+  <% }%>
+  <a href="/autonuoma">Atgal</a>
+</div>
+<p><em> Sukurė <%= autonuoma.author.username %></em></p>
+
+<% include ../partials/footer %>

@@ -1,0 +1,116 @@
+<% include ../partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <h1 style="text-align: center">Redaguoti <%= autokr.marke %>   <%= autokr.modelis %>   <%= autokr.valstnr %></h1>
+    </header>
+</div>
+<div class="container">
+    <div style="width: 40%; margin: 35px auto;">
+        <form action="/autokrov/<%= autokr._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[doc]" value="autokrov" readonly>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[marke]" placeholder="markė" value="<%= autokr.marke %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[modelis]" placeholder="modelis" value="<%= autokr.modelis %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[valstnr]" placeholder="valstybinis numeris" value="<%= autokr.valstnr %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[id]" placeholder="id" value="<%= autokr.id %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[inventnr]" placeholder="inventorinis numeris" value="<%= autokr.inventnr %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[gammetai]" placeholder="gamybos metai" value="<%= autokr.gammetai %>">
+            </div>
+            <div class="form-group">
+                <select style="width: 100%; height: 34px" name="autokr[atsaking]" class="custom-select">
+                 <option  selected><%= autokr.atsaking %></option> 
+                <% data.forEach(function(data){ %>
+                    <% if(data.vairVardPav !== undefined){ %>
+                    <option><%= data.vairVardPav %></option>  <!-- ########## reikia sukurti vairuotojus *********** -->
+                    <% } %>
+                <% }); %>
+            </select>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[baze]" placeholder="bazė" value="<%= autokr.baze %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[drcivil]" placeholder="draudimas civilinis" value="<%= autokr.drcivil %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[drkasko]" placeholder="draudimas kasko" value="<%= autokr.drkasko %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[euro]" placeholder="euro taršos lygis" value="<%= autokr.euro %>">
+            </div>
+            <div class="form-group">
+                <select style="width: 100%; height: 34px" name="autokr[ikurrusis]" class="custom-select">
+                 <option selected><%= autokr.ikurrusis %></option> 
+                <% data.forEach(function(data){ %>
+                    <% if(data.kurrusis !== undefined){ %>
+                    <% console.log(data.kurrusis) %>
+                    <option><%= data.kurrusis %></option>
+                    <% } %>
+                <% }); %>
+            </select>
+            </div>
+            <div class="form-group">
+                <select style="width: 100%; height: 34px" name="autokr[ipadkodas]" class="custom-select">
+                 <option  selected><%= autokr.ipadkodas %></option> 
+                <% data.forEach(function(data){ %>
+                    <% if(data.padkodas !== undefined){ %>
+                    <option><%= data.padkodas %></option>
+                    <% } %>
+                <% }); %>
+            </select>
+            </div>
+            <div class="form-group">
+                <select style="width: 100%; height: 34px" name="autokr[ipagvair]" class="custom-select">
+                 <option  selected><%= autokr.ipagvair %></option> 
+                <% data.forEach(function(data){ %>
+                    <% if(data.vairVardPav !== undefined){ %>
+                    <option><%= data.vairVardPav %></option>
+                    <% } %>
+                <% }); %>
+            </select>
+            </div>
+            <div class="form-group">
+                <select style="width: 100%; height: 34px" name="autokr[itrrus]" class="custom-select">
+                 <option  selected><%= autokr.itrrus %></option> 
+                <% data.forEach(function(data){ %>
+                    <% if(data.trrus !== undefined){ %>
+                    <option><%= data.trrus %></option>
+                    <% } %>
+                <% }); %>
+            </select>
+            </div>
+            <div class="form-group">
+                <select style="width: 100%; height: 34px" name="autokr[itrtipas]" class="custom-select">
+                 <option  selected><%= autokr.itrtipas %></option> 
+                <% data.forEach(function(data){ %>
+                    <% if(data.trtipas !== undefined){ %>
+                    <option><%= data.trtipas %></option>
+                    <% } %>
+                <% }); %>
+            </select>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="autokr[vinjet]" placeholder="Kelių mokesčiai" value="<%= autokr.vinjet %>">
+            </div>
+            <div>
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            </div>
+        </form>
+        <a href="/autokrov">Go Back</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>
+

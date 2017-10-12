@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Kuriamanauja imone</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/imones" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="doc" value="imone" readonly>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="imonessutrumpkodas" placeholder="imones trumpas pavadinimas">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="imonespavadinimas" placeholder="imones pavadinimas">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="imonesimkodas" placeholder="imones kodas">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="imonespvmkodas" placeholder="imones PVM kodas">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="imonesadresas" placeholder="imones adresas">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-success btn-block">Sukurti!</button>
+                </div>
+            </form>
+            <a href="/imones">Atgal i Imoniu kataloga</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

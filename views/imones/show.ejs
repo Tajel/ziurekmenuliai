@@ -1,0 +1,58 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row ">
+            <p class="lead">Transporto valdymo modulis</p>
+            <p class="lead">Detalūs įmonės rekvizitai</p>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>1</th>
+                  <th>2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Sutrumpintas imones kodas:</td>
+                  <td><strong><%=imone.imonessutrumpkodas%></strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Imones pilnas pavadinimas:</td>
+                  <td><strong><%=imone.imonespavadinimas%></strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Imones registracijos kodas:</td>
+                  <td><strong><%=imone.imonesimkodas%></strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>PVM kodas:</td>
+                  <td><strong><%=imone.imonespvmkodas%></strong></td>
+                </tr><tr>
+                  <th scope="row">4</th>
+                  <td>Pilnas imones adresas:</td>
+                  <td><strong><%=imone.imonesadresas%></strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+<% if(currentUser && imone.author.id.equals(currentUser._id)){ %>
+    <a class="btn btn-xs btn-warning" href="/imones/<%= imone._id %>/edit">Redaguoti</a>
+    <hr>
+    <form id="delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-xs btn-danger">Istrinti</button>
+    </form>
+<% }%>
+<hr>
+<p>
+    <em>Submitted By <%= imone.author.username %></em>
+</p>
+<hr>
+<a href="/imones">Atgal</a>
+    </div>
+</div>
+
+<% include ../partials/footer %>

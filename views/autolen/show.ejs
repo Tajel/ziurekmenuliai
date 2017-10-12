@@ -1,0 +1,118 @@
+<% include ../partials/header %>
+<div class='container'>
+  <header class="jumbotron">
+      <div class="container">
+          <h1>Transporto valdymo modulis!</h1>
+          <h3>Detalūs lengvojo automobilio duomenys</h3>
+      </div>
+  </header>
+</div>
+<div class="container ">
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>1</th>
+        <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Markė:</td>
+        <td><strong><%=autolen.marke%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Modelis:</td>
+        <td><strong><%=autolen.modelis%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Valstybinis numers:</td>
+        <td><strong><%=autolen.valstnr%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>ID:</td>
+        <td><strong><%=autolen.id%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Inventorinis numeris:</td>
+        <td><strong><%=autolen.inventnr%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Gamybos metai:</td>
+        <td><strong><%=autolen.gammetai%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Atsakingas asmuo:</td>
+        <td><strong><%=autolen.atsaking%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>bazė:</td>
+        <td><strong><%=autolen.baze%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td>Civilinis draudimas:</td>
+        <td><strong><%=autolen.drcivil%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td>Kasko drudimas:</td>
+        <td><strong><%=autolen.drkasko%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">17</th>
+        <td>Euro taršos lygis:</td>
+        <td><strong><%=autolen.euro%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>Kuro rūšis:</td>
+        <td><strong><%=autolen.ikurrusis%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>Padalinys:</td>
+        <td><strong><%=autolen.ipadkodas%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">18</th>
+        <td>Pagrindinis paskirtas vairuotojas:</td>
+        <td><strong><%=autolen.ipagvair%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Transporto pr rūšis:</td>
+        <td><strong><%=autolen.itrrus%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Transporto pr tipas:</td>
+        <td><strong><%=autolen.itrtipas%></strong></td>
+      </tr>
+      <tr>
+        <th scope="row">16</th>
+        <td>Kelių mokestis - Vinjetė:</td>
+        <td><strong><%=autolen.vinjet%></strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <% if(currentUser && autolen.author.id.equals(currentUser._id)){ %>
+  <a class="btn btn-xs btn-warning" href="/autolen/<%= autolen._id %>/edit">Redaguoti</a>
+  <form id="delete-form" action="/autolen/<%= autolen._id %>?_method=DELETE" method="POST">
+    <button class="btn btn-xs btn-danger">Istrinti</button>
+  </form>
+  <% }%>
+  <a href="/autolen">Atgal</a>
+</div>
+<p><em> Sukurė <%= autolen.author.username %></em></p>
+
+<% include ../partials/footer %>
