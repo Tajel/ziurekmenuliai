@@ -89,6 +89,7 @@ router.get("/newmech", middleware.isLoggedIn, function(req, res){
         }
     });
 });
+
 //NEW - show form to create new KELLAPAS filtruojama lentele pagal itrrus pasirenkams koks keliones lapas su itrkateg 
 router.get("/newlen", middleware.isLoggedIn, function(req, res){
     Autokellap.findOne({doc:'autolen'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrkateg', 'baze', 'ikurrusis'] ).exec(function(err, dataSum){
@@ -102,6 +103,24 @@ router.get("/newlen", middleware.isLoggedIn, function(req, res){
         if(!err){
             console.log("rasti autolen: " + dataSum.auto);
             res.render("kellap/new", {data:dataSum.auto});
+            // console.log("rasti autolen: " + dataSum);
+        }
+    });
+});
+
+//NEW - show form to create new KELLAPAS filtruojama lentele pagal itrrus pasirenkams koks keliones lapas su itrkateg 
+router.get("/newmm", middleware.isLoggedIn, function(req, res){
+    Autokellap.findOne({doc:'automm'}).populate('auto', ['itrrus','ikurrusis','vairVardPav', 'ipadkodas' ] ).exec(function(err, dataSum){
+        if (!dataSum){
+            return res.redirect("/automm/new");
+        } if(dataSum === null){
+            return res.redirect("/automm/new");
+        }
+        // {doc:'autokrov'},{marke:true, modelis:true, valstnr:true, inventnr:true, ipagvair:true,ridapr:true,kurpr:true}
+        // {$or:[{doc:'auto'},{doc:'vair'}]}).populate("auto").exec(function (err, dataSum){
+        if(!err){
+            console.log("rasti automm: " + dataSum.auto);
+            res.render("kellap/newmm", {data:dataSum.auto});
             // console.log("rasti autolen: " + dataSum);
         }
     });

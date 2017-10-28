@@ -14,6 +14,7 @@ var
     autokrovRoutes      = require("./routes/autokrov"),
     autolenRoutes       = require("./routes/autolen"),
     automechRoutes      = require("./routes/automech"),
+    autommRoutes        = require("./routes/automm"),
     autonuomaRoutes     = require("./routes/autonuoma"),
     autoikRoutes        = require("./routes/autoik"),
     vairRoutes          = require("./routes/vair"),
@@ -83,6 +84,7 @@ app.use("/autokrov/:id/autoik", autoikRoutes);
 app.use("/autokrov/:id/kellap", kellapRoutes);
 app.use("/autolen", autolenRoutes);
 app.use("/automech", automechRoutes);
+app.use("/automm", autommRoutes);
 app.use("/autonuoma", autonuomaRoutes);
 app.use("/kellap", kellapRoutes);
 app.use("/kellap/:id/paj", kellapajamosRoutes);

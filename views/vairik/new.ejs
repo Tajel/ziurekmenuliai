@@ -4,7 +4,7 @@
         <div style="width: 30%; margin: 25px auto;">
             <form action="/vair/<%= vair._id %>/vairik" method="POST">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="vairik[doc]" value="vairik">
+                    <input class="form-control" type="text" name="vairik[doc]" value="vairik" hidden>
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="vairik[vairid]" value="<%= vair._id %>" hidden>

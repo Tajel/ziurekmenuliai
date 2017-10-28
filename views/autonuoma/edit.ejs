@@ -8,7 +8,7 @@
     <div style="width: 40%; margin: 35px auto;">
         <form action="/autonuoma/<%= autonuoma._id %>?_method=PUT" method="POST">
             <div class="form-group">
-                <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma" readonly>
+                <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma" hidden>
             </div>
             <div class="form-group">
                 <input class="form-control" type="text" name="autonuoma[marke]" placeholder="markė" value="<%= autonuoma.marke %>">

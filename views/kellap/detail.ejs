@@ -1,7 +1,8 @@
 <% include ../partials/header %>
+
 <div class="container">
 <header class="jumbotron">
-<h1> <%= kellap.marke %>-<%= kellap.modelis %>, <%= kellap.valstnr %>, <%= kellap.inventnr %>
+<h1> <%= kellap.marke %>  <%= kellap.modelis %>  <%= kellap.valstnr %>   <%= kellap.inventnr %>
 <hr>
 <h2>Keliones lapo data <%= kellap.data %> </h2>
 
@@ -32,10 +33,10 @@
       <tbody>
         <% kellap.pajamos.forEach(function(pajamos){ %>
             <tr>
-              <td><%=pajamos.iadarbrus%></td>
+              <td style='width:220px;'><%=pajamos.iadarbrus%></td>
               <td><%=pajamos.kiekis%></td>
               <td><%=pajamos.sumeur%></td>
-              <td><%=pajamos.iobjkodas%></td>
+              <td style='<width:26></width:26>0px;'><%=pajamos.iobjkodas%></td>
               <td><%=pajamos.idvVadasPav%></td>
               <td><%=pajamos.imonkodas%></td>
               <td>
@@ -63,8 +64,8 @@
         </div>
         <td>Kuro saltinis</td>
         <td>Kiekis Litr</td>
-        <td>1</td>
-        <td>1</td>
+        <td>Data</td>
+        <td>Kuro norma</td>
         </thead>
       <tbody>
         <% kellap.kuras.forEach(function(kuras){ %>
@@ -72,7 +73,6 @@
               <td><%=kuras.ikurouzpkodas%></td>
               <td><%=kuras.kiekiskur%></td>
               <td><%=kuras.datekur%></td>
-              <td>Suma</td>
               <td>Norma</td>
               <td>
                   <% if(currentUser && kuras.author.id.equals(currentUser._id)){ %>
@@ -91,6 +91,7 @@
       </tbody>
     </table>
 </div>
+<onload="myFunction2(); myFunction3();">
 <script src='/scripts/kellapdetailkuras.js'></script>
 <script src='/scripts/suvestaskellapas.js'></script>
 <% include ../partials/footer %>
