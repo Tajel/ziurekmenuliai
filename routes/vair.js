@@ -102,4 +102,18 @@ router.delete("/:id",middleware.isLoggedIn, function(req, res){
 });
 
 
+// SHOW - shows detailed info about Vair
+router.get("/:id", middleware.isLoggedIn, function(req, res){
+    //find the Vair with provided ID
+    Vair.findById(req.params.id).populate('ikainis').exec(function(err, foundvair){
+        if(err){
+            console.log(err);
+        } else {
+            console.log(foundvair)
+            //render show template with that Vair
+            res.render("vair/show", {vair: foundvair});
+        }
+    });
+});
+
 module.exports = router;

@@ -1,0 +1,78 @@
+<% include ../partials/header %>
+<div class="container-fluid">
+    <header class="jumbotron">
+        <h1 style="text-align: center">Redaguoti <%= data.auto.marke %>   <%= data.auto.modelis %>   <%= data.auto.valstnr %></h1>
+        <div class="text-right">
+            <a class="btn btn-success" href='/autokrov/<%=data.auto.autoObjectId%>'>Automobilio duomenys</a>
+        </div>
+    </header>
+</div>
+<div class="container-fluid">
+  <div class="col-12">
+            <form action="/kellap/<%=kellapId%>/paj/<%=pajamosId%>?_method=PUT" method="POST">
+                <div class="row">
+                    <div hidden>
+                      <input class="form-control" type="text" placeholder="doc" name="kellap[doc]" value='kellapajamos'></input>
+                    </div>
+                    <div class="col">
+                      <select onchange="myFunction1()" class="custom-select" id='ikainis' name="kellap[iadarbrus]">
+                        <option selected ><%= data.kellapPajamos.iadarbrus%></option>
+                        <% data.ikainis.forEach(function(data){ %>
+                          <% if(data.idarbrus !== undefined){ %>
+                        <option><%= data.idarbrus %>, <%= data.idarbvnt %>, <%= data.trikain %></option>
+                        <% } %>
+                        <% }); %>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <input class="form-control" type="text" placeholder="Kiekis" id='kiekis' onkeyup="myFunction1()" name="kellap[kiekis]"  value='<%= data.kellapPajamos.kiekis%>'>
+                    </div>
+                    <div class="col">
+                        <input id ='sumeur' class="form-control" type='text'name="kellap[sumeur]" readonly value='<%= data.kellapPajamos.sumeur%>'></input>
+                    </div>
+                    <!--*****************************************************-->
+                    <div class="col">
+                      <select class="custom-select" name="kellap[iobjkodas]">
+                        <option selected><%= data.kellapPajamos.iobjkodas%></option> 
+                        <% data.objektas.forEach(function(data){ %>
+                            <% if(data.objkodas !== undefined){ %>
+                            <option>
+                              <%= data.objkodas %>, <%= data.dvVadasPav%></option>
+                          <% } %>
+                        <% }); %>
+                      </select>
+                    </div>
+                    
+                    <div class="col">
+                      <select id ='dv1' class="custom-select" name="kellap[idvVadasPav]">
+                        <option id ='dv' selected ><%= data.kellapPajamos.idvVadasPav%></option> 
+                        <% data.dv.forEach(function(data){ %>
+                          <% if(data.dvVadasPav !== undefined){ %>
+                          <option><%=data.dvVadasPav%></option>
+                          <% } %>
+                        <% }); %>
+                      </select>
+                    </div>
+                    <!--*****************************************************-->
+                    <div class="col">
+                      <select class="custom-select" name="kellap[imonkodas]">
+                        <option  selected><%= data.kellapPajamos.imonkodas%></option> 
+                        <% data.imone.forEach(function(data){ %>
+                          <% if(data.imonessutrumpkodas !== undefined){ %>
+                          <option><%= data.imonessutrumpkodas %></option>
+                          <% } %>
+                        <% }); %>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">Submit!</button>
+                    </div>
+                  </div>
+            </form>
+            <a href="/kellap/<%= kellapId %>/detail">Go Back</a>
+        </div>
+    </div>
+    
+    <script src='/scripts/ikainisfilter.js'></script>
+<% include ../partials/footer %>
+

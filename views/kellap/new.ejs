@@ -3,23 +3,26 @@
     <div class="row">
         <h1 style="text-align: center">Naujas keliones lapas </h1>
         <div class="container" style="margin: 25px auto;">
-            <a class="btn btn-default btn-xs" href="/kellap">Atgal</a>
+            <a class="btn btn-default btn-sm" href="/kellap">Atgal</a>
             <hr>
         <% console.log('siunciami data duomenys: '+data)  %>
             
         <% data.forEach(function(data1){ %>
+        console.log(<%=data1.trkateg%>)
         <form action="/kellap" method="POST" onsubmit="button.disabled = true; return true;">
-            <input class="form-control" type="hidden" name="kellap[doc]" value="<%= data1.itrkateg %>">
-            <input class="form-control" type="hidden" name="kellap[kellap]" value="kellapas" hidden>
-            <input class="form-control" type="hidden" name="kellap[baze]" value=<%= data1.baze %> hidden>
-            <input style= "display:inline"  type="text" name="kellap[marke]" value=<%= data1.marke %> readonly>
-            <input style= "display:inline"  type="text" name="kellap[modelis]" value=<%= data1.modelis %> readonly>
-            <input style= "display:inline"  type="text" name="kellap[valstnr]" value=<%= data1.valstnr %> readonly>
-            <input style= "display:inline"  type="text" name="kellap[ipagvair]" value=<%= data1.ipagvair %> readonly>
-            <input style= "display:inline"  type="text" name="kellap[inventnr]" value=<%= data1.inventnr %> readonly>
-            <input style= "display:inline"  type="text" name="kellap[itrrus]" value=<%= data1.itrrus %> readonly>
+            <input class="form-control" type="text" name="kellap[doc]" value="<%= data1.itrrus %>" hidden>
+            <input class="form-control" type="text" name="kellap[kellap]" value="kellapas"hidden>
+            <input class="form-control" type="text" name="kellap[autoObjectId]" value="<%= data1._id %>" hidden >
+            <input class="form-control" type="text" name="kellap[baze]" value="<%= data1.baze %>" hidden>
+            <input style= "display:inline"  type="text" name="kellap[marke]" value="<%= data1.marke %>" readonly>
+            <input style= "display:inline"  type="text" name="kellap[modelis]" value="<%= data1.modelis %>" readonly>
+            <input style= "display:inline"  type="text" name="kellap[valstnr]" value="<%= data1.valstnr %>" readonly>
+            <input style= "display:inline"  type="text" name="kellap[ipagvair]" value="<%= data1.ipagvair %>" readonly>
+            <input style= "display:inline"  type="text" name="kellap[inventnr]" value="<%= data1.inventnr %>" readonly>
+            <input style= "display:inline"  type="text" name="kellap[itrrus]" value="<%= data1.itrrus %>" readonly>
+            <input style= "display:inline"  type="text" name="kellap[ikurrusis]" value="<%= data1.ikurrusis %>" readonly>
             <input style= "display:inline"  type="text" name="kellap[data]" placeholder="2017.01.01">
-            <input class="btn btn-xs btn-primary" name = 'button' type="submit" value="OK">
+            <input class="btn btn-sm btn-primary" name = 'button' type="submit" value="OK">
         </form>
         <% }); %>
         </div>

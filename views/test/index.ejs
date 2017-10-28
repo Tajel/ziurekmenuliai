@@ -1,0 +1,377 @@
+<% include ../partials/header %>
+
+<select class="custom-select">
+  <option selected>Open this select menu</option>
+  <option>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm" value='1'>
+          One of three columns
+        </div>
+        <div class="col-sm" value='2'>
+          One of three columns
+        </div>
+        <div class="col-sm" value='3'>
+          One of three columns
+        </div>
+      </div>
+    </div>
+  </option>
+</select>
+
+
+<br></br>
+
+<SCRIPT> 	
+	function show(select_item) {
+	    if (select_item == "apple") {
+		    hiddenDiv.style.visibility='visible';
+			hiddenDiv.style.display='block';
+			Form.fileURL.focus();
+		} 
+		else{
+			hiddenDiv.style.visibility='hidden';
+			hiddenDiv.style.display='none';
+		}
+	}	
+</SCRIPT>  
+
+<form>
+<label>Fruit:</label>
+    <select name="Fruit" onchange="java_script_:show(this.options[this.selectedIndex].value)">
+        <option value='pear'>pear</option>
+        <option value='apple'>apple</option>
+        <option value='grapes'>grapes</option>
+    </select>
+
+<div id='hiddenDiv'>
+    <label>Are you sure you want to eat the apple?</label>
+    <select name="AppleQuestion">
+        <option value='Yes'>Yes</option>
+        <option value='No'>No</option>
+    </select>
+</div>
+</form>
+
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>TEST PAGE    </h1>
+
+<script type="text/javascript">
+     function configureDropDownLists(ddl1,ddl2) {
+    var colours = ['Black', 'White', 'Blue'];
+    var shapes = ['Square', 'Circle', 'Triangle'];
+    var names = ['John', 'David', 'Sarah'];
+
+    switch (ddl1.value) {
+        case 'Colours':
+            ddl2.options.length = 0;
+            for (i = 0; i < colours.length; i++) {
+                createOption(ddl2, colours[i], colours[i]);
+            }
+            break;
+        case 'Shapes':
+            ddl2.options.length = 0; 
+        for (i = 0; i < shapes.length; i++) {
+            createOption(ddl2, shapes[i], shapes[i]);
+            }
+            break;
+        case 'Names':
+            ddl2.options.length = 0;
+            for (i = 0; i < names.length; i++) {
+                createOption(ddl2, names[i], names[i]);
+            }
+            break;
+            default:
+                ddl2.options.length = 0;
+            break;
+    }
+
+}
+
+    function createOption(ddl, text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.text = text;
+        ddl.options.add(opt);
+    }
+</script>
+
+<select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+<option value=""></option>
+<option value="Colours">Colours</option>
+<option value="Shapes">Shapes</option>
+<option value="Names">Names</option>
+</select>
+
+<select id="ddl2">
+</select>
+
+
+<break></break>
+
+<form onsubmit="return false" oninput="    totalamount.value = Math.round(kiekis.value * valandos.value);">
+    <div class ='' >
+    Kiekis      <input name="kiekis"    id="kiekis"     type="number">
+   
+    Valandos    <input name="valandos"  id="valandos"   type="number">
+  
+    Total amount <output name="totalamount" id="totalamount" for="kiekis valandos"></output>
+    </div>
+</form>
+
+<br></br>
+<hr>
+
+<form>
+  <div class="row">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% ikainis.forEach(function(data){ %>
+            <% if(data.idarbrus !== undefined){ %>
+            <a class="dropdown-item" href="#"><%= data.idarbrus %>, <%= data.vnt %></a>
+            <% } %>
+        <% }); %>
+      </div>
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+        <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" placeholder="Default input">
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary">Ivesti</button>
+      <button type="button" class="btn btn-secondary">Redaguoti</button>
+      <button type="button" class="btn btn-secondary">Trinti</button>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+
+<br></br>
+
+<hr>
+
+
+
+<form  class="form-inline" onsubmit="return false" 
+    oninput="totalamount.value = Math.round(kiekis.value * ikainis.value);">
+  <div class="form-row align-items-center">
+    
+    <div class="form-group">
+        <select style="width: 100%; height: 34px" name="autoik[darbrus]" class="custom-select">
+         <option  selected>Pasirinkite darbo rusi</option> 
+        <% ikainis.forEach(function(data){ %>
+            <% if(data.idarbrus !== undefined){ %>
+            <option><%= data.idarbrus %>, <%= data.vnt %></option>
+            <% } %>
+        <% }); %>
+    </select>
+    </div>
+    
+    
+    
+    <div class="col-auto">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Darbo rusis</label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+        <option selected>Darbas</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-auto">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Vienetas</label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+        <option selected>Val</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-auto">
+        <label for="ikainis" class="mr-sm-2">Ikainis</label>
+        <div class="col-auto">
+            <input id="ikainis" type="text" class="form-control" placeholder="Ikainis">
+        </div>
+    </div>
+    <div class="col-auto">
+        <label for="kiekis" class="mr-sm-2">Kiekis</label>
+        <div class="col-auto">
+            <input id="kiekis" type="text" class="form-control" placeholder="Ikainis">
+        </div>
+    </div>
+    <div class="col-auto">
+        <label for="totalamount" class="mr-sm-2">Suma</label>
+        <div class="col-auto">
+            <output id="totalamount" for="kiekis ikainis" type="text" class="form-control" placeholder="Suma">
+        </div>
+    </div>
+    <div class="col-auto">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Objektas</label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+        <option selected>V071/17</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-auto">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">DV</label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+        <option selected>Arunas Misevicius</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary">Ivesti</button>
+      <button type="button" class="btn btn-secondary">Redaguoti</button>
+      <button type="button" class="btn btn-secondary">Trinti</button>
+    </div>
+    
+    
+    
+    
+    
+    
+  </div>
+</form>
+
+<hr>
+<!--<div class=''>   -->
+    
+<!--    <form onsubmit="return false" oninput="    totalamount.value = Math.round(input4.value * input3.value);">-->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input1">Darbo rusis</label>-->
+<!--                <select id="input1">-->
+<!--                    <option value="value1" selected>Darbas</option>-->
+<!--                    <option value="value2">Su Priekaba</option> -->
+<!--                    <option value="value3">Su Sluota</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input2">Matas</label>-->
+<!--                <select id="input2">-->
+<!--                    <option value="value1" selected>Val</option>-->
+<!--                    <option value="value2">ton.km</option> -->
+<!--                    <option value="value3">d</option>-->
+<!--                    <option value="value3">sav</option>-->
+<!--                    <option value="value3">men</option>-->
+<!--                    <option value="value3">vnt.</option>-->
+<!--                </select>-->
+<!--            </div> -->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input3">Ikainis</label>-->
+<!--                <input id="input3" type='text'></input>-->
+<!--            </div> -->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input4">Kiekis</label>-->
+<!--                <input id="input4" type='text'></input>-->
+<!--            </div> -->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input5">Suma</label>-->
+<!--                <output name="totalamount" id="totalamount" for="input4 input3"></output>-->
+<!--            </div>-->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input6">Objektas</label>-->
+<!--                <select id="input6">-->
+<!--                    <option value="value1" selected>V071-17</option>-->
+<!--                    <option value="value2">V100-17</option> -->
+<!--                    <option value="value3">V001-17</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="col-xs-1">-->
+<!--                <label for="input7">Darbu vadovas</label>-->
+<!--                <select id="input7">-->
+<!--                    <option value="value1" selected>Petras</option>-->
+<!--                    <option value="value2">Vasia</option> -->
+<!--                    <option value="value3">Domas</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="col-xs-1">-->
+<!--                <button id="input8">Redaguoti</button>-->
+<!--            </div>-->
+<!--            <div class="col-xs-1">-->
+<!--                <button id="input9">Trinti</button>-->
+<!--            </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+<!--<hr>-->
+<!--<br></br>-->
+
+
+<% include ../partials/footer %>

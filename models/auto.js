@@ -32,7 +32,13 @@ var transportSchema = new mongoose.Schema({
          ref: "User"
       },
       username: String
-   }
+   },
+   ikainis: [
+      {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Autoik"
+      }
+   ]
 });
 
 module.exports = mongoose.model("Auto", transportSchema, 'dataSum');

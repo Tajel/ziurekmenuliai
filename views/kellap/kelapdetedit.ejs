@@ -1,0 +1,103 @@
+
+<% include ../partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <h1 style="text-align: center">Redaguoti <%= data.auto.marke %>   <%= data.auto.modelis %>   <%= data.auto.valstnr %></h1>
+    </header>
+</div>
+<div class="row">
+  <div class="col-7">
+    <form oninput=" Sumeur.value = Math.round(kiekis.value * ikainis.value);">
+      <div class="row">
+        <div class="col">
+          <select class="custom-select" id='ikainis' name="kellap[iadarbrus]" >
+            <option  selected >Darbo rusis, vnt, kaina</option> 
+            <% console.log(data.ikainis) %>
+            <% data.ikainis.forEach(function(data){ %>
+              <% if(data.idarbrus !== undefined){ %>
+              <option value='<%= data.trikain %>'><%= data.idarbrus %>, <%= data.trikain %> EUR</option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>  
+        <div class="col">
+          <input class="form-control" type="number" placeholder="Kiekis" id='kiekis' name="kellap[kiekis]">
+        </div>
+        <div class="col">
+            <output class="form-control" type="number" placeholder="Suma" id='Sumeur' for="kiekis ikainis" name="kellap[Sumeur]">
+        </div>
+        <div class="col">
+          <select class="custom-select" name="kellap[iobjkodas]">
+            <option  selected>Objektas</option> 
+            <% data.objektas.forEach(function(data){ %>
+                <% if(data.objkodas !== undefined){ %>
+                <option><%= data.objkodas %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        <div class="col">
+          <select class="custom-select" name="kellap[idvVadasPav]">
+            <option  selected>Darbu Vadovas</option> 
+            <% data.dv.forEach(function(data){ %>
+              <% if(data.dvVadasPav !== undefined){ %>
+              <option><%= data.dvVadasPav %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        <div class="col">
+          <select class="custom-select" name="kellap[imonkodas]">
+            <option  selected>Imone</option> 
+            <% data.imone.forEach(function(data){ %>
+              <% if(data.imonessutrumpkodas !== undefined){ %>
+              <option><%= data.imonessutrumpkodas %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary">Ivesti</button>
+        </div>
+      </div>
+    </form>
+  
+  </div>
+  
+  
+  <div class="col-5">
+    <form>
+      <div class="row">
+        <div class="col">
+          <input class="form-control" type="text" placeholder="Default input" name="kellap[kurrusis]" value="<%= data.auto.ikurrusis %>">
+        </div>
+        <div class="col">
+            <input class="form-control" type="text" name="kellap[datakur]" placeholder="Pylimo Data">
+        </div>
+        <div class="col">
+          <input class="form-control" type="number" name="kellap[kiekiskur]" placeholder="Kiekis">
+        </div>
+        <div class="col">
+          <select class="custom-select" name="kellap[kurouzpkodas]">
+            <option  selected>Kuro saltinis</option> 
+            <% data.kuruzp.forEach(function(data){ %>
+              <% if(data.kurouzpkodas !== undefined){ %>
+              <option><%= data.kurouzpkodas %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary">Ivesti</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
+</div>
+
+<% include ../partials/footer %>
+

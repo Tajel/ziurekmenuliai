@@ -9,16 +9,19 @@ var kellapSchema = new mongoose.Schema({
     kurpr: String,
     kurpab: String,
     idarb: String,
+    iadarbrus:String,
     imatas: String,
     ikainis: String,
     kiekis: String,
-    Sumeur: String,
+    sumeur: String,
     idvVadasPav:String,
     iobjkodas:String,
     iobjpav:String,
     imonkodas:String,
+    suvestas:String,
     
     ipilnas:String,
+    ivdarbrus:String,
     idarbv: String,
     imatasv: String,
     ikainisv: String,
@@ -37,7 +40,7 @@ var kellapSchema = new mongoose.Schema({
     marke: String,
     modelis: String,
     valstnr: String,
-    id: String,
+    autoObjectId: String,
     inventnr:String,
     atsaking:String,
     baze:String,
@@ -65,7 +68,25 @@ var kellapSchema = new mongoose.Schema({
         ref: "User"
     },
         username: String
-    }
+    },
+    pajamos: [
+        {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Kellapajamos"
+      }
+    ],
+    kuras: [
+        {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Kellapkuras"
+        }
+    ],
+    vairuotojas: [
+        {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Kellapvair"
+        }
+    ]
 });
 
 module.exports = mongoose.model("Kellap", kellapSchema, "kellap");

@@ -9,3 +9,12 @@
 .jumbotron {
     padding: 0.4em;
 }
+
+.edit-item-form {
+    display: none;
+}
+
+
+/*label {*/
+/*    float: center;*/
+/*}*/

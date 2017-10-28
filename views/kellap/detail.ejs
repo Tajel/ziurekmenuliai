@@ -1,0 +1,96 @@
+<% include ../partials/header %>
+<div class="container">
+<header class="jumbotron">
+<h1> <%= kellap.marke %>-<%= kellap.modelis %>, <%= kellap.valstnr %>, <%= kellap.inventnr %>
+<hr>
+<h2>Keliones lapo data <%= kellap.data %> </h2>
+
+<a class='btn btn-info btn-sm' href='/kellap'>Atgal</a>
+<br></br>
+ <label class="custom-control custom-checkbox"> Suvestas keliones lapas 
+  <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction1()" name='suvestas'>
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description"></span>
+</label>
+
+        Pajamos is objekto: <h6 style='display:inline;' readonly></h6> EUR; 
+        Uzpilta kuro: <h6 style='display:inline;' readonly></h6> Litr
+</div>
+<div class='container'>
+    <table id='myTable' class="table table-hover">
+        <thead>
+        <div>PAJAMOS 
+          <a class="btn btn-sm btn-success" href="/kellap/<%=kellap._id%>/paj/new">Suvesti pajamas</a>  
+        </div>
+        <td><strong>Darbo rusis</strong></td>
+        <td><strong>Kiekis</strong></td>
+        <td><strong>Suma EUR</strong></td>
+        <td><strong>Objekto kodas, Pagr Darbu vadovas</strong></td>
+        <td><strong>Darbu vadovo Parasas</strong></td>
+        <td><strong>Imone</strong></td>
+        </thead>
+      <tbody>
+        <% kellap.pajamos.forEach(function(pajamos){ %>
+            <tr>
+              <td><%=pajamos.iadarbrus%></td>
+              <td><%=pajamos.kiekis%></td>
+              <td><%=pajamos.sumeur%></td>
+              <td><%=pajamos.iobjkodas%></td>
+              <td><%=pajamos.idvVadasPav%></td>
+              <td><%=pajamos.imonkodas%></td>
+              <td>
+                  <% if(currentUser && pajamos.author.id.equals(currentUser._id)){ %>
+                    <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>/edit">Redaguoti</a>
+                    <% }%>
+              </td>
+              <td>
+                  <% if(currentUser && pajamos.author.id.equals(currentUser._id)){ %>
+                    <form id="delete-form" action="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-sm btn-danger">Istrinti</button>
+                    </form>
+                    <% }%>
+            </tr>
+              </td>
+              <% }); %>
+      </tbody>
+    </table>
+</div>
+<div class='container'>
+    <table id='myTable1' class="table table-hover">
+        <thead>
+        <div>KURAS
+          <a class="btn btn-sm btn-success" href="/kellap/<%=kellap._id%>/kur/new">Suvesti kura</a>
+        </div>
+        <td>Kuro saltinis</td>
+        <td>Kiekis Litr</td>
+        <td>1</td>
+        <td>1</td>
+        </thead>
+      <tbody>
+        <% kellap.kuras.forEach(function(kuras){ %>
+            <tr>
+              <td><%=kuras.ikurouzpkodas%></td>
+              <td><%=kuras.kiekiskur%></td>
+              <td><%=kuras.datekur%></td>
+              <td>Suma</td>
+              <td>Norma</td>
+              <td>
+                  <% if(currentUser && kuras.author.id.equals(currentUser._id)){ %>
+                    <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>/edit">Redaguoti</a>
+                    <% }%>
+              </td>
+              <td>
+                  <% if(currentUser && kuras.author.id.equals(currentUser._id)){ %>
+                    <form id="delete-form" action="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-sm btn-danger">Istrinti</button>
+                    </form>
+                    <% }%>
+            </tr>
+              </td>
+              <% }); %>
+      </tbody>
+    </table>
+</div>
+<script src='/scripts/kellapdetailkuras.js'></script>
+<script src='/scripts/suvestaskellapas.js'></script>
+<% include ../partials/footer %>

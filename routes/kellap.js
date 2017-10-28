@@ -1,9 +1,14 @@
 var express = require("express");
 var router  = express.Router();
+var async   =  require("async");
 // var Auto = require("../models/auto");
 var Kellap = require("../models/kellap");
 var Autokellap = require("../models/autokellap");
-var Data = require("../models/auto");
+var Obj = require("../models/obj");
+var DV = require("../models/dv");
+var KurUzp = require("../models/kuruzp");
+var Imone = require("../models/imones");
+var Ikainis = require("../models/autoik");
 var middleware = require("../middleware");
 
 //INDEX - show all KR Kellaps
@@ -52,7 +57,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 
 //NEW - show form to create new KELLAPAS filtruojama lentele pagal itrrus pasirenkams koks keliones lapas su itrkateg 
 router.get("/newkr", middleware.isLoggedIn, function(req, res){
-    Autokellap.findOne({doc:'autokr'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrkateg', 'baze', 'itrrus'] ).exec(function(err, dataSum){
+    Autokellap.findOne({doc:'autokr'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrtipas', 'baze', 'ikurrusis'] ).exec(function(err, dataSum){
         if (!dataSum){
             return res.redirect("/autokrov/new");
         } if(dataSum === null){
@@ -69,7 +74,7 @@ router.get("/newkr", middleware.isLoggedIn, function(req, res){
 });
 //NEW - show form to create new KELLAPAS filtruojama lentele pagal itrrus pasirenkams koks keliones lapas su itrkateg 
 router.get("/newmech", middleware.isLoggedIn, function(req, res){
-    Autokellap.findOne({doc:'automech'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrkateg', 'baze', 'itrrus'] ).exec(function(err, dataSum){
+    Autokellap.findOne({doc:'automech'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrkateg', 'baze', 'ikurrusis'] ).exec(function(err, dataSum){
         if (!dataSum){
             return res.redirect("/automech/new");
         } if(dataSum === null){
@@ -86,7 +91,7 @@ router.get("/newmech", middleware.isLoggedIn, function(req, res){
 });
 //NEW - show form to create new KELLAPAS filtruojama lentele pagal itrrus pasirenkams koks keliones lapas su itrkateg 
 router.get("/newlen", middleware.isLoggedIn, function(req, res){
-    Autokellap.findOne({doc:'autolen'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrkateg', 'baze', 'itrrus'] ).exec(function(err, dataSum){
+    Autokellap.findOne({doc:'autolen'}).populate('auto', ['marke', 'modelis', 'valstnr', 'inventnr', 'ipagvair','itrrus','itrkateg', 'baze', 'ikurrusis'] ).exec(function(err, dataSum){
         if (!dataSum){
             return res.redirect("/autolen/new");
         } if(dataSum === null){
@@ -103,49 +108,120 @@ router.get("/newlen", middleware.isLoggedIn, function(req, res){
 });
 
 
-// SHOW - shows all kellaps from one Autokrov ******* VIEW DAR NESUTVARKYTAS
-router.get("/:id", function(req, res){
-    //find the Autokrov with provided ID
-    Kellap.findById(req.params.id, function(err, foundkrid){
+// // SHOW - shows all kellaps from one Autokrov ******* VIEW DAR NESUTVARKYTAS
+// router.get("/:id", function(req, res){
+//     //find the Autokrov with provided ID
+//     Kellap.findById(req.params.id, function(err, foundkrid){
+//         if(err){
+//             console.log(err);
+//         } else {
+//             if(foundkrid.doc === "krkellap"){
+//                 res.render("kellap/showkr", {foundkrid:foundkrid});
+//             }
+//             if(foundkrid.doc === "mechkellap"){
+//                 res.render("kellap/showmech", {foundkrid:foundkrid});
+//             }
+//             if(foundkrid.doc === "lenkellap"){
+//                 res.render("kellap/showlen", {foundkrid:foundkrid});
+//             }
+//             if(foundkrid.doc === "nuomkellap"){
+//                 res.render("kellap/shownuom", {foundkrid:foundkrid});
+//             }
+//         }
+//     });
+// });
+
+//  ***************************
+//  SHOW detailed kellap
+//  ***************************
+
+// SHOW - shows more info about one KELLAP
+router.get("/:id/detail", function(req, res){
+    //find the KELLAP with provided ID
+    Kellap.findById(req.params.id).populate("pajamos").populate("kuras").exec(function(err, kellap){
         if(err){
             console.log(err);
         } else {
-            if(foundkrid.doc === "krkellap"){
-                res.render("kellap/showkr", {foundkrid:foundkrid});
-            }
-            if(foundkrid.doc === "mechkellap"){
-                res.render("kellap/showmech", {foundkrid:foundkrid});
-            }
-            if(foundkrid.doc === "lenkellap"){
-                res.render("kellap/showlen", {foundkrid:foundkrid});
-            }
-            if(foundkrid.doc === "nuomkellap"){
-                res.render("kellap/shownuom", {foundkrid:foundkrid});
-            }
+            console.log('kellap pajamos kuras vair'+kellap)
+            //render show template with that KELLAP
+            res.render("kellap/detail", {kellap: kellap});
         }
     });
 });
 
-// EDIT KELLAP ROUTE
-router.get("/:id/edit", middleware.checkkellapOwnership, function(req, res){
-    Kellap.findById(req.params.id, function(err, foundKellap){
-        if(!err){
-            // console.log("*** rasta tr pr redagavimui: " + foundtransport);
-            Data.find({$or:[{ padkodas: { $exists: true } },{ trrus: { $exists: true } },{ kurrusis: { $exists: true } }]}).exec(function (err, dataSum) {
+// router.get('/:id/index', middleware.isLoggedIn, function(req, res) {
+//     Kellap.findById(req.params.id).exec(function(err, kellap){
+//         if(!err){
+//             console.log(kellap)
+//             res.render("kellap/showkr", {data:kellap});
+//         }
+//     })
+// })
+    
+    
+    
+//  EDIT KELLAP ROUTE Suvesti keliones lapo duomenis
+
+router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
+    async.series({
+        auto: function(callback) {
+            Kellap.findById(req.params.id).exec(function(err, auto){
                 if(!err){
-                    console.log("rastas keliones lapas: " + foundKellap);
-                    console.log("duomenu gavimas lapo pildymui: " + dataSum);
-                    res.render("kellap/edit", {kellap: foundKellap, data:dataSum});
-                }
-            });
+                    callback(null, auto);
+                    }
+                })
+            },
+        objektas: function(callback) {
+            Obj.find({doc:'objektas'}).exec(function(err, objektas){
+                if(!err){
+                    callback(null, objektas);
+                    }
+                })
+            },
+        dv: function(callback) {
+            DV.find({doc:'darbvad'}).exec(function(err, dv) {
+                if(!err){
+                    callback(null, dv);
+                    }
+                })
+            },
+        imone: function(callback) {
+            Imone.find({doc:'imone'}).exec(function(err, imone) {
+                if(!err){
+                    callback(null, imone);
+                    }
+                })
+            },
+        kuruzp: function(callback) {
+            KurUzp.find({doc:'kurosaltinis'}).exec(function(err, kurosaltinis) {
+                if(!err){
+                    callback(null, kurosaltinis);
+                    }
+                })
+            },
+        ikainis: function(callback) {
+            Kellap.findById(req.params.id).exec(function(err, auto){
+                if(!err){
+                    Ikainis.find({ $and: [ { doc:'autoik' }, { autoid:auto.autoObjectId }] }).exec(function(err, ikainis){
+                        if(!err){
+                            callback(null, ikainis);
+                            }
+                        })
+                    }
+                })
+            }
+        },
+        function(err, response) {
+            // response == {one: 'Node.js', two: 'JavaScript'}
+            console.log(response)
+            res.render("kellap/kelapdetedit", {data:response});
         }
-    });
-});
-
+    );
+})
 // UPDATE KELLAP ROUTE
-router.put("/:id",middleware.checkkellapOwnership, function(req, res){
+router.put("/:id",middleware.isLoggedIn, function(req, res){
     // find and update the correct KELLAP
-    Kellap.findByIdAndUpdate(req.params.id, req.body, function(err, updatedTransport){
+    Kellap.findByIdAndUpdate(req.params.id, req.body.kellap, function(err, updatedKellap){
        if(err){
            res.redirect("/kellap");
        } else {

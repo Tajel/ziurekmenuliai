@@ -31,6 +31,9 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         id: req.user._id,
         username: req.user.username
     };
+    // console.log('req.body.autokr   ' +req.body.autokr);
+    // req.body.autokr = req.sanitize(req.body.autokr);
+    // console.log('req.body.autokr sanitized  ' +req.body.autokr);
     var autokr = req.body.autokr
         autokr.author = author;
     // Create a new Autokrov and save to DB
@@ -46,7 +49,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                         } else {
                             newlyCreated.save();
                             //redirect back to autokrov page
-                            console.log(newlyCreated);
+                            // console.log(newlyCreated);
                             auto.auto.push(newlyCreated);
                             auto.save();
                             res.redirect("/autokrov");
@@ -61,7 +64,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                 } else {
                     newlyCreated.save();
                     //redirect back to autokrov page
-                    console.log(newlyCreated);
+                    // console.log(newlyCreated);
                     result.auto.push(newlyCreated);
                     result.save();
                     res.redirect("/autokrov");
@@ -98,7 +101,7 @@ router.get("/:id/kellap", function(req, res){
 // SHOW - shows detailed info about Aotokrov
 router.get("/:id", function(req, res){
     //find the Autokrov with provided ID
-    Autokrov.findById(req.params.id).exec(function(err, foundtransport){
+    Autokrov.findById(req.params.id).populate('ikainis').exec(function(err, foundtransport){
         if(err){
             console.log(err);
         } else {

@@ -1,0 +1,88 @@
+
+<% include ../partials/header %>
+<div class="container-fluid">
+    <header class="jumbotron">
+        <h1 style="text-align: center">Redaguoti <%= data.auto.marke %>   <%= data.auto.modelis %>   <%= data.auto.valstnr %></h1>
+        <div class="text-right">
+            <a class="btn btn-success" href='/autokrov/<%=data.auto.autoObjectId%>'>Automobilio duomenys</a>
+        </div>
+    </header>
+</div>
+<div class="container-fluid">
+  <div class="col-12">
+    <form action="/kellap/<%= data.auto._id %>/paj" method="POST">
+      <div class="row">
+        <div hidden>
+          <input class="form-control" type="text" placeholder="doc" name="kellap[doc]" value='kellapajamos'></input>
+        </div>
+        <div class="col">
+          <select onchange="myFunction1()" class="custom-select" id='ikainis' name="kellap[iadarbrus]">
+            <option selected >Darbo rusis, vnt, kaina</option>
+            <% data.ikainis.forEach(function(data){ %>
+              <% if(data.idarbrus !== undefined){ %>
+            <option><%= data.idarbrus %>, <%= data.idarbvnt %>, <%= data.trikain %></option>
+            <% } %>
+            <% }); %>
+          </select>
+        </div>
+        <div class="col">
+          <input class="form-control" type="text" placeholder="Kiekis" id='kiekis' onkeyup="myFunction1()" name="kellap[kiekis]">
+        </div>
+        <div class="col">
+            <input id ='sumeur' class="form-control" type='text'name="kellap[sumeur]" readonly></input>
+        </div>
+        <!--*****************************************************-->
+        <div class="col">
+          <select id ='objektas' onchange="myFunction2()" class="custom-select" name="kellap[iobjkodas]">
+            <option selected>Objektas, Pagr. Darbu Vadovas</option> 
+            <% data.objektas.forEach(function(data){ %>
+                <% if(data.objkodas !== undefined){ %>
+                <option>
+                  <%= data.objkodas %>, <%= data.dvVadasPav %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        
+        <div class="col">
+          <select id ='dv1' class="custom-select" name="kellap[idvVadasPav]">
+            <option id ='dv' selected >Darbu Vadovas</option> 
+            <% data.dv.forEach(function(data){ %>
+              <% if(data.dvVadasPav !== undefined){ %>
+              <option><%= data.dvVadasPav %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        
+        <div class="col" style="display: none;">
+          <input id='ojektas' class="form-control" type="text" placeholder="Objektas" name="kellap[iobjkodas]">
+        </div>
+        <div class="col" style="display: none;">
+          <input id='darbvvad' class="form-control" type="text" placeholder="DV" name="kellap[idvVadasPav]">
+        </div>
+        
+        <!--*****************************************************-->
+        <div class="col">
+          <select class="custom-select" name="kellap[imonkodas]">
+            <option  selected>Fegda</option> 
+            <% data.imone.forEach(function(data){ %>
+              <% if(data.imonessutrumpkodas !== undefined){ %>
+              <option><%= data.imonessutrumpkodas %></option>
+              <% } %>
+            <% }); %>
+          </select>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block">Submit!</button>
+        </div>
+      </div>
+    </form>
+    <a href="/kellap/<%= data.auto._id %>/detail">Go Back</a>
+  </div>
+</div>
+
+<script src='/scripts/ikainisfilter.js'></script>
+
+<% include ../partials/footer %>
+

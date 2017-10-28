@@ -25,11 +25,15 @@ router.get("/", middleware.isLoggedIn, function(req, res){
 //CREATE - add new kurrus to DB
 router.post("/", middleware.isLoggedIn, function(req, res){
     // get data from form and add to kurrus array
+    var author = {
+        id: req.user._id,
+        username: req.user.username
+    };
     var doc = req.body.doc;
     var kurrusis = req.body.kurrusis;
     var kurorusiskodas = req.body.kurorusiskodas;
     
-    var newKurrus = {doc: doc, kurrusis: kurrusis, kurorusiskodas: kurorusiskodas}
+    var newKurrus = {doc: doc, kurrusis: kurrusis, kurorusiskodas: kurorusiskodas, author:author}
     // Create a new kurrus and save to DB
     Kurrus.create(newKurrus, function(err, newlyCreated){
         if(err){
@@ -68,7 +72,7 @@ router.put("/:id",middleware.isLoggedIn, function(req, res){
 });
 
 // DESTROY KURRUS ROUTE
-router.delete("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
+router.delete("/:id",middleware.isLoggedIn, function(req, res){
    Kurrus.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/kurrus");

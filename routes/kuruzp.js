@@ -25,12 +25,16 @@ router.get("/", middleware.isLoggedIn, function(req, res){
 //CREATE - add new kuruzp to DB
 router.post("/", middleware.isLoggedIn, function(req, res){
     // get data from form and add to kuruzp array
+    var author = {
+        id: req.user._id,
+        username: req.user.username
+    };
     var doc = req.body.doc;
     var kurouzpkodas = req.body.kurouzpkodas;
     var kurouzppav = req.body.kurouzppav;
     var kurouzpkortnr = req.body.kurouzpkortnr;
     
-    var newkuruzp = {doc: doc, kurouzpkodas: kurouzpkodas, kurouzppav: kurouzppav, kurouzpkortnr:kurouzpkortnr}
+    var newkuruzp = {doc: doc, kurouzpkodas: kurouzpkodas, kurouzppav: kurouzppav, kurouzpkortnr:kurouzpkortnr, author:author}
     // Create a new kuruzp and save to DB
     Kuruzp.create(newkuruzp, function(err, newlyCreated){
         if(err){
