@@ -10,7 +10,7 @@ var express         = require("express"),
     expressSanitizer = require("express-sanitizer");
 
 //requiring routes
-var 
+var
     autokrovRoutes      = require("./routes/autokrov"),
     autolenRoutes       = require("./routes/autolen"),
     automechRoutes      = require("./routes/automech"),
@@ -92,10 +92,10 @@ app.use("/kellap/:id/kur", kellapkurasRoutes);
 app.use("/kellap/:id/vair", kellapvairRoutes);
 
 // app.get('/', function (req, res) {
-//   // each request has its own id 
-//   // so you can track the log of each request 
-//   // by using `req.log` 
-//   // the ids are cycled every 2^31 - 2 
+//   // each request has its own id
+//   // so you can track the log of each request
+//   // by using `req.log`
+//   // the ids are cycled every 2^31 - 2
 //   req.log.info('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
 //   res.send('@@@@ LOG @@@@@')
 // })
