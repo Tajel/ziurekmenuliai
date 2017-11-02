@@ -125,7 +125,7 @@
                     <% autokrov.ikainis.forEach(function(ikainis){ %>
                         <div>
                             <div>
-                                <strong><%= ikainis.author.username %></strong>
+                                <strong><a href="/users/<%= ikainis.author.id %>"><%= ikainis.author.username %></a></strong>
                             </div>
                             <%= ikainis.idarbrus %>
                                 <%= ikainis.idarbvnt %>
@@ -142,6 +142,6 @@
             </div>
         </div>
 
-        <p><em> Sukurė <%= autokrov.author.username %></em></p>
+        <p><em> Sukurė <a href="/users/<%= autokrov.author.id %>"><%= autokrov.author.username %></a></em></p>
 
         <% include ../partials/footer %>

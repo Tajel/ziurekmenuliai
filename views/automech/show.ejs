@@ -113,6 +113,6 @@
             <% }%>
                 <a href="/automech">Atgal</a>
     </div>
-    <p><em> Sukurė <%= automech.author.username %></em></p>
+    <p><em> Sukurė <a href="/users/<%= automech.author.id %>"><%= automech.author.username %></a></em></p>
 
     <% include ../partials/footer %>

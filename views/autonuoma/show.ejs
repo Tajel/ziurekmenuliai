@@ -118,6 +118,6 @@
             <% }%>
                 <a href="/autonuoma">Atgal</a>
     </div>
-    <p><em> Sukurė <%= autonuoma.author.username %></em></p>
+    <p><em> Sukurė <a href="/users/<%= autonuoma.author.id %>"><%= autonuoma.author.username %></a></em></p>
 
     <% include ../partials/footer %>

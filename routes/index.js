@@ -17,7 +17,11 @@ router.get("/register", function(req, res) {
 //handle sign up logic
 router.post("/register", function(req, res) {
     var newUser = new User({
-        username: req.body.username
+        username: req.body.username,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        avatar: req.body.avatar
     });
     if (req.body.adminCode === 'secretadmincode1234') {
         newUser.isAdmin = true;
@@ -52,6 +56,16 @@ router.get("/logout", function(req, res) {
     res.redirect("/");
 });
 
-
+    //USER PROFILE
+    router.get("/users/:id", function(req, res){
+        User.findById(req.params.id, function(err, foundUser){
+            if(err){
+                req.flash("error", "Somthiing went wrong !")
+                res.redirect("/")
+            } else {
+                res.render("users/show", {user:foundUser})
+            }
+        })
+    })
 
 module.exports = router;

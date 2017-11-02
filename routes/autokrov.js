@@ -203,7 +203,7 @@ router.put("/:id", middleware.checkOwnership, function(req, res) {
 });
 
 // DESTROY Aotokrov ROUTE
-router.deleteisLoggedIn, middleware.checkOwnership,
+router.delete("/:id",middleware.isLoggedIn, middleware.checkOwnership,
     function(req, res) {
         Autokrov.findByIdAndRemove(req.params.id, function(err) {
             if (err) {

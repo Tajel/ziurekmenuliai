@@ -81,6 +81,6 @@
             </div>
         </div>
 
-        <p><em> Sukurė <%= vair.author.username %></em></p>
+        <p><em> Sukurė <a href="/users/<%= vair.author.id %>"><%= vair.author.username %></a></em></p>
 
         <% include ../partials/footer %>

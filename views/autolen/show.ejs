@@ -113,6 +113,6 @@
             <% }%>
                 <a href="/autolen">Atgal</a>
     </div>
-    <p><em> Sukurė <%= autolen.author.username %></em></p>
+    <p><em> Sukurė <a href="/users/<%= autolen.author.id %>"><%= autolen.author.username %></a></em></p>
 
     <% include ../partials/footer %>
