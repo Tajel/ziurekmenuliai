@@ -100,6 +100,10 @@ app.use("/kellap/:id/vair", kellapvairRoutes);
 //   res.send('@@@@ LOG @@@@@')
 // })
 
-app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("TRANSPORT Server Has Started!");
+
+// app.listen(process.env.PORT, process.env.IP, function(){
+//    console.log("TRANSPORT Server Has Started!");
+
+app.listen(3000, function(){
+    console.log("TRANSOPORTO MODULIS server started");
 });
