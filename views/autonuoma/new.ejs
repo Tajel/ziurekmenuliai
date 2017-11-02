@@ -1,31 +1,31 @@
 <% include ../partials/header %>
-<div >
-    <div class="row">
-        <h1 style="text-align: center">Nauja transporto priemonė</h1>
-        <div style="width: 30%; margin: 25px auto;">
-            <a class="btn btn-default btn-xs" href="/autonuoma">Atgal</a>
-            <hr>
-            <form action="/autonuoma" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma" hidden>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[marke]" placeholder="markė">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[modelis]" placeholder="modelis">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[valstnr]" placeholder="valstybinis numeris">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[id]" placeholder="id">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[inventnr]" placeholder="inventorinis numeris">
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[atsaking]" class="custom-select">
+    <div>
+        <div class="row">
+            <h1 style="text-align: center">Nauja transporto priemonė</h1>
+            <div style="width: 30%; margin: 25px auto;">
+                <a class="btn btn-default btn-xs" href="/autonuoma">Atgal</a>
+                <hr>
+                <form action="/autonuoma" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma" hidden>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[marke]" placeholder="markė">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[modelis]" placeholder="modelis">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[valstnr]" placeholder="valstybinis numeris">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[id]" placeholder="id">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[inventnr]" placeholder="inventorinis numeris">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[atsaking]" class="custom-select">
                      <option  selected>Pasirinkite ATSAKINGĄ asmenį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.vairuotojas !== undefined){ %>
@@ -33,24 +33,24 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[baze]" placeholder="bazė">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[drcivil]" placeholder="draudimas civilinis">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[drkasko]" placeholder="draudimas kasko">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[euro]" placeholder="euro taršos lygis">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[gammetai]" placeholder="gamybos metai">
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[ikurrusis]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[baze]" placeholder="bazė">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[drcivil]" placeholder="draudimas civilinis">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[drkasko]" placeholder="draudimas kasko">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[euro]" placeholder="euro taršos lygis">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[gammetai]" placeholder="gamybos metai">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[ikurrusis]" class="custom-select">
                      <option  selected>Pasirinkite KURO rušį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.kurrusis !== undefined){ %>
@@ -59,9 +59,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[ipadkodas]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[ipadkodas]" class="custom-select">
                      <option  selected>Pasirinkite Padlinį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.padkodas !== undefined){ %>
@@ -69,9 +69,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[ipagvair]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[ipagvair]" class="custom-select">
                      <option  selected>Pasirinkite pagr vairuotoją</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.pagvair !== undefined){ %>
@@ -79,9 +79,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[itrkateg]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[itrkateg]" class="custom-select">
                      <option  selected>Pasirinkite kategoriją</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.trkateg !== undefined){ %>
@@ -89,9 +89,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[itrrus]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[itrrus]" class="custom-select">
                      <option  selected>Pasirinkite priemonės rūšį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.trrus !== undefined){ %>
@@ -99,9 +99,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[itrtipas]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autonuoma[itrtipas]" class="custom-select">
                      <option  selected>Pasirinkite Transporto priemonės tipą</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.trtipas !== undefined){ %>
@@ -109,16 +109,15 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[vinjet]" placeholder="Kelių mokesčiai">
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
-                </div>
-            </form>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[vinjet]" placeholder="Kelių mokesčiai">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<% include ../partials/footer %>
-
+    <% include ../partials/footer %>

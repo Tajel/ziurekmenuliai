@@ -1,20 +1,24 @@
 .thumbnail {
-    padding: 0;
+  padding: 0;
 }
 
 .thumbnail .caption-full {
-    padding: 9px;
+  padding: 9px;
 }
 
 .jumbotron {
-    padding: 0.4em;
+  padding: 0.4em;
 }
 
 .edit-item-form {
-    display: none;
+  display: none;
 }
 
 
 /*label {*/
+
+
 /*    float: center;*/
+
+
 /*}*/

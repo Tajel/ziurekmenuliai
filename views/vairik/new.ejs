@@ -1,6 +1,10 @@
 <% include ../partials/header %>
     <div class="row">
-        <h1 style="text-align: center">Ivesti nauja ikaini <%= vair.marke %><%= vair.modelis %><%= vair.valstnr %></h1>
+        <h1 style="text-align: center">Ivesti nauja ikaini
+            <%= vair.marke %>
+                <%= vair.modelis %>
+                    <%= vair.valstnr %>
+        </h1>
         <div style="width: 30%; margin: 25px auto;">
             <form action="/vair/<%= vair._id %>/vairik" method="POST">
                 <div class="form-group">
@@ -9,7 +13,7 @@
                 <div class="form-group">
                     <input class="form-control" type="text" name="vairik[vairid]" value="<%= vair._id %>" hidden>
                 </div>
-                
+
                 <div class="form-group">
                     <select style="width: 100%; height: 34px" name="vairik[idarbrus]" class="custom-select">
                          <option  selected>Pasirinkite darbo rusi</option> 
@@ -33,5 +37,4 @@
             <a href="/autokrov/<%= vair._id %>">Go Back</a>
         </div>
     </div>
-<% include ../partials/footer %>
-
+    <% include ../partials/footer %>

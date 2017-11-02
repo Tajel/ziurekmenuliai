@@ -1,24 +1,28 @@
 <% include ../partials/header %>
-<div class="container-fluid">
-    <header class="jumbotron">
-        <h1 style="text-align: center">Suvesti Kura <%= data.marke %>   <%= data.modelis %>   <%= data.valstnr %></h1>
-        <div class="text-right">
-            <a class="btn btn-success" href='/autokrov/<%=data.autoObjectId%>'>Automobilio duomenys</a>
-        </div>
-    </header>
-</div>
-<div class="container-fluid">
-  <div class="col-12">
-    <form action="/kellap/<%= data._id %>/kur" method="POST">
-      <div class="row">
-        <div hidden>
-          <input class="form-control" type="text" placeholder="doc" name="kellap[doc]" value='kellkuras' hidden></input>
-        </div>
-        <div>
-          <input class="form-control" type="text" placeholder="Kuro rusis" name="kellap[ikurorusis]" value='<%=data.ikurrusis%>'></input>
-        </div>
-        <div class="col">
-          <select class="custom-select" name="kellap[ikurouzpkodas]">
+    <div class="container-fluid">
+        <header class="jumbotron">
+            <h1 style="text-align: center">Suvesti Kura
+                <%= data.marke %>
+                    <%= data.modelis %>
+                        <%= data.valstnr %>
+            </h1>
+            <div class="text-right">
+                <a class="btn btn-success" href='/autokrov/<%=data.autoObjectId%>'>Automobilio duomenys</a>
+            </div>
+        </header>
+    </div>
+    <div class="container-fluid">
+        <div class="col-12">
+            <form action="/kellap/<%= data._id %>/kur" method="POST">
+                <div class="row">
+                    <div hidden>
+                        <input class="form-control" type="text" placeholder="doc" name="kellap[doc]" value='kellkuras' hidden></input>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" placeholder="Kuro rusis" name="kellap[ikurorusis]" value='<%=data.ikurrusis%>'></input>
+                    </div>
+                    <div class="col">
+                        <select class="custom-select" name="kellap[ikurouzpkodas]">
             <option selected >Kuro korteles kodas</option>
             <% kuras.forEach(function(data){ %>
               <% if(data.kurouzpkodas !== undefined){ %>
@@ -26,23 +30,22 @@
             <% } %>
             <% }); %>
           </select>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" placeholder="Kiekis" name="kellap[kiekiskur]">
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="date" placeholder="Data" name="kellap[datekur]">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">Submit!</button>
+                    </div>
+                </div>
+            </form>
+            <a href="/kellap/<%= data._id %>/detail">Go Back</a>
         </div>
-        <div class="col">
-          <input class="form-control" type="text" placeholder="Kiekis" name="kellap[kiekiskur]">
-        </div>
-        <div class="col">
-          <input class="form-control" type="date"  placeholder="Data" name="kellap[datekur]">
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary btn-block">Submit!</button>
-        </div>
-      </div>
-    </form>
-    <a href="/kellap/<%= data._id %>/detail">Go Back</a>
-  </div>
-</div>
+    </div>
 
-<!--<script src='/scripts/ikainisfilter.js'></script>-->
+    <!--<script src='/scripts/ikainisfilter.js'></script>-->
 
-<% include ../partials/footer %>
-
+    <% include ../partials/footer %>

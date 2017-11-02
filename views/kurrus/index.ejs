@@ -1,34 +1,38 @@
-<% include ../partials/header %> 
+<% include ../partials/header %>
 
- <div class="container">
-     <header class="jumbotron">
-         <div class="container">
-             <h1>Transporto valdymo modulis!</h1>
-             <p>Kuro rusys</p>
-             <p>
-                <a class="btn btn-primary btn-large" href="/kurrus/new">Nauja kuro rusis</a>
-             </p>
-         </div>
-     </header>
-     
-     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
-        <% allkurrus.forEach(function(allkurrus){ %>
-            <div class="col-md-3 col-sm-6">
-                   <div class="caption">
-                       <h4><%= allkurrus.kurorusiskodas %></h4>
-                       <h4><%= allkurrus.kurorusis %></h4>
-                       <div>
-                           <hr>
-                           <a class="btn btn-xs btn-warning" href="/kurrus/<%= allkurrus._id%>/edit">REDAGUOTI</a>
-                           <hr>
-                           <form id="delete-form" action="/kurrus/<%=allkurrus._id%>?_method=DELETE" , method=POST>
-                           <button class="btn btn-xs btn-danger">TRINTI</button>
-                           </form>
-                       </div>
-                   </div>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Transporto valdymo modulis!</h1>
+                <p>Kuro rusys</p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="/kurrus/new">Nauja kuro rusis</a>
+                </p>
             </div>
-        <% }); %>
-    </div>
-</div>
+        </header>
 
-<% include ../partials/footer %>
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% allkurrus.forEach(function(allkurrus){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="caption">
+                        <h4>
+                            <%= allkurrus.kurorusiskodas %>
+                        </h4>
+                        <h4>
+                            <%= allkurrus.kurorusis %>
+                        </h4>
+                        <div>
+                            <hr>
+                            <a class="btn btn-xs btn-warning" href="/kurrus/<%= allkurrus._id%>/edit">REDAGUOTI</a>
+                            <hr>
+                            <form id="delete-form" action="/kurrus/<%=allkurrus._id%>?_method=DELETE" , method=POST>
+                                <button class="btn btn-xs btn-danger">TRINTI</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <% include ../partials/footer %>

@@ -1,84 +1,86 @@
 <% include ../partials/header %>
-<div class='container'>
-  <header class="jumbotron">
-      <div class="container">
-          <h1>Transporto valdymo modulis!</h1>
-          <h3>Detalūs Vairuotojo duomenys</h3>
-      </div>
-  </header>
-</div>
-<div class="container">
-  <div class='row'>
-    <div class='col'>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>1</th>
-            <th>2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Inventorinis numeris:</td>
-            <td><strong><%=vair.vairVard%></strong></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Pavarde:</td>
-            <td><strong><%=vair.vairPav%></strong></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Pilnas Vardas</td>
-            <td><strong><%=vair.vairVardPav%></strong></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Tabelio kodas:</td>
-            <td><strong><%=vair.vairkodas%></strong></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Padalinys:</td>
-            <td><strong><%=vair.ipadkodas%></strong></td>
-          </tr>
-        </tbody>
-      </table>
-      <hr>
-      <a class="btn btn-sm btn btn-outline-info" href="/vair/<%= vair._id %>/edit">Redaguoti</a>
-      <form id="delete-form" action="/vair/<%= vair._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-outline-danger btn-sm">Istrinti</button>
-      </form>
-      <a href="/vair">Atgal</a>
-  </div>
-  <!--************************   IKAINIAI  ********************************-->
-    <div class='col'>
-      <div class="well">
-        <h2>IKAINIAI</h2>
-        <div class="text-right">
-            <a class="btn btn-outline-success" href="/vair/<%= vair._id %>/vairik/new">Naujas Ikainis</a>
-        </div>
-        <hr>
-        <% vair.ikainis.forEach(function(ikainis){ %>
-            <div>
-              <div>
-                <strong><%= ikainis.author.username %></strong>
-              </div>
-              <%= ikainis.idarbrus %> <%= ikainis.idarbvnt %> <%= ikainis.vairikain %> 
-              <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                <form style="display: inline" class="pull-right" action="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>?_method=DELETE" method="POST">
-                  <button class="btn btn-outline-danger btn-sm">Trinti</button>
-                  <a href="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>/edit" class="btn btn-sm btn btn-outline-info">Redaguoti</a>
+    <div class='container'>
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Transporto valdymo modulis!</h1>
+                <h3>Detalūs Vairuotojo duomenys</h3>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div class='row'>
+            <div class='col'>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>1</th>
+                            <th>2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Inventorinis numeris:</td>
+                            <td><strong><%=vair.vairVard%></strong></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Pavarde:</td>
+                            <td><strong><%=vair.vairPav%></strong></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Pilnas Vardas</td>
+                            <td><strong><%=vair.vairVardPav%></strong></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Tabelio kodas:</td>
+                            <td><strong><%=vair.vairkodas%></strong></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Padalinys:</td>
+                            <td><strong><%=vair.ipadkodas%></strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <a class="btn btn-sm btn btn-outline-info" href="/vair/<%= vair._id %>/edit">Redaguoti</a>
+                <form id="delete-form" action="/vair/<%= vair._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-outline-danger btn-sm">Istrinti</button>
                 </form>
-              <% } %> 
-        <% }) %>
-    </div>
-    </div>
-    </div>
-  </div>
-  
-<p><em> Sukurė <%= vair.author.username %></em></p>
+                <a href="/vair">Atgal</a>
+            </div>
+            <!--************************   IKAINIAI  ********************************-->
+            <div class='col'>
+                <div class="well">
+                    <h2>IKAINIAI</h2>
+                    <div class="text-right">
+                        <a class="btn btn-outline-success" href="/vair/<%= vair._id %>/vairik/new">Naujas Ikainis</a>
+                    </div>
+                    <hr>
+                    <% vair.ikainis.forEach(function(ikainis){ %>
+                        <div>
+                            <div>
+                                <strong><%= ikainis.author.username %></strong>
+                            </div>
+                            <%= ikainis.idarbrus %>
+                                <%= ikainis.idarbvnt %>
+                                    <%= ikainis.vairikain %>
+                                        <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                            <form style="display: inline" class="pull-right" action="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>?_method=DELETE" method="POST">
+                                                <button class="btn btn-outline-danger btn-sm">Trinti</button>
+                                                <a href="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>/edit" class="btn btn-sm btn btn-outline-info">Redaguoti</a>
+                                            </form>
+                                            <% } %>
+                                                <% }) %>
+                        </div>
+                </div>
+            </div>
+        </div>
 
-<% include ../partials/footer %>
+        <p><em> Sukurė <%= vair.author.username %></em></p>
+
+        <% include ../partials/footer %>

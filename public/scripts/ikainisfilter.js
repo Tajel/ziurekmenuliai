@@ -5,9 +5,9 @@ function myFunction1() {
     suma = kiekis * data[2]
     $('.sumeur').text(suma)
     $('#sumeur').val(suma)
-    
+
 }
 
-function myFunction2()  {
-    
+function myFunction2() {
+
 }

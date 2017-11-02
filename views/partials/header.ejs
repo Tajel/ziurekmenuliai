@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Transporto valdymo modulis</title>
+
+<head>
+    <title>Transporto valdymo modulis</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    </head>
-    <body>
-        
+</head>
+
+<body>
+
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Transporto valdymo modulis</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/autokrov">Kroviniai</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/automech">Mechanizmai</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/autolen">Lengvieji</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/autonuoma">Nuoma</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/automm">Kiti</a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Transporto valdymo modulis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/autokrov">Kroviniai</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/automech">Mechanizmai</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/autolen">Lengvieji</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/autonuoma">Nuoma</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/automm">Kiti</a>
+            </li>
         </ul>
         <ul class="nav justify-content-end">
             <% if(!currentUser){ %>
                 <li class="nav-item"><a class="nav-link" href="/login">Prisijungti</a></li>
                 <li class="nav-item"><a class="nav-link" href="/register">Registruotis</a></li>
-            <% } else { %>
-                <li class="nav-item"><a class="nav-link" href="#">Prisijunges kaip <%= currentUser.username %></a></li>
-                <li class="nav-item"><a class="nav-link" href="/logout">Iseiti</a></li>
-            <% } %>
+                <% } else { %>
+                    <li class="nav-item"><a class="nav-link" href="#">Prisijunges kaip <%= currentUser.username %></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Iseiti</a></li>
+                    <% } %>
         </ul>
         </div>
-  <!-- Navbar content -->
-    </nav>    
-        
+        <!-- Navbar content -->
+    </nav>
+
     <!--<nav class="navbar navbar-default">-->
     <!--</nav>-->
-    
+
     <div class="container">
-        
+
         <% if(error && error.length > 0){ %>
             <div class="alert alert-danger" role="alert">
                 <%= error %>
             </div>
-        <% } %>
-        <% if(success && success.length > 0){ %>
-            <div class="alert alert-success" role="alert">
-                <%= success %>
-            </div>
-        <% } %>
+            <% } %>
+                <% if(success && success.length > 0){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= success %>
+                    </div>
+                    <% } %>
     </div>
-    

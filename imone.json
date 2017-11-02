@@ -1,2029 +1,2028 @@
-[
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Zita",
-		"imonespavadinimas": "Zita Svetlikauskienė",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Žilinskas",
-		"imonespavadinimas": "Žilinskas ir ko UAB",
-		"imonesimkodas": "1",
-		"imonesadresas": "1",
-		"imonespvmkodas": "1"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Žiežmarių hidro",
-		"imonespavadinimas": "Žiežmarių hidrotechnika UAB",
-		"imonesimkodas": "158972556",
-		"imonesadresas": "Žiežmariai",
-		"imonespvmkodas": " LT-56017 Kaišiadorių r."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Zaliosios girininkija",
-		"imonespavadinimas": "Žaliosios girininkija",
-		"imonesimkodas": "182742796",
-		"imonesadresas": "LT-19153",
-		"imonespvmkodas": " PLIKIŠKIŲ K."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "X-CLUB",
-		"imonespavadinimas": "X CLUB SHOP parduotuvė UAB MODUS OTII",
-		"imonesimkodas": "211801880",
-		"imonesadresas": "Konstitucijos pr. 12",
-		"imonespvmkodas": " 09308 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Wirtgen Vln",
-		"imonespavadinimas": "WIRTGEN LIETUVA UAB",
-		"imonesimkodas": "111642847",
-		"imonesadresas": "Liepkalnio g. 188",
-		"imonespvmkodas": " LT-13242"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Willenbrock",
-		"imonespavadinimas": "WILLENBROCK BALTIC UAB",
-		"imonesimkodas": "300638080",
-		"imonesadresas": "Kirtimų g. 47B",
-		"imonespvmkodas": " LT-02244"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Wavin",
-		"imonespavadinimas": "WAVIN BALTIC UAB",
-		"imonesimkodas": "210734350",
-		"imonesadresas": "Kirtimų g. 45",
-		"imonespvmkodas": " 02244 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "VTRA",
-		"imonespavadinimas": "VTRA",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "VSA",
-		"imonespavadinimas": "VILNIAUS SPECIALUS AUTOTRANSPORTAS AB",
-		"imonesimkodas": "220074960",
-		"imonesadresas": "Laisvės pr. 3",
-		"imonespvmkodas": " 04132 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vokė",
-		"imonespavadinimas": "Sodininkų Bendrija Vokė",
-		"imonesimkodas": "181539063",
-		"imonesadresas": "Vokės Sodų 1-oji g. 109",
-		"imonespvmkodas": " LT-27126 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vygrita",
-		"imonespavadinimas": "UAB Vygrita",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vitras-S",
-		"imonespavadinimas": "VITRAS-S UAB",
-		"imonesimkodas": "301791809",
-		"imonesadresas": "Liudvinavo g. 1E",
-		"imonespvmkodas": " LT-02241"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vitras",
-		"imonespavadinimas": "VITRAS UAB",
-		"imonesimkodas": "121428368",
-		"imonesadresas": "Rasų g. 9",
-		"imonespvmkodas": " 11350 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vitoma",
-		"imonespavadinimas": "Vitoma",
-		"imonesimkodas": "0",
-		"imonesadresas": "0",
-		"imonespvmkodas": "0"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Viti",
-		"imonespavadinimas": "Viti",
-		"imonesimkodas": "1",
-		"imonesadresas": "1",
-		"imonespvmkodas": "1"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Visagino Statybininkai",
-		"imonespavadinimas": "VISAGINO STATYBININKAI VĮ",
-		"imonesimkodas": "110087855",
-		"imonesadresas": "31002 DRŪKŠINIAI VISAGINO SAV.",
-		"imonespvmkodas": " LIETUVA"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Viremidos statyba",
-		"imonespavadinimas": "UAB Viremidos Statyba",
-		"imonesimkodas": "300560888",
-		"imonesadresas": "Mokyklos g. 18A",
-		"imonespvmkodas": " LT-91256 Klaipėda"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vingės terminalas",
-		"imonespavadinimas": "VINGĖS TERMINALAS UAB",
-		"imonesimkodas": "122770150",
-		"imonesadresas": "Minsko pl. 16 km.",
-		"imonespvmkodas": " 02121 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vilniaus sąvartynas",
-		"imonespavadinimas": "UAB Vilniaus sąvartynas",
-		"imonesimkodas": "181705485",
-		"imonesadresas": "Smolensko g. 19/1F",
-		"imonespvmkodas": " LT-03201"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vilmanto statybos",
-		"imonespavadinimas": "UAB Vilmanto statybos",
-		"imonesimkodas": "125758445",
-		"imonesadresas": "Riešės 8A.",
-		"imonespvmkodas": " Rišės k. Vilniaus raj."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vilkpėdės ligoninė",
-		"imonespavadinimas": "VILKPĖDĖS LIGONINĖ VšĮ",
-		"imonesimkodas": "2424532",
-		"imonesadresas": "Vilkpėdės g. 3",
-		"imonespvmkodas": " 03151 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vigasta",
-		"imonespavadinimas": "VIGASTA UAB",
-		"imonesimkodas": "120158350",
-		"imonesadresas": "Dariaus ir Girėno g. 36",
-		"imonespvmkodas": " 02189 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Viadukas",
-		"imonespavadinimas": "VIADUKAS UAB",
-		"imonesimkodas": "111441125",
-		"imonesadresas": "Tunelio g. 4A",
-		"imonespvmkodas": " 03153 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Via MPT",
-		"imonespavadinimas": "VIA MPT UAB",
-		"imonesimkodas": "300794439",
-		"imonesadresas": "Rasų g. 39",
-		"imonespvmkodas": " LT-11351"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Verslo konsultavimas",
-		"imonespavadinimas": "UAB Verslo konsultavimo studija",
-		"imonesimkodas": "302550152",
-		"imonesadresas": "Pramonės g. 97",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Van-Merksteijn",
-		"imonespavadinimas": "UAB Van-Merksteijn Fencing Systems Baltics",
-		"imonesimkodas": "302425679",
-		"imonesadresas": "Kirtimų g. 51a",
-		"imonespvmkodas": " LT-02244"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Vaitesa",
-		"imonespavadinimas": "Vaitesa UAB",
-		"imonesimkodas": "302595763",
-		"imonesadresas": "Ukmergės g. 221",
-		"imonespvmkodas": " LT-07156 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "VAAT",
-		"imonespavadinimas": "UAB VAATC",
-		"imonesimkodas": "181705485",
-		"imonesadresas": "Šeimyniškių g. 15",
-		"imonespvmkodas": " LT-09312 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Utenos Mesa",
-		"imonespavadinimas": "UTENOS MĖSA UAB",
-		"imonesimkodas": "284268020",
-		"imonesadresas": "Pramonės g. 4",
-		"imonespvmkodas": " LT-28216"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Ulkesta",
-		"imonespavadinimas": "Ulkesta",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Tvirta",
-		"imonespavadinimas": "TVIRTA UAB",
-		"imonesimkodas": "300583424",
-		"imonesadresas": "LT-28335",
-		"imonespvmkodas": " PAISETĖS I K. "
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "TUVLITA",
-		"imonespavadinimas": "UAB Tuvlita",
-		"imonesimkodas": "110584095",
-		"imonesadresas": "Lentvario g. 7a",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Trucklita",
-		"imonespavadinimas": "UAB Trucklita",
-		"imonesimkodas": "225899190",
-		"imonesadresas": "Verkių g. 195",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Transmart",
-		"imonespavadinimas": "TRANSMART UAB",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Transekspedicija",
-		"imonespavadinimas": "TRANSEKSPEDICIJA UAB",
-		"imonesimkodas": "120053837",
-		"imonesadresas": "Verkių g. 36",
-		"imonespvmkodas": " 09109 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "traku misku ured",
-		"imonespavadinimas": "VĮ Trakų miškų urėdija",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "touwn group",
-		"imonespavadinimas": "VILNIUS TOWN GROUP UAB",
-		"imonesimkodas": "302247963",
-		"imonesadresas": "Gurių Sodų 33-ioji g. 26",
-		"imonespvmkodas": " LT-11310"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Tinklai",
-		"imonespavadinimas": "INŽINERINIAI TINKLAI UAB",
-		"imonesimkodas": "133165398",
-		"imonesadresas": "Draugystės g. 8H",
-		"imonespvmkodas": " 51264 KAUNAS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Tilsta",
-		"imonespavadinimas": "TILSTA tiltų statybos UAB",
-		"imonesimkodas": "2147732",
-		"imonesadresas": "Granito g. 6",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Teronis",
-		"imonespavadinimas": "TERONIS UAB",
-		"imonesimkodas": "122733166",
-		"imonesadresas": "Pelesos g. 3",
-		"imonespvmkodas": " LT-02115"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Teniso kortai",
-		"imonespavadinimas": "Teniso kortai",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Telekonta",
-		"imonespavadinimas": "UAB TELEKONTA“",
-		"imonesimkodas": "144803197",
-		"imonesadresas": "Žemaitės g. 17",
-		"imonespvmkodas": " LT-03118 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Teatralas",
-		"imonespavadinimas": "Sodininkų bendrija Teatralas",
-		"imonesimkodas": "191498871",
-		"imonesadresas": "PYLIMĖLIŲ G. 1",
-		"imonespvmkodas": " VILNIAUS M."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Svytejimas",
-		"imonespavadinimas": "ŠVYTĖJIMAS UAB",
-		"imonesimkodas": "123017127",
-		"imonesadresas": "Kalno g. 10",
-		"imonespvmkodas": " LT-15174"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Švaros era",
-		"imonespavadinimas": "ŠVAROS ERA UAB"
-	},
-	{
-		"doc": "ŠVAROS ERA UAB",
-		"imonessutrumpkodas": "163747575",
-		"imonespavadinimas": "Statybininkų g. 13",
-		"imonesimkodas": " 85305 VENTA AKMENĖS r.",
-		"imonesadresas": "100001002812"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Sunkrida",
-		"imonespavadinimas": "SUNKRIDA A Knystauto įmonė",
-		"imonesimkodas": "2515491",
-		"imonesadresas": "Kalvarijų g. 124",
-		"imonespvmkodas": " 08211 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Stiebasta",
-		"imonespavadinimas": "STIEBASTA UAB",
-		"imonesimkodas": "300521166",
-		"imonesadresas": "Ateities g. 21",
-		"imonespvmkodas": " 06326 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Stiebas",
-		"imonespavadinimas": "STIEBAS UAB",
-		"imonesimkodas": "121312634",
-		"imonesadresas": "Ateities g. 21",
-		"imonespvmkodas": " 06326 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Stebulė",
-		"imonespavadinimas": "STEBULĖ UAB",
-		"imonesimkodas": "122211549",
-		"imonesadresas": "Eišiškių pl. 127",
-		"imonespvmkodas": " LT-02184 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Statoil",
-		"imonespavadinimas": "LIETUVA STATOIL UAB",
-		"imonesimkodas": "211454910",
-		"imonesadresas": "J.Jasinskio g. 16A",
-		"imonespvmkodas": " 01112 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Statybų Palaetė",
-		"imonespavadinimas": "UAB Statybų Paletė",
-		"imonesimkodas": "300107222",
-		"imonesadresas": "Ateities g. 10",
-		"imonespvmkodas": " LT-08303"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Statyba",
-		"imonespavadinimas": "UAB Statyba",
-		"imonesimkodas": "161104559",
-		"imonesadresas": "A. Mickevičiaus g. 48",
-		"imonespvmkodas": " 57174 Kėdainiai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Stanmotors",
-		"imonespavadinimas": "STANMOTORS UAB",
-		"imonesimkodas": "186748362",
-		"imonesadresas": "Rasų g. 39",
-		"imonespvmkodas": " LT-11351"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Stamecha",
-		"imonespavadinimas": "STAMECHA UAB",
-		"imonesimkodas": "110682397",
-		"imonesadresas": "Panerių g. 49",
-		"imonespvmkodas": " LT- 03202 VILNIUS - (5) 2040208"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Stamas",
-		"imonespavadinimas": "STAMAS UAB",
-		"imonesimkodas": "123015795",
-		"imonesadresas": "Meistrų g. 9",
-		"imonespvmkodas": " 02189 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Spindys",
-		"imonespavadinimas": "SPINDYS UAB",
-		"imonesimkodas": "121504054",
-		"imonesadresas": "Geologų g. 12A",
-		"imonespvmkodas": " 02190 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Spec. Mechanizmai",
-		"imonespavadinimas": "UAB Specialieji mechanizmai",
-		"imonesimkodas": "0",
-		"imonesadresas": "Žirnių g. 4",
-		"imonespvmkodas": " Vilniaus m."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Sostines gatvės",
-		"imonespavadinimas": "SOSTINĖS GATVĖS UAB",
-		"imonesimkodas": "123037158",
-		"imonesadresas": "Kuršių g. 2",
-		"imonespvmkodas": " 03153 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Sostinės centras",
-		"imonespavadinimas": "SOSTINĖS TURGUS UAB SOSTINĖS CENTRAS",
-		"imonesimkodas": "0",
-		"imonesadresas": "Kalvarijų g. 88",
-		"imonespvmkodas": " Vilniaus m."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Soltra",
-		"imonespavadinimas": "Soltra UAB",
-		"imonesimkodas": "110561716",
-		"imonesadresas": "Ostruvkos k.",
-		"imonespvmkodas": " LT-21142 Trakų r."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Skuba",
-		"imonespavadinimas": "SKUBA UAB",
-		"imonesimkodas": "121559428",
-		"imonesadresas": "V.A.Graičiūno g. 36",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Skalda",
-		"imonespavadinimas": "Granitinė skalda",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Silikatas",
-		"imonespavadinimas": "SILIKATAS AB",
-		"imonesimkodas": "2196876",
-		"imonesadresas": "Savanorių pr. 124",
-		"imonespvmkodas": " 03153 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Šiaulių pl.",
-		"imonespavadinimas": "Šiaulių plentas UAB",
-		"imonesimkodas": "244693070",
-		"imonesadresas": "Išradėjų g. 11",
-		"imonespvmkodas": " LT-78149 Šiauliai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Savartynas",
-		"imonespavadinimas": "Vilniaus Sąvartynas",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Saulius Antanas",
-		"imonespavadinimas": "Saulius Antanas Vilutis",
-		"imonesimkodas": "3450623",
-		"imonesadresas": "Vanagiškių 7",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Šarūnas",
-		"imonespavadinimas": "ŠARŪNAS viešbutis",
-		"imonesimkodas": "111501145",
-		"imonesadresas": "Raitininkų g. 4",
-		"imonespvmkodas": " 09200 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Salniko",
-		"imonespavadinimas": "SALNIKO UAB",
-		"imonesimkodas": "186485146",
-		"imonesadresas": "LT-14119",
-		"imonespvmkodas": " PAGIRIAI"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Salcininku statyba",
-		"imonespavadinimas": "ŠALČININKŲ STATYBA UAB",
-		"imonesimkodas": "174986975",
-		"imonesadresas": "Jubiliejinė g. 12",
-		"imonespvmkodas": " LT-17117"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Rukainiu sen",
-		"imonespavadinimas": "Vilniaus r Sav Administracija Rukainių sen",
-		"imonesimkodas": "8870401",
-		"imonesadresas": "Mokytojų g. 7",
-		"imonespvmkodas": " Rukainiai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Rudamina sen.",
-		"imonespavadinimas": "RUDAMINOS SENIŪNIJA Vilniaus rajono savivaldybės administracija",
-		"imonesimkodas": "188703978",
-		"imonesadresas": "Vilniaus g. 4",
-		"imonespvmkodas": " Rudaminos k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Rodsta",
-		"imonespavadinimas": "UAB Rodsta",
-		"imonesimkodas": "302422462",
-		"imonesadresas": "Viršuliškių g. 35-94",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Roberto santechnika",
-		"imonespavadinimas": "UAB Roberto santechnika",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Roberto sant",
-		"imonespavadinimas": "UAB Roberto santechnika",
-		"imonesimkodas": "300961532",
-		"imonesadresas": "DANĖS G. 15",
-		"imonespvmkodas": " KLAIPĖDOS M."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Rytra",
-		"imonespavadinimas": "RYTRA UAB",
-		"imonesimkodas": "300072305",
-		"imonesadresas": "Geologų g. 16",
-		"imonespvmkodas": " 02190 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Ripeta",
-		"imonespavadinimas": "RIPETA R Petkūno firma",
-		"imonesimkodas": "121573043",
-		"imonesadresas": "Mokyklos g. 38A",
-		"imonespvmkodas": " 08414 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Rimas",
-		"imonespavadinimas": "Rimas Kazlauskas",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Rietona",
-		"imonespavadinimas": "UAB RIETONA",
-		"imonesimkodas": "124890077",
-		"imonesadresas": "Asavos g. 3",
-		"imonespvmkodas": " Vilniaus m."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Riešė",
-		"imonespavadinimas": "Riešės seniūnija",
-		"imonesimkodas": "188703825",
-		"imonesadresas": "Molėtų g. 16",
-		"imonespvmkodas": " 14260 DIDŽIOJI RIEŠĖ VILNIAUS R"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "rekreacine statyba",
-		"imonespavadinimas": "Rekreacinė statyba UAB",
-		"imonesimkodas": "120932575",
-		"imonesadresas": "Laisvės pr. 77-201",
-		"imonespvmkodas": " LT-00122 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Regroup",
-		"imonespavadinimas": "UAB CFA STATYBA",
-		"imonesimkodas": "300615473",
-		"imonesadresas": "Lukiškių g. 5-512",
-		"imonespvmkodas": " LT-01108 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "regiono keliai",
-		"imonespavadinimas": "VILNIAUS REGIONO KELIAI VĮ Trakų kelių tarnyba",
-		"imonesimkodas": "120056751",
-		"imonesadresas": "Senkelio g. 13",
-		"imonespvmkodas": " 21107 TRAKAI"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "RANGAVA",
-		"imonespavadinimas": "RANGAVA UAB",
-		"imonesimkodas": "124556177",
-		"imonesadresas": "Ateities g. 21",
-		"imonespvmkodas": " 06326 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Ranga IV",
-		"imonespavadinimas": "RANGA IV UAB",
-		"imonesimkodas": "120715568",
-		"imonesadresas": "A.Goštauto g. 12A",
-		"imonespvmkodas": " 01108 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Ramirent",
-		"imonespavadinimas": "RAMIRENT Baltic AS Vilniaus filialas",
-		"imonesimkodas": "302431034",
-		"imonesadresas": "Titnago 19"
-	},
-	{
-		"doc": "Titnago g. 19",
-		"imonessutrumpkodas": " Vilnius LT-02300",
-		"imonespavadinimas": "LT100005061517"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Radzevicius",
-		"imonespavadinimas": "Radzevičius",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Punktyras",
-		"imonespavadinimas": "UAB Punktyras",
-		"imonesimkodas": "123631730",
-		"imonesadresas": "A.V.Graičiūno g. 24 LT-02241 Vilnius",
-		"imonespvmkodas": " Lietuva"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "PST",
-		"imonespavadinimas": "AB Panevėžio statybos trestas filialas Konstrukcija",
-		"imonesimkodas": "303342873",
-		"imonesadresas": "Tinklų g. 7",
-		"imonespvmkodas": " LT-35115 Panevėžys"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Prosperas",
-		"imonespavadinimas": "PROSPERAS UAB",
-		"imonesimkodas": "8622196",
-		"imonesadresas": "V.Maciulevičiaus g. 51",
-		"imonespvmkodas": " 04310 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Projektana",
-		"imonespavadinimas": "Projektana UAB",
-		"imonesimkodas": "135738747",
-		"imonesadresas": "Chemijos g. 13A",
-		"imonespvmkodas": " LT-51331 Kaunas"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Privatus asmuo",
-		"imonespavadinimas": "Privatus asmuo",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Pramones Energija",
-		"imonespavadinimas": "Pramonės Energija UAB",
-		"imonesimkodas": "300073802",
-		"imonesadresas": "Jogailos g. 4",
-		"imonespvmkodas": " LT-01116 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Požeminiai darbai",
-		"imonespavadinimas": "POŽEMINIAI DARBAI UAB",
-		"imonesimkodas": "133393277",
-		"imonesadresas": "Lazdijų g. 20",
-		"imonespvmkodas": " 46393 KAUNAS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Pimpis Kestutis",
-		"imonespavadinimas": "Pimpis Kęstutis",
-		"imonesimkodas": "3651026",
-		"imonesadresas": "Upelio g. 20-1",
-		"imonespvmkodas": " Širvintos"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "perdanaga",
-		"imonespavadinimas": "PERDANGA UAB Vilniaus cechas",
-		"imonesimkodas": "40518030",
-		"imonesadresas": "Lentvario g. 16",
-		"imonespvmkodas": " 02241 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Papiskiu karj.",
-		"imonespavadinimas": "Papiškių karjeras UAB",
-		"imonesimkodas": "304033328",
-		"imonesadresas": "Manufaktūrų g. 7",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "panevėžio keliai",
-		"imonespavadinimas": "PANEVĖŽIO KELIAI AB",
-		"imonesimkodas": "147710353",
-		"imonesadresas": "S.Kerbedžio g. 7",
-		"imonespvmkodas": " 35104 PANEVĖŽYS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Paneriu stotis",
-		"imonespavadinimas": "Panerių geležinkelio stotis AB Lietuvos Geležinkleiai",
-		"imonesimkodas": "110053842",
-		"imonesadresas": "Agrastų g. 5",
-		"imonespvmkodas": " LT-02243 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "PALIUTIS",
-		"imonespavadinimas": "UAB PALIŪTIS",
-		"imonesimkodas": "223397680",
-		"imonesadresas": "Žirnių g. 6",
-		"imonespvmkodas": " LT 02120 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Pagirių seniūnija",
-		"imonespavadinimas": "Pagirių sen",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "ORO Uostas",
-		"imonespavadinimas": "VĮ Tarptautinis Vilniaus oro uostas",
-		"imonesimkodas": "120864074",
-		"imonesadresas": "Rodiūnios kelias 10a",
-		"imonespvmkodas": " LT-02189"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Oksata",
-		"imonespavadinimas": "OKSATA UAB",
-		"imonesimkodas": "181308989",
-		"imonesadresas": "Kauno g. 36-221",
-		"imonespvmkodas": " LT-03202"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Nova",
-		"imonespavadinimas": "NOVA UAB",
-		"imonesimkodas": "180106568",
-		"imonesadresas": "Mažeikių g. 2",
-		"imonespvmkodas": " 87101 TELŠIAI"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Nesta",
-		"imonespavadinimas": "Pagirių Nesta UAB",
-		"imonesimkodas": "286458260",
-		"imonesadresas": "Pagiriai",
-		"imonespvmkodas": " LT-14119 Vilniaus r."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Nerstalita",
-		"imonespavadinimas": "Nerstalita UAB",
-		"imonesimkodas": "303025823",
-		"imonesadresas": "Urėdijos g. 4",
-		"imonespvmkodas": " Kaišiadorys"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Nemėžio sen",
-		"imonespavadinimas": "Nemėžio Seniūnija Vilniaus Rajono Savivaldybės Administracija",
-		"imonesimkodas": "188703597",
-		"imonesadresas": "Nemėžio k.",
-		"imonespvmkodas": " LT-13260 Vilniaus r."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Narbutas",
-		"imonespavadinimas": "NARBUTAS IR KO UAB",
-		"imonesimkodas": "123406623",
-		"imonesadresas": "Metalo g. 11 /10",
-		"imonespvmkodas": " 02190 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "MRS",
-		"imonespavadinimas": "UAB MRS",
-		"imonesimkodas": "300083515",
-		"imonesadresas": "Naujoji g. 2D",
-		"imonespvmkodas": " Alytus"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Montuotojas",
-		"imonespavadinimas": "MONTUOTOJAS AB montavimo firma Vilniuje",
-		"imonesimkodas": "123642374",
-		"imonesadresas": "Eišiškių pl. 36 /7",
-		"imonespvmkodas": " 02184 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Mitnija",
-		"imonespavadinimas": "UAB Mitnija",
-		"imonesimkodas": "134511472",
-		"imonesadresas": "Palemono g. 3",
-		"imonespvmkodas": " Kaunas"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Miškinių karjeras",
-		"imonespavadinimas": "UAB Miškinių karjeras",
-		"imonesimkodas": "302290719",
-		"imonesadresas": "Paplaujos g. 7",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Mintranseta",
-		"imonespavadinimas": "MINTRANSETA IĮ",
-		"imonesimkodas": "122676637",
-		"imonesadresas": "Žarijų g. 2A",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Metransa",
-		"imonespavadinimas": "METRANSA UAB",
-		"imonesimkodas": "125521955",
-		"imonesadresas": "V. A. Graičiūno g. 10A",
-		"imonespvmkodas": " LT-02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Merko",
-		"imonespavadinimas": "UAB MERKO STATYBA",
-		"imonesimkodas": "111610080",
-		"imonesadresas": "Laisvės pr. 3",
-		"imonespvmkodas": " LT-04215"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Medmeta",
-		"imonespavadinimas": "MEDMETA IR PARTNERIAI UAB",
-		"imonesimkodas": "300084243",
-		"imonesadresas": "R. Kalantos g. 59",
-		"imonespvmkodas": " LT-52304"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Medimeta",
-		"imonespavadinimas": "MEDIMETA UAB",
-		"imonesimkodas": "134556019",
-		"imonesadresas": "Metalo g. 7",
-		"imonespvmkodas": " LT-02190"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Mecro",
-		"imonespavadinimas": "Įrankių centras Stokker UAB Mecro technikonas",
-		"imonesimkodas": "211660860",
-		"imonesadresas": "Savanorių pr. 119",
-		"imonespvmkodas": " LT-03150 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Markučiai",
-		"imonespavadinimas": "MARKUČIAI UAB"
-	},
-	{
-		"doc": "MARKUČIAI UAB",
-		"imonessutrumpkodas": "121559766",
-		"imonespavadinimas": "Paplaujos g. 7",
-		"imonesimkodas": " 11342 VILNIUS",
-		"imonesadresas": " LIETUVA",
-		"imonespvmkodas": "LT100000009017"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Marijampolis",
-		"imonespavadinimas": "Marijampolio Seniūnija Vilniaus Rajono Savivaldybės Administracija",
-		"imonesimkodas": "188702919",
-		"imonesadresas": "Liepų g. 24",
-		"imonespvmkodas": " Marijampolio k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Mantra",
-		"imonespavadinimas": "MANTRA UAB",
-		"imonesimkodas": "300038769",
-		"imonesadresas": "Žarijų g. 6",
-		"imonespvmkodas": " LT-02300"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Lucija",
-		"imonespavadinimas": "Lucija Jakovič",
-		"imonesimkodas": "",
-		"imonesadresas": "Viršupio sodų 18-16",
-		"imonespvmkodas": " Vilnius."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "LKW Tiekimas",
-		"imonespavadinimas": "UAB LKW TIEKIMAS",
-		"imonesimkodas": "302540489",
-		"imonesadresas": "Savanorių 219",
-		"imonespvmkodas": " LT02300 Vilnius."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Lindstrom",
-		"imonespavadinimas": "LINDSTROM UAB",
-		"imonesimkodas": "111618732",
-		"imonesadresas": "Savanorių pr. 183",
-		"imonespvmkodas": " 02300 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Lina",
-		"imonespavadinimas": "LINA UAB prekybos namai",
-		"imonesimkodas": "2014987",
-		"imonesadresas": "Žalgirio g. 90-505",
-		"imonespvmkodas": " 09303 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Liktrans",
-		"imonespavadinimas": "UAB Liktrans",
-		"imonesimkodas": "301540881",
-		"imonesadresas": "Kirtimų g. 61",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Lenciva",
-		"imonespavadinimas": "Lenciva"
-	},
-	{
-		"doc": "UAB LENCIVA",
-		"imonessutrumpkodas": "186237617",
-		"imonespavadinimas": "ŽALIAKALNIO SODŲ 2-OJI G. 13",
-		"imonesimkodas": " VILNIAUS M.",
-		"imonesadresas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Lemminkainen",
-		"imonespavadinimas": "LEMMINKAINEN LIETUVA UAB",
-		"imonesimkodas": "122657512",
-		"imonesadresas": "Granito g. 4",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Lakaja",
-		"imonespavadinimas": "UAB Lakaja",
-		"imonesimkodas": "167535057",
-		"imonesadresas": "Melioratorių g. 2b",
-		"imonespvmkodas": " LT-33118 Molėtai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "LAYHER BALTIC",
-		"imonespavadinimas": "LAYHER BALTIC UAB",
-		"imonesimkodas": "300855874",
-		"imonesadresas": "Šiltnamių g. 30",
-		"imonespvmkodas": " LT-04130 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "KRS",
-		"imonespavadinimas": "KRS UAB",
-		"imonesimkodas": "133630961",
-		"imonesadresas": "Draugystės g. 15A",
-		"imonespvmkodas": " 51227 KAUNAS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Krivicko IĮ",
-		"imonespavadinimas": "Deimanto Krivicko IĮ",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Krivickas",
-		"imonespavadinimas": "Deimantas Krivickas IĮ",
-		"imonesimkodas": "124413186",
-		"imonesadresas": "Kalvų g. 44",
-		"imonespvmkodas": " Riešė"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kotryna",
-		"imonespavadinimas": "KOTRYNA UAB",
-		"imonesimkodas": "121673734",
-		"imonesadresas": "Dariaus ir Girėno g. 34",
-		"imonespvmkodas": " LT-02189"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Konstra",
-		"imonespavadinimas": "Konstra UAB",
-		"imonesimkodas": "302638944",
-		"imonesadresas": "Darželio g. 1",
-		"imonespvmkodas": " Jakutiškių k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Konekesko",
-		"imonespavadinimas": "Konekesko Lietuva UAB",
-		"imonesimkodas": "111750538",
-		"imonesadresas": "Molėtų g. 13",
-		"imonespvmkodas": " Didžiosios Riešės k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Komunalinis ūkis",
-		"imonespavadinimas": "Širvintų komunalinis ūkis UAB",
-		"imonesimkodas": "178200576",
-		"imonesadresas": "Plento g. 3",
-		"imonespvmkodas": " LT-19117 Širvintos"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kloniai",
-		"imonespavadinimas": "Sodų bendrija Kloniai",
-		"imonesimkodas": "300044761",
-		"imonesadresas": "Vilniaus r. sav. Klonių k.",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Klevas",
-		"imonespavadinimas": "Sodininkų bendrija KLEVAS",
-		"imonesimkodas": "191735651",
-		"imonesadresas": "ŽIRMŪNŲ G. 117-34",
-		"imonespvmkodas": " VILNIAUS M."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kerista",
-		"imonespavadinimas": "KERISTA UAB",
-		"imonesimkodas": "122635779",
-		"imonesadresas": "Geologų g. 11",
-		"imonespvmkodas": " 02190 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Keluva",
-		"imonespavadinimas": "KELUVA UAB",
-		"imonesimkodas": "121543961",
-		"imonesadresas": "Liepkalnio g. 83A",
-		"imonespvmkodas": " 02120 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kelstata",
-		"imonespavadinimas": "Kelstata UAB",
-		"imonesimkodas": "302507375",
-		"imonesadresas": "Saltoniškių g. 29 / Sėlių g. 3",
-		"imonespvmkodas": " LT-08105 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Keliu masinos",
-		"imonespavadinimas": "Kauno g 36-221 LT- 03202 VILNIUS",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kelda",
-		"imonespavadinimas": "KELDA UAB",
-		"imonesimkodas": "181259645",
-		"imonesadresas": "Kauno g. 14",
-		"imonespvmkodas": " 21372 VIEVIS ELEKTRĖNŲ SAV."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "kavaliauskas",
-		"imonespavadinimas": "Kavaliauskas",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kauno Tiltai",
-		"imonespavadinimas": "KAUNO TILTAI AB",
-		"imonesimkodas": "133729589",
-		"imonesadresas": "Ateities pl. 46",
-		"imonespvmkodas": " 52502 KAUNAS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kauno keliai",
-		"imonespavadinimas": "UAB Kauno keliai",
-		"imonesimkodas": "135640993",
-		"imonesadresas": "R. Kalantos g. 85",
-		"imonespvmkodas": " LT-52310 Kaunas"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kasyba",
-		"imonespavadinimas": "UAB Kasyba",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "kanalu valymas",
-		"imonespavadinimas": "KANALŲ VALYMAS UAB",
-		"imonesimkodas": "120894441",
-		"imonesadresas": "Aušros g. 18",
-		"imonespvmkodas": " 13248 RUDAMINA"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Kamitra",
-		"imonespavadinimas": "KAMITRA IR KO UAB",
-		"imonesimkodas": "2624759",
-		"imonesadresas": "Metalo g. 6A",
-		"imonespvmkodas": " 02190 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Jurgena",
-		"imonespavadinimas": "Jurgena UAB",
-		"imonesimkodas": "122769753",
-		"imonesadresas": "Gariūnų g. 68",
-		"imonespvmkodas": " LT-02300 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Juodasis Gandras",
-		"imonespavadinimas": "UAB Juodasis Gandras",
-		"imonesimkodas": "274962690",
-		"imonesadresas": "Vilniaus g. 6",
-		"imonespvmkodas": " Baltoji Vokė"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Juknevičiaus",
-		"imonespavadinimas": "Juknevičiaus Kompostas UAB",
-		"imonesimkodas": "122983846",
-		"imonesadresas": "Ukmergės g. 206-68",
-		"imonespvmkodas": " Vilnius LT-07167"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Jėgos Linija",
-		"imonespavadinimas": "JĖGOS LINIJA UAB",
-		"imonesimkodas": "123475384",
-		"imonesadresas": "Pažagiškių g. 45",
-		"imonespvmkodas": " LT-04125 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "YIT Kausta2",
-		"imonespavadinimas": "AB YIT Kausta2",
-		"imonesimkodas": "",
-		"imonesadresas": "Naglio g. 4A",
-		"imonespvmkodas": " 52600 Kaunas"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "YIT Kausta1",
-		"imonespavadinimas": "AB YIT Kausta1",
-		"imonesimkodas": "",
-		"imonesadresas": "Naglio g. 4A",
-		"imonespvmkodas": " 52600 Kaunas"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Yglė",
-		"imonespavadinimas": "UAB Yglė",
-		"imonesimkodas": "123444143",
-		"imonesadresas": "Ozo g. 10",
-		"imonespvmkodas": " LT-08200"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Y",
-		"imonespavadinimas": "A Gribulis",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Irek Baltic",
-		"imonespavadinimas": "Irek Baltic",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Inžinerinė statyba",
-		"imonespavadinimas": "INŽINERINĖ STATYBA UAB",
-		"imonesimkodas": "110684971",
-		"imonesadresas": "Švitrigailos g. 7 /16",
-		"imonespvmkodas": " 03110 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Intrac",
-		"imonespavadinimas": "INTRAC LIETUVA UAB",
-		"imonesimkodas": "111713162",
-		"imonesadresas": "Dariaus ir Girėno g. 39",
-		"imonespvmkodas": " 02189 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "IKEA",
-		"imonespavadinimas": "IKEA",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Idėjų generatorius",
-		"imonespavadinimas": "IDĖJŲ GENERATORIUS UAB",
-		"imonesimkodas": "126264556",
-		"imonesadresas": "Vilkpėdės g. 8",
-		"imonespvmkodas": " 03151 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Holsta",
-		"imonespavadinimas": "HOLSTA UAB",
-		"imonesimkodas": "111491338",
-		"imonesadresas": "Žirmūnų g. 139",
-		"imonespvmkodas": " LT-09120"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Hidromontaz",
-		"imonespavadinimas": "UAB Kijevhidromontaž",
-		"imonesimkodas": "1114847110",
-		"imonesadresas": "Sodų g. 12-18",
-		"imonespvmkodas": " Elektrėnai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "HC Betonas",
-		"imonespavadinimas": "HC Betonas UAB",
-		"imonesimkodas": "304102190",
-		"imonesadresas": "Technikos g. 7K",
-		"imonespvmkodas": " LT-51209 Kaunas"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Hansa flex",
-		"imonespavadinimas": "HANSA FLEX HIDRAULINĖS JUNGTYS UAB",
-		"imonesimkodas": "110776462",
-		"imonesadresas": "Naugarduko g. 96",
-		"imonespvmkodas": " 03202 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Hanner",
-		"imonespavadinimas": "HANNER AB",
-		"imonesimkodas": "111535724",
-		"imonesadresas": "Konstitucijos pr. 7",
-		"imonespvmkodas": " 09308 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Grundolita",
-		"imonespavadinimas": "GRUNDOLITA UAB",
-		"imonesimkodas": "122760619",
-		"imonesadresas": "Žirnių g. 12",
-		"imonespvmkodas": " 02120 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Grinduva",
-		"imonespavadinimas": "Grinduva Lietuvos ir Čekijos UAB",
-		"imonesimkodas": "149937378",
-		"imonesadresas": "Kepyklos g. 15",
-		"imonespvmkodas": " LT-62117 Alytus"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Grinda",
-		"imonespavadinimas": "GRINDA UAB",
-		"imonesimkodas": "120153047",
-		"imonesadresas": "Liepkalnio g. 101",
-		"imonespvmkodas": " 02121 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Grigiškės",
-		"imonespavadinimas": "GRIGIŠKĖS AB",
-		"imonesimkodas": "110012450",
-		"imonesadresas": "Vilniaus g. 10",
-		"imonespvmkodas": " 27101 GRIGIŠKĖS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gintautas Kūlokas",
-		"imonespavadinimas": "Gintautas Kūlokas",
-		"imonesimkodas": "",
-		"imonesadresas": "Marijampolė",
-		"imonespvmkodas": " Krevos g. 38"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gevalda",
-		"imonespavadinimas": "GEVALDA UAB",
-		"imonesimkodas": "302592895",
-		"imonesadresas": "Veisiejų g. 15-24",
-		"imonespvmkodas": " LT-66211"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Geruda",
-		"imonespavadinimas": "Geruda UAB - Gariūnų automobilių turgus",
-		"imonesimkodas": "122043119",
-		"imonesadresas": "Gariūnų g. 71",
-		"imonespvmkodas": " LT-02242 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gerbuvita",
-		"imonespavadinimas": "UAB Gerbuvita",
-		"imonesimkodas": "302684190",
-		"imonesadresas": "J. Kolaso g. 33-1",
-		"imonespvmkodas": " LT-11306 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gerbusta",
-		"imonespavadinimas": "GERBUSTA AB PANEVĖŽIO STATYBOS TRESTAS filialas",
-		"imonesimkodas": "148001312",
-		"imonesadresas": "S. Kerbedžio g. 54",
-		"imonespvmkodas": " LT-35113"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Geodana",
-		"imonespavadinimas": "UAB Geodena",
-		"imonesimkodas": "300625122",
-		"imonesadresas": "Salomėjos Nėries g. 95-108",
-		"imonespvmkodas": " LT-06333 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gatviu statyba",
-		"imonespavadinimas": "GATVIŲ STATYBA UAB",
-		"imonesimkodas": "122570826",
-		"imonesadresas": "Panerių g. 12",
-		"imonespvmkodas": " LT-03209 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gasta",
-		"imonespavadinimas": "Gasta UAB",
-		"imonesimkodas": "122569852",
-		"imonesadresas": "Savanorių pr. 247",
-		"imonespvmkodas": " Gariūnų karjeras"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Garsu pasaulis",
-		"imonespavadinimas": "GARSŲ PASAULIS UAB",
-		"imonesimkodas": "122666714",
-		"imonesadresas": "S. Nėries g. 69",
-		"imonespvmkodas": " 06304 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gariūnai",
-		"imonespavadinimas": "Gariūnai",
-		"imonesimkodas": "",
-		"imonesadresas": "Vilnius",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Gamtovaizdis",
-		"imonespavadinimas": "Gamtovaizdis UAB",
-		"imonesimkodas": "124825528",
-		"imonesadresas": "Kareivių g. 9A",
-		"imonespvmkodas": " LT-09108 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Galuotas",
-		"imonespavadinimas": "GALUOTAS UAB",
-		"imonesimkodas": "123019288",
-		"imonesadresas": "Dariaus ir Girėno g. 81",
-		"imonespvmkodas": " 02189 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "G. Zubrickas",
-		"imonespavadinimas": "G Zubricko firma",
-		"imonesimkodas": "165215763",
-		"imonesadresas": "Žalioji g. 2",
-		"imonespvmkodas": " Teizų k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Futbolo perspektyvos",
-		"imonespavadinimas": "Futbolo perspektyvos",
-		"imonesimkodas": "0",
-		"imonesadresas": ".",
-		"imonespvmkodas": "0"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Frizas",
-		"imonespavadinimas": "Frizas statybos ir remonto UAB",
-		"imonesimkodas": "120503693",
-		"imonesadresas": "Metalo g. 13B",
-		"imonespvmkodas": " LT-02190 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Frerot",
-		"imonespavadinimas": "FREOR LT UAB",
-		"imonesimkodas": "125406166",
-		"imonesadresas": "Motorų g. 6",
-		"imonespvmkodas": " LT-02190 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Forsazo mirazas",
-		"imonespavadinimas": "FORSAŽO MIRAŽAS UAB",
-		"imonesimkodas": "123591741",
-		"imonesadresas": "Pakraščio g. 10",
-		"imonespvmkodas": " 11342 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Fencing",
-		"imonespavadinimas": "UAB Van Merksteijn Fencing Systems Baltics",
-		"imonesimkodas": "302425679",
-		"imonesadresas": "Metalo g. 19A",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "FEGDA",
-		"imonespavadinimas": "UAB Fegda",
-		"imonesimkodas": "110801759",
-		"imonesadresas": "Geologų 12",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Eurovia",
-		"imonespavadinimas": "UAB Eurovia Lietuva",
-		"imonesimkodas": "1111111",
-		"imonesadresas": "Liepkalnio 125",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "EMSI",
-		"imonespavadinimas": "UAB EMSI",
-		"imonesimkodas": "120643955",
-		"imonesadresas": "SAVANORIŲ PR. 225",
-		"imonespvmkodas": " VILNIAUS M."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Ema Vija",
-		"imonespavadinimas": "Ema Vija UAB",
-		"imonesimkodas": "302434888",
-		"imonesadresas": "Verkių 5a-44",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Elfa",
-		"imonespavadinimas": "Sodininkų bendrija Elfa",
-		"imonesimkodas": "191500450",
-		"imonesadresas": "Rokantiškių Sodų 8-oji g. 48",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Elektros tinklo paslaugos",
-		"imonespavadinimas": "Elektros tinklo paslaugos UAB",
-		"imonesimkodas": "300072351",
-		"imonesadresas": "Motorų g. 2",
-		"imonespvmkodas": " LT-02190"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Elektros darbai",
-		"imonespavadinimas": "ELEKTROS DARBAI UAB Vilniaus filialas",
-		"imonesimkodas": "133619018",
-		"imonesadresas": "Mindaugo g. 23",
-		"imonespvmkodas": " 03214 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Elektrokompl",
-		"imonespavadinimas": "ELEKTROKOMPLEKTAS A Šukio firma",
-		"imonesimkodas": "247744890",
-		"imonesadresas": "Vilkpėdės g. 4",
-		"imonespvmkodas": " 03151 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Elektrobalt",
-		"imonespavadinimas": "UAB Elektrobalt",
-		"imonesimkodas": "",
-		"imonesadresas": "Liepkalnio g. 85",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "DZITVA",
-		"imonespavadinimas": "Dzitva UAB",
-		"imonesimkodas": "301491046",
-		"imonesadresas": "Pušyno g. 21",
-		"imonespvmkodas": " Bekupės k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "DS1",
-		"imonespavadinimas": "DS-1 UAB",
-		"imonesimkodas": "181123848",
-		"imonesadresas": "Gedimino g. 30",
-		"imonespvmkodas": " LT-21118 Trakai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Dominga",
-		"imonespavadinimas": "DOMINGOS PREKYBA UAB",
-		"imonesimkodas": "124362368",
-		"imonesadresas": "Vilniaus 4a",
-		"imonespvmkodas": "LT243623610"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Diatomas",
-		"imonespavadinimas": "Diatomas UAB",
-		"imonesimkodas": "222769220",
-		"imonesadresas": "Smolensko g. 17-23",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Defensas",
-		"imonespavadinimas": "UAB Defensas",
-		"imonesimkodas": "302315453",
-		"imonesadresas": "Metalo g. 8",
-		"imonespvmkodas": " LT-02190 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Daskeviciaus",
-		"imonespavadinimas": "T Daškevičius",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Darnios pl inst",
-		"imonespavadinimas": "VšĮ Darnios plėtros institutas",
-		"imonesimkodas": "302794249",
-		"imonesadresas": "302794249",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Daldehog",
-		"imonespavadinimas": "UAB Daldehog",
-		"imonesimkodas": "111491338",
-		"imonesadresas": "Žirmūnų g. 139",
-		"imonespvmkodas": " 09120 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Daiva",
-		"imonespavadinimas": "Daiva Mučinienė",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Cramo",
-		"imonespavadinimas": "CRAMO UAB",
-		"imonesimkodas": "300031995",
-		"imonesadresas": "Lentvario g. 15",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Construktus",
-		"imonespavadinimas": "CONSTRUCTUS UAB"
-	},
-	{
-		"doc": "CONSTRUCTUS UAB",
-		"imonessutrumpkodas": "111472932",
-		"imonespavadinimas": "J.Jasinskio g. 16B",
-		"imonesimkodas": " 01112 VILNIUS",
-		"imonesadresas": " LIETUVA",
-		"imonespvmkodas": "LT114729314"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Conresta",
-		"imonespavadinimas": "UAB Conresta",
-		"imonesimkodas": "145751974",
-		"imonesadresas": "Tuskulėnų g. 33C",
-		"imonespvmkodas": " LT-09219 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Cerara",
-		"imonespavadinimas": "UAB Cerara",
-		"imonesimkodas": "300645477",
-		"imonesadresas": "Vilniaus g. 105",
-		"imonespvmkodas": " Raseiniai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "ccm Baltic",
-		"imonespavadinimas": "UAB CCM Baltic",
-		"imonesimkodas": "145417921",
-		"imonesadresas": "Žalgirio g. 8",
-		"imonespvmkodas": " Šiauliai"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "CCM Balric",
-		"imonespavadinimas": "UAB CCM Baltic",
-		"imonesimkodas": "145417921",
-		"imonesadresas": "Žalgirio g. 8",
-		"imonespvmkodas": " LT-77137"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Būstas",
-		"imonespavadinimas": "NAUJAMIESČIO BŪSTAS UAB",
-		"imonesimkodas": "121452091",
-		"imonesadresas": "Islandijos g. 2",
-		"imonespvmkodas": " 01117 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Bobkatas",
-		"imonespavadinimas": "Bobkatas UAB",
-		"imonesimkodas": "300108915",
-		"imonesadresas": "R. Jankausko g. 6C",
-		"imonespvmkodas": " LT-04310 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Bobcatoma",
-		"imonespavadinimas": "BOBCATOMA UAB",
-		"imonesimkodas": "302337599",
-		"imonesadresas": "Molėtų pl. 137",
-		"imonespvmkodas": " LT-14262"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "BM Baltic",
-		"imonespavadinimas": "BM Baltic UAB",
-		"imonesimkodas": "302594597",
-		"imonesadresas": "Lentvario g. 16",
-		"imonespvmkodas": " LT-02300 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Biovela",
-		"imonespavadinimas": "Biovela UAB",
-		"imonesimkodas": "110647072",
-		"imonesadresas": "Kernavės g. 1",
-		"imonespvmkodas": " Dūkštų k."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Biodegra",
-		"imonespavadinimas": "UAB Biodegra",
-		"imonesimkodas": "123919953",
-		"imonesadresas": "Ateities g. 31",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "Ateities g. 31",
-		"imonessutrumpkodas": " LT-06326 Vilnius",
-		"imonespavadinimas": "LT239199515"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "BIOcentras",
-		"imonespavadinimas": "BIOCENTRAS UAB",
-		"imonesimkodas": "120324587",
-		"imonesadresas": "V.A.Graičiūno g. 10",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Bezdonys",
-		"imonespavadinimas": "Vilniaus r savivaldybės administracija Bezdonių seniūnija",
-		"imonesimkodas": "188702157",
-		"imonesadresas": "Statybininkų g. 9",
-		"imonespvmkodas": " LT-15202"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Betono tech",
-		"imonespavadinimas": "UAB Betono technologijos",
-		"imonesimkodas": "300004852",
-		"imonesadresas": "Adresas: Verslo g. 11",
-		"imonespvmkodas": " Klaipėda"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Bervilna",
-		"imonespavadinimas": "UAB Bervilna",
-		"imonesimkodas": "125983367",
-		"imonesadresas": "A. JAKŠTO G. 11-4",
-		"imonespvmkodas": " VILNIAUS M."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Bendrija",
-		"imonespavadinimas": "Individualių Gyvenamųjų Namų Pupinės K Vilniuje Savininkų Bendrija",
-		"imonesimkodas": "30010871",
-		"imonesadresas": "Sebastijoniškių g. 13",
-		"imonespvmkodas": " Vilniaus m."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "BDT",
-		"imonespavadinimas": "VILNIAUS BETONO DEMONTAVIMO TECHNIKA UAB",
-		"imonesimkodas": "125722762",
-		"imonesadresas": "Šv. Stepono g. 39",
-		"imonespvmkodas": " LT-03210"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Batera",
-		"imonespavadinimas": "Batera UAB",
-		"imonesimkodas": "302435164",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Baltkalis",
-		"imonespavadinimas": "BALTKALIS UAB",
-		"imonesimkodas": "125025140",
-		"imonesadresas": "A.Smetonos g. 6-1",
-		"imonespvmkodas": " Vilnius LT-01115"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Baltissches House",
-		"imonespavadinimas": "BALTISCHES HAUS UAB",
-		"imonesimkodas": "111543781",
-		"imonesadresas": "J.Jasinskio g. 16A",
-		"imonespvmkodas": " 01112 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Azuritas",
-		"imonespavadinimas": "AZURITAS UAB",
-		"imonesimkodas": "2630731",
-		"imonesadresas": "Lentvario g. 16",
-		"imonespvmkodas": " Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Auvis",
-		"imonespavadinimas": "AUVIS UAB",
-		"imonesimkodas": "300051738",
-		"imonesadresas": "V. A. Graičiūno g. 10",
-		"imonespvmkodas": " 02241 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Autoverslas",
-		"imonespavadinimas": "Autoverslas",
-		"imonesimkodas": "",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "August",
-		"imonespavadinimas": "August ir Ko UAB",
-		"imonesimkodas": "124600588",
-		"imonesadresas": "Juodasis kelias 104",
-		"imonespvmkodas": " LT-11307 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Atviri toliai",
-		"imonespavadinimas": "ATVIRI TOLIAI UAB",
-		"imonesimkodas": "300022398",
-		"imonesadresas": "LAISVĖS AL. 102A-18",
-		"imonespvmkodas": " KAUNO M."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Astig",
-		"imonespavadinimas": "Astig UAB",
-		"imonesimkodas": "123098047",
-		"imonesadresas": "Kareivių g. 7",
-		"imonespvmkodas": " LT-09108 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Artūras Vasiliauskas",
-		"imonespavadinimas": "Artūras Vasiliauskas",
-		"imonesimkodas": "",
-		"imonesadresas": "Artūras Vasiliauskas",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Arsdekosta",
-		"imonespavadinimas": "Arsdekosta UAB",
-		"imonesimkodas": "300113887",
-		"imonesadresas": "Bistryčios g. 9-519",
-		"imonespvmkodas": " LT-10320 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Arginta",
-		"imonespavadinimas": "UAB Arginta”",
-		"imonesimkodas": "",
-		"imonesadresas": "Molėtų pl. 71",
-		"imonespvmkodas": " LT-14259 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Ardekosta",
-		"imonespavadinimas": "Arsdekosta UAB",
-		"imonesimkodas": "300113887",
-		"imonesadresas": "Bistryčios g. 9-519",
-		"imonespvmkodas": " LT-10320 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Archyvų sistemos",
-		"imonespavadinimas": "ARCHYVŲ SISTEMOS UAB",
-		"imonesimkodas": "122263236",
-		"imonesadresas": "Žirgų g. 3",
-		"imonespvmkodas": " 14159 GINEITIŠKIŲ K."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Alvora",
-		"imonespavadinimas": "ALVORA UAB",
-		"imonesimkodas": "122049143",
-		"imonesadresas": "Visorių g. 33",
-		"imonespvmkodas": " 08300 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Alnitransa",
-		"imonespavadinimas": "Alnitransa UAB",
-		"imonesimkodas": "178234817",
-		"imonesadresas": "Zibalų g. 43C",
-		"imonespvmkodas": " Širvintų m."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Alkesta",
-		"imonespavadinimas": "Alkesta",
-		"imonesimkodas": "0",
-		"imonesadresas": "",
-		"imonespvmkodas": ""
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Algimanto Radionovo PI",
-		"imonespavadinimas": "Algimanto Radionovo PĮ",
-		"imonesimkodas": "278271040",
-		"imonesadresas": "Aušros g. 7",
-		"imonespvmkodas": " LT-19125 ŠIRVINTOS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Alduva",
-		"imonespavadinimas": "Alduva UAB",
-		"imonesimkodas": "300086828",
-		"imonesadresas": "Savanorių pr. 159A",
-		"imonespvmkodas": " LT-03150 Vilnius"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Akordas",
-		"imonespavadinimas": "AKORDAS R Matulevičienės firma",
-		"imonesimkodas": "120546940",
-		"imonesadresas": "Utenos g. 41A",
-		"imonespvmkodas": " 08217 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Agvysta",
-		"imonespavadinimas": "AGVYSTA UAB",
-		"imonesimkodas": "300130064",
-		"imonesadresas": "V.A.Graičiūno g. 2 a",
-		"imonespvmkodas": " LT-02241"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "Adrem",
-		"imonespavadinimas": "AD REM UAB",
-		"imonesimkodas": "110537569",
-		"imonesadresas": "Metalo g. 2A/7",
-		"imonespvmkodas": " 02190 VILNIUS"
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "A. Žilinskio",
-		"imonespavadinimas": "A ŽILINSKIO ir ko UAB",
-		"imonesimkodas": "158102142",
-		"imonesadresas": "Dainiai",
-		"imonespvmkodas": " Užtvankos g. 17 LT-74202 Jurbarko raj."
-	},
-	{
-		"doc": "imone",
-		"imonessutrumpkodas": "A. Paukstys",
-		"imonespavadinimas": "Arvydas Paukštys",
-		"imonesimkodas": "1359035",
-		"imonesadresas": "Ličiūnų k.",
-		"imonespvmkodas": " Paberžės sen."
-	}
+[{
+        "doc": "imone",
+        "imonessutrumpkodas": "Zita",
+        "imonespavadinimas": "Zita Svetlikauskienė",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Žilinskas",
+        "imonespavadinimas": "Žilinskas ir ko UAB",
+        "imonesimkodas": "1",
+        "imonesadresas": "1",
+        "imonespvmkodas": "1"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Žiežmarių hidro",
+        "imonespavadinimas": "Žiežmarių hidrotechnika UAB",
+        "imonesimkodas": "158972556",
+        "imonesadresas": "Žiežmariai",
+        "imonespvmkodas": " LT-56017 Kaišiadorių r."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Zaliosios girininkija",
+        "imonespavadinimas": "Žaliosios girininkija",
+        "imonesimkodas": "182742796",
+        "imonesadresas": "LT-19153",
+        "imonespvmkodas": " PLIKIŠKIŲ K."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "X-CLUB",
+        "imonespavadinimas": "X CLUB SHOP parduotuvė UAB MODUS OTII",
+        "imonesimkodas": "211801880",
+        "imonesadresas": "Konstitucijos pr. 12",
+        "imonespvmkodas": " 09308 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Wirtgen Vln",
+        "imonespavadinimas": "WIRTGEN LIETUVA UAB",
+        "imonesimkodas": "111642847",
+        "imonesadresas": "Liepkalnio g. 188",
+        "imonespvmkodas": " LT-13242"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Willenbrock",
+        "imonespavadinimas": "WILLENBROCK BALTIC UAB",
+        "imonesimkodas": "300638080",
+        "imonesadresas": "Kirtimų g. 47B",
+        "imonespvmkodas": " LT-02244"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Wavin",
+        "imonespavadinimas": "WAVIN BALTIC UAB",
+        "imonesimkodas": "210734350",
+        "imonesadresas": "Kirtimų g. 45",
+        "imonespvmkodas": " 02244 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "VTRA",
+        "imonespavadinimas": "VTRA",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "VSA",
+        "imonespavadinimas": "VILNIAUS SPECIALUS AUTOTRANSPORTAS AB",
+        "imonesimkodas": "220074960",
+        "imonesadresas": "Laisvės pr. 3",
+        "imonespvmkodas": " 04132 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vokė",
+        "imonespavadinimas": "Sodininkų Bendrija Vokė",
+        "imonesimkodas": "181539063",
+        "imonesadresas": "Vokės Sodų 1-oji g. 109",
+        "imonespvmkodas": " LT-27126 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vygrita",
+        "imonespavadinimas": "UAB Vygrita",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vitras-S",
+        "imonespavadinimas": "VITRAS-S UAB",
+        "imonesimkodas": "301791809",
+        "imonesadresas": "Liudvinavo g. 1E",
+        "imonespvmkodas": " LT-02241"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vitras",
+        "imonespavadinimas": "VITRAS UAB",
+        "imonesimkodas": "121428368",
+        "imonesadresas": "Rasų g. 9",
+        "imonespvmkodas": " 11350 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vitoma",
+        "imonespavadinimas": "Vitoma",
+        "imonesimkodas": "0",
+        "imonesadresas": "0",
+        "imonespvmkodas": "0"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Viti",
+        "imonespavadinimas": "Viti",
+        "imonesimkodas": "1",
+        "imonesadresas": "1",
+        "imonespvmkodas": "1"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Visagino Statybininkai",
+        "imonespavadinimas": "VISAGINO STATYBININKAI VĮ",
+        "imonesimkodas": "110087855",
+        "imonesadresas": "31002 DRŪKŠINIAI VISAGINO SAV.",
+        "imonespvmkodas": " LIETUVA"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Viremidos statyba",
+        "imonespavadinimas": "UAB Viremidos Statyba",
+        "imonesimkodas": "300560888",
+        "imonesadresas": "Mokyklos g. 18A",
+        "imonespvmkodas": " LT-91256 Klaipėda"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vingės terminalas",
+        "imonespavadinimas": "VINGĖS TERMINALAS UAB",
+        "imonesimkodas": "122770150",
+        "imonesadresas": "Minsko pl. 16 km.",
+        "imonespvmkodas": " 02121 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vilniaus sąvartynas",
+        "imonespavadinimas": "UAB Vilniaus sąvartynas",
+        "imonesimkodas": "181705485",
+        "imonesadresas": "Smolensko g. 19/1F",
+        "imonespvmkodas": " LT-03201"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vilmanto statybos",
+        "imonespavadinimas": "UAB Vilmanto statybos",
+        "imonesimkodas": "125758445",
+        "imonesadresas": "Riešės 8A.",
+        "imonespvmkodas": " Rišės k. Vilniaus raj."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vilkpėdės ligoninė",
+        "imonespavadinimas": "VILKPĖDĖS LIGONINĖ VšĮ",
+        "imonesimkodas": "2424532",
+        "imonesadresas": "Vilkpėdės g. 3",
+        "imonespvmkodas": " 03151 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vigasta",
+        "imonespavadinimas": "VIGASTA UAB",
+        "imonesimkodas": "120158350",
+        "imonesadresas": "Dariaus ir Girėno g. 36",
+        "imonespvmkodas": " 02189 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Viadukas",
+        "imonespavadinimas": "VIADUKAS UAB",
+        "imonesimkodas": "111441125",
+        "imonesadresas": "Tunelio g. 4A",
+        "imonespvmkodas": " 03153 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Via MPT",
+        "imonespavadinimas": "VIA MPT UAB",
+        "imonesimkodas": "300794439",
+        "imonesadresas": "Rasų g. 39",
+        "imonespvmkodas": " LT-11351"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Verslo konsultavimas",
+        "imonespavadinimas": "UAB Verslo konsultavimo studija",
+        "imonesimkodas": "302550152",
+        "imonesadresas": "Pramonės g. 97",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Van-Merksteijn",
+        "imonespavadinimas": "UAB Van-Merksteijn Fencing Systems Baltics",
+        "imonesimkodas": "302425679",
+        "imonesadresas": "Kirtimų g. 51a",
+        "imonespvmkodas": " LT-02244"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Vaitesa",
+        "imonespavadinimas": "Vaitesa UAB",
+        "imonesimkodas": "302595763",
+        "imonesadresas": "Ukmergės g. 221",
+        "imonespvmkodas": " LT-07156 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "VAAT",
+        "imonespavadinimas": "UAB VAATC",
+        "imonesimkodas": "181705485",
+        "imonesadresas": "Šeimyniškių g. 15",
+        "imonespvmkodas": " LT-09312 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Utenos Mesa",
+        "imonespavadinimas": "UTENOS MĖSA UAB",
+        "imonesimkodas": "284268020",
+        "imonesadresas": "Pramonės g. 4",
+        "imonespvmkodas": " LT-28216"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Ulkesta",
+        "imonespavadinimas": "Ulkesta",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Tvirta",
+        "imonespavadinimas": "TVIRTA UAB",
+        "imonesimkodas": "300583424",
+        "imonesadresas": "LT-28335",
+        "imonespvmkodas": " PAISETĖS I K. "
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "TUVLITA",
+        "imonespavadinimas": "UAB Tuvlita",
+        "imonesimkodas": "110584095",
+        "imonesadresas": "Lentvario g. 7a",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Trucklita",
+        "imonespavadinimas": "UAB Trucklita",
+        "imonesimkodas": "225899190",
+        "imonesadresas": "Verkių g. 195",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Transmart",
+        "imonespavadinimas": "TRANSMART UAB",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Transekspedicija",
+        "imonespavadinimas": "TRANSEKSPEDICIJA UAB",
+        "imonesimkodas": "120053837",
+        "imonesadresas": "Verkių g. 36",
+        "imonespvmkodas": " 09109 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "traku misku ured",
+        "imonespavadinimas": "VĮ Trakų miškų urėdija",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "touwn group",
+        "imonespavadinimas": "VILNIUS TOWN GROUP UAB",
+        "imonesimkodas": "302247963",
+        "imonesadresas": "Gurių Sodų 33-ioji g. 26",
+        "imonespvmkodas": " LT-11310"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Tinklai",
+        "imonespavadinimas": "INŽINERINIAI TINKLAI UAB",
+        "imonesimkodas": "133165398",
+        "imonesadresas": "Draugystės g. 8H",
+        "imonespvmkodas": " 51264 KAUNAS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Tilsta",
+        "imonespavadinimas": "TILSTA tiltų statybos UAB",
+        "imonesimkodas": "2147732",
+        "imonesadresas": "Granito g. 6",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Teronis",
+        "imonespavadinimas": "TERONIS UAB",
+        "imonesimkodas": "122733166",
+        "imonesadresas": "Pelesos g. 3",
+        "imonespvmkodas": " LT-02115"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Teniso kortai",
+        "imonespavadinimas": "Teniso kortai",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Telekonta",
+        "imonespavadinimas": "UAB TELEKONTA“",
+        "imonesimkodas": "144803197",
+        "imonesadresas": "Žemaitės g. 17",
+        "imonespvmkodas": " LT-03118 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Teatralas",
+        "imonespavadinimas": "Sodininkų bendrija Teatralas",
+        "imonesimkodas": "191498871",
+        "imonesadresas": "PYLIMĖLIŲ G. 1",
+        "imonespvmkodas": " VILNIAUS M."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Svytejimas",
+        "imonespavadinimas": "ŠVYTĖJIMAS UAB",
+        "imonesimkodas": "123017127",
+        "imonesadresas": "Kalno g. 10",
+        "imonespvmkodas": " LT-15174"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Švaros era",
+        "imonespavadinimas": "ŠVAROS ERA UAB"
+    },
+    {
+        "doc": "ŠVAROS ERA UAB",
+        "imonessutrumpkodas": "163747575",
+        "imonespavadinimas": "Statybininkų g. 13",
+        "imonesimkodas": " 85305 VENTA AKMENĖS r.",
+        "imonesadresas": "100001002812"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Sunkrida",
+        "imonespavadinimas": "SUNKRIDA A Knystauto įmonė",
+        "imonesimkodas": "2515491",
+        "imonesadresas": "Kalvarijų g. 124",
+        "imonespvmkodas": " 08211 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Stiebasta",
+        "imonespavadinimas": "STIEBASTA UAB",
+        "imonesimkodas": "300521166",
+        "imonesadresas": "Ateities g. 21",
+        "imonespvmkodas": " 06326 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Stiebas",
+        "imonespavadinimas": "STIEBAS UAB",
+        "imonesimkodas": "121312634",
+        "imonesadresas": "Ateities g. 21",
+        "imonespvmkodas": " 06326 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Stebulė",
+        "imonespavadinimas": "STEBULĖ UAB",
+        "imonesimkodas": "122211549",
+        "imonesadresas": "Eišiškių pl. 127",
+        "imonespvmkodas": " LT-02184 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Statoil",
+        "imonespavadinimas": "LIETUVA STATOIL UAB",
+        "imonesimkodas": "211454910",
+        "imonesadresas": "J.Jasinskio g. 16A",
+        "imonespvmkodas": " 01112 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Statybų Palaetė",
+        "imonespavadinimas": "UAB Statybų Paletė",
+        "imonesimkodas": "300107222",
+        "imonesadresas": "Ateities g. 10",
+        "imonespvmkodas": " LT-08303"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Statyba",
+        "imonespavadinimas": "UAB Statyba",
+        "imonesimkodas": "161104559",
+        "imonesadresas": "A. Mickevičiaus g. 48",
+        "imonespvmkodas": " 57174 Kėdainiai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Stanmotors",
+        "imonespavadinimas": "STANMOTORS UAB",
+        "imonesimkodas": "186748362",
+        "imonesadresas": "Rasų g. 39",
+        "imonespvmkodas": " LT-11351"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Stamecha",
+        "imonespavadinimas": "STAMECHA UAB",
+        "imonesimkodas": "110682397",
+        "imonesadresas": "Panerių g. 49",
+        "imonespvmkodas": " LT- 03202 VILNIUS - (5) 2040208"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Stamas",
+        "imonespavadinimas": "STAMAS UAB",
+        "imonesimkodas": "123015795",
+        "imonesadresas": "Meistrų g. 9",
+        "imonespvmkodas": " 02189 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Spindys",
+        "imonespavadinimas": "SPINDYS UAB",
+        "imonesimkodas": "121504054",
+        "imonesadresas": "Geologų g. 12A",
+        "imonespvmkodas": " 02190 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Spec. Mechanizmai",
+        "imonespavadinimas": "UAB Specialieji mechanizmai",
+        "imonesimkodas": "0",
+        "imonesadresas": "Žirnių g. 4",
+        "imonespvmkodas": " Vilniaus m."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Sostines gatvės",
+        "imonespavadinimas": "SOSTINĖS GATVĖS UAB",
+        "imonesimkodas": "123037158",
+        "imonesadresas": "Kuršių g. 2",
+        "imonespvmkodas": " 03153 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Sostinės centras",
+        "imonespavadinimas": "SOSTINĖS TURGUS UAB SOSTINĖS CENTRAS",
+        "imonesimkodas": "0",
+        "imonesadresas": "Kalvarijų g. 88",
+        "imonespvmkodas": " Vilniaus m."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Soltra",
+        "imonespavadinimas": "Soltra UAB",
+        "imonesimkodas": "110561716",
+        "imonesadresas": "Ostruvkos k.",
+        "imonespvmkodas": " LT-21142 Trakų r."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Skuba",
+        "imonespavadinimas": "SKUBA UAB",
+        "imonesimkodas": "121559428",
+        "imonesadresas": "V.A.Graičiūno g. 36",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Skalda",
+        "imonespavadinimas": "Granitinė skalda",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Silikatas",
+        "imonespavadinimas": "SILIKATAS AB",
+        "imonesimkodas": "2196876",
+        "imonesadresas": "Savanorių pr. 124",
+        "imonespvmkodas": " 03153 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Šiaulių pl.",
+        "imonespavadinimas": "Šiaulių plentas UAB",
+        "imonesimkodas": "244693070",
+        "imonesadresas": "Išradėjų g. 11",
+        "imonespvmkodas": " LT-78149 Šiauliai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Savartynas",
+        "imonespavadinimas": "Vilniaus Sąvartynas",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Saulius Antanas",
+        "imonespavadinimas": "Saulius Antanas Vilutis",
+        "imonesimkodas": "3450623",
+        "imonesadresas": "Vanagiškių 7",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Šarūnas",
+        "imonespavadinimas": "ŠARŪNAS viešbutis",
+        "imonesimkodas": "111501145",
+        "imonesadresas": "Raitininkų g. 4",
+        "imonespvmkodas": " 09200 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Salniko",
+        "imonespavadinimas": "SALNIKO UAB",
+        "imonesimkodas": "186485146",
+        "imonesadresas": "LT-14119",
+        "imonespvmkodas": " PAGIRIAI"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Salcininku statyba",
+        "imonespavadinimas": "ŠALČININKŲ STATYBA UAB",
+        "imonesimkodas": "174986975",
+        "imonesadresas": "Jubiliejinė g. 12",
+        "imonespvmkodas": " LT-17117"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Rukainiu sen",
+        "imonespavadinimas": "Vilniaus r Sav Administracija Rukainių sen",
+        "imonesimkodas": "8870401",
+        "imonesadresas": "Mokytojų g. 7",
+        "imonespvmkodas": " Rukainiai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Rudamina sen.",
+        "imonespavadinimas": "RUDAMINOS SENIŪNIJA Vilniaus rajono savivaldybės administracija",
+        "imonesimkodas": "188703978",
+        "imonesadresas": "Vilniaus g. 4",
+        "imonespvmkodas": " Rudaminos k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Rodsta",
+        "imonespavadinimas": "UAB Rodsta",
+        "imonesimkodas": "302422462",
+        "imonesadresas": "Viršuliškių g. 35-94",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Roberto santechnika",
+        "imonespavadinimas": "UAB Roberto santechnika",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Roberto sant",
+        "imonespavadinimas": "UAB Roberto santechnika",
+        "imonesimkodas": "300961532",
+        "imonesadresas": "DANĖS G. 15",
+        "imonespvmkodas": " KLAIPĖDOS M."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Rytra",
+        "imonespavadinimas": "RYTRA UAB",
+        "imonesimkodas": "300072305",
+        "imonesadresas": "Geologų g. 16",
+        "imonespvmkodas": " 02190 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Ripeta",
+        "imonespavadinimas": "RIPETA R Petkūno firma",
+        "imonesimkodas": "121573043",
+        "imonesadresas": "Mokyklos g. 38A",
+        "imonespvmkodas": " 08414 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Rimas",
+        "imonespavadinimas": "Rimas Kazlauskas",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Rietona",
+        "imonespavadinimas": "UAB RIETONA",
+        "imonesimkodas": "124890077",
+        "imonesadresas": "Asavos g. 3",
+        "imonespvmkodas": " Vilniaus m."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Riešė",
+        "imonespavadinimas": "Riešės seniūnija",
+        "imonesimkodas": "188703825",
+        "imonesadresas": "Molėtų g. 16",
+        "imonespvmkodas": " 14260 DIDŽIOJI RIEŠĖ VILNIAUS R"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "rekreacine statyba",
+        "imonespavadinimas": "Rekreacinė statyba UAB",
+        "imonesimkodas": "120932575",
+        "imonesadresas": "Laisvės pr. 77-201",
+        "imonespvmkodas": " LT-00122 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Regroup",
+        "imonespavadinimas": "UAB CFA STATYBA",
+        "imonesimkodas": "300615473",
+        "imonesadresas": "Lukiškių g. 5-512",
+        "imonespvmkodas": " LT-01108 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "regiono keliai",
+        "imonespavadinimas": "VILNIAUS REGIONO KELIAI VĮ Trakų kelių tarnyba",
+        "imonesimkodas": "120056751",
+        "imonesadresas": "Senkelio g. 13",
+        "imonespvmkodas": " 21107 TRAKAI"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "RANGAVA",
+        "imonespavadinimas": "RANGAVA UAB",
+        "imonesimkodas": "124556177",
+        "imonesadresas": "Ateities g. 21",
+        "imonespvmkodas": " 06326 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Ranga IV",
+        "imonespavadinimas": "RANGA IV UAB",
+        "imonesimkodas": "120715568",
+        "imonesadresas": "A.Goštauto g. 12A",
+        "imonespvmkodas": " 01108 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Ramirent",
+        "imonespavadinimas": "RAMIRENT Baltic AS Vilniaus filialas",
+        "imonesimkodas": "302431034",
+        "imonesadresas": "Titnago 19"
+    },
+    {
+        "doc": "Titnago g. 19",
+        "imonessutrumpkodas": " Vilnius LT-02300",
+        "imonespavadinimas": "LT100005061517"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Radzevicius",
+        "imonespavadinimas": "Radzevičius",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Punktyras",
+        "imonespavadinimas": "UAB Punktyras",
+        "imonesimkodas": "123631730",
+        "imonesadresas": "A.V.Graičiūno g. 24 LT-02241 Vilnius",
+        "imonespvmkodas": " Lietuva"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "PST",
+        "imonespavadinimas": "AB Panevėžio statybos trestas filialas Konstrukcija",
+        "imonesimkodas": "303342873",
+        "imonesadresas": "Tinklų g. 7",
+        "imonespvmkodas": " LT-35115 Panevėžys"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Prosperas",
+        "imonespavadinimas": "PROSPERAS UAB",
+        "imonesimkodas": "8622196",
+        "imonesadresas": "V.Maciulevičiaus g. 51",
+        "imonespvmkodas": " 04310 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Projektana",
+        "imonespavadinimas": "Projektana UAB",
+        "imonesimkodas": "135738747",
+        "imonesadresas": "Chemijos g. 13A",
+        "imonespvmkodas": " LT-51331 Kaunas"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Privatus asmuo",
+        "imonespavadinimas": "Privatus asmuo",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Pramones Energija",
+        "imonespavadinimas": "Pramonės Energija UAB",
+        "imonesimkodas": "300073802",
+        "imonesadresas": "Jogailos g. 4",
+        "imonespvmkodas": " LT-01116 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Požeminiai darbai",
+        "imonespavadinimas": "POŽEMINIAI DARBAI UAB",
+        "imonesimkodas": "133393277",
+        "imonesadresas": "Lazdijų g. 20",
+        "imonespvmkodas": " 46393 KAUNAS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Pimpis Kestutis",
+        "imonespavadinimas": "Pimpis Kęstutis",
+        "imonesimkodas": "3651026",
+        "imonesadresas": "Upelio g. 20-1",
+        "imonespvmkodas": " Širvintos"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "perdanaga",
+        "imonespavadinimas": "PERDANGA UAB Vilniaus cechas",
+        "imonesimkodas": "40518030",
+        "imonesadresas": "Lentvario g. 16",
+        "imonespvmkodas": " 02241 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Papiskiu karj.",
+        "imonespavadinimas": "Papiškių karjeras UAB",
+        "imonesimkodas": "304033328",
+        "imonesadresas": "Manufaktūrų g. 7",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "panevėžio keliai",
+        "imonespavadinimas": "PANEVĖŽIO KELIAI AB",
+        "imonesimkodas": "147710353",
+        "imonesadresas": "S.Kerbedžio g. 7",
+        "imonespvmkodas": " 35104 PANEVĖŽYS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Paneriu stotis",
+        "imonespavadinimas": "Panerių geležinkelio stotis AB Lietuvos Geležinkleiai",
+        "imonesimkodas": "110053842",
+        "imonesadresas": "Agrastų g. 5",
+        "imonespvmkodas": " LT-02243 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "PALIUTIS",
+        "imonespavadinimas": "UAB PALIŪTIS",
+        "imonesimkodas": "223397680",
+        "imonesadresas": "Žirnių g. 6",
+        "imonespvmkodas": " LT 02120 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Pagirių seniūnija",
+        "imonespavadinimas": "Pagirių sen",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "ORO Uostas",
+        "imonespavadinimas": "VĮ Tarptautinis Vilniaus oro uostas",
+        "imonesimkodas": "120864074",
+        "imonesadresas": "Rodiūnios kelias 10a",
+        "imonespvmkodas": " LT-02189"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Oksata",
+        "imonespavadinimas": "OKSATA UAB",
+        "imonesimkodas": "181308989",
+        "imonesadresas": "Kauno g. 36-221",
+        "imonespvmkodas": " LT-03202"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Nova",
+        "imonespavadinimas": "NOVA UAB",
+        "imonesimkodas": "180106568",
+        "imonesadresas": "Mažeikių g. 2",
+        "imonespvmkodas": " 87101 TELŠIAI"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Nesta",
+        "imonespavadinimas": "Pagirių Nesta UAB",
+        "imonesimkodas": "286458260",
+        "imonesadresas": "Pagiriai",
+        "imonespvmkodas": " LT-14119 Vilniaus r."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Nerstalita",
+        "imonespavadinimas": "Nerstalita UAB",
+        "imonesimkodas": "303025823",
+        "imonesadresas": "Urėdijos g. 4",
+        "imonespvmkodas": " Kaišiadorys"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Nemėžio sen",
+        "imonespavadinimas": "Nemėžio Seniūnija Vilniaus Rajono Savivaldybės Administracija",
+        "imonesimkodas": "188703597",
+        "imonesadresas": "Nemėžio k.",
+        "imonespvmkodas": " LT-13260 Vilniaus r."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Narbutas",
+        "imonespavadinimas": "NARBUTAS IR KO UAB",
+        "imonesimkodas": "123406623",
+        "imonesadresas": "Metalo g. 11 /10",
+        "imonespvmkodas": " 02190 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "MRS",
+        "imonespavadinimas": "UAB MRS",
+        "imonesimkodas": "300083515",
+        "imonesadresas": "Naujoji g. 2D",
+        "imonespvmkodas": " Alytus"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Montuotojas",
+        "imonespavadinimas": "MONTUOTOJAS AB montavimo firma Vilniuje",
+        "imonesimkodas": "123642374",
+        "imonesadresas": "Eišiškių pl. 36 /7",
+        "imonespvmkodas": " 02184 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Mitnija",
+        "imonespavadinimas": "UAB Mitnija",
+        "imonesimkodas": "134511472",
+        "imonesadresas": "Palemono g. 3",
+        "imonespvmkodas": " Kaunas"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Miškinių karjeras",
+        "imonespavadinimas": "UAB Miškinių karjeras",
+        "imonesimkodas": "302290719",
+        "imonesadresas": "Paplaujos g. 7",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Mintranseta",
+        "imonespavadinimas": "MINTRANSETA IĮ",
+        "imonesimkodas": "122676637",
+        "imonesadresas": "Žarijų g. 2A",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Metransa",
+        "imonespavadinimas": "METRANSA UAB",
+        "imonesimkodas": "125521955",
+        "imonesadresas": "V. A. Graičiūno g. 10A",
+        "imonespvmkodas": " LT-02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Merko",
+        "imonespavadinimas": "UAB MERKO STATYBA",
+        "imonesimkodas": "111610080",
+        "imonesadresas": "Laisvės pr. 3",
+        "imonespvmkodas": " LT-04215"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Medmeta",
+        "imonespavadinimas": "MEDMETA IR PARTNERIAI UAB",
+        "imonesimkodas": "300084243",
+        "imonesadresas": "R. Kalantos g. 59",
+        "imonespvmkodas": " LT-52304"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Medimeta",
+        "imonespavadinimas": "MEDIMETA UAB",
+        "imonesimkodas": "134556019",
+        "imonesadresas": "Metalo g. 7",
+        "imonespvmkodas": " LT-02190"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Mecro",
+        "imonespavadinimas": "Įrankių centras Stokker UAB Mecro technikonas",
+        "imonesimkodas": "211660860",
+        "imonesadresas": "Savanorių pr. 119",
+        "imonespvmkodas": " LT-03150 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Markučiai",
+        "imonespavadinimas": "MARKUČIAI UAB"
+    },
+    {
+        "doc": "MARKUČIAI UAB",
+        "imonessutrumpkodas": "121559766",
+        "imonespavadinimas": "Paplaujos g. 7",
+        "imonesimkodas": " 11342 VILNIUS",
+        "imonesadresas": " LIETUVA",
+        "imonespvmkodas": "LT100000009017"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Marijampolis",
+        "imonespavadinimas": "Marijampolio Seniūnija Vilniaus Rajono Savivaldybės Administracija",
+        "imonesimkodas": "188702919",
+        "imonesadresas": "Liepų g. 24",
+        "imonespvmkodas": " Marijampolio k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Mantra",
+        "imonespavadinimas": "MANTRA UAB",
+        "imonesimkodas": "300038769",
+        "imonesadresas": "Žarijų g. 6",
+        "imonespvmkodas": " LT-02300"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Lucija",
+        "imonespavadinimas": "Lucija Jakovič",
+        "imonesimkodas": "",
+        "imonesadresas": "Viršupio sodų 18-16",
+        "imonespvmkodas": " Vilnius."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "LKW Tiekimas",
+        "imonespavadinimas": "UAB LKW TIEKIMAS",
+        "imonesimkodas": "302540489",
+        "imonesadresas": "Savanorių 219",
+        "imonespvmkodas": " LT02300 Vilnius."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Lindstrom",
+        "imonespavadinimas": "LINDSTROM UAB",
+        "imonesimkodas": "111618732",
+        "imonesadresas": "Savanorių pr. 183",
+        "imonespvmkodas": " 02300 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Lina",
+        "imonespavadinimas": "LINA UAB prekybos namai",
+        "imonesimkodas": "2014987",
+        "imonesadresas": "Žalgirio g. 90-505",
+        "imonespvmkodas": " 09303 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Liktrans",
+        "imonespavadinimas": "UAB Liktrans",
+        "imonesimkodas": "301540881",
+        "imonesadresas": "Kirtimų g. 61",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Lenciva",
+        "imonespavadinimas": "Lenciva"
+    },
+    {
+        "doc": "UAB LENCIVA",
+        "imonessutrumpkodas": "186237617",
+        "imonespavadinimas": "ŽALIAKALNIO SODŲ 2-OJI G. 13",
+        "imonesimkodas": " VILNIAUS M.",
+        "imonesadresas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Lemminkainen",
+        "imonespavadinimas": "LEMMINKAINEN LIETUVA UAB",
+        "imonesimkodas": "122657512",
+        "imonesadresas": "Granito g. 4",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Lakaja",
+        "imonespavadinimas": "UAB Lakaja",
+        "imonesimkodas": "167535057",
+        "imonesadresas": "Melioratorių g. 2b",
+        "imonespvmkodas": " LT-33118 Molėtai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "LAYHER BALTIC",
+        "imonespavadinimas": "LAYHER BALTIC UAB",
+        "imonesimkodas": "300855874",
+        "imonesadresas": "Šiltnamių g. 30",
+        "imonespvmkodas": " LT-04130 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "KRS",
+        "imonespavadinimas": "KRS UAB",
+        "imonesimkodas": "133630961",
+        "imonesadresas": "Draugystės g. 15A",
+        "imonespvmkodas": " 51227 KAUNAS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Krivicko IĮ",
+        "imonespavadinimas": "Deimanto Krivicko IĮ",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Krivickas",
+        "imonespavadinimas": "Deimantas Krivickas IĮ",
+        "imonesimkodas": "124413186",
+        "imonesadresas": "Kalvų g. 44",
+        "imonespvmkodas": " Riešė"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kotryna",
+        "imonespavadinimas": "KOTRYNA UAB",
+        "imonesimkodas": "121673734",
+        "imonesadresas": "Dariaus ir Girėno g. 34",
+        "imonespvmkodas": " LT-02189"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Konstra",
+        "imonespavadinimas": "Konstra UAB",
+        "imonesimkodas": "302638944",
+        "imonesadresas": "Darželio g. 1",
+        "imonespvmkodas": " Jakutiškių k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Konekesko",
+        "imonespavadinimas": "Konekesko Lietuva UAB",
+        "imonesimkodas": "111750538",
+        "imonesadresas": "Molėtų g. 13",
+        "imonespvmkodas": " Didžiosios Riešės k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Komunalinis ūkis",
+        "imonespavadinimas": "Širvintų komunalinis ūkis UAB",
+        "imonesimkodas": "178200576",
+        "imonesadresas": "Plento g. 3",
+        "imonespvmkodas": " LT-19117 Širvintos"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kloniai",
+        "imonespavadinimas": "Sodų bendrija Kloniai",
+        "imonesimkodas": "300044761",
+        "imonesadresas": "Vilniaus r. sav. Klonių k.",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Klevas",
+        "imonespavadinimas": "Sodininkų bendrija KLEVAS",
+        "imonesimkodas": "191735651",
+        "imonesadresas": "ŽIRMŪNŲ G. 117-34",
+        "imonespvmkodas": " VILNIAUS M."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kerista",
+        "imonespavadinimas": "KERISTA UAB",
+        "imonesimkodas": "122635779",
+        "imonesadresas": "Geologų g. 11",
+        "imonespvmkodas": " 02190 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Keluva",
+        "imonespavadinimas": "KELUVA UAB",
+        "imonesimkodas": "121543961",
+        "imonesadresas": "Liepkalnio g. 83A",
+        "imonespvmkodas": " 02120 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kelstata",
+        "imonespavadinimas": "Kelstata UAB",
+        "imonesimkodas": "302507375",
+        "imonesadresas": "Saltoniškių g. 29 / Sėlių g. 3",
+        "imonespvmkodas": " LT-08105 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Keliu masinos",
+        "imonespavadinimas": "Kauno g 36-221 LT- 03202 VILNIUS",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kelda",
+        "imonespavadinimas": "KELDA UAB",
+        "imonesimkodas": "181259645",
+        "imonesadresas": "Kauno g. 14",
+        "imonespvmkodas": " 21372 VIEVIS ELEKTRĖNŲ SAV."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "kavaliauskas",
+        "imonespavadinimas": "Kavaliauskas",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kauno Tiltai",
+        "imonespavadinimas": "KAUNO TILTAI AB",
+        "imonesimkodas": "133729589",
+        "imonesadresas": "Ateities pl. 46",
+        "imonespvmkodas": " 52502 KAUNAS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kauno keliai",
+        "imonespavadinimas": "UAB Kauno keliai",
+        "imonesimkodas": "135640993",
+        "imonesadresas": "R. Kalantos g. 85",
+        "imonespvmkodas": " LT-52310 Kaunas"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kasyba",
+        "imonespavadinimas": "UAB Kasyba",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "kanalu valymas",
+        "imonespavadinimas": "KANALŲ VALYMAS UAB",
+        "imonesimkodas": "120894441",
+        "imonesadresas": "Aušros g. 18",
+        "imonespvmkodas": " 13248 RUDAMINA"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Kamitra",
+        "imonespavadinimas": "KAMITRA IR KO UAB",
+        "imonesimkodas": "2624759",
+        "imonesadresas": "Metalo g. 6A",
+        "imonespvmkodas": " 02190 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Jurgena",
+        "imonespavadinimas": "Jurgena UAB",
+        "imonesimkodas": "122769753",
+        "imonesadresas": "Gariūnų g. 68",
+        "imonespvmkodas": " LT-02300 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Juodasis Gandras",
+        "imonespavadinimas": "UAB Juodasis Gandras",
+        "imonesimkodas": "274962690",
+        "imonesadresas": "Vilniaus g. 6",
+        "imonespvmkodas": " Baltoji Vokė"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Juknevičiaus",
+        "imonespavadinimas": "Juknevičiaus Kompostas UAB",
+        "imonesimkodas": "122983846",
+        "imonesadresas": "Ukmergės g. 206-68",
+        "imonespvmkodas": " Vilnius LT-07167"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Jėgos Linija",
+        "imonespavadinimas": "JĖGOS LINIJA UAB",
+        "imonesimkodas": "123475384",
+        "imonesadresas": "Pažagiškių g. 45",
+        "imonespvmkodas": " LT-04125 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "YIT Kausta2",
+        "imonespavadinimas": "AB YIT Kausta2",
+        "imonesimkodas": "",
+        "imonesadresas": "Naglio g. 4A",
+        "imonespvmkodas": " 52600 Kaunas"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "YIT Kausta1",
+        "imonespavadinimas": "AB YIT Kausta1",
+        "imonesimkodas": "",
+        "imonesadresas": "Naglio g. 4A",
+        "imonespvmkodas": " 52600 Kaunas"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Yglė",
+        "imonespavadinimas": "UAB Yglė",
+        "imonesimkodas": "123444143",
+        "imonesadresas": "Ozo g. 10",
+        "imonespvmkodas": " LT-08200"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Y",
+        "imonespavadinimas": "A Gribulis",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Irek Baltic",
+        "imonespavadinimas": "Irek Baltic",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Inžinerinė statyba",
+        "imonespavadinimas": "INŽINERINĖ STATYBA UAB",
+        "imonesimkodas": "110684971",
+        "imonesadresas": "Švitrigailos g. 7 /16",
+        "imonespvmkodas": " 03110 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Intrac",
+        "imonespavadinimas": "INTRAC LIETUVA UAB",
+        "imonesimkodas": "111713162",
+        "imonesadresas": "Dariaus ir Girėno g. 39",
+        "imonespvmkodas": " 02189 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "IKEA",
+        "imonespavadinimas": "IKEA",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Idėjų generatorius",
+        "imonespavadinimas": "IDĖJŲ GENERATORIUS UAB",
+        "imonesimkodas": "126264556",
+        "imonesadresas": "Vilkpėdės g. 8",
+        "imonespvmkodas": " 03151 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Holsta",
+        "imonespavadinimas": "HOLSTA UAB",
+        "imonesimkodas": "111491338",
+        "imonesadresas": "Žirmūnų g. 139",
+        "imonespvmkodas": " LT-09120"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Hidromontaz",
+        "imonespavadinimas": "UAB Kijevhidromontaž",
+        "imonesimkodas": "1114847110",
+        "imonesadresas": "Sodų g. 12-18",
+        "imonespvmkodas": " Elektrėnai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "HC Betonas",
+        "imonespavadinimas": "HC Betonas UAB",
+        "imonesimkodas": "304102190",
+        "imonesadresas": "Technikos g. 7K",
+        "imonespvmkodas": " LT-51209 Kaunas"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Hansa flex",
+        "imonespavadinimas": "HANSA FLEX HIDRAULINĖS JUNGTYS UAB",
+        "imonesimkodas": "110776462",
+        "imonesadresas": "Naugarduko g. 96",
+        "imonespvmkodas": " 03202 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Hanner",
+        "imonespavadinimas": "HANNER AB",
+        "imonesimkodas": "111535724",
+        "imonesadresas": "Konstitucijos pr. 7",
+        "imonespvmkodas": " 09308 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Grundolita",
+        "imonespavadinimas": "GRUNDOLITA UAB",
+        "imonesimkodas": "122760619",
+        "imonesadresas": "Žirnių g. 12",
+        "imonespvmkodas": " 02120 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Grinduva",
+        "imonespavadinimas": "Grinduva Lietuvos ir Čekijos UAB",
+        "imonesimkodas": "149937378",
+        "imonesadresas": "Kepyklos g. 15",
+        "imonespvmkodas": " LT-62117 Alytus"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Grinda",
+        "imonespavadinimas": "GRINDA UAB",
+        "imonesimkodas": "120153047",
+        "imonesadresas": "Liepkalnio g. 101",
+        "imonespvmkodas": " 02121 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Grigiškės",
+        "imonespavadinimas": "GRIGIŠKĖS AB",
+        "imonesimkodas": "110012450",
+        "imonesadresas": "Vilniaus g. 10",
+        "imonespvmkodas": " 27101 GRIGIŠKĖS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gintautas Kūlokas",
+        "imonespavadinimas": "Gintautas Kūlokas",
+        "imonesimkodas": "",
+        "imonesadresas": "Marijampolė",
+        "imonespvmkodas": " Krevos g. 38"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gevalda",
+        "imonespavadinimas": "GEVALDA UAB",
+        "imonesimkodas": "302592895",
+        "imonesadresas": "Veisiejų g. 15-24",
+        "imonespvmkodas": " LT-66211"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Geruda",
+        "imonespavadinimas": "Geruda UAB - Gariūnų automobilių turgus",
+        "imonesimkodas": "122043119",
+        "imonesadresas": "Gariūnų g. 71",
+        "imonespvmkodas": " LT-02242 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gerbuvita",
+        "imonespavadinimas": "UAB Gerbuvita",
+        "imonesimkodas": "302684190",
+        "imonesadresas": "J. Kolaso g. 33-1",
+        "imonespvmkodas": " LT-11306 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gerbusta",
+        "imonespavadinimas": "GERBUSTA AB PANEVĖŽIO STATYBOS TRESTAS filialas",
+        "imonesimkodas": "148001312",
+        "imonesadresas": "S. Kerbedžio g. 54",
+        "imonespvmkodas": " LT-35113"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Geodana",
+        "imonespavadinimas": "UAB Geodena",
+        "imonesimkodas": "300625122",
+        "imonesadresas": "Salomėjos Nėries g. 95-108",
+        "imonespvmkodas": " LT-06333 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gatviu statyba",
+        "imonespavadinimas": "GATVIŲ STATYBA UAB",
+        "imonesimkodas": "122570826",
+        "imonesadresas": "Panerių g. 12",
+        "imonespvmkodas": " LT-03209 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gasta",
+        "imonespavadinimas": "Gasta UAB",
+        "imonesimkodas": "122569852",
+        "imonesadresas": "Savanorių pr. 247",
+        "imonespvmkodas": " Gariūnų karjeras"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Garsu pasaulis",
+        "imonespavadinimas": "GARSŲ PASAULIS UAB",
+        "imonesimkodas": "122666714",
+        "imonesadresas": "S. Nėries g. 69",
+        "imonespvmkodas": " 06304 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gariūnai",
+        "imonespavadinimas": "Gariūnai",
+        "imonesimkodas": "",
+        "imonesadresas": "Vilnius",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Gamtovaizdis",
+        "imonespavadinimas": "Gamtovaizdis UAB",
+        "imonesimkodas": "124825528",
+        "imonesadresas": "Kareivių g. 9A",
+        "imonespvmkodas": " LT-09108 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Galuotas",
+        "imonespavadinimas": "GALUOTAS UAB",
+        "imonesimkodas": "123019288",
+        "imonesadresas": "Dariaus ir Girėno g. 81",
+        "imonespvmkodas": " 02189 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "G. Zubrickas",
+        "imonespavadinimas": "G Zubricko firma",
+        "imonesimkodas": "165215763",
+        "imonesadresas": "Žalioji g. 2",
+        "imonespvmkodas": " Teizų k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Futbolo perspektyvos",
+        "imonespavadinimas": "Futbolo perspektyvos",
+        "imonesimkodas": "0",
+        "imonesadresas": ".",
+        "imonespvmkodas": "0"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Frizas",
+        "imonespavadinimas": "Frizas statybos ir remonto UAB",
+        "imonesimkodas": "120503693",
+        "imonesadresas": "Metalo g. 13B",
+        "imonespvmkodas": " LT-02190 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Frerot",
+        "imonespavadinimas": "FREOR LT UAB",
+        "imonesimkodas": "125406166",
+        "imonesadresas": "Motorų g. 6",
+        "imonespvmkodas": " LT-02190 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Forsazo mirazas",
+        "imonespavadinimas": "FORSAŽO MIRAŽAS UAB",
+        "imonesimkodas": "123591741",
+        "imonesadresas": "Pakraščio g. 10",
+        "imonespvmkodas": " 11342 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Fencing",
+        "imonespavadinimas": "UAB Van Merksteijn Fencing Systems Baltics",
+        "imonesimkodas": "302425679",
+        "imonesadresas": "Metalo g. 19A",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "FEGDA",
+        "imonespavadinimas": "UAB Fegda",
+        "imonesimkodas": "110801759",
+        "imonesadresas": "Geologų 12",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Eurovia",
+        "imonespavadinimas": "UAB Eurovia Lietuva",
+        "imonesimkodas": "1111111",
+        "imonesadresas": "Liepkalnio 125",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "EMSI",
+        "imonespavadinimas": "UAB EMSI",
+        "imonesimkodas": "120643955",
+        "imonesadresas": "SAVANORIŲ PR. 225",
+        "imonespvmkodas": " VILNIAUS M."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Ema Vija",
+        "imonespavadinimas": "Ema Vija UAB",
+        "imonesimkodas": "302434888",
+        "imonesadresas": "Verkių 5a-44",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Elfa",
+        "imonespavadinimas": "Sodininkų bendrija Elfa",
+        "imonesimkodas": "191500450",
+        "imonesadresas": "Rokantiškių Sodų 8-oji g. 48",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Elektros tinklo paslaugos",
+        "imonespavadinimas": "Elektros tinklo paslaugos UAB",
+        "imonesimkodas": "300072351",
+        "imonesadresas": "Motorų g. 2",
+        "imonespvmkodas": " LT-02190"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Elektros darbai",
+        "imonespavadinimas": "ELEKTROS DARBAI UAB Vilniaus filialas",
+        "imonesimkodas": "133619018",
+        "imonesadresas": "Mindaugo g. 23",
+        "imonespvmkodas": " 03214 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Elektrokompl",
+        "imonespavadinimas": "ELEKTROKOMPLEKTAS A Šukio firma",
+        "imonesimkodas": "247744890",
+        "imonesadresas": "Vilkpėdės g. 4",
+        "imonespvmkodas": " 03151 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Elektrobalt",
+        "imonespavadinimas": "UAB Elektrobalt",
+        "imonesimkodas": "",
+        "imonesadresas": "Liepkalnio g. 85",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "DZITVA",
+        "imonespavadinimas": "Dzitva UAB",
+        "imonesimkodas": "301491046",
+        "imonesadresas": "Pušyno g. 21",
+        "imonespvmkodas": " Bekupės k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "DS1",
+        "imonespavadinimas": "DS-1 UAB",
+        "imonesimkodas": "181123848",
+        "imonesadresas": "Gedimino g. 30",
+        "imonespvmkodas": " LT-21118 Trakai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Dominga",
+        "imonespavadinimas": "DOMINGOS PREKYBA UAB",
+        "imonesimkodas": "124362368",
+        "imonesadresas": "Vilniaus 4a",
+        "imonespvmkodas": "LT243623610"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Diatomas",
+        "imonespavadinimas": "Diatomas UAB",
+        "imonesimkodas": "222769220",
+        "imonesadresas": "Smolensko g. 17-23",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Defensas",
+        "imonespavadinimas": "UAB Defensas",
+        "imonesimkodas": "302315453",
+        "imonesadresas": "Metalo g. 8",
+        "imonespvmkodas": " LT-02190 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Daskeviciaus",
+        "imonespavadinimas": "T Daškevičius",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Darnios pl inst",
+        "imonespavadinimas": "VšĮ Darnios plėtros institutas",
+        "imonesimkodas": "302794249",
+        "imonesadresas": "302794249",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Daldehog",
+        "imonespavadinimas": "UAB Daldehog",
+        "imonesimkodas": "111491338",
+        "imonesadresas": "Žirmūnų g. 139",
+        "imonespvmkodas": " 09120 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Daiva",
+        "imonespavadinimas": "Daiva Mučinienė",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Cramo",
+        "imonespavadinimas": "CRAMO UAB",
+        "imonesimkodas": "300031995",
+        "imonesadresas": "Lentvario g. 15",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Construktus",
+        "imonespavadinimas": "CONSTRUCTUS UAB"
+    },
+    {
+        "doc": "CONSTRUCTUS UAB",
+        "imonessutrumpkodas": "111472932",
+        "imonespavadinimas": "J.Jasinskio g. 16B",
+        "imonesimkodas": " 01112 VILNIUS",
+        "imonesadresas": " LIETUVA",
+        "imonespvmkodas": "LT114729314"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Conresta",
+        "imonespavadinimas": "UAB Conresta",
+        "imonesimkodas": "145751974",
+        "imonesadresas": "Tuskulėnų g. 33C",
+        "imonespvmkodas": " LT-09219 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Cerara",
+        "imonespavadinimas": "UAB Cerara",
+        "imonesimkodas": "300645477",
+        "imonesadresas": "Vilniaus g. 105",
+        "imonespvmkodas": " Raseiniai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "ccm Baltic",
+        "imonespavadinimas": "UAB CCM Baltic",
+        "imonesimkodas": "145417921",
+        "imonesadresas": "Žalgirio g. 8",
+        "imonespvmkodas": " Šiauliai"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "CCM Balric",
+        "imonespavadinimas": "UAB CCM Baltic",
+        "imonesimkodas": "145417921",
+        "imonesadresas": "Žalgirio g. 8",
+        "imonespvmkodas": " LT-77137"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Būstas",
+        "imonespavadinimas": "NAUJAMIESČIO BŪSTAS UAB",
+        "imonesimkodas": "121452091",
+        "imonesadresas": "Islandijos g. 2",
+        "imonespvmkodas": " 01117 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Bobkatas",
+        "imonespavadinimas": "Bobkatas UAB",
+        "imonesimkodas": "300108915",
+        "imonesadresas": "R. Jankausko g. 6C",
+        "imonespvmkodas": " LT-04310 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Bobcatoma",
+        "imonespavadinimas": "BOBCATOMA UAB",
+        "imonesimkodas": "302337599",
+        "imonesadresas": "Molėtų pl. 137",
+        "imonespvmkodas": " LT-14262"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "BM Baltic",
+        "imonespavadinimas": "BM Baltic UAB",
+        "imonesimkodas": "302594597",
+        "imonesadresas": "Lentvario g. 16",
+        "imonespvmkodas": " LT-02300 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Biovela",
+        "imonespavadinimas": "Biovela UAB",
+        "imonesimkodas": "110647072",
+        "imonesadresas": "Kernavės g. 1",
+        "imonespvmkodas": " Dūkštų k."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Biodegra",
+        "imonespavadinimas": "UAB Biodegra",
+        "imonesimkodas": "123919953",
+        "imonesadresas": "Ateities g. 31",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "Ateities g. 31",
+        "imonessutrumpkodas": " LT-06326 Vilnius",
+        "imonespavadinimas": "LT239199515"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "BIOcentras",
+        "imonespavadinimas": "BIOCENTRAS UAB",
+        "imonesimkodas": "120324587",
+        "imonesadresas": "V.A.Graičiūno g. 10",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Bezdonys",
+        "imonespavadinimas": "Vilniaus r savivaldybės administracija Bezdonių seniūnija",
+        "imonesimkodas": "188702157",
+        "imonesadresas": "Statybininkų g. 9",
+        "imonespvmkodas": " LT-15202"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Betono tech",
+        "imonespavadinimas": "UAB Betono technologijos",
+        "imonesimkodas": "300004852",
+        "imonesadresas": "Adresas: Verslo g. 11",
+        "imonespvmkodas": " Klaipėda"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Bervilna",
+        "imonespavadinimas": "UAB Bervilna",
+        "imonesimkodas": "125983367",
+        "imonesadresas": "A. JAKŠTO G. 11-4",
+        "imonespvmkodas": " VILNIAUS M."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Bendrija",
+        "imonespavadinimas": "Individualių Gyvenamųjų Namų Pupinės K Vilniuje Savininkų Bendrija",
+        "imonesimkodas": "30010871",
+        "imonesadresas": "Sebastijoniškių g. 13",
+        "imonespvmkodas": " Vilniaus m."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "BDT",
+        "imonespavadinimas": "VILNIAUS BETONO DEMONTAVIMO TECHNIKA UAB",
+        "imonesimkodas": "125722762",
+        "imonesadresas": "Šv. Stepono g. 39",
+        "imonespvmkodas": " LT-03210"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Batera",
+        "imonespavadinimas": "Batera UAB",
+        "imonesimkodas": "302435164",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Baltkalis",
+        "imonespavadinimas": "BALTKALIS UAB",
+        "imonesimkodas": "125025140",
+        "imonesadresas": "A.Smetonos g. 6-1",
+        "imonespvmkodas": " Vilnius LT-01115"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Baltissches House",
+        "imonespavadinimas": "BALTISCHES HAUS UAB",
+        "imonesimkodas": "111543781",
+        "imonesadresas": "J.Jasinskio g. 16A",
+        "imonespvmkodas": " 01112 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Azuritas",
+        "imonespavadinimas": "AZURITAS UAB",
+        "imonesimkodas": "2630731",
+        "imonesadresas": "Lentvario g. 16",
+        "imonespvmkodas": " Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Auvis",
+        "imonespavadinimas": "AUVIS UAB",
+        "imonesimkodas": "300051738",
+        "imonesadresas": "V. A. Graičiūno g. 10",
+        "imonespvmkodas": " 02241 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Autoverslas",
+        "imonespavadinimas": "Autoverslas",
+        "imonesimkodas": "",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "August",
+        "imonespavadinimas": "August ir Ko UAB",
+        "imonesimkodas": "124600588",
+        "imonesadresas": "Juodasis kelias 104",
+        "imonespvmkodas": " LT-11307 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Atviri toliai",
+        "imonespavadinimas": "ATVIRI TOLIAI UAB",
+        "imonesimkodas": "300022398",
+        "imonesadresas": "LAISVĖS AL. 102A-18",
+        "imonespvmkodas": " KAUNO M."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Astig",
+        "imonespavadinimas": "Astig UAB",
+        "imonesimkodas": "123098047",
+        "imonesadresas": "Kareivių g. 7",
+        "imonespvmkodas": " LT-09108 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Artūras Vasiliauskas",
+        "imonespavadinimas": "Artūras Vasiliauskas",
+        "imonesimkodas": "",
+        "imonesadresas": "Artūras Vasiliauskas",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Arsdekosta",
+        "imonespavadinimas": "Arsdekosta UAB",
+        "imonesimkodas": "300113887",
+        "imonesadresas": "Bistryčios g. 9-519",
+        "imonespvmkodas": " LT-10320 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Arginta",
+        "imonespavadinimas": "UAB Arginta”",
+        "imonesimkodas": "",
+        "imonesadresas": "Molėtų pl. 71",
+        "imonespvmkodas": " LT-14259 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Ardekosta",
+        "imonespavadinimas": "Arsdekosta UAB",
+        "imonesimkodas": "300113887",
+        "imonesadresas": "Bistryčios g. 9-519",
+        "imonespvmkodas": " LT-10320 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Archyvų sistemos",
+        "imonespavadinimas": "ARCHYVŲ SISTEMOS UAB",
+        "imonesimkodas": "122263236",
+        "imonesadresas": "Žirgų g. 3",
+        "imonespvmkodas": " 14159 GINEITIŠKIŲ K."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Alvora",
+        "imonespavadinimas": "ALVORA UAB",
+        "imonesimkodas": "122049143",
+        "imonesadresas": "Visorių g. 33",
+        "imonespvmkodas": " 08300 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Alnitransa",
+        "imonespavadinimas": "Alnitransa UAB",
+        "imonesimkodas": "178234817",
+        "imonesadresas": "Zibalų g. 43C",
+        "imonespvmkodas": " Širvintų m."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Alkesta",
+        "imonespavadinimas": "Alkesta",
+        "imonesimkodas": "0",
+        "imonesadresas": "",
+        "imonespvmkodas": ""
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Algimanto Radionovo PI",
+        "imonespavadinimas": "Algimanto Radionovo PĮ",
+        "imonesimkodas": "278271040",
+        "imonesadresas": "Aušros g. 7",
+        "imonespvmkodas": " LT-19125 ŠIRVINTOS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Alduva",
+        "imonespavadinimas": "Alduva UAB",
+        "imonesimkodas": "300086828",
+        "imonesadresas": "Savanorių pr. 159A",
+        "imonespvmkodas": " LT-03150 Vilnius"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Akordas",
+        "imonespavadinimas": "AKORDAS R Matulevičienės firma",
+        "imonesimkodas": "120546940",
+        "imonesadresas": "Utenos g. 41A",
+        "imonespvmkodas": " 08217 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Agvysta",
+        "imonespavadinimas": "AGVYSTA UAB",
+        "imonesimkodas": "300130064",
+        "imonesadresas": "V.A.Graičiūno g. 2 a",
+        "imonespvmkodas": " LT-02241"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "Adrem",
+        "imonespavadinimas": "AD REM UAB",
+        "imonesimkodas": "110537569",
+        "imonesadresas": "Metalo g. 2A/7",
+        "imonespvmkodas": " 02190 VILNIUS"
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "A. Žilinskio",
+        "imonespavadinimas": "A ŽILINSKIO ir ko UAB",
+        "imonesimkodas": "158102142",
+        "imonesadresas": "Dainiai",
+        "imonespvmkodas": " Užtvankos g. 17 LT-74202 Jurbarko raj."
+    },
+    {
+        "doc": "imone",
+        "imonessutrumpkodas": "A. Paukstys",
+        "imonespavadinimas": "Arvydas Paukštys",
+        "imonesimkodas": "1359035",
+        "imonesadresas": "Ličiūnų k.",
+        "imonespvmkodas": " Paberžės sen."
+    }
 ]

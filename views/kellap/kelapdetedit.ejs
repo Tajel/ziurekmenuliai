@@ -1,16 +1,19 @@
-
 <% include ../partials/header %>
-<div class="container">
-    <header class="jumbotron">
-        <h1 style="text-align: center">Redaguoti <%= data.auto.marke %>   <%= data.auto.modelis %>   <%= data.auto.valstnr %></h1>
-    </header>
-</div>
-<div class="row">
-  <div class="col-7">
-    <form oninput=" Sumeur.value = Math.round(kiekis.value * ikainis.value);">
-      <div class="row">
-        <div class="col">
-          <select class="custom-select" id='ikainis' name="kellap[iadarbrus]" >
+    <div class="container">
+        <header class="jumbotron">
+            <h1 style="text-align: center">Redaguoti
+                <%= data.auto.marke %>
+                    <%= data.auto.modelis %>
+                        <%= data.auto.valstnr %>
+            </h1>
+        </header>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <form oninput=" Sumeur.value = Math.round(kiekis.value * ikainis.value);">
+                <div class="row">
+                    <div class="col">
+                        <select class="custom-select" id='ikainis' name="kellap[iadarbrus]">
             <option  selected >Darbo rusis, vnt, kaina</option> 
             <% console.log(data.ikainis) %>
             <% data.ikainis.forEach(function(data){ %>
@@ -19,12 +22,12 @@
               <% } %>
             <% }); %>
           </select>
-        </div>  
-        <div class="col">
-          <input class="form-control" type="number" placeholder="Kiekis" id='kiekis' name="kellap[kiekis]">
-        </div>
-        <div class="col">
-            <output class="form-control" type="number" placeholder="Suma" id='Sumeur' for="kiekis ikainis" name="kellap[Sumeur]">
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="number" placeholder="Kiekis" id='kiekis' name="kellap[kiekis]">
+                    </div>
+                    <div class="col">
+                        <output class="form-control" type="number" placeholder="Suma" id='Sumeur' for="kiekis ikainis" name="kellap[Sumeur]">
         </div>
         <div class="col">
           <select class="custom-select" name="kellap[iobjkodas]">
@@ -100,4 +103,3 @@
 </div>
 
 <% include ../partials/footer %>
-

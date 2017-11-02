@@ -1,8 +1,8 @@
-$('#new-todo-form').submit(function(e){
+$('#new-todo-form').submit(function(e) {
     e.preventDefault();
-//  NEW ENTRY
+    //  NEW ENTRY
     var toDoItem = $(this).serialize();
-    $.post('/trtip', toDoItem, function(data){
+    $.post('/trtip', toDoItem, function(data) {
         $('#trans-tipas').append(
             `
             <div class="form-group col-md-4 col-sm-4">
@@ -28,16 +28,16 @@ $('#new-todo-form').submit(function(e){
                 </div>
             </div>
             `
-            )
+        )
         $('#new-todo-form').find('.form-control').val(''); //Clears the input form
     });
 });
 //  EDIT 
-$('#trans-tipas').on('click', '.edit-button', function(){
+$('#trans-tipas').on('click', '.edit-button', function() {
     $(this).parent().siblings('.edit-item-form').toggle();
 });
 //  EDIT UPDATE
-$('#trans-tipas').on('submit', '.edit-item-form', function(e){
+$('#trans-tipas').on('submit', '.edit-item-form', function(e) {
     e.preventDefault();
     var toDoItem = $(this).serialize();
     var actionUrl = $(this).attr('action');
@@ -47,7 +47,7 @@ $('#trans-tipas').on('submit', '.edit-item-form', function(e){
         data: toDoItem,
         type: 'PUT',
         originalItem: $originalItem,
-        success: function(data){
+        success: function(data) {
             this.originalItem.html(
                 `
                 <form action="/trtip/${data._id}" method="POST" class='edit-item-form'>
@@ -73,21 +73,21 @@ $('#trans-tipas').on('submit', '.edit-item-form', function(e){
     });
 });
 
-$('#trans-tipas').on('submit', '.delete-item-form', function(e){
+$('#trans-tipas').on('submit', '.delete-item-form', function(e) {
     e.preventDefault();
     var confirmResponce = confirm("Ar tikrai norite istrinti ?");
-    if(confirmResponce) {
+    if (confirmResponce) {
         var actionUrl = $(this).attr('action');
         $itemToDelete = $(this).closest('.form-group');
         $.ajax({
             url: actionUrl,
-            type:"DELETE",
+            type: "DELETE",
             itemToDelete: $itemToDelete,
-            success:function(data){
+            success: function(data) {
                 this.itemToDelete.remove();
             }
         })
-    } else{
+    } else {
         $(this).find('button').blur();
     }
 });
@@ -148,7 +148,7 @@ $('#trans-tipas').on('submit', '.delete-item-form', function(e){
 // $.get('/todos', function(data){
 //     debugger
 // })
-        
+
 // $('form').submit(function(e) {
 //     e.preventDefault();
 //     var formData = $(this).serialize();
@@ -157,7 +157,7 @@ $('#trans-tipas').on('submit', '.delete-item-form', function(e){
 //     });
 // });
 
-  
+
 // $('form').submit(function(e) {
 //     e.preventDefault();
 //     var formData = $(this).serialize();
@@ -172,7 +172,7 @@ $('#trans-tipas').on('submit', '.delete-item-form', function(e){
 //     });
 // });
 
-  
+
 // $('form').submit(function(e) {
 //     e.preventDefault();
 //     var formAction = $(this).attr('action');

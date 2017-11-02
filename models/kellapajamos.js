@@ -20,7 +20,7 @@ var kellapajamosSchema = new mongoose.Schema({
     iobjpav: String,
     imonkodas: String,
 
-    
+
     marke: String,
     modelis: String,
     valstnr: String,
@@ -45,12 +45,12 @@ var kellapajamosSchema = new mongoose.Schema({
     trtipas: String,
     itrtipas: String,
     vinjet: String,
-   
+
     author: {
         id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
-    },
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        },
         username: String
     }
 });

@@ -1,34 +1,34 @@
 <% include ../partials/header %>
-<div >
-    <div class="row">
-        <h1 style="text-align: center">Nauja transporto priemonė</h1>
-        <div style="width: 30%; margin: 25px auto;">
-            <a class="btn btn-default btn-xs" href="/autokrov">Atgal</a>
-            <hr>
-            <form action="/autokrov" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[doc]" value="autokrov" hidden>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[marke]" placeholder="markė">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[modelis]" placeholder="modelis">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[valstnr]" placeholder="valstybinis numeris">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[id]" placeholder="id">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[inventnr]" placeholder="inventorinis numeris">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[gammetai]" placeholder="gamybos metai">
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autokr[atsaking]" class="custom-select">
+    <div>
+        <div class="row">
+            <h1 style="text-align: center">Nauja transporto priemonė</h1>
+            <div style="width: 30%; margin: 25px auto;">
+                <a class="btn btn-default btn-xs" href="/autokrov">Atgal</a>
+                <hr>
+                <form action="/autokrov" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[doc]" value="autokrov" hidden>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[marke]" placeholder="markė">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[modelis]" placeholder="modelis">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[valstnr]" placeholder="valstybinis numeris">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[id]" placeholder="id">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[inventnr]" placeholder="inventorinis numeris">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[gammetai]" placeholder="gamybos metai">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autokr[atsaking]" class="custom-select">
                      <option  selected>Pasirinkite ATSAKINGĄ asmenį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.vairVardPav !== undefined){ %>
@@ -37,21 +37,21 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[baze]" placeholder="bazė">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[drcivil]" placeholder="draudimas civilinis">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[drkasko]" placeholder="draudimas kasko">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[euro]" placeholder="euro taršos lygis">
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autokr[ikurrusis]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[baze]" placeholder="bazė">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[drcivil]" placeholder="draudimas civilinis">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[drkasko]" placeholder="draudimas kasko">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[euro]" placeholder="euro taršos lygis">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autokr[ikurrusis]" class="custom-select">
                      <option  selected>Pasirinkite KURO rušį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.kurrusis !== undefined){ %>
@@ -60,9 +60,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autokr[ipadkodas]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autokr[ipadkodas]" class="custom-select">
                      <option  selected>Pasirinkite Padlinį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.padkodas !== undefined){ %>
@@ -71,9 +71,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autokr[ipagvair]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autokr[ipagvair]" class="custom-select">
                      <option  selected>Pasirinkite pagr vairuotoją</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.vairVardPav !== undefined){ %>
@@ -82,9 +82,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autokr[itrrus]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autokr[itrrus]" class="custom-select">
                      <option  selected>Pasirinkite priemonės rūšį</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.trrus !== undefined){ %>
@@ -93,9 +93,9 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autokr[itrtipas]" class="custom-select">
+                    </div>
+                    <div class="form-group">
+                        <select style="width: 100%; height: 34px" name="autokr[itrtipas]" class="custom-select">
                      <option  selected>Pasirinkite Transporto priemonės tipą</option> 
                     <% data.forEach(function(data){ %>
                         <% if(data.trtipas !== undefined){ %>
@@ -104,16 +104,15 @@
                         <% } %>
                     <% }); %>
                 </select>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autokr[vinjet]" placeholder="Kelių mokesčiai">
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
-                </div>
-            </form>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autokr[vinjet]" placeholder="Kelių mokesčiai">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<% include ../partials/footer %>
-
+    <% include ../partials/footer %>

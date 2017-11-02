@@ -1,65 +1,65 @@
-<% include ../partials/header %>  
-<div class="container">
-<header class="jumbotron">
-   <div class="container">
-       <h1> Transporto valdymo modulis! </h1>
-       <p> Keliones lapai </p>
-       <div>
-          <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas kr keliones lapas</a>
-          <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
-          <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
-          <hr>
-          <a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>
-          <a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>
-          <a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>
-          <a class="btn btn-primary btn-large" href="/kellap/mmkellap">mazoji tech, savaieigestr pr. keliones lapai</a>
-          <a class="btn btn-primary btn-large" href="/kellap/nuomkellap">nuomotu auto keliones lapai</a>
-       </div>
-   </div>
-</header>
- <div class="container">
-     
-      </div>
-            <table class="table table-striped">
-              <thead>
-                <tr data-halign="right">
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                  <th>4</th>
-                  <th>5</th>
-                  <th>6</th>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                </tr>
-              </thead>
-              <tbody>
-                <% console.log(allkellap) %>
-                <% allkellap.forEach(function(kellap){ %>
-                    <tr>
-                      <td><strong><%=kellap.data%></strong></td>
-                      <td><strong><%=kellap.marke%></strong></td>
-                      <td><strong><%=kellap.modelis%></strong></td>
-                      <td><strong><%=kellap.valstnr%></strong></td>
-                      <td><strong><%=kellap.inventnr%></strong></td>
-                      <td><strong><%=kellap.ipagvair%></strong></td>
-                      <td>
-                          <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                            <a class="btn btn-xs btn-warning" href="/kellap/<%= kellap._id %>/edit">Pildyti keliones lapa</a>
-                            <% }%>
-                      </td>
-                      <td>
-                          <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                            <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-xs btn-danger">Istrinti</button>
-                            </form>
-                            <% }%>
-                      </td>
-                      <td><a href="/kellap/<%= kellap._id %>" class="btn btn-xs btn-primary">Detali informacija</a></td>
-                      <% }); %>
-                    </tr>
-              </tbody>
-            </table>
+<% include ../partials/header %>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1> Transporto valdymo modulis! </h1>
+                <p> Keliones lapai </p>
+                <div>
+                    <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas kr keliones lapas</a>
+                    <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
+                    <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
+                    <hr>
+                    <a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>
+                    <a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>
+                    <a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>
+                    <a class="btn btn-primary btn-large" href="/kellap/mmkellap">mazoji tech, savaieigestr pr. keliones lapai</a>
+                    <a class="btn btn-primary btn-large" href="/kellap/nuomkellap">nuomotu auto keliones lapai</a>
+                </div>
+            </div>
+        </header>
+        <div class="container">
 
-<% include ../partials/footer %>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr data-halign="right">
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% console.log(allkellap) %>
+                    <% allkellap.forEach(function(kellap){ %>
+                        <tr>
+                            <td><strong><%=kellap.data%></strong></td>
+                            <td><strong><%=kellap.marke%></strong></td>
+                            <td><strong><%=kellap.modelis%></strong></td>
+                            <td><strong><%=kellap.valstnr%></strong></td>
+                            <td><strong><%=kellap.inventnr%></strong></td>
+                            <td><strong><%=kellap.ipagvair%></strong></td>
+                            <td>
+                                <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                    <a class="btn btn-xs btn-warning" href="/kellap/<%= kellap._id %>/edit">Pildyti keliones lapa</a>
+                                    <% }%>
+                            </td>
+                            <td>
+                                <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                    <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-xs btn-danger">Istrinti</button>
+                                    </form>
+                                    <% }%>
+                            </td>
+                            <td><a href="/kellap/<%= kellap._id %>" class="btn btn-xs btn-primary">Detali informacija</a></td>
+                            <% }); %>
+                        </tr>
+            </tbody>
+        </table>
+
+        <% include ../partials/footer %>

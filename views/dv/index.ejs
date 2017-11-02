@@ -1,50 +1,56 @@
-<% include ../partials/header %> 
+<% include ../partials/header %>
 
- <div class="container">
-     <header class="jumbotron">
-         <div class="container">
-             <h1>Transporto valdymo modulis!</h1>
-             <p>Darbu vadovai</p>
-             <p>
-                <a class="btn btn-primary btn-large" href="/dv/new">Naujas darbu vadovas</a>
-                <a class="btn btn-primary btn-large" href="/dv/import">Import dv</a>
-             </p>
-         </div>
-     </header>
-     
-     <div class="container">
-         <table class="table table-hover"> 
-          <thead>
-            <tr>
-              <th>Darbu vadovo kodas</th>
-              <th>Vardas Pavarde</th>
-              <th>Padalinio kodas</th>
-              <th>Redaguoti</th>
-              <th>Trinti</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% alldv.forEach(function(alldv){ %>
-            <tr>
-                <td><%= alldv.dvkodas %></td>
-                <td><%= alldv.dvVadasPav %></td>
-                <td><%= alldv.ipadkodas %></td>
-                <td>
-                    <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                        <a class="btn btn-xs btn-warning" href="/dv/<%= alldv._id%>/edit">REDAGUOTI</a>
-                    <% }%>
-                </td>
-                <td>
-                    <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                    <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
-                        <button class="btn btn-xs btn-danger">TRINTI</button>
-                    </form>
-                    <% }%>
-                </td>
-            </tr>
-            <% }); %>
-          </tbody>
-    </table>
-</div>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Transporto valdymo modulis!</h1>
+                <p>Darbu vadovai</p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="/dv/new">Naujas darbu vadovas</a>
+                    <a class="btn btn-primary btn-large" href="/dv/import">Import dv</a>
+                </p>
+            </div>
+        </header>
 
-<% include ../partials/footer %>
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Darbu vadovo kodas</th>
+                        <th>Vardas Pavarde</th>
+                        <th>Padalinio kodas</th>
+                        <th>Redaguoti</th>
+                        <th>Trinti</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% alldv.forEach(function(alldv){ %>
+                        <tr>
+                            <td>
+                                <%= alldv.dvkodas %>
+                            </td>
+                            <td>
+                                <%= alldv.dvVadasPav %>
+                            </td>
+                            <td>
+                                <%= alldv.ipadkodas %>
+                            </td>
+                            <td>
+                                <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                    <a class="btn btn-xs btn-warning" href="/dv/<%= alldv._id%>/edit">REDAGUOTI</a>
+                                    <% }%>
+                            </td>
+                            <td>
+                                <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                    <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
+                                        <button class="btn btn-xs btn-danger">TRINTI</button>
+                                    </form>
+                                    <% }%>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+
+        <% include ../partials/footer %>

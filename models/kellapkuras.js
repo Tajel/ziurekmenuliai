@@ -1,16 +1,16 @@
 var mongoose = require("mongoose");
 
 var kellapkurasSchema = new mongoose.Schema({
-    doc:String,
+    doc: String,
     ikurorusis: String,
     ikurouzpkodas: String,
     kiekiskur: String,
     datekur: String,
     author: {
         id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
-    },
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        },
         username: String
     }
 });

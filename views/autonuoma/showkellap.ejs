@@ -1,54 +1,65 @@
 <% include ../partials/header %>
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <p class="lead">Transporto valdymo modulis</p>
-            
-        </div>
-        <div class="col-md-9">
-            <div class="thumbnail">
-                <div class="caption-full">
-                    <h4><a><%=autonuoma.marke%></a></h4>
-                    <h4><a><%=autonuoma.modelis%></a></h4>
-                    <h4><a><%=autonuoma.valstnr%></a></h4>
-                    <p>
-                        <em>Submitted By <%= autonuoma.author.username %></em>
-                    </p>
-                    <% if(currentUser && autonuoma.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                        <a class="btn btn-xs btn-warning" href="/autonuoma/<%= autonuoma._id %>/edit">Edit</a>
-                        <form id="delete-form" action="/autonuoma/<%= autonuoma._id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-xs btn-danger">Delete</button>
-                        </form>
-                    <% }%>
-                </div>
-            </div>
-            <div class="well">
-                <div class="text-right">
-                    <a class="btn btn-success" href="/autonuoma/<%= autonuoma._id %>/kellapas/new">Naujas keliones lapas</a>
-                </div>
-                <hr>
-                <% autonuoma.kellapas.forEach(function(kellapas){ %>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <strong><%= autonuoma.author.username %></strong>
-                            <span class="pull-right">10 days ago</span>
-                            <p>
-                                <%= autonuoma.text %> 
-                            </p>
-                        <% if(currentUser && autonuoma.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                            <a class="btn btn-xs btn-warning" 
-                               href="/autonuoma/<%=autonuoma._id %>/kellapas/<%=kellapas._id %>/edit">Edit</a>
-                            <form id="delete-form" action="/autonuoma/<%=transport._id %>/kellapas/<%=kellapas._id %>?_method=DELETE" method="POST">
-                                <input type="submit" class="btn btn-xs btn-danger" value="Delete">
-                            </form>
-                        <% } %>
-                        </div>
-                    </div>
-                <% }) %>
-            </div>
-        </div>
-    </div>
-    <a class="btn btn-xs btn-default" href="/autonuoma">Atgal</a>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="lead">Transporto valdymo modulis</p>
 
-<% include ../partials/footer %>
+            </div>
+            <div class="col-md-9">
+                <div class="thumbnail">
+                    <div class="caption-full">
+                        <h4>
+                            <a>
+                                <%=autonuoma.marke%>
+                            </a>
+                        </h4>
+                        <h4>
+                            <a>
+                                <%=autonuoma.modelis%>
+                            </a>
+                        </h4>
+                        <h4>
+                            <a>
+                                <%=autonuoma.valstnr%>
+                            </a>
+                        </h4>
+                        <p>
+                            <em>Submitted By <%= autonuoma.author.username %></em>
+                        </p>
+                        <% if(currentUser && autonuoma.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                            <a class="btn btn-xs btn-warning" href="/autonuoma/<%= autonuoma._id %>/edit">Edit</a>
+                            <form id="delete-form" action="/autonuoma/<%= autonuoma._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-xs btn-danger">Delete</button>
+                            </form>
+                            <% }%>
+                    </div>
+                </div>
+                <div class="well">
+                    <div class="text-right">
+                        <a class="btn btn-success" href="/autonuoma/<%= autonuoma._id %>/kellapas/new">Naujas keliones lapas</a>
+                    </div>
+                    <hr>
+                    <% autonuoma.kellapas.forEach(function(kellapas){ %>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <strong><%= autonuoma.author.username %></strong>
+                                <span class="pull-right">10 days ago</span>
+                                <p>
+                                    <%= autonuoma.text %>
+                                </p>
+                                <% if(currentUser && autonuoma.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                    <a class="btn btn-xs btn-warning" href="/autonuoma/<%=autonuoma._id %>/kellapas/<%=kellapas._id %>/edit">Edit</a>
+                                    <form id="delete-form" action="/autonuoma/<%=transport._id %>/kellapas/<%=kellapas._id %>?_method=DELETE" method="POST">
+                                        <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                                    </form>
+                                    <% } %>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-xs btn-default" href="/autonuoma">Atgal</a>
+    </div>
+
+    <% include ../partials/footer %>

@@ -1,5 +1,5 @@
 var express = require("express");
-var router  = express.Router();
+var router = express.Router();
 var Autokrov = require("../models/auto");
 var Kellap = require("../models/kellap");
 var Autokellap = require("../models/autokellap");
@@ -7,25 +7,29 @@ var middleware = require("../middleware");
 
 
 //INDEX - show all Autokrov
-router.get("/", middleware.isLoggedIn, function(req, res){
+router.get("/", middleware.isLoggedIn, function(req, res) {
     // Get all Autokrov from DB
-    Autokrov.find({doc:"autokrov"}, function(err, alltrkr){
-       if(err){
-           console.log(err);
-       } else {
-           alltrkr.sort(function(a, b) {
+    Autokrov.find({
+        doc: "autokrov"
+    }, function(err, alltrkr) {
+        if (err) {
+            console.log(err);
+        } else {
+            alltrkr.sort(function(a, b) {
                 var textA = a.marke.toUpperCase();
                 var textB = b.marke.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-                });
-                // console.log("Suvesti kroviniai automobiliai"+alltrkr);
-          res.render("autokr/index",{alltrkr:alltrkr});
-       }
+            });
+            // console.log("Suvesti kroviniai automobiliai"+alltrkr);
+            res.render("autokr/index", {
+                alltrkr: alltrkr
+            });
+        }
     });
 });
 
 //CREATE - add new Autokrov to DB
-router.post("/", middleware.isLoggedIn, function(req, res){
+router.post("/", middleware.isLoggedIn, function(req, res) {
     // get data from form and add to Autokrov array
     var author = {
         id: req.user._id,
@@ -35,16 +39,21 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     // req.body.autokr = req.sanitize(req.body.autokr);
     // console.log('req.body.autokr sanitized  ' +req.body.autokr);
     var autokr = req.body.autokr
-        autokr.author = author;
+    autokr.author = author;
     // Create a new Autokrov and save to DB
-    Autokellap.findOne({doc:'autokr'}, function(err, result){
-        if(err){
+    Autokellap.findOne({
+        doc: 'autokr'
+    }, function(err, result) {
+        if (err) {
             console.log(err);
-        }if(!result){
-            Autokellap.create({doc:'autokr'}, function(err, auto){
-                if(!err){
-                    Autokrov.create(autokr, function(err, newlyCreated){
-                        if(err){
+        }
+        if (!result) {
+            Autokellap.create({
+                doc: 'autokr'
+            }, function(err, auto) {
+                if (!err) {
+                    Autokrov.create(autokr, function(err, newlyCreated) {
+                        if (err) {
                             console.log(err);
                         } else {
                             newlyCreated.save();
@@ -58,8 +67,8 @@ router.post("/", middleware.isLoggedIn, function(req, res){
                 }
             });
         } else {
-            Autokrov.create(autokr, function(err, newlyCreated){
-                if(err){
+            Autokrov.create(autokr, function(err, newlyCreated) {
+                if (err) {
                     console.log(err);
                 } else {
                     newlyCreated.save();
@@ -75,52 +84,105 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 });
 
 //NEW - show form to create new Autokrov
-router.get("/new", middleware.isLoggedIn, function(req, res){
-    Autokrov.find({$or:[{ padkodas: { $exists: true } },{ trrus: { $exists: true } },{ trtipas: { $exists: true } },{ vairVardPav: { $exists: true } },{ kurrusis: { $exists: true } }]}).exec(function (err, dataSum) {
-        if(!err){
+router.get("/new", middleware.isLoggedIn, function(req, res) {
+    Autokrov.find({
+        $or: [{
+            padkodas: {
+                $exists: true
+            }
+        }, {
+            trrus: {
+                $exists: true
+            }
+        }, {
+            trtipas: {
+                $exists: true
+            }
+        }, {
+            vairVardPav: {
+                $exists: true
+            }
+        }, {
+            kurrusis: {
+                $exists: true
+            }
+        }]
+    }).exec(function(err, dataSum) {
+        if (!err) {
             // console.log("rasti autokrov: " + dataSum);
-            res.render("autokr/new", {data:dataSum}); 
+            res.render("autokr/new", {
+                data: dataSum
+            });
             // console.log("rasti autokrov: " + dataSum);
         }
     });
 });
 
 // SHOW - shows all kellaps from one Autokrov ******* VIEW DAR NESUTVARKYTAS
-router.get("/:id/kellap", function(req, res){
+router.get("/:id/kellap", function(req, res) {
     //find the Autokrov with provided ID
-    Kellap.findById(req.params.id, function(err, foundkrid){
-        if(err){
+    Kellap.findById(req.params.id, function(err, foundkrid) {
+        if (err) {
             console.log(err);
         } else {
             // console.log(foundkrid)
             //render show template with that Autokrov kallap List
-            res.render("kellap/showkr", {foundkrid:foundkrid});
+            res.render("kellap/showkr", {
+                foundkrid: foundkrid
+            });
         }
     });
 });
 // SHOW - shows detailed info about Aotokrov
-router.get("/:id", function(req, res){
+router.get("/:id", function(req, res) {
     //find the Autokrov with provided ID
-    Autokrov.findById(req.params.id).populate('ikainis').exec(function(err, foundtransport){
-        if(err){
+    Autokrov.findById(req.params.id).populate('ikainis').exec(function(err, foundtransport) {
+        if (err) {
             console.log(err);
         } else {
             console.log(foundtransport)
             //render show template with that Autokrov
-            res.render("autokr/show", {autokrov: foundtransport});
+            res.render("autokr/show", {
+                autokrov: foundtransport
+            });
         }
     });
 });
 
 // EDIT Aotokrov ROUTE
-router.get("/:id/edit", middleware.checkOwnership, function(req, res){
-    Autokrov.findById(req.params.id, function(err, foundtransport){
-        if(!err){
+router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
+    Autokrov.findById(req.params.id, function(err, foundtransport) {
+        if (!err) {
             console.log("*** rasta tr pr redagavimui: " + foundtransport);
-            Autokrov.find({$or:[{ padkodas: { $exists: true } },{ trrus: { $exists: true } },{ trtipas: { $exists: true } },{ vairVardPav: { $exists: true } },{ kurrusis: { $exists: true } }]}).exec(function (err, dataSum) {
-                if(!err){
+            Autokrov.find({
+                $or: [{
+                    padkodas: {
+                        $exists: true
+                    }
+                }, {
+                    trrus: {
+                        $exists: true
+                    }
+                }, {
+                    trtipas: {
+                        $exists: true
+                    }
+                }, {
+                    vairVardPav: {
+                        $exists: true
+                    }
+                }, {
+                    kurrusis: {
+                        $exists: true
+                    }
+                }]
+            }).exec(function(err, dataSum) {
+                if (!err) {
                     // console.log("rasti autokrov: " + autokrov);
-                    res.render("autokr/edit", {autokr: foundtransport, data:dataSum});
+                    res.render("autokr/edit", {
+                        autokr: foundtransport,
+                        data: dataSum
+                    });
                 }
             });
         }
@@ -128,28 +190,29 @@ router.get("/:id/edit", middleware.checkOwnership, function(req, res){
 });
 
 // UPDATE Aotokrov ROUTE
-router.put("/:id",middleware.checkOwnership, function(req, res){
+router.put("/:id", middleware.checkOwnership, function(req, res) {
     // find and update the correct Aotokrov
-    Autokrov.findByIdAndUpdate(req.params.id, req.body.autokr, function(err, updatedTransport){
-       if(err){
-           res.redirect("/autokrov");
-       } else {
-           //redirect somewhere(Aotokrov show page)
-           res.redirect("/autokrov/" + req.params.id);
-       }
+    Autokrov.findByIdAndUpdate(req.params.id, req.body.autokr, function(err, updatedTransport) {
+        if (err) {
+            res.redirect("/autokrov");
+        } else {
+            //redirect somewhere(Aotokrov show page)
+            res.redirect("/autokrov/" + req.params.id);
+        }
     });
 });
 
 // DESTROY Aotokrov ROUTE
-router.deleteisLoggedIn, middleware.checkOwnership, function(req, res){
-   Autokrov.findByIdAndRemove(req.params.id, function(err){
-      if(err){
-          res.redirect("/autokrov");
-      } else {
-          res.redirect("/autokrov");
-      }
-   });
-});
+router.deleteisLoggedIn, middleware.checkOwnership,
+    function(req, res) {
+        Autokrov.findByIdAndRemove(req.params.id, function(err) {
+            if (err) {
+                res.redirect("/autokrov");
+            } else {
+                res.redirect("/autokrov");
+            }
+        });
+    });
 
 
 module.exports = router;
