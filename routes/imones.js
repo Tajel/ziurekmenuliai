@@ -104,7 +104,7 @@ router.get("/:id/edit", middleware.checkimonesOwnership, function(req, res){
 });
 
 // UPDATE IMONE ROUTE
-router.put("/:id",middleware.checkimonesOwnership, function(req, res){
+router.put("/:id",middleware.checkOwnership, function(req, res){
     // find and update the correct imone
     Imones.findByIdAndUpdate(req.params.id, req.body.imone, function(err, updatedImone){
        if(err){
@@ -117,7 +117,7 @@ router.put("/:id",middleware.checkimonesOwnership, function(req, res){
 });
 
 // DESTROY CAMPGROUND ROUTE
-router.delete("/:id",middleware.checkimonesOwnership, function(req, res){
+router.delete("/:id",middleware.checkOwnership, function(req, res){
    Imones.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/imones");

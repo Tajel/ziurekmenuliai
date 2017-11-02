@@ -17,6 +17,9 @@ router.get("/register", function(req, res){
 //handle sign up logic
 router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
+    if(req.body.adminCode === 'secretadmincode1234'){
+        newUser.isAdmin = true;
+    }
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             req.flash("error", err.message);
@@ -24,14 +27,14 @@ router.post("/register", function(req, res){
         }
         passport.authenticate("local")(req, res, function(){
            req.flash("success", " Transporto valdymo modulis sveikina Jus " + user.username);
-           res.redirect("/"); 
+           res.redirect("/");
         });
     });
 });
 
 //show login form
 router.get("/login", function(req, res){
-   res.render("login"); 
+   res.render("login");
 });
 
 //handling login logic

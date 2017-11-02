@@ -35,11 +35,11 @@
                       <td><strong><%=trans.valstnr%></strong></td>
                       <td><strong><%=trans.inventnr%></strong></td>
                       <td>
-                          <% if(currentUser && trans.author.id.equals(currentUser._id)){ %>
+                          <% ifif(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                             <a class="btn btn-xs btn-warning" href="/autonuoma/<%= trans._id %>/edit">Redaguoti</a>
                             <% }%>
                       </td><td>
-                          <% if(currentUser && trans.author.id.equals(currentUser._id)){ %>
+                          <% ifif(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                             <form id="delete-form" action="/autonuoma/<%= trans._id %>?_method=DELETE" method="POST">
                             <button class="btn btn-xs btn-danger">Istrinti</button>
                             </form>

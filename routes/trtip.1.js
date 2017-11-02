@@ -48,14 +48,14 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
 });
 
 // EDIT trtip ROUTE
-router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  middleware.checkOwnership
+router.get("/:id/edit", middleware.isLoggedIn, middleware.checkOwnership, function(req, res){        //  middleware.checkOwnership
     Trtip.findById(req.params.id, function(err, foundtrtip){
         res.render("trtip/edit", {trtip: foundtrtip});
     });
 });
 
 // UPDATE PAD ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkOwnership function(req, res){
     // find and update the correct pad
     Trtip.findByIdAndUpdate(req.params.id, req.body.trtip, function(err, updatedtrtip){
        if(err){
@@ -68,7 +68,7 @@ router.put("/:id",middleware.isLoggedIn, function(req, res){
 });
 
 // DESTROY CAMPGROUND ROUTE
-router.delete("/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
    Trtip.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/trtip");

@@ -56,7 +56,7 @@ router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  mi
 });
 
 // UPDATE PAD ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
     // find and update the correct pad
     Trrus.findByIdAndUpdate(req.params.id, req.body.trrus, function(err, updatedtrrus){
        if(err){

@@ -60,7 +60,7 @@ router.get("/:id/edit",middleware.isLoggedIn, middleware.checkOwnership, functio
 });
 
 // UPDATE kuruzp ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
     // find and update the correct kuruzp
     Kuruzp.findByIdAndUpdate(req.params.id, req.body.kuruzp, function(err, updatedkuruzp){
        if(err){

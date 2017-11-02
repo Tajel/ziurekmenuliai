@@ -51,7 +51,7 @@ router.post("/",middleware.isLoggedIn,function(req, res){
 });
 
     //  Edit IKAINIS
-router.get("/:ikainisId/edit", middleware.isLoggedIn, function(req, res){
+router.get("/:ikainisId/edit", middleware.checkOwnership, function(req, res){
     // find campground by id
     Ikainis.findById(req.params.ikainisId, function(err, ikainis){
         if(err){

@@ -14,7 +14,7 @@
                     <p>
                         <em>Submitted By <%= autolen.author.username %></em>
                     </p>
-                    <% if(currentUser && autolen.author.id.equals(currentUser._id)){ %>
+                    <% if(currentUser && autolen.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                         <a class="btn btn-xs btn-warning" href="/autolen/<%= autolen._id %>/edit">Edit</a>
                         <form id="delete-form" action="/autolen/<%= autolen._id %>?_method=DELETE" method="POST">
                             <button class="btn btn-xs btn-danger">Delete</button>
@@ -35,7 +35,7 @@
                             <p>
                                 <%= autolen.text %> 
                             </p>
-                        <% if(currentUser && autolen.author.id.equals(currentUser._id)){ %>
+                        <% if(currentUser && autolen.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                             <a class="btn btn-xs btn-warning" 
                                href="/autolen/<%=autolen._id %>/kellapas/<%=kellapas._id %>/edit">Edit</a>
                             <form id="delete-form" action="/autolen/<%=transport._id %>/kellapas/<%=kellapas._id %>?_method=DELETE" method="POST">

@@ -1,17 +1,22 @@
-<% include ./partials/header %> 
-
-
+<% include ./partials/header %>
 
 <div class=' container'>
     <div class="jumbotron">
         <h1>Sign Up!</h1>
         <hr>
         <form action="/register" method="post">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
+            <div class='form-group'>
+                <input type="text" name="username" placeholder="username">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <div class="form-group">
+                <input type="password" name="adminCode" placeholder="admin code">
+            </div>
             <button>REGISTRUOTIS !</button>
             <hr>
         </form>
     </div>
 </div>
-<% include ./partials/footer %> 
+<% include ./partials/footer %>

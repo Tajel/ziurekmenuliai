@@ -67,7 +67,7 @@
                 <strong><%= ikainis.author.username %></strong>
               </div>
               <%= ikainis.idarbrus %> <%= ikainis.idarbvnt %> <%= ikainis.vairikain %> 
-              <% if(currentUser && ikainis.author.id.equals(currentUser._id)){ %>
+              <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                 <form style="display: inline" class="pull-right" action="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>?_method=DELETE" method="POST">
                   <button class="btn btn-outline-danger btn-sm">Trinti</button>
                   <a href="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>/edit" class="btn btn-sm btn btn-outline-info">Redaguoti</a>

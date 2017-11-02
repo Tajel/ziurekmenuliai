@@ -39,7 +39,7 @@
               </tbody>
             </table>
             <hr>
-<% if(currentUser && imone.author.id.equals(currentUser._id)){ %>
+<% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
     <a class="btn btn-xs btn-warning" href="/imones/<%= imone._id %>/edit">Redaguoti</a>
     <hr>
     <form id="delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">

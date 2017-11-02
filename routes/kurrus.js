@@ -59,7 +59,7 @@ router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  mi
 });
 
 // UPDATE KURRUS ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
     // find and update the correct kurrus
     Kurrus.findByIdAndUpdate(req.params.id, req.body.kurrus, function(err, updatedKurrus){
        if(err){
@@ -72,7 +72,7 @@ router.put("/:id",middleware.isLoggedIn, function(req, res){
 });
 
 // DESTROY KURRUS ROUTE
-router.delete("/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
    Kurrus.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/kurrus");

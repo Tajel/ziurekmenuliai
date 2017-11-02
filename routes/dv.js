@@ -25,7 +25,13 @@ router.get("/", middleware.isLoggedIn, function(req, res){
 //  CREATE - add new dv
 router.post("/", middleware.isLoggedIn, function(req, res){
     // Create a new dv and save to DB
-    Dv.create(req.body.dv, function(err, newlyCreated){
+    var author = {
+        id: req.user._id,
+        username: req.user.username
+    };
+    var dv = req.body.dv;
+        dv.author = author;
+    Dv.create(dv, function(err, newlyCreated){
         if(err){
             console.log(err);
         } else {
@@ -70,13 +76,12 @@ router.get("/import", middleware.isLoggedIn, function(req, res){
 });
 
 // EDIT DV ROUTE
-router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  middleware.checkOwnership
+router.get("/:id/edit", middleware.checkOwnership, function(req, res){        //  middleware.checkOwnership
     Dv.findById(req.params.id, function(err, founddv){
         if(!err){
             Dv.find({ padkodas: { $exists: true } }).exec(function(err, pad){
                 if(!err){
                     res.render("dv/edit", {dv: founddv, pad:pad});
-                    
                 }
             });
         }
@@ -84,7 +89,7 @@ router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  mi
 });
 
 // UPDATE DV ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.checkOwnership, function(req, res){
     // find and update the correct dv
     Dv.findByIdAndUpdate(req.params.id, req.body.dv, function(err, updatedDv){
        if(err){
@@ -98,7 +103,7 @@ router.put("/:id",middleware.isLoggedIn, function(req, res){
 
 
 // DESTROY DV ROUTE
-router.delete("/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/:id",middleware.checkOwnership, function(req, res){
    Dv.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/dv");

@@ -29,11 +29,17 @@
                 <td><%= alldv.dvkodas %></td>
                 <td><%= alldv.dvVadasPav %></td>
                 <td><%= alldv.ipadkodas %></td>
-                <td><a class="btn btn-xs btn-warning" href="/dv/<%= alldv._id%>/edit">REDAGUOTI</a>
                 <td>
+                    <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                        <a class="btn btn-xs btn-warning" href="/dv/<%= alldv._id%>/edit">REDAGUOTI</a>
+                    <% }%>
+                </td>
+                <td>
+                    <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
                         <button class="btn btn-xs btn-danger">TRINTI</button>
-                    </form> 
+                    </form>
+                    <% }%>
                 </td>
             </tr>
             <% }); %>

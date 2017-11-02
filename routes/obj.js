@@ -61,7 +61,7 @@ router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  mi
 });
 
 // UPDATE OBJ ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
     // find and update the correct obj
     Obj.findByIdAndUpdate(req.params.id, req.body.obj, function(err, updatedObj){
        if(err){

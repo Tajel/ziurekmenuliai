@@ -40,12 +40,12 @@
               <td><%=pajamos.idvVadasPav%></td>
               <td><%=pajamos.imonkodas%></td>
               <td>
-                  <% if(currentUser && pajamos.author.id.equals(currentUser._id)){ %>
+                  <% if(currentUser && pajamos.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>/edit">Redaguoti</a>
                     <% }%>
               </td>
               <td>
-                  <% if(currentUser && pajamos.author.id.equals(currentUser._id)){ %>
+                  <% if(currentUser && pajamos.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <form id="delete-form" action="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>?_method=DELETE" method="POST">
                     <button class="btn btn-sm btn-danger">Istrinti</button>
                     </form>
@@ -75,12 +75,12 @@
               <td><%=kuras.datekur%></td>
               <td>Norma</td>
               <td>
-                  <% if(currentUser && kuras.author.id.equals(currentUser._id)){ %>
+                  <% if(currentUser && kuras.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>/edit">Redaguoti</a>
                     <% }%>
               </td>
               <td>
-                  <% if(currentUser && kuras.author.id.equals(currentUser._id)){ %>
+                  <% if(currentUser && kuras.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <form id="delete-form" action="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>?_method=DELETE" method="POST">
                     <button class="btn btn-sm btn-danger">Istrinti</button>
                     </form>

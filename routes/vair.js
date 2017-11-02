@@ -77,7 +77,7 @@ router.get("/:id/edit", middleware.isLoggedIn, function(req, res){        //  mi
 });
 
 // UPDATE VAIR ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
     // find and update the correct dv
     Vair.findByIdAndUpdate(req.params.id, req.body.vair, function(err, updatedVair){
        if(err){
@@ -91,7 +91,7 @@ router.put("/:id",middleware.isLoggedIn, function(req, res){
 
 
 // DESTROY DV ROUTE
-router.delete("/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/:id",middleware.isLoggedIn, middleware.checkOwnership, function(req, res){
    Vair.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/vair");

@@ -71,7 +71,7 @@ router.put("/:id",middleware.isLoggedIn, function(req, res){
 });
 
 // DESTROY KURRUS ROUTE
-router.delete("/:id",middleware.isLoggedIn, function(req, res){
+router.delete("/:id",middleware.isLoggedIn,middleware.checkOwnership, function(req, res){
    Darbrus.findByIdAndRemove(req.params.id, function(err){
       if(err){
           res.redirect("/darbrus");

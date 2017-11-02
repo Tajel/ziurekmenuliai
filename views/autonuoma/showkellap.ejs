@@ -14,7 +14,7 @@
                     <p>
                         <em>Submitted By <%= autonuoma.author.username %></em>
                     </p>
-                    <% if(currentUser && autonuoma.author.id.equals(currentUser._id)){ %>
+                    <% if(currentUser && autonuoma.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                         <a class="btn btn-xs btn-warning" href="/autonuoma/<%= autonuoma._id %>/edit">Edit</a>
                         <form id="delete-form" action="/autonuoma/<%= autonuoma._id %>?_method=DELETE" method="POST">
                             <button class="btn btn-xs btn-danger">Delete</button>
@@ -35,7 +35,7 @@
                             <p>
                                 <%= autonuoma.text %> 
                             </p>
-                        <% if(currentUser && autonuoma.author.id.equals(currentUser._id)){ %>
+                        <% if(currentUser && autonuoma.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                             <a class="btn btn-xs btn-warning" 
                                href="/autonuoma/<%=autonuoma._id %>/kellapas/<%=kellapas._id %>/edit">Edit</a>
                             <form id="delete-form" action="/autonuoma/<%=transport._id %>/kellapas/<%=kellapas._id %>?_method=DELETE" method="POST">

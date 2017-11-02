@@ -238,7 +238,7 @@ router.get('/:id/edit', middleware.isLoggedIn, function(req, res) {
     );
 })
 // UPDATE KELLAP ROUTE
-router.put("/:id",middleware.isLoggedIn, function(req, res){
+router.put("/:id",middleware.isLoggedIn, middleware.checkkellapOwnership, function(req, res){
     // find and update the correct KELLAP
     Kellap.findByIdAndUpdate(req.params.id, req.body.kellap, function(err, updatedKellap){
        if(err){

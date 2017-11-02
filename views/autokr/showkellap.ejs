@@ -14,7 +14,7 @@
                     <p>
                         <em>Submitted By <%= autokrov.author.username %></em>
                     </p>
-                    <% if(currentUser && autokrov.author.id.equals(currentUser._id)){ %>
+                    <% if(currentUser && autokrov.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                         <a class="btn btn-xs btn-warning" href="/autokrov/<%= autokrov._id %>/edit">Edit</a>
                         <form id="delete-form" action="/autokrov/<%= autokrov._id %>?_method=DELETE" method="POST">
                             <button class="btn btn-xs btn-danger">Delete</button>
@@ -35,7 +35,7 @@
                             <p>
                                 <%= autokrov.text %> 
                             </p>
-                        <% if(currentUser && autokrov.author.id.equals(currentUser._id)){ %>
+                        <% if(currentUser && autokrov.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                             <a class="btn btn-xs btn-warning" 
                                href="/autokrov/<%=autokrov._id %>/kellapas/<%=kellapas._id %>/edit">Edit</a>
                             <form id="delete-form" action="/autokrov/<%=transport._id %>/kellapas/<%=kellapas._id %>?_method=DELETE" method="POST">

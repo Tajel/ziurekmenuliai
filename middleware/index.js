@@ -1,31 +1,32 @@
-var Transport = require("../models/auto");
-var Kellapas = require("../models/kellap");
-var Imones = require("../models/imones");
+var Data = require("../models/auto");
+var Kellap = require("../models/kellap");
+var Data = require("../models/imones");
 
 // all the middleare goes here
 var middlewareObj = {};
 
 middlewareObj.checkOwnership = function(req, res, next) {
  if(req.isAuthenticated()){
-        Transport.findById(req.params.id, function(err, foundtransport){
+        Data.findById(req.params.id, function(err, found){
            if(err){
-               req.flash("error", "Nerastas transport");
+               req.flash("error", "Nerastas irasas");
                res.redirect("back");
            }  else {
                // does user own the campground?
-            if(foundtransport.author.id.equals(req.user._id)) {
+            if(found.author.id.equals(req.user._id) || req.user.isAdmin) {
                 next();
             } else {
-                req.flash("error", "You don't have permission to do that");
+                req.flash("error", "Neturite teisiu siam veiksmui atlikti !");
                 res.redirect("back");
             }
            }
         });
     } else {
-        req.flash("error", "You need to be logged in to do that");
+        req.flash("error", "Jus nesate prisijunges !");
         res.redirect("back");
     }
 }
+
 middlewareObj.checkimonesOwnership = function(req, res, next) {
  if(req.isAuthenticated()){
         Imones.findById(req.params.id, function(err, foundimone){
@@ -34,7 +35,7 @@ middlewareObj.checkimonesOwnership = function(req, res, next) {
                res.redirect("back");
            }  else {
                // does user own the imone?
-            if(foundimone.author.id.equals(req.user._id)) {
+            if(foundimone.author.id.equals(req.user._id) || req.user.isAdmin) {
                 next();
             } else {
                 req.flash("error", "You don't have permission to do that");
@@ -56,7 +57,7 @@ middlewareObj.checkkellapOwnership = function(req, res, next) {
                res.redirect("back");
            }  else {
                // does user own the comment?
-            if(foundKellapas.author.id.equals(req.user._id)) {
+            if(foundKellapas.author.id.equals(req.user._id) || req.user.isAdmin) {
                 next();
             } else {
                 req.flash("error", "You don't have permission to do that");
