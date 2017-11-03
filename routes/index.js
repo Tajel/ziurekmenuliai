@@ -56,16 +56,18 @@ router.get("/logout", function(req, res) {
     res.redirect("/");
 });
 
-    //USER PROFILE
-    router.get("/users/:id", function(req, res){
-        User.findById(req.params.id, function(err, foundUser){
-            if(err){
-                req.flash("error", "Somthiing went wrong !")
-                res.redirect("/")
-            } else {
-                res.render("users/show", {user:foundUser})
-            }
-        })
+//USER PROFILE
+router.get("/users/:id", function(req, res) {
+    User.findById(req.params.id, function(err, foundUser) {
+        if (err) {
+            req.flash("error", "Somthiing went wrong !")
+            res.redirect("/")
+        } else {
+            res.render("users/show", {
+                user: foundUser
+            })
+        }
     })
+})
 
 module.exports = router;

@@ -1,6 +1,6 @@
 var Data = require("../models/auto");
 var Kellap = require("../models/kellap");
-var Data = require("../models/imones");
+var Ikainis = require("../models/autoik");
 
 // all the middleare goes here
 var middlewareObj = {};
@@ -8,7 +8,7 @@ var middlewareObj = {};
 middlewareObj.checkOwnership = function(req, res, next) {
     if (req.isAuthenticated()) {
         Data.findById(req.params.id, function(err, found) {
-            if (err) {
+            if (err || !found) {
                 req.flash("error", "Nerastas irasas");
                 res.redirect("back");
             } else {
@@ -27,55 +27,57 @@ middlewareObj.checkOwnership = function(req, res, next) {
     }
 }
 
-middlewareObj.checkimonesOwnership = function(req, res, next) {
+middlewareObj.checkkellapOwnership = function(req, res, next) {
     if (req.isAuthenticated()) {
-        Imones.findById(req.params.id, function(err, foundimone) {
-            if (err) {
-                req.flash("error", "Nerasta imone");
+        Kellap.findById(req.params.id, function(err, found) {
+            if (err || !found) {
+                req.flash("errr", "Nerastas irasas")
                 res.redirect("back");
             } else {
-                // does user own the imone?
-                if (foundimone.author.id.equals(req.user._id) || req.user.isAdmin) {
+                // does user own the comment?
+                if (found.author.id.equals(req.user._id) || req.user.isAdmin) {
                     next();
                 } else {
-                    req.flash("error", "You don't have permission to do that");
+                    req.flash("error", "jus neturite teises siam veiksmui atlikti");
                     res.redirect("back");
                 }
             }
         });
     } else {
-        req.flash("error", "You need to be logged in to do that");
+        req.flash("error", "jus neturite teises siam veiksmui atlikti");
         res.redirect("back");
     }
 }
 
-
-middlewareObj.checkkellapOwnership = function(req, res, next) {
-    if (req.isAuthenticated()) {
-        Kellapas.findById(req.params.id, function(err, foundKellapas) {
-            if (err) {
-                res.redirect("back");
-            } else {
-                // does user own the comment?
-                if (foundKellapas.author.id.equals(req.user._id) || req.user.isAdmin) {
-                    next();
-                } else {
-                    req.flash("error", "You don't have permission to do that");
-                    res.redirect("back");
-                }
-            }
-        });
-    } else {
-        req.flash("error", "You need to be logged in to do that");
-        res.redirect("back");
-    }
+middlewareObj.checkikainisOwnership =function(req, res, next){
+	if(req.isAuthenticated()){
+		Ikainis.findById(req.params.ikainisId, function(err, found){
+			if(err || !found){
+                req.flash("error", "nerastas irasas")
+				res.redirect("back");
+			} else {
+				// Does the user own the auto?
+				// console.log(foundCampground.author.id);
+				// console.log(req.user.id);
+				if(found.author.id.equals(req.user._id) || req.user.isAdmin){
+					next();
+				} else {
+                    req.flash("error", "Jus neturite teises siam veiksmui atlikti")
+					res.redirect("back");
+				}
+			}
+		});
+	} else {
+        req.flash("error", "Jus neturite teises siam veiksmui atlikti")
+		res.redirect("back");
+	}
 }
 
 middlewareObj.isLoggedIn = function(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    req.flash("error", "You need to be logged in to do that");
+    req.flash("error", "Veiksmas negalimas, Jus turite buti prisijunges");
     res.redirect("/login");
 }
 

@@ -119,11 +119,12 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
 });
 
 // SHOW - shows all kellaps from one Autokrov ******* VIEW DAR NESUTVARKYTAS
-router.get("/:id/kellap", function(req, res) {
+router.get("/:id/kellap", middleware.isLoggedIn, function(req, res) {
     //find the Autokrov with provided ID
     Kellap.findById(req.params.id, function(err, foundkrid) {
-        if (err) {
+        if (err || !foundkrid) {
             console.log(err);
+            res.redirect('/')
         } else {
             // console.log(foundkrid)
             //render show template with that Autokrov kallap List
@@ -134,11 +135,13 @@ router.get("/:id/kellap", function(req, res) {
     });
 });
 // SHOW - shows detailed info about Aotokrov
-router.get("/:id", function(req, res) {
+router.get("/:id", middleware.isLoggedIn, function(req, res) {
     //find the Autokrov with provided ID
     Autokrov.findById(req.params.id).populate('ikainis').exec(function(err, foundtransport) {
-        if (err) {
+        if (err || !foundtransport) {
             console.log(err);
+            req.flash('error', 'tokio iraso nera!')
+            res.redirect('/autokrov')
         } else {
             console.log(foundtransport)
             //render show template with that Autokrov
@@ -150,7 +153,7 @@ router.get("/:id", function(req, res) {
 });
 
 // EDIT Aotokrov ROUTE
-router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
+router.get("/:id/edit", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
     Autokrov.findById(req.params.id, function(err, foundtransport) {
         if (!err) {
             console.log("*** rasta tr pr redagavimui: " + foundtransport);
@@ -190,7 +193,7 @@ router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
 });
 
 // UPDATE Aotokrov ROUTE
-router.put("/:id", middleware.checkOwnership, function(req, res) {
+router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
     // find and update the correct Aotokrov
     Autokrov.findByIdAndUpdate(req.params.id, req.body.autokr, function(err, updatedTransport) {
         if (err) {

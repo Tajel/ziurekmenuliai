@@ -95,7 +95,7 @@ router.get("/import", middleware.isLoggedIn, function(req, res) {
 
 
 // SHOW - shows more info about one imone
-router.get("/:id", function(req, res) {
+router.get("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
     //find the imone with provided ID
     Imones.findById(req.params.id, function(err, foundimone) {
         if (err) {
@@ -111,7 +111,7 @@ router.get("/:id", function(req, res) {
 });
 
 // EDIT IMONE ROUTE
-router.get("/:id/edit", middleware.checkimonesOwnership, function(req, res) {
+router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
     Imones.findById(req.params.id, function(err, foundimone) {
         res.render("imones/edit", {
             imone: foundimone

@@ -7,19 +7,23 @@ var Data = require("../models/darbrus");
 var Ikainis = require("../models/autoik");
 var middleware = require("../middleware");
 
-//Comments New
+//Naujas ikainis
 router.get("/new", middleware.isLoggedIn, function(req, res) {
-    // find campground by id
-    // console.log(req.params.id);
     Auto.findById(req.params.id, function(err, auto) {
-        if (!err) {
+        if (err || !auto) {
+            req.flash("error", "nerastas irasas")
+            res.redirect('/autokrov')
+        } else {
             console.log('found auto');
         }
         Data.find({
             doc: "darbrus"
         }, function(err, darbrus) {
-            if (!err) {
-                console.log('faound darbrus');
+            if (err || !darbrus) {
+                req.flash("error", "nerastas irasas")
+                res.redirect('/autokrov')
+            } else {
+                console.log('found darbrus');
             }
             res.render("autoik/new", {
                 auto: auto,
@@ -41,10 +45,10 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
                 if (err) {
                     console.log(err);
                 } else {
-                    //add username and id to comment
+                    //add ikainis and id to auto
                     autoik.author.id = req.user._id;
                     autoik.author.username = req.user.username;
-                    //save comment
+                    //save ikainis
                     autoik.save();
                     auto.ikainis.push(autoik);
                     auto.save();
@@ -58,27 +62,38 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //  Edit IKAINIS
-router.get("/:ikainisId/edit", middleware.checkOwnership, function(req, res) {
-    // find campground by id
-    Ikainis.findById(req.params.ikainisId, function(err, ikainis) {
-        if (err) {
-            console.log(err);
-        } else {
-            Data.find({
-                doc: "darbrus"
-            }, function(err, darbrus) {
-                if (!err) {
-                    console.log('faound darbrus');
-                }
-                res.render("autoik/edit", {
-                    autoid: req.params.id,
-                    ikainis: ikainis,
-                    darbrus: darbrus
-                });
-            });
+router.get("/:ikainisId/edit", middleware.checkikainisOwnership, function(req, res) {
+    // find ikainis by id
+    Auto.findById(req.params._id, function(err, found) {
+        if (err || !found) {
+            req.flash("error", "nerastas irasas")
+            console.log(req.params._id)
         }
-    })
-});
+        Ikainis.findById(req.params.ikainisId, function(err, ikainis) {
+            if (err || !ikainis) {
+                req.flash("error", "nerastas irasas")
+                res.redirect("/autokrov")
+                console.log(err);
+            } else {
+                Data.find({
+                    doc: "darbrus"
+                }, function(err, darbrus) {
+                    if (err || !darbrus) {
+                        req.flash("error", "nerastas irasas")
+                        res.redirect("/autokrov")
+                    } else {
+                        console.log('found darbrus');
+                    }
+                    res.render("autoik/edit", {
+                        autoid: req.params.id,
+                        ikainis: ikainis,
+                        darbrus: darbrus
+                    });
+                });
+            }
+        })
+    });
+})
 //  UPDATE Edited ikainis
 router.put("/:ikainisId", function(req, res) {
     Ikainis.findByIdAndUpdate(req.params.ikainisId, req.body.autoik, function(err, ikainis) {
