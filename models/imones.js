@@ -5,7 +5,7 @@ var imoneSchema = new mongoose.Schema({
     imonessutrumpkodas: String,
     imonespavadinimas: String,
     imonesimkodas: Number,
-    imonespvmkodas: Number,
+    imonespvmkodas: String,
     imonesadresas: String,
     author: {
         id: {
