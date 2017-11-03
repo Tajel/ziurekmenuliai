@@ -6,14 +6,17 @@
                 <a class="btn btn-default btn-xs" href="/autonuoma">Atgal</a>
                 <hr>
                 <form action="/autonuoma" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma" hidden>
+                    <div class="form-group" hidden>
+                        <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="text" name="autonuoma[marke]" placeholder="markė">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="text" name="autonuoma[modelis]" placeholder="modelis">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[imone]" placeholder="imone">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="text" name="autonuoma[valstnr]" placeholder="valstybinis numeris">
@@ -25,14 +28,20 @@
                         <input class="form-control" type="text" name="autonuoma[inventnr]" placeholder="inventorinis numeris">
                     </div>
                     <div class="form-group">
+                        <input class="form-control" type="text" name="autonuoma[gammetai]" placeholder="gamybos metai">
+                    </div>
+                    <div class="form-group">
                         <select style="width: 100%; height: 34px" name="autonuoma[atsaking]" class="custom-select">
-                     <option  selected>Pasirinkite ATSAKINGĄ asmenį</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.vairuotojas !== undefined){ %>
-                        <option><%= data.vairuotojas %></option>  <!-- ########## reikia sukurti vairuotojus *********** -->
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option selected>Pasirinkite ATSAKINGĄ asmenį</option>
+                            <% data.forEach(function(data){ %>
+                                <% if(data.vairVardPav !== undefined){ %>
+                                    <% console.log('Atsakingas: '+data.vairVardPav) %>
+                                        <option>
+                                            <%= data.vairVardPav %>
+                                        </option>
+                                        <% } %>
+                                            <% }); %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="text" name="autonuoma[baze]" placeholder="bazė">
@@ -47,72 +56,73 @@
                         <input class="form-control" type="text" name="autonuoma[euro]" placeholder="euro taršos lygis">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="autonuoma[gammetai]" placeholder="gamybos metai">
-                    </div>
-                    <div class="form-group">
                         <select style="width: 100%; height: 34px" name="autonuoma[ikurrusis]" class="custom-select">
-                     <option  selected>Pasirinkite KURO rušį</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.kurrusis !== undefined){ %>
-                        <% console.log(data.kurrusis) %>
-                        <option><%= data.kurrusis %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option selected>Pasirinkite KURO rušį</option>
+                            <% data.forEach(function(data){ %>
+                                <% if(data.kurrusis !== undefined){ %>
+                                    <% console.log('Kuro rusis: '+data.kurrusis) %>
+                                        <option>
+                                            <%= data.kurrusis %>
+                                        </option>
+                                        <% } %>
+                                            <% }); %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="autonuoma[ipadkodas]" class="custom-select">
-                     <option  selected>Pasirinkite Padlinį</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.padkodas !== undefined){ %>
-                        <option><%= data.padkodas %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option selected>Pasirinkite Padlinį</option>
+                            <% data.forEach(function(data){ %>
+                                <% if(data.padkodas !== undefined){ %>
+                                    <% console.log('Padalinio Kodas: '+data.padkodas) %>
+                                        <option>
+                                            <%= data.padkodas %>
+                                        </option>
+                                        <% } %>
+                                            <% }); %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="autonuoma[ipagvair]" class="custom-select">
-                     <option  selected>Pasirinkite pagr vairuotoją</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.pagvair !== undefined){ %>
-                        <option><%= data.pagvair %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
-                    </div>
-                    <div class="form-group">
-                        <select style="width: 100%; height: 34px" name="autonuoma[itrkateg]" class="custom-select">
-                     <option  selected>Pasirinkite kategoriją</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.trkateg !== undefined){ %>
-                        <option><%= data.trkateg %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option selected>Pasirinkite pagr vairuotoją</option>
+                            <% data.forEach(function(data){ %>
+                                <% if(data.vairVardPav !== undefined){ %>
+                                    <% console.log('Pagrindinis Vairuotojas: '+data.vairVardPav) %>
+                                        <option>
+                                            <%= data.vairVardPav %>
+                                        </option>
+                                        <% } %>
+                                            <% }); %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="autonuoma[itrrus]" class="custom-select">
-                     <option  selected>Pasirinkite priemonės rūšį</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.trrus !== undefined){ %>
-                        <option><%= data.trrus %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option selected>Pasirinkite priemonės rūšį</option>
+                            <% data.forEach(function(data){ %>
+                                <% if(data.trrus !== undefined){ %>
+                                    <% console.log('Transporto rusis: '+data.trrus) %>
+                                        <option>
+                                            <%= data.trrus %>
+                                        </option>
+                                        <% } %>
+                                            <% }); %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="autonuoma[itrtipas]" class="custom-select">
-                     <option  selected>Pasirinkite Transporto priemonės tipą</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.trtipas !== undefined){ %>
-                        <option><%= data.trtipas %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option selected>Pasirinkite Transporto priemonės tipą</option>
+                            <% data.forEach(function(data){ %>
+                                <% if(data.trtipas !== undefined){ %>
+                                    <% console.log('Transporto TIPAS: '+data.trtipas) %>
+                                        <option>
+                                            <%= data.trtipas %>
+                                        </option>
+                                        <% } %>
+                                            <% }); %>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="autonuoma[vinjet]" placeholder="Kelių mokesčiai">
-                    </div>
+                    <!--<div class="form-group">-->
+                    <!--    <input class="form-control" type="text" name="autonuoma[vinjet]" placeholder="Kelių mokesčiai">-->
+                    <!--</div>-->
                     <div class="form-group">
                         <button class="btn btn-lg btn-primary btn-block">Submit!</button>
                     </div>

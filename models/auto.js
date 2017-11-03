@@ -4,6 +4,7 @@ var transportSchema = new mongoose.Schema({
     doc: String,
     marke: String,
     modelis: String,
+    imone: String,
     valstnr: String,
     id: String,
     inventnr: String,
