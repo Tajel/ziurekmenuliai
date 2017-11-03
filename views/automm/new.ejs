@@ -11,14 +11,14 @@
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="automm[vairVardPav]" class="custom-select">
-                     <option  selected>Pasirinkite ATSAKINGĄ asmenį</option> 
-                    <% data.forEach(function(data){ %>
-                        <% if(data.vairVardPav !== undefined){ %>
-                        <% console.log('Atsakingas: '+data.vairVardPav) %>
-                        <option><%= data.vairVardPav %></option>
-                        <% } %>
-                    <% }); %>
-                </select>
+                            <option  selected>Pasirinkite ATSAKINGĄ asmenį</option> 
+                            <% data.forEach(function(data){ %>
+                                <% if(data.vairVardPav !== undefined){ %>
+                                <% console.log('Atsakingas: '+data.vairVardPav) %>
+                                <option><%= data.vairVardPav %></option>
+                                <% } %>
+                            <% }); %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="automm[ikurrusis]" class="custom-select">
