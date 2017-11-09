@@ -62,7 +62,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.locals.currentUser = req.user;
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
@@ -107,6 +107,6 @@ app.use("/kellap/:id/vair", kellapvairRoutes);
 // app.listen(process.env.PORT, process.env.IP, function(){
 //    console.log("TRANSPORT Server Has Started!");
 
-app.listen(3000, function() {
+app.listen(3000, function () {
     console.log("TRANSOPORTO MODULIS server started");
 });
