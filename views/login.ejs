@@ -1,16 +1,45 @@
 <% include ./partials/header %>
 
     <div class=' container'>
-        <div class="jumbotron">
-            <h1>Login!</h1>
-            <hr>
-            <form action="/login" method="POST">
-                <input type="text" name="username" placeholder="username">
-                <input type="password" name="password" placeholder="password">
-                <input type="submit" value="PRISIJUNGTI !">
-                <hr>
-            </form>
-        </div>
-    </div>
+        <form class="form-horizontal" action="/login" method="POST">
+            <fieldset>
 
-    <% include ./partials/footer %>
+                <!-- Form Name -->
+                <legend>Suveskite prisijungimo duomenis</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="name">
+                        <i class="fa fa-user"></i>
+                    </label>
+                    <div class="col-md-4">
+                        <input name="username" type="text" placeholder="vardas" class="form-control input-md" required="">
+                        <span class="help-block">įveskite prisijungimo vardą</span>
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="password">
+                        <i class="glyphicon glyphicon-lock"></i>
+                    </label>
+                    <div class="col-md-4">
+                        <input name="password" type="password" placeholder="slaptažodis" class="form-control input-md" required="">
+                        <span class="help-block">įveskite slaptažodį</span>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Prisijungti">
+                        <i class="glyphicon glyphicon-log-in"></i>
+                    </label>
+                    <div class="col-md-4">
+                        <button type="submit" id="Prisijungti" name="Prisijungti" class="btn btn-primary">
+                            Prisijungti</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <% include ./partials/footer %>
