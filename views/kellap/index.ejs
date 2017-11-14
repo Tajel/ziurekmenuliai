@@ -1,120 +1,152 @@
 <% include ../partials/header %>
 
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1> Transporto valdymo modulis! </h1>
-                <h2>KELIONES LAPAI</h2>
-                <div>
-                    <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas kr keliones lapas</a>
-                    <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
-                    <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
-                    <a class="btn btn-primary btn-large" href="/kellap/newmm">Naujas MM keliones lapas</a>
-                    <!--<hr>-->
-                    <!--<a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>-->
-                    <!--<a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>-->
-                    <!--<a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>-->
-                    <!--<a class="btn btn-primary btn-large" href="/kellap/mmkellap">mazoji tech, savaieigestr pr. keliones lapai</a>-->
-                    <!--<a class="btn btn-primary btn-large" href="/kellap/nuomkellap">nuomotu auto keliones lapai</a>-->
-                </div>
-            </div>
 
-        </header>
-        <hr>
-
-        <form>
-            <table table class="table table-responsive">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th scope="col">Įrašykite datą</th>
-                        <th scope="col">Įrašykite Valst Nr</th>
-                        <th scope="col">Įrašykite Invent. Nr.</th>
-                        <th scope="col">Įrašykite bazę</th>
-                        <th scope="col">Įrašykite Tr rušį</th>
-                        <th scope="col">Įrašykite autorių</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <label class="custom-control custom-checkbox">
-            <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction7()">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description"></span>
-          </label>
-                        </td>
-                        <td>
-                            <input class="form-control" type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Data" title="Įrašykite datą">
-                        </td>
-                        <td>
-                            <input class="form-control" type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Valst Nr." title="Įrašykite Valst Nr">
-                        </td>
-                        <td>
-                            <input class="form-control" type="text" id="myInput6" onkeyup="myFunction6()" placeholder="Invent. Nr." title="Įrašykite Invent. Nr.">
-                        </td>
-                        <td>
-                            <input class="form-control" type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Bazė" title="Įrašykite bazę">
-                        </td>
-                        <td>
-                            <input class="form-control" type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Tr rūšį" title="Įrašykite Tr rušį">
-                        </td>
-                        <td>
-                            <input class="form-control" type="text" id="myInput5" onkeyup="myFunction5()" placeholder="Sukūrė" title="Įrašykite autorių">
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-        </form>
+    <h1> TRANSPORTO VALDYMO MODULIS </h1>
+    <h2>kelionės lapai</h2>
+    <div>
+        <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas kr keliones lapas</a>
+        <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
+        <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
+        <a class="btn btn-primary btn-large" href="/kellap/newmm">Naujas MM keliones lapas</a>
+        <!--<hr>-->
+        <!--<a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>-->
+        <!--<a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>-->
+        <!--<a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>-->
+        <!--<a class="btn btn-primary btn-large" href="/kellap/mmkellap">mazoji tech, savaieigestr pr. keliones lapai</a>-->
+        <!--<a class="btn btn-primary btn-large" href="/kellap/nuomkellap">nuomotu auto keliones lapai</a>-->
+    </div>
 
 
-        <table id="myTable" table class="table table-responsive">
-            <tr class="header">
-                <th>#</th>
-                <th style="text-align: center;">1</th>
-                <th style="text-align: center;">2</th>
-                <th style="text-align: center;">3</th>
-                <th style="text-align: center;">4</th>
-                <th style="text-align: center;">5</th>
-                <th style="text-align: center;">6</th>
-                <th style="text-align: center;">7</th>
-                <th style="text-align: center;">8</th>
-                <th style="text-align: center;">9</th>
-                <th style="text-align: center;">10</th>
+    </header>
+    <hr>
 
-            </tr>
-            <% allkellap.forEach(function(kellap){ %>
+    <form>
+        <table table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th scope="col">Įrašykite datą</th>
+                    <th scope="col">Įrašykite Valst Nr</th>
+                    <th scope="col">Įrašykite Invent. Nr.</th>
+                    <th scope="col">Įrašykite bazę</th>
+                    <th scope="col">Įrašykite Tr rušį</th>
+                    <th scope="col">Įrašykite autorių</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>
                         <label class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" checked>
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description"></span>
-        </label>
+                            <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction7()">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description"></span>
+                        </label>
                     </td>
-                    <td style="text-align: center;"><strong><%=kellap.data%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.marke%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.modelis%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.valstnr%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.inventnr%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.ipagvair%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.baze%></strong></td>
-                    <td style="text-align: center;"><strong><%=kellap.itrrus%></strong></td>
-                    <td style="text-align: center;">
-                        <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                            <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                                <button class="btn btn-xs btn-danger">Istrinti</button>
-                            </form>
-                            <% }%>
-                    </td style="text-align: center;">
-                    <td style="text-align: center;"><a href="/kellap/<%= kellap._id %>/detail" class="btn btn-xs btn-primary">Detali informacija</a></td>
-                    <% }); %>
+                    <td>
+                        <input class="form-control" type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Data" title="Įrašykite datą">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Valst Nr." title="Įrašykite Valst Nr">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" id="myInput6" onkeyup="myFunction6()" placeholder="Invent. Nr." title="Įrašykite Invent. Nr.">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Bazė" title="Įrašykite bazę">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Tr rūšį" title="Įrašykite Tr rušį">
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" id="myInput5" onkeyup="myFunction5()" placeholder="Sukūrė" title="Įrašykite autorių">
+                    </td>
                 </tr>
-                </tr>
+
+            </tbody>
         </table>
 
-        <script src='/scripts/kellapfilter.js'></script>
+    </form>
 
-        <% include ../partials/footer %>
+
+    <table id="myTable" table class="table table-responsive">
+        <tr class="header">
+            <th>#</th>
+            <th style="text-align: center;">1</th>
+            <th style="text-align: center;">2</th>
+            <th style="text-align: center;">3</th>
+            <th style="text-align: center;">4</th>
+            <th style="text-align: center;">5</th>
+            <th style="text-align: center;">6</th>
+            <th style="text-align: center;">7</th>
+            <th style="text-align: center;">8</th>
+            <th style="text-align: center;">9</th>
+            <th style="text-align: center;">10</th>
+
+        </tr>
+        <% allkellap.forEach(function(kellap){ %>
+            <tr>
+                <td>
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked>
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description"></span>
+                    </label>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.data%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.marke%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.modelis%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.valstnr%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.inventnr%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.ipagvair%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.baze%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <strong>
+                        <%=kellap.itrrus%>
+                    </strong>
+                </td>
+                <td style="text-align: center;">
+                    <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                        <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Istrinti</button>
+                        </form>
+                        <% }%>
+                </td style="text-align: center;">
+                <td style="text-align: center;">
+                    <a href="/kellap/<%= kellap._id %>/detail" class="btn btn-xs btn-primary">Detali informacija</a>
+                </td>
+                <% }); %>
+            </tr>
+            </tr>
+    </table>
+
+    <script src='/scripts/kellapfilter.js'></script>
+
+    <% include ../partials/footer %>

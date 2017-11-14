@@ -1,24 +1,47 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Kuriamas Naujas Padalinys</h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/pad" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="doc" value="padalinys" hidden>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="padkodas" placeholder="padalinio kodas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="padpavadinimas" placeholder="padalinio pavadinimas">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
-                    </div>
-                </form>
-                <a href="/pad">Atgal i Padaliniu sarasa</a>
+
+    <form action="/pad" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/pad">Atgal i Padaliniu sarasa</a>
+            <!-- Form Name -->
+            <legend>Naujas Padalinys</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">Text Input</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" value="padalinys" type="text" placeholder="placeholder" class="form-control input-md">
+                    <span class="help-block">help</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="padkodas">Padalinio kodas</label>
+                <div class="col-md-4">
+                    <input id="padkodas" name="padkodas" type="text" placeholder="Padalinio kodas" class="form-control input-md" required="">
+                    <span class="help-block">Padalinio kodas</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="padpavadinimas">Padalinio pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="padpavadinimas" name="padpavadinimas" type="text" placeholder="Padalinio pavadinimas" class="form-control input-md"
+                        required="">
+                    <span class="help-block">Padalinio pavadinimas</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>

@@ -1,5 +1,54 @@
 <% include ../partials/header %>
-    <div class="container">
+
+    <form action="/pad/<%= pad._id %>?_method=PUT" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/pad">Atgal i Padalinių sąrašą</a>
+            <!-- Form Name -->
+            <legend>Redaguoti Padalinį:
+                <%= pad.padpavadinimas %>
+            </legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">Text Input</label>
+                <div class="col-md-4">
+                    <input id="doc" name="pad[doc]" value="padalinys" type="text" placeholder="placeholder" class="form-control input-md">
+                    <span class="help-block">help</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="padkodas">Padalinio kodas</label>
+                <div class="col-md-4">
+                    <input id="padkodas" name="pad[padkodas]" readonly value="<%= pad.padkodas %>" type="text" placeholder="Padalinio kodas"
+                        class="form-control input-md" required="">
+                    <span class="help-block">Padalinio kodas</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="padpavadinimas">Padalinio pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="padpavadinimas" name="pad[padpavadinimas]" value="<%= pad.padpavadinimas %>" type="text" placeholder="Padalinio pavadinimas"
+                        class="form-control input-md" required="">
+                    <span class="help-block">Padalinio pavadinimas</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit"></label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Redaguoti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <!-- <div class="container">
         <div class="row">
             <h1 style="text-align: center">Edit
                 <%= pad.padpavadinimas %>
@@ -22,5 +71,5 @@
                 <a href="/pad">Atgal</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <% include ../partials/footer %>
