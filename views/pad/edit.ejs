@@ -2,7 +2,7 @@
 
     <form action="/pad/<%= pad._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/pad">Atgal i Padalinių sąrašą</a>
+            <a href="/pad">Atgal į Padalinių sąrašą</a>
             <!-- Form Name -->
             <legend>Redaguoti Padalinį:
                 <%= pad.padpavadinimas %>
@@ -23,7 +23,7 @@
                 <div class="col-md-4">
                     <input id="padkodas" name="pad[padkodas]" readonly value="<%= pad.padkodas %>" type="text" placeholder="Padalinio kodas"
                         class="form-control input-md" required="">
-                    <span class="help-block">Padalinio kodas</span>
+                    <span class="help-block">Įrašykite padalinio kodą</span>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <div class="col-md-4">
                     <input id="padpavadinimas" name="pad[padpavadinimas]" value="<%= pad.padpavadinimas %>" type="text" placeholder="Padalinio pavadinimas"
                         class="form-control input-md" required="">
-                    <span class="help-block">Padalinio pavadinimas</span>
+                    <span class="help-block">Įrašykite adalinio pavadinimą</span>
                 </div>
             </div>
 
