@@ -1,56 +1,43 @@
 <% include ../partials/header %>
 
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>Darbu vadovai</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/dv/new">Naujas darbu vadovas</a>
-                    <a class="btn btn-primary btn-large" href="/dv/import">Import dv</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="container">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Darbu vadovo kodas</th>
-                        <th>Vardas Pavarde</th>
-                        <th>Padalinio kodas</th>
-                        <th>Redaguoti</th>
-                        <th>Trinti</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% alldv.forEach(function(alldv){ %>
-                        <tr>
-                            <td>
-                                <%= alldv.dvkodas %>
-                            </td>
-                            <td>
+    <div class="page-header">
+        <h1>DARBŲ VADOVAI
+            <small>Sukurti naują, redaguoti, trinti</small>
+            <p>
+                <a class="btn btn-primary btn-large" href="/dv/new">Naujas Darbų Vadovas</a>
+                <a class="btn btn-primary btn-large" href="/dv/import">Import DV</a>
+            </p>
+        </h1>
+    </div>
+    <div class="row">
+        <% alldv.forEach(function(alldv){ %>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>
+                            <strong>
                                 <%= alldv.dvVadasPav %>
-                            </td>
-                            <td>
-                                <%= alldv.ipadkodas %>
-                            </td>
-                            <td>
-                                <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                    <a class="btn btn-xs btn-warning" href="/dv/<%= alldv._id%>/edit">REDAGUOTI</a>
-                                    <% }%>
-                            </td>
-                            <td>
-                                <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                    <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
-                                        <button class="btn btn-xs btn-danger">TRINTI</button>
-                                    </form>
-                                    <% }%>
-                            </td>
-                        </tr>
-                        <% }); %>
-                </tbody>
-            </table>
-        </div>
+                            </strong>
+                        </h3>
 
-        <% include ../partials/footer %>
+                        <p>kodas:
+                            <%= alldv.dvkodas %>
+                        </p>
+                        <p> Padalinio kodas:
+                            <%= alldv.ipadkodas %>
+                        </p>
+
+                        <p>
+                            <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                <a class="btn btn-primary" role="button" href="/dv/<%= alldv._id%>/edit">REDAGUOTI</a>
+                                <% }%>
+                                    <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
+                                        <button class="btn btn-danger">TRINTI</button>
+                                    </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+    <% include ../partials/footer %>
