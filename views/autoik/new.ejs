@@ -1,40 +1,73 @@
 <% include ../partials/header %>
-    <div class="row">
-        <h1 style="text-align: center">Ivesti nauja ikaini
-            <%= auto.marke %>
-                <%= auto.modelis %>
-                    <%= auto.valstnr %>
-        </h1>
-        <div style="width: 30%; margin: 25px auto;">
-            <form action="/autokrov/<%= auto._id %>/autoik" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autoik[doc]" value="autoik" hidden>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autoik[autoid]" value="<%= auto._id %>" hidden>
-                </div>
+    <form action="/autokrov/<%= auto._id %>/autoik" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/autokrov/<%= auto._id %>">Atgal</a>
+            <!-- Form Name -->
+            <legend>Ivesti nauja ikaini
+                <%= auto.marke %>
+                    <%= auto.modelis %>
+                        <%= auto.valstnr %>
+            </legend>
 
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autoik[idarbrus]" class="custom-select">
-                    <option  selected>Pasirinkite darbo rusi</option> 
-                    <% darbrus.forEach(function(data){ %>
-                    <% if(data.darbrus !== undefined){ %>
-                    <option><%= data.darbrus %></option>
-                    <% } %>
-                    <% }); %>
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="autoik[doc]">autoik</label>
+                <div class="col-md-4">
+                    <input id="autoik[doc]" name="autoik[doc]" type="text" placeholder="autoik" class="form-control input-md" value="autoik">
+
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autoik[idarbrus]">Darbo rusis</label>
+                <div class="col-md-4">
+                    <select id="autoik[idarbrus]" name="autoik[idarbrus]" class="form-control">
+                        <% darbrus.forEach(function(data){ %>
+                            <% if(data.darbrus !== undefined){ %>
+                                <option value="<%= data.darbrus %>">&lt;%= data.darbrus %&gt;</option>
+                                <% } %>
+                                    <% }); %>
                     </select>
+                    <span class="help-block">Pasirinikite darbo rusi</span>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="number" name="autoik[trikain]" placeholder="Ikainis">
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="autoik[autoid]">Text Input</label>
+                <div class="col-md-4">
+                    <input id="autoik[autoid]" name="autoik[autoid]" type="text" placeholder="<%= auto._id %>" class="form-control input-md">
+                    <span class="help-block">help</span>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autoik[idarbvnt]" placeholder="Val, d., tkm.">
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autoik[trikain]">Ikainis</label>
+                <div class="col-md-4">
+                    <input id="autoik[trikain]" name="autoik[trikain]" type="text" placeholder="Ikainis" class="form-control input-md">
+                    <span class="help-block">Irasykite ikaini</span>
                 </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autoik[idarbvnt]">Mato vienetas</label>
+                <div class="col-md-4">
+                    <input id="autoik[idarbvnt]" name="autoik[idarbvnt]" type="text" placeholder="Val, d., tkm." class="form-control input-md">
+                    <span class="help-block">irasykite mato vieneta</span>
                 </div>
-            </form>
-            <a href="/autokrov/<%= auto._id %>">Go Back</a>
-        </div>
-    </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>
