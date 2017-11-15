@@ -1,29 +1,54 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Edit
-                <%= kuruzp.kurouzpkodas %>
-            </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/kuruzp/<%= kuruzp._id %>?_method=PUT" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kuruzp[kurouzpkodas]" value="<%= kuruzp.kurouzpkodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kuruzp[kurouzppav]" value="<%= kuruzp.kurouzppav %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kuruzp[kurouzpkortnr]" value="<%= kuruzp.kurouzpkortnr %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kuruzp[doc]" hidden value="<%= kuruzp.doc %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Pakeisti !</button>
-                    </div>
-                </form>
-                <a href="/kuruzp">Atgal</a>
+    <form action="/kuruzp/<%= kuruzp._id %>?_method=PUT" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/kuruzp">Atgal į Kuro šaltinių sąrašą </a>
+            <!-- Form Name -->
+            <legend>Redaguoto Kuro šaltinį</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">kuruzp[doc]</label>
+                <div class="col-md-4">
+                    <input id="doc" name="kuruzp[doc]" type="text" placeholder="placeholder" class="form-control input-md" value="kurosaltinis">
+                    <span class="help-block">help</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="kuruzp[kurouzpkodas]">Trumpas kodas</label>
+                <div class="col-md-4">
+                    <input id="kurouzpkodas" name="kuruzp[kurouzpkodas]" type="text" placeholder="Trumpas kodas" class="form-control input-md" value="<%= kuruzp.kurouzpkodas %>">
+                    <span class="help-block">Įrašykite trumpą kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="kuruzp[kurouzppav]">Tiekėjas</label>
+                <div class="col-md-4">
+                    <input id="kurouzppav" name="kuruzp[kurouzppav]" type="text" placeholder="Tiekėjas" class="form-control input-md" value="<%= kuruzp.kurouzppav %>">
+                    <span class="help-block">Įrašykite tiekėją</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="kuruzp[kurouzpkortnr]">Kortelės numeris</label>
+                <div class="col-md-4">
+                    <input id="kurouzpkortnr" name="kuruzp[kurouzpkortnr]" type="text" placeholder="Kortelės numeris" class="form-control input-md"value="<%= kuruzp.kurouzpkortnr %>">
+                    <span class="help-block">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Redaguoti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Redaguoti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>

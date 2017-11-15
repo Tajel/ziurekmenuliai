@@ -1,49 +1,41 @@
 <% include ../partials/header %>
-
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>Kuro saltiniai</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/kuruzp/new">Naujas kuro saltinis</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="container">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Trumpas Kodas</th>
-                        <th>Degalines pavadinimas</th>
-                        <th>Korteles numeris</th>
-                        <th>Redaguoti</th>
-                        <th>Trinti</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% allkuruzp.forEach(function(allkuruzp){ %>
-                        <tr>
-                            <td>
+    <div class="page-header">
+        <h1>KURO ŠALTINIAI
+            <small>Sukurti naują, redaguoti, trinti</small>
+        </h1>
+        <p>
+            <a class="btn btn-primary btn-large" href="/kuruzp/new">Naujas kuro šaltinis</a>
+        </p>
+    </div>
+    <div class="row">
+        <% allkuruzp.forEach(function(allkuruzp){ %>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>
+                            <strong>
                                 <%= allkuruzp.kurouzpkodas %>
-                            </td>
-                            <td>
+                            </strong>
+                        </h3>
+                        <h4>
+                            <p>
+                                Tiekėjas:
                                 <%= allkuruzp.kurouzppav %>
-                            </td>
-                            <td>
+                            </p>
+                            <p>
+                                Kortelės Nr.
                                 <%= allkuruzp.kurouzpkortnr %>
-                            </td>
-                            <td><a class="btn btn-xs btn-warning" href="/kuruzp/<%= allkuruzp._id%>/edit">REDAGUOTI</a>
-                                <td>
-                                    <form id="delete-form" action="/kuruzp/<%=allkuruzp._id%>?_method=DELETE" , method=POST>
-                                        <button class="btn btn-xs btn-danger">TRINTI</button>
-                                    </form>
-                                </td>
-                        </tr>
-                        <% }); %>
-                </tbody>
-            </table>
-        </div>
-
+                            </p>
+                        </h4>
+                        <p>
+                            <a href="/kuruzp/<%= allkuruzp._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
+                            <form id="delete-form" action="/kuruzp/<%=allkuruzp._id%>?_method=DELETE" , method=POST>
+                                <button class="btn btn-danger">TRINTI</button>
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+    </div>
         <% include ../partials/footer %>

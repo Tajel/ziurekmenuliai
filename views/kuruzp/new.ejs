@@ -1,27 +1,54 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Kuriamas Naujas kuro saltinis </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/kuruzp" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="doc" value="kurosaltinis" hidden>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kurouzpkodas" placeholder="kuro saltinio kodas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kurouzppav" placeholder="kuro saltinio pavadinimas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="kurouzpkortnr" placeholder="kuro saltinio kort numeris">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
-                    </div>
-                </form>
-                <a href="/kuruzp">Atgal i Kuro saltiniu sarasa </a>
+    <form action="/kuruzp" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/kuruzp">Atgal į Kuro šaltinių sąrašą </a>
+            <!-- Form Name -->
+            <legend>Naujas Kuro šaltinis</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">kurosaltinis</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" type="text" placeholder="placeholder" class="form-control input-md" value="kurosaltinis">
+                    <span class="help-block">help</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="kurouzpkodas">Trumpas kodas</label>
+                <div class="col-md-4">
+                    <input id="kurouzpkodas" name="kurouzpkodas" type="text" placeholder="Trumpas kodas" class="form-control input-md">
+                    <span class="help-block">Įrašykite trumpą kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="kurouzppav">Tiekėjas</label>
+                <div class="col-md-4">
+                    <input id="kurouzppav" name="kurouzppav" type="text" placeholder="Tiekėjas" class="form-control input-md">
+                    <span class="help-block">Įrašykite tiekėją</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="kurouzpkortnr">Kortelės numeris</label>
+                <div class="col-md-4">
+                    <input id="kurouzpkortnr" name="kurouzpkortnr" type="text" placeholder="Kortelės numeris" class="form-control input-md">
+                    <span class="help-block">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>
