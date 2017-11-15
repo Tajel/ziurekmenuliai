@@ -38,7 +38,7 @@
 
             <!-- Select Basic -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[ipadkodas]">Pasirinkite Padlinį</label>
+                <label class="col-md-4 control-label" for="dv[ipadkodas]">Darbu vadovo padalinys</label>
                 <div class="col-md-4">
                     <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="form-control">
                         <% pad.forEach(function(pad){ %>
@@ -61,4 +61,6 @@
 
         </fieldset>
     </form>
-    <% include ../partials/footer %>
+    <%= console.log(dv) %>
+
+        <% include ../partials/footer %>

@@ -5,15 +5,15 @@ var middleware = require("../middleware");
 // var json = require("../doc/dv.json");
 
 //INDEX - show all dv
-router.get("/", middleware.isLoggedIn, function(req, res) {
+router.get("/", middleware.isLoggedIn, function (req, res) {
     // Get all dv from DB
     Dv.find({
         doc: "darbvad"
-    }, function(err, alldv) {
+    }, function (err, alldv) {
         if (err) {
             console.log(err);
         } else {
-            alldv.sort(function(a, b) {
+            alldv.sort(function (a, b) {
                 var textA = a.dvVadasPav.toUpperCase();
                 var textB = b.dvVadasPav.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -27,7 +27,7 @@ router.get("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //  CREATE - add new dv
-router.post("/", middleware.isLoggedIn, function(req, res) {
+router.post("/", middleware.isLoggedIn, function (req, res) {
     // Create a new dv and save to DB
     var author = {
         id: req.user._id,
@@ -35,7 +35,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
     };
     var dv = req.body.dv;
     dv.author = author;
-    Dv.create(dv, function(err, newlyCreated) {
+    Dv.create(dv, function (err, newlyCreated) {
         if (err) {
             console.log(err);
         } else {
@@ -46,13 +46,13 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
     });
 });
 
-//NEW - show form to create new dv  
-router.get("/new", middleware.isLoggedIn, function(req, res) {
+//NEW - show form to create new dv
+router.get("/new", middleware.isLoggedIn, function (req, res) {
     Dv.find({
         padkodas: {
             $exists: true
         }
-    }, function(err, pad) {
+    }, function (err, pad) {
         if (!err) {
             console.log("rasti pad: " + pad);
             res.render("dv/new", {
@@ -65,10 +65,10 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
 // IPORT to DV
 // console.log( require( "../dv.json" ));
 
-router.post("/json", middleware.isLoggedIn, function(req, res) {
+router.post("/json", middleware.isLoggedIn, function (req, res) {
     var newDv = require("../dv.json");
-    newDv.forEach(function(dv) {
-        Dv.create(dv, function(err, newlyCreated) {
+    newDv.forEach(function (dv) {
+        Dv.create(dv, function (err, newlyCreated) {
             if (err) {
                 res.redirect("/dv");
             } else {
@@ -81,19 +81,19 @@ router.post("/json", middleware.isLoggedIn, function(req, res) {
 
 
 //NEW - show form to create new dv
-router.get("/import", middleware.isLoggedIn, function(req, res) {
+router.get("/import", middleware.isLoggedIn, function (req, res) {
     res.render("dv/import");
 });
 
 // EDIT DV ROUTE
-router.get("/:id/edit", middleware.checkOwnership, function(req, res) { //  middleware.checkOwnership
-    Dv.findById(req.params.id, function(err, founddv) {
+router.get("/:id/edit", middleware.checkOwnership, function (req, res) { //  middleware.checkOwnership
+    Dv.findById(req.params.id, function (err, founddv) {
         if (!err) {
             Dv.find({
                 padkodas: {
                     $exists: true
                 }
-            }).exec(function(err, pad) {
+            }).exec(function (err, pad) {
                 if (!err) {
                     res.render("dv/edit", {
                         dv: founddv,
@@ -106,9 +106,9 @@ router.get("/:id/edit", middleware.checkOwnership, function(req, res) { //  midd
 });
 
 // UPDATE DV ROUTE
-router.put("/:id", middleware.checkOwnership, function(req, res) {
+router.put("/:id", middleware.checkOwnership, function (req, res) {
     // find and update the correct dv
-    Dv.findByIdAndUpdate(req.params.id, req.body.dv, function(err, updatedDv) {
+    Dv.findByIdAndUpdate(req.params.id, req.body.dv, function (err, updatedDv) {
         if (err) {
             res.redirect("/dv");
         } else {
@@ -120,8 +120,8 @@ router.put("/:id", middleware.checkOwnership, function(req, res) {
 
 
 // DESTROY DV ROUTE
-router.delete("/:id", middleware.checkOwnership, function(req, res) {
-    Dv.findByIdAndRemove(req.params.id, function(err) {
+router.delete("/:id", middleware.checkOwnership, function (req, res) {
+    Dv.findByIdAndRemove(req.params.id, function (err) {
         if (err) {
             res.redirect("/dv");
         } else {

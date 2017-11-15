@@ -1,40 +1,79 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Kuriamas Naujas vairuotojas </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/vair" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="vair[doc]" value="vairuot" hidden>
-                    </div>
-                    <div class="form-group">
-                        <select style="width: 100%; height: 34px" name="vair[ipadkodas]" class="custom-select">
-                     <option  selected>Pasirinkite Padlinį</option> 
-                    <% pad.forEach(function(pad){ %>
-                        <option><%= pad.padkodas %></option>
-                        <!--<%console.log("data duomenys: " + pad)%>-->
-                        <!--<%console.log("Pdalinio duomenys:  " + pad.padkodas)%>-->
-                    <% }); %>
-                </select>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="vair[vairkodas]" placeholder="Vairuotojo kodas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="vair[vairVardPav]" placeholder="Vairuotojo vardas pavarde">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="vair[vairVard]" placeholder="Vairuotojo vardas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="vair[vairPav]" placeholder="Vairuotojo pavarde">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
-                    </div>
-                </form>
-                <a href="/vair">Atgal i vairuotoju sarasa </a>
+    <form action="/vair" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/vair">Atgal į vairuotojų sąrašą </a>
+            <!-- Form Name -->
+            <legend>Naujas Vairuotojas</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="vair[doc]">vairuot</label>
+                <div class="col-md-4">
+                    <input id="vair[doc]" name="vair[doc]" type="text" placeholder="vairuot" class="form-control input-md" value="vairuot">
+                    <span class="help-block">vairuot</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vair[ipadkodas]">Pasirinkite Padlinį</label>
+                <div class="col-md-4">
+                    <select id="vair[ipadkodas]" name="vair[ipadkodas]" class="form-control">
+                        <% pad.forEach(function(pad){ %>
+                            <option value="<%= pad.padkodas %>">
+                                <%= pad.padkodas %>
+                            </option>
+                            <% }); %>
+                    </select>
+                    <span class="help-block">Pasirinkite padalinį</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vair[vairkodas]">Vairuotojo kodas</label>
+                <div class="col-md-4">
+                    <input id="vair[vairkodas]" name="vair[vairkodas]" type="text" placeholder="Vairuotojo kodas" class="form-control input-md">
+                    <span class="help-block">Įrašykite vairuotojo kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vair[vairVardPav]">Vairuotojo vardas pavarde</label>
+                <div class="col-md-4">
+                    <input id="vair[vairVardPav]" name="vair[vairVardPav]" type="text" placeholder="Vairuotojo vardas pavarde" class="form-control input-md">
+                    <span class="help-block">Įrašykite vardą ir pavardę</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vair[vairVard]">Vairuotojo vardas</label>
+                <div class="col-md-4">
+                    <input id="vair[vairVard]" name="vair[vairVard]" type="text" placeholder="Vairuotojo vardas" class="form-control input-md">
+                    <span class="help-block">Įrašykite Vardą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vair[vairPav]">Vairuotojo pavardė</label>
+                <div class="col-md-4">
+                    <input id="vair[vairPav]" name="vair[vairPav]" type="text" placeholder="Vairuotojo pavardė" class="form-control input-md">
+                    <span class="help-block">Įrašykite Pavardę</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
     <% include ../partials/footer %>

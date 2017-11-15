@@ -1,51 +1,42 @@
 <% include ../partials/header %>
 
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>Vairuotojai</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/vair/new">Naujas vairuotojas</a>
-                    <a class="btn btn-primary btn-large" href="/vair/import">Import Vairuotojus</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="container">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Vairuotojo kodas</th>
-                        <th>Vardas Pavarde</th>
-                        <th>Padalinio kodas</th>
-                        <th>Redaguoti</th>
-                        <th>Trinti</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% allvair.forEach(function(allvair){ %>
-                        <tr>
-                            <td>
-                                <%= allvair.vairkodas %>
-                            </td>
-                            <td>
+    <div class="page-header">
+        <h1>VAIRUOTOJAI
+            <small>Sukurti naują, redaguoti, trinti</small>
+            <p>
+                <a class="btn btn-primary btn-large" href="/vair/new">Naujas vairuotojas</a>
+                <a class="btn btn-primary btn-large" href="/vair/import">Importuoti Vairuotojus</a>
+            </p>
+        </h1>
+    </div>
+    <div class="row">
+        <% allvair.forEach(function(allvair){ %>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>
+                            <strong>
                                 <%= allvair.vairVardPav %>
-                            </td>
-                            <td>
+                            </strong>
+                        </h3>
+                        <h4>
+                            <p>Tabelio Nr:
+                                <%= allvair.vairkodas %>
+                            </p>
+                            <p> Padalinio kodas:
                                 <%= allvair.ipadkodas %>
-                            </td>
-                            <td><a class="btn btn-xs btn-warning" href="/vair/<%= allvair._id%>/edit">REDAGUOTI</a>
-                                <td>
-                                    <form id="delete-form" action="/vair/<%=allvair._id%>?_method=DELETE" , method=POST>
-                                        <button class="btn btn-xs btn-danger">TRINTI</button>
-                                    </form>
-                                </td>
-                                <td><a href="/vair/<%= allvair._id %>" class="btn btn-xs btn-primary">Detali informacija</a></td>
-                        </tr>
-                        <% }); %>
-                </tbody>
-            </table>
-        </div>
-
-        <% include ../partials/footer %>
+                            </p>
+                        </h4>
+                        <p>
+                            <a href="/vair/<%= allvair._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
+                            <a href="/vair/<%= allvair._id %>" class="btn btn-primary">Detali INFO</a>
+                            <form id="delete-form" action="/vair/<%=allvair._id%>?_method=DELETE" method=POST>
+                                <button class="btn btn-danger">TRINTI</button>
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+    <% include ../partials/footer %>
