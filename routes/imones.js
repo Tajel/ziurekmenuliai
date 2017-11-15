@@ -5,15 +5,15 @@ var middleware = require("../middleware");
 
 
 //INDEX - show all imones
-router.get("/", middleware.isLoggedIn, function(req, res) {
+router.get("/", middleware.isLoggedIn, function (req, res) {
     // Get all imones from DB
     Imones.find({
         doc: "imone"
-    }, function(err, allimones) {
+    }, function (err, allimones) {
         if (err) {
             console.log(err);
         } else {
-            allimones.sort(function(a, b) {
+            allimones.sort(function (a, b) {
                 var textA = a.imonespavadinimas.toUpperCase();
                 var textB = b.imonespavadinimas.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -27,7 +27,7 @@ router.get("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //CREATE - add new imone to DB
-router.post("/", middleware.isLoggedIn, function(req, res) {
+router.post("/", middleware.isLoggedIn, function (req, res) {
     // get data from form and add to imone array
     var doc = req.body.doc;
     var imonessutrumpkodas = req.body.imonessutrumpkodas;
@@ -49,7 +49,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
         doc: doc
     }
     // Create a new imone and save to DB
-    Imones.create(newImone, function(err, newlyCreated) {
+    Imones.create(newImone, function (err, newlyCreated) {
         if (err) {
             console.log(err);
         } else {
@@ -61,23 +61,23 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //NEW - show form to create new imone
-router.get("/new", middleware.isLoggedIn, function(req, res) {
+router.get("/new", middleware.isLoggedIn, function (req, res) {
     res.render("imones/new");
 });
 
 // IPORT to IMONE
 // console.log( require( "../imone.json" ));
 
-router.post("/json", middleware.isLoggedIn, function(req, res) {
+router.post("/json", middleware.isLoggedIn, function (req, res) {
     var newim = require("../imone.json");
     var author = {
         id: req.user._id,
         username: req.user.username
     }
-    newim.forEach(function(im) {
+    newim.forEach(function (im) {
         //  console.log("importuojam imone *****:     " + JSON.stringify(im));
         im.author = author;
-        Imones.create(im, function(err, newlyCreated) {
+        Imones.create(im, function (err, newlyCreated) {
             if (!err) {
                 return console.log("importuotos imones:   " + newlyCreated);
             }
@@ -88,16 +88,16 @@ router.post("/json", middleware.isLoggedIn, function(req, res) {
 
 
 //NEW1 - show form to create new dv
-router.get("/import", middleware.isLoggedIn, function(req, res) {
+router.get("/import", middleware.isLoggedIn, function (req, res) {
     res.render("imones/import");
 });
 
 
 
 // SHOW - shows more info about one imone
-router.get("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
+router.get("/:id", middleware.isLoggedIn, middleware.checkOwnership, function (req, res) {
     //find the imone with provided ID
-    Imones.findById(req.params.id, function(err, foundimone) {
+    Imones.findById(req.params.id, function (err, foundimone) {
         if (err) {
             console.log(err);
         } else {
@@ -111,8 +111,8 @@ router.get("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(re
 });
 
 // EDIT IMONE ROUTE
-router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
-    Imones.findById(req.params.id, function(err, foundimone) {
+router.get("/:id/edit", middleware.checkOwnership, function (req, res) {
+    Imones.findById(req.params.id, function (err, foundimone) {
         res.render("imones/edit", {
             imone: foundimone
         });
@@ -120,9 +120,9 @@ router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
 });
 
 // UPDATE IMONE ROUTE
-router.put("/:id", middleware.checkOwnership, function(req, res) {
+router.put("/:id", middleware.checkOwnership, function (req, res) {
     // find and update the correct imone
-    Imones.findByIdAndUpdate(req.params.id, req.body.imone, function(err, updatedImone) {
+    Imones.findByIdAndUpdate(req.params.id, req.body.imone, function (err, updatedImone) {
         if (err) {
             res.redirect("/imones");
         } else {
@@ -133,8 +133,8 @@ router.put("/:id", middleware.checkOwnership, function(req, res) {
 });
 
 // DESTROY CAMPGROUND ROUTE
-router.delete("/:id", middleware.checkOwnership, function(req, res) {
-    Imones.findByIdAndRemove(req.params.id, function(err) {
+router.delete("/:id", middleware.checkOwnership, function (req, res) {
+    Imones.findByIdAndRemove(req.params.id, function (err) {
         if (err) {
             res.redirect("/imones");
         } else {

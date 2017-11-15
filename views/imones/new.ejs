@@ -1,33 +1,72 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Kuriamanauja imone</h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/imones" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="doc" value="imone" hidden>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imonessutrumpkodas" placeholder="imones trumpas pavadinimas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imonespavadinimas" placeholder="imones pavadinimas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imonesimkodas" placeholder="imones kodas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imonespvmkodas" placeholder="imones PVM kodas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imonesadresas" placeholder="imones adresas">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-success btn-block">Sukurti!</button>
-                    </div>
-                </form>
-                <a href="/imones">Atgal i Imoniu kataloga</a>
+    <form action="/imones" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/imones">Atgal į Įmonių katalogą</a>
+            <!-- Form Name -->
+            <legend>Nauja Įmonė</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">imone</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" type="text" placeholder="imone" class="form-control input-md" value="imone">
+                    <span class="help-block">imone</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imonessutrumpkodas">Kodinis pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="imonessutrumpkodas" name="imonessutrumpkodas" type="text" placeholder="Kodinis pavadinimas" class="form-control input-md">
+                    <span class="help-block">Įrašykite trumpą įimonės pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imonespavadinimas">Pilnas įmonės pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="imonespavadinimas" name="imonespavadinimas" type="text" placeholder="Pilnas įmonės pavadinimas" class="form-control input-md">
+                    <span class="help-block">Įrašykite pilną įmonės pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imonesimkodas">Registracijos kodas, įk.</label>
+                <div class="col-md-4">
+                    <input id="imonesimkodas" name="imonesimkodas" type="text" placeholder="Registracijos kodas, įk." class="form-control input-md">
+                    <span class="help-block">Įrašykite registracijos kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imonespvmkodas">PVM kodas</label>
+                <div class="col-md-4">
+                    <input id="imonespvmkodas" name="imonespvmkodas" type="text" placeholder="PVM kodas" class="form-control input-md">
+                    <span class="help-block">Įrašykite PVM kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imonesadresas">Adresas</label>
+                <div class="col-md-4">
+                    <input id="imonesadresas" name="imonesadresas" type="text" placeholder="Adresas" class="form-control input-md">
+                    <span class="help-block">Įrašykite įmonės adresą</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>

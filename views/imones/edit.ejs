@@ -1,35 +1,71 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Redaguoti
-                <%= imone.imonespavadinimas %>
-            </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/imones/<%= imone._id %>?_method=PUT" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imone[imonessutrumpkodas]" value="<%= imone.imonessutrumpkodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imone[imonespavadinimas]" value="<%= imone.imonespavadinimas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imone[imonesimkodas]" value="<%= imone.imonesimkodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imone[imonesadresas]" value="<%= imone.imonesadresas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imone[imonespvmkodas]" value="<%= imone.imonespvmkodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="imone[doc]" hidden value="<%= imone.doc %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Submit!</button>
-                    </div>
-                </form>
-                <a href="/imones">Atgal i imoniu kataloga</a>
+    <form action="/imones/<%= imone._id %>?_method=PUT" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/imones">Atgal į Įmonių katalogą</a>
+            <!-- Form Name -->
+            <legend>Redaguoti Įmonę   <%= imone.imonespavadinimas %></legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="imone[doc]">imone</label>
+                <div class="col-md-4">
+                    <input id="imone[doc]" name="imone[doc]" type="text" placeholder="imone" class="form-control input-md" value="imone">
+                    <span class="help-block">imone</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imone[imonessutrumpkodas]">Kodinis pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="imone[imonessutrumpkodas]" name="imone[imonessutrumpkodas]" type="text" placeholder="Kodinis pavadinimas" class="form-control input-md" value="<%= imone.imonessutrumpkodas %>">
+                    <span class="help-block">Įrašykite trumpą įimonės pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imone[imonespavadinimas]">Pilnas įmonės pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="imone[imonespavadinimas]" name="imone[imonespavadinimas]" type="text" placeholder="Pilnas įmonės pavadinimas" class="form-control input-md" value="<%= imone.imonespavadinimas %>">
+                    <span class="help-block">Įrašykite pilną įmonės pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imone[imonesimkodas]">Registracijos kodas, įk.</label>
+                <div class="col-md-4">
+                    <input id="imone[imonesimkodas]" name="imone[imonesimkodas]" type="text" placeholder="Registracijos kodas, įk." class="form-control input-md" value="<%= imone.imonesimkodas %>">
+                    <span class="help-block">Įrašykite registracijos kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imone[imonespvmkodas]">PVM kodas</label>
+                <div class="col-md-4">
+                    <input id="imone[imonespvmkodas]" name="imone[imonespvmkodas]" type="text" placeholder="PVM kodas" class="form-control input-md" value="<%= imone.imonespvmkodas %>">
+                    <span class="help-block">Įrašykite PVM kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="imone[imonesadresas]">Adresas</label>
+                <div class="col-md-4">
+                    <input id="imone[imonesadresas]" name="imone[imonesadresas]" type="text" placeholder="Adresas" class="form-control input-md" value="<%= imone.imonesadresas %>">
+                    <span class="help-block">Įrašykite įmonės adresą</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Redaguoti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Redaguoti</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
     <% include ../partials/footer %>
