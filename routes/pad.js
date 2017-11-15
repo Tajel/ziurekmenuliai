@@ -82,7 +82,7 @@ router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function (r
     });
 });
 
-// DESTROY CAMPGROUND ROUTE
+// DESTROY PAD ROUTE
 router.delete("/:id", middleware.isLoggedIn, middleware.checkOwnership, function (req, res) {
     Pad.findByIdAndRemove(req.params.id, function (err) {
         if (err) {
