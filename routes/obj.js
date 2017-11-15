@@ -5,15 +5,15 @@ var middleware = require("../middleware");
 
 
 //INDEX - show all objekts
-router.get("/", middleware.isLoggedIn, function(req, res) {
+router.get("/", middleware.isLoggedIn, function (req, res) {
     // Get all objekts from DB
     Obj.find({
         doc: "objektas"
-    }, function(err, allobjekt) {
+    }, function (err, allobjekt) {
         if (err) {
             console.log(err);
         } else {
-            allobjekt.sort(function(a, b) {
+            allobjekt.sort(function (a, b) {
                 var textA = a.objkodas.toUpperCase();
                 var textB = b.objkodas.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -27,21 +27,26 @@ router.get("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //CREATE - add new objekt to DB
-router.post("/", middleware.isLoggedIn, function(req, res) {
+router.post("/", middleware.isLoggedIn, function (req, res) {
     // get data from form and add to object array
     var doc = req.body.doc;
     var dvVadasPav = req.body.dvVadasPav
     var objkodas = req.body.objkodas;
     var objpav = req.body.objpav;
+    var author = {
+        id: req.user._id,
+        username: req.user.username
+    };
 
     var newObj = {
         doc: doc,
         dvVadasPav: dvVadasPav,
         objkodas: objkodas,
-        objpav: objpav
+        objpav: objpav,
+        author: author
     }
     // Create a new object and save to DB
-    Obj.create(newObj, function(err, newlyCreated) {
+    Obj.create(newObj, function (err, newlyCreated) {
         if (err) {
             console.log(err);
         } else {
@@ -53,10 +58,10 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //NEW - show form to create new objekt
-router.get("/new", middleware.isLoggedIn, function(req, res) {
+router.get("/new", middleware.isLoggedIn, function (req, res) {
     Obj.find({
         doc: "darbvad"
-    }, function(err, allDv) {
+    }, function (err, allDv) {
         if (!err) {
             console.log("rasti dv: " + allDv);
             res.render("obj/new", {
@@ -67,18 +72,26 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
 });
 
 // EDIT OBJ ROUTE
-router.get("/:id/edit", middleware.isLoggedIn, function(req, res) { //  middleware.checkOwnership
-    Obj.findById(req.params.id, function(err, foundObj) {
-        res.render("obj/edit", {
-            obj: foundObj
-        });
-    });
+router.get("/:id/edit", middleware.isLoggedIn, function (req, res) { //  middleware.checkOwnership
+    Obj.findById(req.params.id, function (err, foundObj) {
+        if (!err) {
+            Obj.find({
+                doc: "darbvad"
+            }, function (err, allDv) {
+                if (!err) {
+                    res.render("obj/edit", {
+                        obj: foundObj, allDv: allDv
+                    })
+                }
+            })
+        }
+    })
 });
 
 // UPDATE OBJ ROUTE
-router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
+router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function (req, res) {
     // find and update the correct obj
-    Obj.findByIdAndUpdate(req.params.id, req.body.obj, function(err, updatedObj) {
+    Obj.findByIdAndUpdate(req.params.id, req.body.obj, function (err, updatedObj) {
         if (err) {
             res.redirect("/obj");
         } else {
@@ -89,8 +102,8 @@ router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(re
 });
 
 // DESTROY OBJ ROUTE
-router.delete("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
-    Obj.findByIdAndRemove(req.params.id, function(err) {
+router.delete("/:id", middleware.isLoggedIn, middleware.checkOwnership, function (req, res) {
+    Obj.findByIdAndRemove(req.params.id, function (err) {
         if (err) {
             res.redirect("/obj");
         } else {

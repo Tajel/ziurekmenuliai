@@ -1,29 +1,64 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Edit
-                <%= obj.objkodas %>
-            </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/obj/<%= obj._id %>?_method=PUT" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="obj[dvVadasPav]" value="<%= obj.dvVadasPav %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="obj[objkodas]" value="<%= obj.objkodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="obj[objpav]" value="<%= obj.objpav %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="obj[doc]" hidden value="<%= obj.doc %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Pakeisti !</button>
-                    </div>
-                </form>
-                <a href="/obj">Atgal</a>
+    <form action="/obj/<%= obj._id %>?_method=PUT" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/obj">Atgal į Objektų sąrašą</a>
+            <!-- Form Name -->
+            <legend>Redaguoti
+                <%= obj.objkodas %> Objektą</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">objektas</label>
+                <div class="col-md-4">
+                    <input id="doc" name="obj[doc]" type="text" placeholder="objektas" class="form-control input-md" value="objektas">
+                    <span class="help-block">objektas</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="dvVadasPav">Darbų vadovas</label>
+                <div class="col-md-4">
+                    <select id="dvVadasPav" name="obj[dvVadasPav]" class="form-control">
+                        <option value="<%= obj.dvVadasPav %>">
+                        </option>
+                        <% allDv.forEach(function(dv){ %>
+                            <option value="<%= dv.dvVadasPav %>">
+                                <%= dv.dvVadasPav %>
+                            </option>
+                            <% }); %>
+                    </select>
+                    <span class="help-block">Pasirinkite darbų vadovą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="objkodas">Objekto kodas</label>
+                <div class="col-md-4">
+                    <input id="objkodas" name="obj[objkodas]" type="text" placeholder="Objekto kodas pvz: v001/17" class="form-control input-md"
+                        value="<%= obj.objkodas %>">
+                    <span class="help-block">Įrašykite objekto kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="objpav">Objekto pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="objpav" name="obj[objpav]" type="text" placeholder="Objekto pavadinimas" class="form-control input-md" value="<%= obj.objpav %>">
+                    <span class="help-block">Įrašykite objekto pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Redaguoti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Redaguoti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>

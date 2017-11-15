@@ -1,35 +1,60 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Kuriamas Naujas Objektas</h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/obj" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="doc" value="objektas" hidden>
-                    </div>
-                    <!--<div class="form-group">-->
-                    <!--    <input class="form-control" type="text" name="dvVadasPav" placeholder="darbu vadovo kodas">-->
-                    <!--</div>-->
-                    <div class="form-group">
-                        <select style="width: 100%; height: 34px" name="dvVadasPav" class="custom-select">
-                     <option  selected>Pasirinkite Darbu vadova</option> 
-                    <% allDv.forEach(function(dv){ %>
-                        <option><%= dv.dvVadasPav %></option>
-                    <% }); %>
-                </select>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="objkodas" placeholder="objekto kodas">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="objpav" placeholder="objekto pavadinimas">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
-                    </div>
-                </form>
-                <a href="/obj">Atgal i Objektu sarasa</a>
+    <form action="/obj" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/obj">Atgal į Objektų sąrašą</a>
+            <!-- Form Name -->
+            <legend>Naujas Objektas</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">objektas</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" type="text" placeholder="objektas" class="form-control input-md" value="objektas">
+                    <span class="help-block">objektas</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="dvVadasPav">Darbų vadovas</label>
+                <div class="col-md-4">
+                    <select id="dvVadasPav" name="dvVadasPav" class="form-control">
+                        <% allDv.forEach(function(dv){ %>
+                            <option value="<%= dv.dvVadasPav %>">
+                                <%= dv.dvVadasPav %>
+                            </option>
+                            <% }); %>
+                    </select>
+                    <span class="help-block">Pasirinkite darbų vadovą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="objkodas">Objekto kodas</label>
+                <div class="col-md-4">
+                    <input id="objkodas" name="objkodas" type="text" placeholder="Objekto kodas pvz: v001/17" class="form-control input-md">
+                    <span class="help-block">Įrašykite objekto kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="objpav">Objekto pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="objpav" name="objpav" type="text" placeholder="Objekto pavadinimas" class="form-control input-md">
+                    <span class="help-block">Įrašykite objekto pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>
