@@ -1,38 +1,34 @@
 <% include ../partials/header %>
-
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>Transporto rusys</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/trrus/new">Nauja transporto rusis</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
-            <% alltrrus.forEach(function(alltrrus){ %>
-                <div class="col-md-3 col-sm-6">
+    <div class="page-header">
+        <h1>TRANSPORTO RŪŠYS
+            <small>Sukurti naują, redaguoti, trinti</small>
+        </h1>
+        <p>
+            <a class="btn btn-primary btn-large" href="/trrus/new">Nauja transporto rūšis</a>
+        </p>
+    </div>
+    <div class="row">
+        <% alltrrus.forEach(function(alltrrus){ %>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
                     <div class="caption">
-                        <h4>
-                            <%= alltrrus.trrus %>
-                        </h4>
+                        <h3>
+                            <strong>
+                                <%= alltrrus.trrus %>
+                            </strong>
+                        </h3>
                         <h4>
                             <%= alltrrus.trruskodas %>
                         </h4>
-                        <div>
-                            <hr>
-                            <a class="btn btn-xs btn-warning" href="/trrus/<%= alltrrus._id%>/edit">REDAGUOTI</a>
-                            <hr>
-                            <form id="delete-form" action="/trrus/<%=alltrrus._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-xs btn-danger">TRINTI</button>
+                        <p>
+                            <a href="/trrus/<%= alltrrus._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
+                            <form action="/trrus/<%=alltrrus._id%>?_method=DELETE" , method=POST>
+                                <button class="btn btn-danger">TRINTI</button>
                             </form>
-                        </div>
+                        </p>
                     </div>
                 </div>
-                <% }); %>
-        </div>
+            </div>
+            <% }); %>
     </div>
-
     <% include ../partials/footer %>

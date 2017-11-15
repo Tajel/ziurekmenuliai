@@ -1,23 +1,46 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Edit
-                <%= trrus.transportoru %>
-            </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/trrus/<%= trrus._id %>?_method=PUT" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="trrus[trruskodas]" value="<%= trrus.trruskodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="trrus[trrus]" value="<%= trrus.trrus %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Pakeisti !</button>
-                    </div>
-                </form>
-                <a href="/trrus">Atgal</a>
+    <form action="/trrus/<%= trrus._id %>?_method=PUT" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/trrus">Atgal į Transporto rūšių sąrašą </a>
+            <!-- Form Name -->
+            <legend>Redaguoti transporto rūšį
+            </legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">trrusis</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" type="text" placeholder="trrusis" class="form-control input-md" value="trrusis">
+                    <span class="help-block">trrusis</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="trrus[trruskodas]">Transporto rūšies kodas</label>
+                <div class="col-md-4">
+                    <input id="trruskodas" name="trrus[trruskodas]" type="text" placeholder="Transporto rūšies kodas" class="form-control input-md" value="<%= trrus.trruskodas %>">
+                    <span class="help-block">Įrašykite transporto rūšies kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="trrus[trrus]">Transporto rūšies pavadinimas</label>
+                <div class="col-md-4">
+                    <input id="trrus" name="trrus[trrus]" type="text" placeholder="Transporto rūšies pavadinimas" class="form-control input-md" value="<%= trrus.trrus %>">
+                    <span class="help-block">Įrašykite transporto rūšies pavadinimą</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>

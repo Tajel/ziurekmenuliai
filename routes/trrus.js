@@ -33,11 +33,16 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
     var doc = req.body.doc;
     var trrus = req.body.trrus;
     var trruskodas = req.body.trruskodas;
+    var author = {
+        id: req.user._id,
+        username: req.user.username
+    };
 
     var newTrrus = {
         doc: doc,
         trrus: trrus,
-        trruskodas: trruskodas
+        trruskodas: trruskodas,
+        author:author
     }
     // Create a new trrus and save to DB
     Trrus.create(newTrrus, function(err, newlyCreated) {
