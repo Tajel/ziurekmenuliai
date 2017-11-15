@@ -1,38 +1,35 @@
 <% include ../partials/header %>
-
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>Darbu rusis</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/darbrus/new">Nauja darbo rusis</a>
-                </p>
-            </div>
-        </header>
-
-        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
-            <% alldarbrus.forEach(function(alldarbrus){ %>
-                <div class="col-md-3 col-sm-6">
+    <div class="page-header">
+        <h1>DARBO RŪŠYS
+            <small>Sukurti naują, redaguoti, trinti</small>
+        </h1>
+        <p>
+            <a class="btn btn-primary btn-large" href="/darbrus/new">Nauja darbo rūšis</a>
+        </p>
+    </div>
+    <div class="row">
+        <% alldarbrus.forEach(function(alldarbrus){ %>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
                     <div class="caption">
+                        <h3>
+                            <strong>
+                                <%= alldarbrus.darbrus %>
+                            </strong>
+                        </h3>
                         <h4>
-                            <%= alldarbrus.darbrus %>
-                        </h4>
-                        <h4>
+                            Mato vienetas :
                             <%= alldarbrus.vnt %>
                         </h4>
-                        <div>
-                            <hr>
-                            <a class="btn btn-xs btn-warning" href="/darbrus/<%= alldarbrus._id%>/edit">REDAGUOTI</a>
-                            <hr>
+                        <p>
+                            <a href="/darbrus/<%= alldarbrus._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
                             <form id="delete-form" action="/darbrus/<%=alldarbrus._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-xs btn-danger">TRINTI</button>
+                                <button class="btn btn-danger">TRINTI</button>
                             </form>
-                        </div>
+                        </p>
                     </div>
                 </div>
-                <% }); %>
-        </div>
+            </div>
+            <% }); %>
     </div>
-
     <% include ../partials/footer %>

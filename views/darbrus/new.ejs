@@ -1,24 +1,45 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Kuriama darbo rusis </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/darbrus" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="doc" value="darbrus" hidden>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="darbrus" placeholder="darbo rusis">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="vnt" placeholder="vienetas">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
-                    </div>
-                </form>
-                <a href="/darbrus">Atgal i Kuro rusiu sarasa </a>
+    <form action="/darbrus" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/darbrus">Atgal į Kuro rūšių sąrašą </a>
+            <!-- Form Name -->
+            <legend>Nauja darbo rūšis</legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="doc">darbrus</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" type="text" placeholder="darbrus" class="form-control input-md" value="darbrus">
+                    <span class="help-block">darbrus</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="darbrus">Darbo rūšis</label>
+                <div class="col-md-4">
+                    <input id="darbrus" name="darbrus" type="text" placeholder="Darbo rūšis" class="form-control input-md">
+                    <span class="help-block">Įrašykite darbo rūšį</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vnt">Mato vienetas</label>
+                <div class="col-md-4">
+                    <input id="vnt" name="vnt" type="text" placeholder="Mato vienetas" class="form-control input-md">
+                    <span class="help-block">Įrašykite mato vienetą, Val, Mėn, tkm, d ...</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>
