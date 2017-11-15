@@ -41,11 +41,12 @@
                 <label class="col-md-4 control-label" for="dv[ipadkodas]">Darbu vadovo padalinys</label>
                 <div class="col-md-4">
                     <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="form-control">
-                        <% pad.forEach(function(pad){ %>
-                            <option value="<%= pad.padkodas %>">
-                                <%= pad.padkodas %>
-                            </option>
-                            <% }); %>
+                        <option value="<%= dv.ipadkodas %>">
+                            <% pad.forEach(function(pad){ %>
+                                <option value="<%= pad.padkodas %>">
+                                    <%= pad.padkodas %>
+                                </option>
+                                <% }); %>
                     </select>
                     <span class="help-block">Pasirinkite padalinio kodą</span>
                 </div>
