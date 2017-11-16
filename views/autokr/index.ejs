@@ -1,77 +1,54 @@
 <% include ../partials/header %>
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>KROVININIĖS Transporto priemonės</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/autokrov/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto priemone</a>
-                    <a class="btn btn-primary btn-large" href="/kellap">Krovininiu transporto pr keliones lapai</a>
-                    <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas keliones lapas</a>
-                </p>
-            </div>
-        </header>
-        <div class="container">
 
-        </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                    <th>7</th>
-                    <th>8</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% alltrkr.forEach(function(trans){ %>
-                    <tr>
-                        <td>
+    <div class="page-header">
+        <h1>KROVINIAI AUTOMOBILIAI
+            <small>Sukurti naują, redaguoti, trinti</small>
+            <p>
+        </h1>
+        <a class="btn btn-primary btn-large" href="/autokrov/new">
+            <i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto priemonė</a>
+        <a class="btn btn-primary btn-large" href="/kellap">
+            <i class="fa fa-plus" aria-hidden="true"></i> Krovininių transporto pr kelionės lapai</a>
+        <a class="btn btn-primary btn-large" href="/kellap/newkr">
+            <i class="fa fa-plus" aria-hidden="true"></i> Naujas kelionės lapas</a>
+        <hr>
+        </p>
+    </div>
+    <div class="row">
+        <% alltrkr.forEach(function(trans){ %>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>
                             <strong>
                                 <%=trans.marke%>
+                                    <%=trans.modelis%>
                             </strong>
-                        </td>
-                        <td>
-                            <strong>
-                                <%=trans.modelis%>
-                            </strong>
-                        </td>
-                        <td>
-                            <strong>
+                        </h3>
+                        <h4>
+                            <p>Valst Nr.:
                                 <%=trans.valstnr%>
-                            </strong>
-                        </td>
-                        <td>
-                            <strong>
+                            </p>
+                            <p> Invent. Nr.:
                                 <%=trans.inventnr%>
-                            </strong>
-                        </td>
-                        <td>
+                        </h4>
+                        <p>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-xs btn-warning" href="/autokrov/<%= trans._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                                <% }%>
-                        </td>
-                        <td>
-                            <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                <a class="btn   btn-warning" href="/autokrov/<%= trans._id %>/edit">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+
                                 <form id="delete-form" action="/autokrov/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-xs btn-danger">
+                                    <button class="btn   btn-danger">
                                         <i class="fa fa-trash-o"></i> TRINTI</button>
                                 </form>
                                 <% }%>
-                        </td>
-                        <td>
-                            <a href="/autokrov/<%= trans._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
-                        </td>
-                        <td>
-                            <a href="/autokrov/<%= trans._id %>/kellap" class="btn btn-xs btn-primary">Kelionės lapai</a>
-                        </td>
-                        <% }); %>
-                    </tr>
-            </tbody>
-        </table>
+                                    <a href="/autokrov/<%= trans._id %>" class="btn   btn-primary">
+                                        <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
+                                    <a href="/autokrov/<%= trans._id %>/kellap" class="btn   btn-primary">Kelionės lapai</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
     </div>
     <% include ../partials/footer %>

@@ -176,10 +176,10 @@
                 </table>
                 <hr>
                 <% if(currentUser && autokrov.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                    <a class="btn btn-xs btn-warning" href="/autokrov/<%= autokrov._id %>/edit">
+                    <a class="btn   btn-warning" href="/autokrov/<%= autokrov._id %>/edit">
                         <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                     <form id="delete-form" action="/autokrov/<%= autokrov._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-xs btn-danger">
+                        <button class="btn   btn-danger">
                             <i class="fa fa-trash-o"></i> TRINTI</button>
                     </form>
                     <% }%>
@@ -207,9 +207,9 @@
                                         <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                             <form style="display: inline" class="pull-right" action="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>?_method=DELETE"
                                                 method="POST">
-                                                <button class="btn btn-xs btn-danger">
+                                                <button class="btn   btn-danger">
                                                     <i class="fa fa-trash-o"></i> TRINTI</button>
-                                                <a href="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>/edit" class="btn btn-xs btn-info">
+                                                <a href="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>/edit" class="btn   btn-info">
                                                     <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                             </form>
                                             <% } %>
