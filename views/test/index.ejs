@@ -205,8 +205,8 @@
             </div>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-secondary">Ivesti</button>
-                <button type="button" class="btn btn-secondary">Redaguoti</button>
-                <button type="button" class="btn btn-secondary">Trinti</button>
+                <button type="button" class="btn btn-secondary"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                <button type="button" class="btn btn-secondary"><i class="fa fa-trash-o"></i>  TRINTI</button>
             </div>
         </div>
     </form>
@@ -228,7 +228,7 @@
 
             <div class="form-group">
                 <select style="width: 100%; height: 34px" name="autoik[darbrus]" class="custom-select">
-         <option  selected>Pasirinkite darbo rusi</option> 
+         <option  selected>Pasirinkite darbo rusi</option>
         <% ikainis.forEach(function(data){ %>
             <% if(data.idarbrus !== undefined){ %>
             <option><%= data.idarbrus %>, <%= data.vnt %></option>
@@ -295,21 +295,21 @@
     </div>
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary">Ivesti</button>
-      <button type="button" class="btn btn-secondary">Redaguoti</button>
-      <button type="button" class="btn btn-secondary">Trinti</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+      <button type="button" class="btn btn-secondary"><i class="fa fa-trash-o"></i>  TRINTI</button>
     </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
   </div>
 </form>
 
 <hr>
 <!--<div class=''>   -->
-    
+
 <!--    <form onsubmit="return false" oninput="    totalamount.value = Math.round(input4.value * input3.value);">-->
 <!--            <div class="col-xs-1">-->
 <!--                <label for="input1">Darbo rusis</label>-->
@@ -359,10 +359,10 @@
                     <!--                </select>-->
                     <!--            </div>-->
                     <!--            <div class="col-xs-1">-->
-                    <!--                <button id="input8">Redaguoti</button>-->
+                    <!--                <button id="input8"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>-->
                     <!--            </div>-->
                     <!--            <div class="col-xs-1">-->
-                    <!--                <button id="input9">Trinti</button>-->
+                    <!--                <button id="input9"><i class="fa fa-trash-o"></i>  TRINTI</button>-->
                     <!--            </div>-->
                     <!--    </form>-->
                     <!--</div>-->

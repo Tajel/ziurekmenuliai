@@ -5,7 +5,7 @@
                 <h1>Transporto valdymo modulis!</h1>
                 <p>KROVININIĖS Transporto priemonės</p>
                 <p>
-                    <a class="btn btn-primary btn-large" href="/autokrov/new">Nauja transporto priemone</a>
+                    <a class="btn btn-primary btn-large" href="/autokrov/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto priemone</a>
                     <a class="btn btn-primary btn-large" href="/kellap">Krovininiu transporto pr keliones lapai</a>
                     <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas keliones lapas</a>
                 </p>
@@ -30,24 +30,45 @@
             <tbody>
                 <% alltrkr.forEach(function(trans){ %>
                     <tr>
-                        <td><strong><%=trans.marke%></strong></td>
-                        <td><strong><%=trans.modelis%></strong></td>
-                        <td><strong><%=trans.valstnr%></strong></td>
-                        <td><strong><%=trans.inventnr%></strong></td>
+                        <td>
+                            <strong>
+                                <%=trans.marke%>
+                            </strong>
+                        </td>
+                        <td>
+                            <strong>
+                                <%=trans.modelis%>
+                            </strong>
+                        </td>
+                        <td>
+                            <strong>
+                                <%=trans.valstnr%>
+                            </strong>
+                        </td>
+                        <td>
+                            <strong>
+                                <%=trans.inventnr%>
+                            </strong>
+                        </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-xs btn-warning" href="/autokrov/<%= trans._id %>/edit">Redaguoti</a>
+                                <a class="btn btn-xs btn-warning" href="/autokrov/<%= trans._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/autokrov/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-xs btn-danger">Istrinti</button>
+                                    <button class="btn btn-xs btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
                                 </form>
                                 <% }%>
                         </td>
-                        <td><a href="/autokrov/<%= trans._id %>" class="btn btn-xs btn-primary">Detali informacija</a></td>
-                        <td><a href="/autokrov/<%= trans._id %>/kellap" class="btn btn-xs btn-primary">Kelionės lapai</a></td>
+                        <td>
+                            <a href="/autokrov/<%= trans._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
+                        </td>
+                        <td>
+                            <a href="/autokrov/<%= trans._id %>/kellap" class="btn btn-xs btn-primary">Kelionės lapai</a>
+                        </td>
                         <% }); %>
                     </tr>
             </tbody>

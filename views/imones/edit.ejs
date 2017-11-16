@@ -1,7 +1,7 @@
 <% include ../partials/header %>
     <form action="/imones/<%= imone._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/imones">Atgal į Įmonių katalogą</a>
+            <a href="/imones"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Įmonių katalogą</a>
             <!-- Form Name -->
             <legend>Redaguoti Įmonę   <%= imone.imonespavadinimas %></legend>
 
@@ -61,9 +61,9 @@
 
             <!-- Button -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">Redaguoti</label>
+                <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">Redaguoti</button>
+                    <button id="submit" name="submit" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                 </div>
             </div>
         </fieldset>

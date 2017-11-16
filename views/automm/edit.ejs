@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <select style="width: 100%; height: 34px" name="automm[vairVardPav]" class="custom-select">
-                     <option  selected><%=automm.vairVardPav%></option> 
+                     <option  selected><%=automm.vairVardPav%></option>
                     <% data.forEach(function(data){ %>
                         <% if(data.vairVardPav !== undefined){ %>
                         <% console.log('Atsakingas: '+data.vairVardPav) %>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <select style="width: 100%; height: 34px" name="automm[ikurrusis]" class="custom-select">
-                     <option  selected><%=automm.ikurrusis%></option> 
+                     <option  selected><%=automm.ikurrusis%></option>
                     <% data.forEach(function(data){ %>
                         <% if(data.kurrusis !== undefined){ %>
                         <% console.log('Kuro rusis: '+data.kurrusis) %>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <select style="width: 100%; height: 34px" name="automm[ipadkodas]" class="custom-select">
-                     <option  selected><%=automm.ipadkodas%></option> 
+                     <option  selected><%=automm.ipadkodas%></option>
                     <% data.forEach(function(data){ %>
                         <% if(data.padkodas !== undefined){ %>
                         <% console.log('Padalinio Kodas: '+data.padkodas) %>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group">
                     <select style="width: 100%; height: 34px" name="automm[itrrus]" class="custom-select">
-                     <option  selected><%=automm.itrrus%></option> 
+                     <option  selected><%=automm.itrrus%></option>
                     <% data.forEach(function(data){ %>
                         <% if(data.trrus !== undefined){ %>
                         <% console.log('Transporto rusis: '+data.trrus) %>
@@ -59,10 +59,10 @@
                 </select>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    <button class="btn btn-lg btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
                 </div>
             </form>
-            <a href="/automm">Go Back</a>
+            <a href="/automm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
         </div>
     </div>
 

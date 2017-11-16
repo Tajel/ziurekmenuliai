@@ -37,7 +37,7 @@
                     <!--*****************************************************-->
                     <div class="col">
                         <select id='objektas' onchange="myFunction2()" class="custom-select" name="kellap[iobjkodas]">
-                        <option selected><%= data.kellapPajamos.iobjkodas%></option> 
+                        <option selected><%= data.kellapPajamos.iobjkodas%></option>
                         <% data.objektas.forEach(function(data){ %>
                             <% if(data.objkodas !== undefined){ %>
                             <option>
@@ -49,7 +49,7 @@
 
                     <div class="col">
                         <select id='dv1' class="custom-select" name="kellap[idvVadasPav]">
-                        <option id ='dv' selected ><%= data.kellapPajamos.idvVadasPav%></option> 
+                        <option id ='dv' selected ><%= data.kellapPajamos.idvVadasPav%></option>
                         <% data.dv.forEach(function(data){ %>
                           <% if(data.dvVadasPav !== undefined){ %>
                           <option><%= data.dvVadasPav %></option>
@@ -68,7 +68,7 @@
                     <!--*****************************************************-->
                     <div class="col">
                         <select class="custom-select" name="kellap[imonkodas]">
-                        <option  selected><%= data.kellapPajamos.imonkodas%></option> 
+                        <option  selected><%= data.kellapPajamos.imonkodas%></option>
                         <% data.imone.forEach(function(data){ %>
                           <% if(data.imonessutrumpkodas !== undefined){ %>
                           <option><%= data.imonessutrumpkodas %></option>
@@ -77,11 +77,11 @@
                       </select>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-block">Submit!</button>
+                        <button class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
                     </div>
                 </div>
             </form>
-            <a href="/kellap/<%= kellapId %>/detail">Go Back</a>
+            <a href="/kellap/<%= kellapId %>/detail"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
         </div>
     </div>
 

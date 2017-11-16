@@ -5,7 +5,8 @@
                 <h1>Transporto valdymo modulis!</h1>
                 <p>Mazosios mechanizacijos priemonės</p>
                 <p>
-                    <a class="btn btn-primary btn-large" href="/automm/new">Nauja transporto priemone</a>
+                    <a class="btn btn-primary btn-large" href="/automm/new">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto priemone</a>
                     <a class="btn btn-primary btn-large" href="/kellap">MM transporto pr keliones lapai</a>
                     <a class="btn btn-primary btn-large" href="/kellap/newmm">Naujas keliones lapas</a>
 
@@ -31,24 +32,44 @@
             <tbody>
                 <% alltrmm.forEach(function(trans){ %>
                     <tr>
-                        <td><strong><%=trans.vairVardPav%></strong></td>
-                        <td><strong><%=trans.ikurrusis%></strong></td>
-                        <td><strong><%=trans.ipadkodas%></strong></td>
-                        <td><strong><%=trans.itrrus%></strong></td>
+                        <td>
+                            <strong>
+                                <%=trans.vairVardPav%>
+                            </strong>
+                        </td>
+                        <td>
+                            <strong>
+                                <%=trans.ikurrusis%>
+                            </strong>
+                        </td>
+                        <td>
+                            <strong>
+                                <%=trans.ipadkodas%>
+                            </strong>
+                        </td>
+                        <td>
+                            <strong>
+                                <%=trans.itrrus%>
+                            </strong>
+                        </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-xs btn-warning" href="/automm/<%= trans._id %>/edit">Redaguoti</a>
+                                <a class="btn btn-xs btn-warning" href="/automm/<%= trans._id %>/edit">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/automm/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-xs btn-danger">Istrinti</button>
+                                    <button class="btn btn-xs btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
                                 </form>
                                 <% }%>
                         </td>
-                        <!--<td><a href="/automm/<%= trans._id %>" class="btn btn-xs btn-primary">Detali informacija</a></td>-->
-                        <td><a href="/kellap" class="btn btn-xs btn-primary">Kelionės lapai</a></td>
+                        <!--<td><a href="/automm/<%= trans._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>-->
+                        <td>
+                            <a href="/kellap" class="btn btn-xs btn-primary">Kelionės lapai</a>
+                        </td>
                         <% }); %>
                     </tr>
             </tbody>

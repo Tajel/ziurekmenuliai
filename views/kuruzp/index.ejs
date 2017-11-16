@@ -4,7 +4,7 @@
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
         <p>
-            <a class="btn btn-primary btn-large" href="/kuruzp/new">Naujas kuro šaltinis</a>
+            <a class="btn btn-primary btn-large" href="/kuruzp/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas kuro šaltinis</a>
         </p>
     </div>
     <div class="row">
@@ -28,9 +28,9 @@
                             </p>
                         </h4>
                         <p>
-                            <a href="/kuruzp/<%= allkuruzp._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
+                            <a href="/kuruzp/<%= allkuruzp._id%>/edit" class="btn btn-primary" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                             <form id="delete-form" action="/kuruzp/<%=allkuruzp._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-danger">TRINTI</button>
+                                <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                             </form>
                         </p>
                     </div>

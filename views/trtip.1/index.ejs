@@ -6,7 +6,7 @@
                 <h1>Transporto valdymo modulis!</h1>
                 <p>Transporto tipas</p>
                 <p>
-                    <a class="btn btn-primary btn-large" href="/trtip/new">Nauja transporto rusis</a>
+                    <a class="btn btn-primary btn-large" href="/trtip/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto rusis</a>
                 </p>
             </div>
         </header>
@@ -20,10 +20,10 @@
                         </h4>
                         <div>
                             <hr>
-                            <a class="btn btn-xs btn-warning" href="/trtip/<%= alltrtip._id%>/edit">REDAGUOTI</a>
+                            <a class="btn btn-xs btn-warning" href="/trtip/<%= alltrtip._id%>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                             <hr>
                             <form id="delete-form" action="/trtip/<%=alltrtip._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-xs btn-danger">TRINTI</button>
+                                <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                             </form>
                         </div>
                     </div>

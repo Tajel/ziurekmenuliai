@@ -5,7 +5,7 @@
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
         <p>
-            <a class="btn btn-primary btn-large" href="/kurrus/new">Nauja kuro rūšis</a>
+            <a class="btn btn-primary btn-large" href="/kurrus/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja kuro rūšis</a>
         </p>
     </div>
     <div class="row">
@@ -22,9 +22,9 @@
                             <%= allkurrus.kurrusis %>
                         </h4>
                         <p>
-                            <a href="/kurrus/<%= allkurrus._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
+                            <a href="/kurrus/<%= allkurrus._id%>/edit" class="btn btn-primary" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                             <form id="delete-form" action="/kurrus/<%=allkurrus._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-danger">TRINTI</button>
+                                <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                             </form>
                         </p>
                     </div>

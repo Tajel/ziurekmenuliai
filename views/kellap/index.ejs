@@ -135,12 +135,12 @@
                 <td style="text-align: center;">
                     <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                         <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-xs btn-danger">Istrinti</button>
+                            <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                         </form>
                         <% }%>
                 </td style="text-align: center;">
                 <td style="text-align: center;">
-                    <a href="/kellap/<%= kellap._id %>/detail" class="btn btn-xs btn-primary">Detali informacija</a>
+                    <a href="/kellap/<%= kellap._id %>/detail" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
                 </td>
                 <% }); %>
             </tr>

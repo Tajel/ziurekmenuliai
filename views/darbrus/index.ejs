@@ -4,7 +4,7 @@
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
         <p>
-            <a class="btn btn-primary btn-large" href="/darbrus/new">Nauja darbo rūšis</a>
+            <a class="btn btn-primary btn-large" href="/darbrus/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja darbo rūšis</a>
         </p>
     </div>
     <div class="row">
@@ -22,9 +22,9 @@
                             <%= alldarbrus.vnt %>
                         </h4>
                         <p>
-                            <a href="/darbrus/<%= alldarbrus._id%>/edit" class="btn btn-primary" role="button">REDAGUOTI</a>
+                            <a href="/darbrus/<%= alldarbrus._id%>/edit" class="btn btn-primary" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                             <form id="delete-form" action="/darbrus/<%=alldarbrus._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-danger">TRINTI</button>
+                                <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                             </form>
                         </p>
                     </div>

@@ -36,7 +36,7 @@
                 </div>
                 <div class="well">
                     <div class="text-right">
-                        <a class="btn btn-success" href="/autonuoma/<%= autonuoma._id %>/kellapas/new">Naujas keliones lapas</a>
+                        <a class="btn btn-success" href="/autonuoma/<%= autonuoma._id %>/kellapas/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas keliones lapas</a>
                     </div>
                     <hr>
                     <% autonuoma.kellapas.forEach(function(kellapas){ %>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-xs btn-default" href="/autonuoma">Atgal</a>
+        <a class="btn btn-xs btn-default" href="/autonuoma"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
     </div>
 
     <% include ../partials/footer %>

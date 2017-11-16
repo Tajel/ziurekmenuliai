@@ -2,7 +2,7 @@
     <h1>
         <%=vair.vairVardPav%>
     </h1>
-    <a href="/vair">Atgal į vairuotojų sąrašą </a>
+    <a href="/vair"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į vairuotojų sąrašą </a>
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">
@@ -13,8 +13,8 @@
             <!-- <p> -->
             <div class="panel-footer">
                 <form id="delete-form" action="/vair/<%= vair._id %>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger">TRINTI</button>
-                    <a class="btn btn-primary" role="button" href="/vair/<%= vair._id %>/edit">REDAGUOTI</a>
+                    <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                    <a class="btn btn-primary" role="button" href="/vair/<%= vair._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
 
                 </form>
             </div>
@@ -84,7 +84,7 @@
         <!-- Default panel contents -->
         <div class="panel-heading">
             <h1> Įkainis</h1>
-            <a class="btn btn-success" href="/vair/<%= vair._id %>/vairik/new">Naujas Įkainis</a>
+            <a class="btn btn-success" href="/vair/<%= vair._id %>/vairik/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas Įkainis</a>
         </div>
         <% vair.ikainis.forEach(function(ikainis){ %>
             <h4>
@@ -93,8 +93,8 @@
                         <%= ikainis.vairikain %>
                             <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form style="display: inline" action="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>?_method=DELETE" method="POST">
-                                    <button class="btn btn-danger btn-sm">TRINTI</button>
-                                    <a href="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>/edit" a class="btn btn-sm btn-primary" role="button">Redaguoti</a>
+                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                                    <a href="/vair/<%=vair._id%>/vairik/<%=ikainis._id%>/edit" a class="btn btn-sm btn-primary" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 </form>
                                 <% } %>
                                     <% }) %>

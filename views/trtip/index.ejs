@@ -21,7 +21,7 @@
                     <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
                 </div>
             </form>
-            <!--<a href="/trtip">Atgal i sarasa </a>-->
+            <!--<a href="/trtip"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal i sarasa </a>-->
         </div>
 
         <div id='trans-tipas' class="row text-center" style="display:flex; flex-wrap: wrap;">
@@ -38,9 +38,9 @@
                         <%= trtip.trtipas %>
                     </h4>
                     <div>
-                        <button class="btn btn-xs btn-warning edit-button">REDAGUOTI</button>
+                        <button class="btn btn-xs btn-warning edit-button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                         <form style="display: inline" id="delete-form" action="/trtip/<%=trtip._id%>" , method=POST class='delete-item-form'>
-                            <button class="btn btn-xs btn-danger">TRINTI</button>
+                            <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                         </form>
                         <hr>
                     </div>

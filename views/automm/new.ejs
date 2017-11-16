@@ -3,7 +3,7 @@
         <div class="row">
             <h1 style="text-align: center">Nauja transporto priemonė</h1>
             <div style="width: 30%; margin: 25px auto;">
-                <a class="btn btn-default btn-xs" href="/automm">Atgal</a>
+                <a class="btn btn-default btn-xs" href="/automm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
                 <hr>
                 <form action="/automm" method="POST">
                     <div class="form-group">
@@ -11,7 +11,7 @@
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="automm[vairVardPav]" class="custom-select">
-                            <option  selected>Pasirinkite ATSAKINGĄ asmenį</option> 
+                            <option  selected>Pasirinkite ATSAKINGĄ asmenį</option>
                             <% data.forEach(function(data){ %>
                                 <% if(data.vairVardPav !== undefined){ %>
                                 <% console.log('Atsakingas: '+data.vairVardPav) %>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="automm[ikurrusis]" class="custom-select">
-                     <option  selected>Pasirinkite KURO rušį</option> 
+                     <option  selected>Pasirinkite KURO rušį</option>
                     <% data.forEach(function(data){ %>
                         <% if(data.kurrusis !== undefined){ %>
                         <% console.log('Kuro rusis: '+data.kurrusis) %>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="automm[ipadkodas]" class="custom-select">
-                     <option  selected>Pasirinkite Padlinį</option> 
+                     <option  selected>Pasirinkite Padlinį</option>
                     <% data.forEach(function(data){ %>
                         <% if(data.padkodas !== undefined){ %>
                         <% console.log('Padalinio Kodas: '+data.padkodas) %>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <select style="width: 100%; height: 34px" name="automm[itrrus]" class="custom-select">
-                     <option  selected>Pasirinkite priemonės rūšį</option> 
+                     <option  selected>Pasirinkite priemonės rūšį</option>
                     <% data.forEach(function(data){ %>
                         <% if(data.trrus !== undefined){ %>
                         <% console.log('Transporto rusis: '+data.trrus) %>
@@ -54,7 +54,7 @@
                 </select>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                        <button class="btn btn-lg btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
                     </div>
                 </form>
             </div>

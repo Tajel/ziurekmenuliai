@@ -2,7 +2,7 @@
     <h1>
         <%=imone.imonespavadinimas%>
     </h1>
-    <a href="/imones">Atgal į įmonių sąrašą </a>
+    <a href="/imones"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į įmonių sąrašą </a>
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">
@@ -14,8 +14,8 @@
             <div class="panel-footer">
                 <% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <form id="delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger">TRINTI</button>
-                        <a class="btn btn-primary" role="button" href="/imones/<%= imone._id %>/edit">REDAGUOTI</a>
+                        <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                        <a class="btn btn-primary" role="button" href="/imones/<%= imone._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
 
                     </form>
                     <% }%>

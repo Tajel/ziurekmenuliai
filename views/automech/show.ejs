@@ -106,12 +106,12 @@
         </table>
         <hr>
         <% if(currentUser && automech.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-            <a class="btn btn-xs btn-warning" href="/automech/<%= automech._id %>/edit">Redaguoti</a>
+            <a class="btn btn-xs btn-warning" href="/automech/<%= automech._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
             <form id="delete-form" action="/automech/<%= automech._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-xs btn-danger">Istrinti</button>
+                <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
             </form>
             <% }%>
-                <a href="/automech">Atgal</a>
+                <a href="/automech"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
     </div>
     <p><em> Sukurė <a href="/users/<%= automech.author.id %>"><%= automech.author.username %></a></em></p>
 

@@ -5,7 +5,7 @@
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
             <p>
-                <a class="btn btn-primary btn-large" href="/imones/new">Nauja įmonė</a>
+                <a class="btn btn-primary btn-large" href="/imones/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja įmonė</a>
                 <a class="btn btn-primary btn-large" href="/imones/import">Importuoti įmones</a>
             </p>
     </div>
@@ -26,10 +26,10 @@
                         <p>
                             <a href="/imones/<%= imone._id %>" class="btn btn-primary">Detali INFO</a>
                             <% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-primary" role="button" href="/imones/<%= imone._id%>/edit">REDAGUOTI</a>
+                                <a class="btn btn-primary" role="button" href="/imones/<%= imone._id%>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                                     <form id="delete-form" action="/imones/<%=imone._id%>?_method=DELETE" , method=POST>
-                                        <button class="btn btn-danger">TRINTI</button>
+                                        <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                                     </form>
                         </p>
                     </div>

@@ -5,7 +5,7 @@
                 <h1>Transporto valdymo modulis!</h1>
                 <p>MECHANIZMAI TRAKTORIAI SAVAEIGES Transporto priemonės</p>
                 <p>
-                    <a class="btn btn-primary btn-large" href="/automech/new">Nauja transporto priemone</a>
+                    <a class="btn btn-primary btn-large" href="/automech/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto priemone</a>
                     <a class="btn btn-primary btn-large" href="/kellap">Mechanizmu keliones lapai</a>
                     <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas keliones lapas</a>
                 </p>
@@ -35,17 +35,17 @@
                         <td><strong><%=trans.inventnr%></strong></td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-xs btn-warning" href="/automech/<%= trans._id %>/edit">Redaguoti</a>
+                                <a class="btn btn-xs btn-warning" href="/automech/<%= trans._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/automech/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-xs btn-danger">Istrinti</button>
+                                    <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                                 </form>
                                 <% }%>
                         </td>
-                        <td><a href="/automech/<%= trans._id %>" class="btn btn-xs btn-primary">Detali informacija</a></td>
+                        <td><a href="/automech/<%= trans._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
                         <td><a href="/automech/<%= trans._id %>/krovkellap" class="btn btn-xs btn-primary">Kelionės lapai</a></td>
                         <% }); %>
                     </tr>

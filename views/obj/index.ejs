@@ -5,7 +5,7 @@
             <small>Sukurti naują, redaguoti, trinti</small>
             <p>
         </h1>
-        <a class="btn btn-primary btn-large" href="/obj/new">Naujas objektas</a>
+        <a class="btn btn-primary btn-large" href="/obj/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas objektas</a>
         </p>
     </div>
     <div class="row">
@@ -27,10 +27,10 @@
                             </p>
                         </h4>
                         <p>
-                            <a class="btn btn-primary" href="/obj/<%= allobj._id%>/edit">REDAGUOTI</a>
+                            <a class="btn btn-primary" href="/obj/<%= allobj._id%>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
 
                             <form id="delete-form" action="/obj/<%=allobj._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-danger">TRINTI</button>
+                                <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                             </form>
                         </p>
                     </div>
