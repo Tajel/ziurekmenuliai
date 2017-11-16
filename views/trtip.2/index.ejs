@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Transporto valdymo modulis!</h1>
+                <p>Transporto tipas</p>
+            </div>
+        </header>
+
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/trtip" method="POST" id='new-todo-form'>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="doc" value="trantipas" readonly>
+                </div>
+                <div class="form-group">
+                    <label for='new-item'>Naujas irasas</label>
+                    <input class="form-control" type="text" name="trtipas" placeholder="transporto rusies tipas" id='new-item'>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Sukurti!</button>
+                </div>
+            </form>
+            <!--<a href="/trtip"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal i sarasa </a>-->
+        </div>
+
+        <div id='trans-tipas' class="row text-center" style="display:flex; flex-wrap: wrap;">
+            <% trtip.forEach(function(trtip){ %>
+                <div class="form-group col-md-4 col-sm-4">
+                    <form action="/trtip/<%= trtip._id %>" method="POST" class='edit-item-form'>
+                        <div class="form-group">
+                            <label for='<%= trtip._id %>'>Iraso tekstas</label>
+                            <input class="form-control" id='<%= trtip._id %>' type="text" name="trtip[trtipas]" value="<%= trtip.trtipas %>">
+                        </div>
+                        <button class="btn   btn-primary">Pakeisti !</button>
+                    </form>
+                    <h4>
+                        <%= trtip.trtipas %>
+                    </h4>
+                    <div>
+                        <button class="btn   btn-warning edit-button">
+                            <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                        <form style="display: inline" id="delete-form" action="/trtip/<%=trtip._id%>" , method=POST class='delete-item-form'>
+                            <button class="btn   btn-danger">
+                                <i class="fa fa-trash-o"></i> TRINTI</button>
+                        </form>
+                        <hr>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <% include ../partials/footer %>

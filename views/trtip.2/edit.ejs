@@ -5,7 +5,7 @@
                 <%= trtip.trtipas %>
             </h1>
             <div style="width: 30%; margin: 25px auto;">
-                <form action="/trtip/<%= trtip._id %>?_method=PUT" method="POST">
+                <form action="/trtip/<%= trtip._id %>?_method=PUT" method="POST" class='edit-item-form'>
                     <div class="form-group">
                         <input class="form-control" type="text" name="trtip[trtipas]" value="<%= trtip.trtipas %>">
                     </div>

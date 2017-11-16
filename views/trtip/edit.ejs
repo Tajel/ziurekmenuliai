@@ -1,20 +1,38 @@
 <% include ../partials/header %>
-    <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Edit
-                <%= trtip.trtipas %>
-            </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/trtip/<%= trtip._id %>?_method=PUT" method="POST" class='edit-item-form'>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="trtip[trtipas]" value="<%= trtip.trtipas %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Pakeisti !</button>
-                    </div>
-                </form>
-                <a href="/trtip"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+    <form action="/trtip/<%= trtip._id %>?_method=PUT" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/trtip">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į transporto priemonių sąrašą </a>
+            <!-- Form Name -->
+            <legend>Redaguoti transporto priemonės tipą</legend>
+            <hr>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="trtip[doc]" >trantipas</label>
+                <div class="col-md-4">
+                    <input id="doc" name="doc" type="text" placeholder="trantipas" class="form-control input-md" value="trantipas">
+                    <span class="help-block">trantipas</span>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="trtip[trtipas]">Transporto priemonės tipas</label>
+                <div class="col-md-4">
+                    <input id="trtip[trtipas]" name="trtip[trtipas]" type="text" placeholder="Transporto priemonės tipas" class="form-control input-md" required="" value="<%= trtip.trtipas %>">
+                    <span class="help-block">Įrašykite transporto priemonės tipą</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Redaguoti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Redaguoti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
     <% include ../partials/footer %>
