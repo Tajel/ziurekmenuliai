@@ -5,9 +5,11 @@
             <small>Sukurti naują, redaguoti, trinti</small>
             <p>
         </h1>
-        <a class="btn btn-primary btn-large" href="/vair/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas vairuotojas</a>
+        <a class="btn btn-primary btn-large" href="/vair/new">
+            <i class="fa fa-plus" aria-hidden="true"></i> Naujas vairuotojas</a>
         <a class="btn btn-primary btn-large" href="/vair/import">Importuoti Vairuotojus</a>
         </p>
+        <hr>
     </div>
     <div class="row">
         <% allvair.forEach(function(allvair){ %>
@@ -28,13 +30,16 @@
                             </p>
                         </h4>
                         <p>
-                            <a href="/vair/<%= allvair._id%>/edit" class="btn btn-primary" role="button">
-                                <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                            <a href="/vair/<%= allvair._id %>" class="btn btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
-                            <form id="delete-form" action="/vair/<%=allvair._id%>?_method=DELETE" method=POST>
-                                <button class="btn btn-danger">
-                                    <i class="fa fa-trash-o"></i> TRINTI</button>
-                            </form>
+                            <% if(currentUser && allvair.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                <a href="/vair/<%= allvair._id%>/edit" class="btn btn-primary" role="button">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <form id="delete-form" action="/vair/<%=allvair._id%>?_method=DELETE" method=POST>
+                                    <button class="btn btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
+                                </form>
+                                <% }%>
+                                    <a href="/vair/<%= allvair._id %>" class="btn btn-primary">
+                                        <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
                         </p>
                     </div>
                 </div>

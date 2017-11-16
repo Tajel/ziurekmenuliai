@@ -106,9 +106,9 @@
         </table>
         <hr>
         <% if(currentUser && autolen.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-            <a class="btn btn-xs btn-warning" href="/autolen/<%= autolen._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+            <a class="btn   btn-warning" href="/autolen/<%= autolen._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
             <form id="delete-form" action="/autolen/<%= autolen._id %>?_method=DELETE" method="POST">
-                <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
             </form>
             <% }%>
                 <a href="/autolen"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>

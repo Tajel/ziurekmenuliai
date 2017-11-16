@@ -1,10 +1,12 @@
 <% include ../partials/header %>
     <form action="/obj/<%= obj._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/obj"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Objektų sąrašą</a>
+            <a href="/obj">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Objektų sąrašą</a>
             <!-- Form Name -->
             <legend>Redaguoti
                 <%= obj.objkodas %> Objektą</legend>
+            <hr>
 
             <!-- Text input-->
             <div class="form-group" hidden>
@@ -55,10 +57,10 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                    <button id="submit" name="submit" class="btn btn-info">
+                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                 </div>
             </div>
-
         </fieldset>
     </form>
     <% include ../partials/footer %>

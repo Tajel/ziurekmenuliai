@@ -5,8 +5,10 @@
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
         <p>
-            <a class="btn btn-primary btn-large" href="/pad/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas padalinys</a>
+            <a class="btn btn-primary btn-large" href="/pad/new">
+                <i class="fa fa-plus" aria-hidden="true"></i> Naujas padalinys</a>
         </p>
+        <hr>
     </div>
     <div class="row">
         <% allpads.forEach(function(allpads){ %>
@@ -22,12 +24,15 @@
                             <%= allpads.padpavadinimas %>
                         </h4>
                         <p>
-                            <a href="/pad/<%= allpads._id%>/edit" class="btn btn-primary" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                            <form id="delete-form" action="/pad/<%=allpads._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-danger">
-                                    <i class="fa fa-trash-o"></i>
-                                    TRINTI</button>
-                            </form>
+                            <% if(currentUser && allpads.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                <a href="/pad/<%= allpads._id%>/edit" class="btn btn-primary" role="button">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <form id="delete-form" action="/pad/<%=allpads._id%>?_method=DELETE" , method=POST>
+                                    <button class="btn btn-danger">
+                                        <i class="fa fa-trash-o"></i>
+                                        TRINTI</button>
+                                </form>
+                                <% }%>
                         </p>
                     </div>
                 </div>

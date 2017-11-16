@@ -54,21 +54,21 @@
                         </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-xs btn-warning" href="/automm/<%= trans._id %>/edit">
+                                <a class="btn   btn-warning" href="/automm/<%= trans._id %>/edit">
                                     <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/automm/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-xs btn-danger">
+                                    <button class="btn   btn-danger">
                                         <i class="fa fa-trash-o"></i> TRINTI</button>
                                 </form>
                                 <% }%>
                         </td>
-                        <!--<td><a href="/automm/<%= trans._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>-->
+                        <!--<td><a href="/automm/<%= trans._id %>" class="btn   btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>-->
                         <td>
-                            <a href="/kellap" class="btn btn-xs btn-primary">Kelionės lapai</a>
+                            <a href="/kellap" class="btn   btn-primary">Kelionės lapai</a>
                         </td>
                         <% }); %>
                     </tr>

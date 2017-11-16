@@ -1,10 +1,12 @@
 <% include ../partials/header %>
     <form action="/trrus/<%= trrus._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/trrus"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Transporto rūšių sąrašą </a>
+            <a href="/trrus">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Transporto rūšių sąrašą </a>
             <!-- Form Name -->
             <legend>Redaguoti transporto rūšį
             </legend>
+            <hr>
 
             <!-- Text input-->
             <div class="form-group" hidden>
@@ -19,7 +21,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="trrus[trruskodas]">Transporto rūšies kodas</label>
                 <div class="col-md-4">
-                    <input id="trruskodas" name="trrus[trruskodas]" type="text" placeholder="Transporto rūšies kodas" class="form-control input-md" value="<%= trrus.trruskodas %>">
+                    <input id="trruskodas" name="trrus[trruskodas]" type="text" placeholder="Transporto rūšies kodas" class="form-control input-md"
+                        value="<%= trrus.trruskodas %>">
                     <span class="help-block">Įrašykite transporto rūšies kodą</span>
                 </div>
             </div>
@@ -28,16 +31,19 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="trrus[trrus]">Transporto rūšies pavadinimas</label>
                 <div class="col-md-4">
-                    <input id="trrus" name="trrus[trrus]" type="text" placeholder="Transporto rūšies pavadinimas" class="form-control input-md" value="<%= trrus.trrus %>">
+                    <input id="trrus" name="trrus[trrus]" type="text" placeholder="Transporto rūšies pavadinimas" class="form-control input-md"
+                        value="<%= trrus.trrus %>">
                     <span class="help-block">Įrašykite transporto rūšies pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"></i>Sukurti</label>
+                <label class="col-md-4 control-label" for="submit">
+                    </i>Sukurti</label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
+                    <button id="submit" name="submit" class="btn btn-info">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
                 </div>
             </div>
 

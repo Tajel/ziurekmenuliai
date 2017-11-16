@@ -2,11 +2,13 @@
 
     <form action="/pad/<%= pad._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/pad"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Padalinių sąrašą</a>
+            <a href="/pad">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Padalinių sąrašą</a>
             <!-- Form Name -->
             <legend>Redaguoti Padalinį:
                 <%= pad.padpavadinimas %>
             </legend>
+            <hr>
 
             <!-- Text input-->
             <div class="form-group" hidden>
@@ -41,7 +43,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"></label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                    <button id="submit" name="submit" class="btn btn-info">
+                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                 </div>
             </div>
 

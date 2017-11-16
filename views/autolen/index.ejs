@@ -37,18 +37,18 @@
                         <td><strong><%=trans.inventnr%></strong></td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-xs btn-warning" href="/autolen/<%= trans._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <a class="btn   btn-warning" href="/autolen/<%= trans._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/autolen/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                                    <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                                 </form>
                                 <% }%>
                         </td>
-                        <td><a href="/autolen/<%= trans._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
-                        <td><a href="/autolen/<%= trans._id %>/krovkellap" class="btn btn-xs btn-primary">Kelionės lapai</a></td>
+                        <td><a href="/autolen/<%= trans._id %>" class="btn   btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
+                        <td><a href="/autolen/<%= trans._id %>/krovkellap" class="btn   btn-primary">Kelionės lapai</a></td>
                         <% }); %>
                     </tr>
             </tbody>

@@ -7,15 +7,15 @@ var middleware = require("../middleware");
 
 
 //INDEX - show all Autokrov
-router.get("/", middleware.isLoggedIn, function(req, res) {
+router.get("/", middleware.isLoggedIn, function (req, res) {
     // Get all Autokrov from DB
     Autokrov.find({
         doc: "autokrov"
-    }, function(err, alltrkr) {
+    }, function (err, alltrkr) {
         if (err) {
             console.log(err);
         } else {
-            alltrkr.sort(function(a, b) {
+            alltrkr.sort(function (a, b) {
                 var textA = a.marke.toUpperCase();
                 var textB = b.marke.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -29,7 +29,7 @@ router.get("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //CREATE - add new Autokrov to DB
-router.post("/", middleware.isLoggedIn, function(req, res) {
+router.post("/", middleware.isLoggedIn, function (req, res) {
     // get data from form and add to Autokrov array
     var author = {
         id: req.user._id,
@@ -43,16 +43,16 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
     // Create a new Autokrov and save to DB
     Autokellap.findOne({
         doc: 'autokr'
-    }, function(err, result) {
+    }, function (err, result) {
         if (err) {
             console.log(err);
         }
         if (!result) {
             Autokellap.create({
                 doc: 'autokr'
-            }, function(err, auto) {
+            }, function (err, auto) {
                 if (!err) {
-                    Autokrov.create(autokr, function(err, newlyCreated) {
+                    Autokrov.create(autokr, function (err, newlyCreated) {
                         if (err) {
                             console.log(err);
                         } else {
@@ -67,7 +67,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
                 }
             });
         } else {
-            Autokrov.create(autokr, function(err, newlyCreated) {
+            Autokrov.create(autokr, function (err, newlyCreated) {
                 if (err) {
                     console.log(err);
                 } else {
@@ -84,7 +84,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
 });
 
 //NEW - show form to create new Autokrov
-router.get("/new", middleware.isLoggedIn, function(req, res) {
+router.get("/new", middleware.isLoggedIn, function (req, res) {
     Autokrov.find({
         $or: [{
             padkodas: {
@@ -107,21 +107,22 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
                 $exists: true
             }
         }]
-    }).exec(function(err, dataSum) {
+    }).exec(function (err, dataSum) {
         if (!err) {
             // console.log("rasti autokrov: " + dataSum);
             res.render("autokr/new", {
                 data: dataSum
             });
+            console.log(dataSum)
             // console.log("rasti autokrov: " + dataSum);
         }
     });
 });
 
 // SHOW - shows all kellaps from one Autokrov ******* VIEW DAR NESUTVARKYTAS
-router.get("/:id/kellap", middleware.isLoggedIn, function(req, res) {
+router.get("/:id/kellap", middleware.isLoggedIn, function (req, res) {
     //find the Autokrov with provided ID
-    Kellap.findById(req.params.id, function(err, foundkrid) {
+    Kellap.findById(req.params.id, function (err, foundkrid) {
         if (err || !foundkrid) {
             console.log(err);
             res.redirect('/')
@@ -135,9 +136,9 @@ router.get("/:id/kellap", middleware.isLoggedIn, function(req, res) {
     });
 });
 // SHOW - shows detailed info about Aotokrov
-router.get("/:id", middleware.isLoggedIn, function(req, res) {
+router.get("/:id", middleware.isLoggedIn, function (req, res) {
     //find the Autokrov with provided ID
-    Autokrov.findById(req.params.id).populate('ikainis').exec(function(err, foundtransport) {
+    Autokrov.findById(req.params.id).populate('ikainis').exec(function (err, foundtransport) {
         if (err || !foundtransport) {
             console.log(err);
             req.flash('error', 'tokio iraso nera!')
@@ -153,8 +154,8 @@ router.get("/:id", middleware.isLoggedIn, function(req, res) {
 });
 
 // EDIT Aotokrov ROUTE
-router.get("/:id/edit", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
-    Autokrov.findById(req.params.id, function(err, foundtransport) {
+router.get("/:id/edit", middleware.isLoggedIn, middleware.checkOwnership, function (req, res) {
+    Autokrov.findById(req.params.id, function (err, foundtransport) {
         if (!err) {
             console.log("*** rasta tr pr redagavimui: " + foundtransport);
             Autokrov.find({
@@ -179,7 +180,7 @@ router.get("/:id/edit", middleware.isLoggedIn, middleware.checkOwnership, functi
                         $exists: true
                     }
                 }]
-            }).exec(function(err, dataSum) {
+            }).exec(function (err, dataSum) {
                 if (!err) {
                     // console.log("rasti autokrov: " + autokrov);
                     res.render("autokr/edit", {
@@ -193,9 +194,9 @@ router.get("/:id/edit", middleware.isLoggedIn, middleware.checkOwnership, functi
 });
 
 // UPDATE Aotokrov ROUTE
-router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(req, res) {
+router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function (req, res) {
     // find and update the correct Aotokrov
-    Autokrov.findByIdAndUpdate(req.params.id, req.body.autokr, function(err, updatedTransport) {
+    Autokrov.findByIdAndUpdate(req.params.id, req.body.autokr, function (err, updatedTransport) {
         if (err) {
             res.redirect("/autokrov");
         } else {
@@ -206,9 +207,9 @@ router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(re
 });
 
 // DESTROY Aotokrov ROUTE
-router.delete("/:id",middleware.isLoggedIn, middleware.checkOwnership,
-    function(req, res) {
-        Autokrov.findByIdAndRemove(req.params.id, function(err) {
+router.delete("/:id", middleware.isLoggedIn, middleware.checkOwnership,
+    function (req, res) {
+        Autokrov.findByIdAndRemove(req.params.id, function (err) {
             if (err) {
                 res.redirect("/autokrov");
             } else {

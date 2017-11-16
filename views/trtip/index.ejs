@@ -32,15 +32,15 @@
                             <label for='<%= trtip._id %>'>Iraso tekstas</label>
                             <input class="form-control" id='<%= trtip._id %>' type="text" name="trtip[trtipas]" value="<%= trtip.trtipas %>">
                         </div>
-                        <button class="btn btn-xs btn-primary">Pakeisti !</button>
+                        <button class="btn   btn-primary">Pakeisti !</button>
                     </form>
                     <h4>
                         <%= trtip.trtipas %>
                     </h4>
                     <div>
-                        <button class="btn btn-xs btn-warning edit-button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                        <button class="btn   btn-warning edit-button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                         <form style="display: inline" id="delete-form" action="/trtip/<%=trtip._id%>" , method=POST class='delete-item-form'>
-                            <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                            <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                         </form>
                         <hr>
                     </div>

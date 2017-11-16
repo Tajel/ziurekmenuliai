@@ -46,17 +46,17 @@
                             <td><strong><%=kellap.ipagvair%></strong></td>
                             <td>
                                 <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                    <a class="btn btn-xs btn-warning" href="/kellap/<%= kellap._id %>/edit">Pildyti keliones lapa</a>
+                                    <a class="btn   btn-warning" href="/kellap/<%= kellap._id %>/edit">Pildyti keliones lapa</a>
                                     <% }%>
                             </td>
                             <td>
                                 <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                     <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                                        <button class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                                        <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
                                     </form>
                                     <% }%>
                             </td>
-                            <td><a href="/kellap/<%= kellap._id %>" class="btn btn-xs btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
+                            <td><a href="/kellap/<%= kellap._id %>" class="btn   btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
                             <% }); %>
                         </tr>
             </tbody>

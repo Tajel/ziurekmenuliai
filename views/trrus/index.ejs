@@ -4,8 +4,10 @@
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
         <p>
-            <a class="btn btn-primary btn-large" href="/trrus/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto rūšis</a>
+            <a class="btn btn-primary btn-large" href="/trrus/new">
+                <i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto rūšis</a>
         </p>
+        <hr>
     </div>
     <div class="row">
         <% alltrrus.forEach(function(alltrrus){ %>
@@ -21,10 +23,14 @@
                             <%= alltrrus.trruskodas %>
                         </h4>
                         <p>
-                            <a href="/trrus/<%= alltrrus._id%>/edit" class="btn btn-primary" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                            <form action="/trrus/<%=alltrrus._id%>?_method=DELETE" , method=POST>
-                                <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
-                            </form>
+                            <% if(currentUser && alltrrus.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                <a href="/trrus/<%= alltrrus._id%>/edit" class="btn btn-primary" role="button">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <form action="/trrus/<%=alltrrus._id%>?_method=DELETE" , method=POST>
+                                    <button class="btn btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
+                                </form>
+                                <% }%>
                         </p>
                     </div>
                 </div>

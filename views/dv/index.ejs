@@ -4,10 +4,12 @@
         <h1>DARBŲ VADOVAI
             <small>Sukurti naują, redaguoti, trinti</small>
         </h1>
-            <p>
-                <a class="btn btn-primary btn-large" href="/dv/new"><i class="fa fa-plus" aria-hidden="true"></i> Naujas Darbų Vadovas</a>
-                <a class="btn btn-primary btn-large" href="/dv/import">Import DV</a>
-            </p>
+        <p>
+            <a class="btn btn-primary btn-large" href="/dv/new">
+                <i class="fa fa-plus" aria-hidden="true"></i> Naujas Darbų Vadovas</a>
+            <a class="btn btn-primary btn-large" href="/dv/import">Import DV</a>
+        </p>
+        <hr>
     </div>
     <div class="row">
         <% alldv.forEach(function(alldv){ %>
@@ -29,11 +31,13 @@
 
                         <p>
                             <% if(currentUser && alldv.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-primary" role="button" href="/dv/<%= alldv._id%>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <a class="btn btn-primary" role="button" href="/dv/<%= alldv._id%>/edit">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
+                                    <button class="btn btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
+                                </form>
                                 <% }%>
-                                    <form id="delete-form" action="/dv/<%=alldv._id%>?_method=DELETE" , method=POST>
-                                        <button class="btn btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
-                                    </form>
                         </p>
                     </div>
                 </div>
