@@ -1,74 +1,77 @@
 <% include partials/header %>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12">
-            <div class="content">
-                <hr>
-                <h1>TRANSPORTO VALDYMO MODULIS</h1>
-                <!-- <br></br> -->
-                <!-- <h2>Mes su malonumu padėsime Jums, nes mes norime jog laiką skirtumėte reikšmingiems darbams</h2> -->
-                <hr>
-                <br></br>
-                <p>Kelionės lapų apskaita:</p>
-                <a href="/kellap" class="btn btn-default btn-lg">
-                    <i class="fa fa-file-text" aria-hidden="true"></i> KELIONĖS LAPAI !</a>
-                <!--<a href="/kellap/59ecb9de5e5dcd1532979859/paj/new" class="btn btn-default btn-lg"><i class="fa fa-tree"></i> KELIONES LAPAI !</a>-->
-                <br></br>
-                <p>Išrašyti naują kelionės lapą:</p>
-                <a href="/kellap/newkr" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> Naujas krov Lapas !</a>
-                <a href="/kellap/newmech" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> Naujas mech Lapas !</a>
-                <a href="/kellap/newlen" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> Naujas lengv Lapas !</a>
-                <a href="/kellap/" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> Naujas m.m. Lapas !</a>
-                <hr>
-                <p>Transporto priemonių sąrašai:</p>
-                <a href="/autokrov" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> KROVININIAI !</a>
-                <a href="/automech" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> MECHANIZMAI !</a>
-                <a href="/autolen" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> LENGVIEJI !</a>
-                <a href="/automm" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> KITI !</a>
-                <a href="/autonuoma" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> NUOMA !</a>
-                <hr>
-                <p>Duomenys: </p>
-                <p>
-
-                    <a href="/pad" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Padaliniai !</a>
-                    <a href="/dv" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Darbų vadovai !</a>
-                    <a href="/vair" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Vairuotojai !</a>
-                    <a href="/obj" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Objektai !</a>
-                    <a href="/trrus" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Transporto rušis !</a>
-                    <a href="/trtip" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Transporto tipas !</a>
-                    <a href="/kurrus" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Kuro rūšys !</a>
-                    <a href="/kuruzp" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Kuro šaltiniai !</a>
-                    <a href="/darbrus" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> darbo rūšis !</a>
-                    <a href="/imones" class="btn btn-default btn-lg">
-                        <i class="fa fa-tree"></i> Įmonės !</a>
-                </p>
-                <hr>
-
-                <p>Ataskaitos:</p>
-                <a href="/main" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> KURO ATASKAITA !</a>
-                <a href="/main" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> PAJAMŲ ATASKAITA !</a>
-                <a href="/test" class="btn btn-default btn-lg">
-                    <i class="fa fa-tree"></i> TEST !</a>
-            </div>
+    <div class="page-header">
+        <h1>TRANSPORTO VALDYMO MODULIS
+            <p>
+                <small>Mes su malonumu padėsime Jums, nes mes norime jog laiką skirtumėte reikšmingiems darbams</small>
+            </p>
+        </h1>
+        <hr>
+        <div class="col-md-12">
+            <h4 class="center">Kelionės lapų apskaita:</h4>
+            <a href="/kellap" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-file-text" aria-hidden="true"></i> Kelionės lapai!</a>
+            <h4 class="center">Išrašyti naują kelionės lapą:</h4>
+            <a href="/kellap/newkr" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> Naujas krov lapas !</a>
+            <a href="/kellap/newmech" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> Naujas mech lapas !</a>
+            <a href="/kellap/newlen" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> Naujas lengv lapas !</a>
+            <a href="/kellap/" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> Naujas m.m. lapas !</a>
+            <hr>
+        </div>
+        <div class="col-md-12">
+            <h4 class="center">Transporto priemonių sąrašai:</h4>
+            <a href="/autokrov" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list" aria-hidden="true"></i> Krovininiai !</a>
+            <a href="/automech" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list" aria-hidden="true"></i> Mechanizmai !</a>
+            <a href="/autolen" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list" aria-hidden="true"></i> Lengvieji !</a>
+            <a href="/automm" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list" aria-hidden="true"></i> Kiti !</a>
+            <a href="/autonuoma" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list" aria-hidden="true"></i> Nuoma !</a>
+            <hr>
+        </div>
+        <div class="col-md-12">
+            <h4 class="center">Duomenys: </h4>
+            <a href="/pad" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Padaliniai </a>
+            <a href="/dv" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Darbų vadovai </a>
+            <a href="/vair" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Vairuotojai </a>
+            <a href="/obj" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Objektai </a>
+            <a href="/trrus" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Transporto rušis </a>
+            <a href="/trtip" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Transporto tipas </a>
+            <a href="/kurrus" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Kuro rūšys </a>
+            <a href="/kuruzp" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Kuro šaltiniai </a>
+            <a href="/darbrus" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> darbo rūšis </a>
+            <a href="/imones" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-database" aria-hidden="true"></i> Įmonės </a>
+            <hr>
+        </div>
+        <div class="col-md-12">
+            <h4 class="center">Ataskaitos:</h4>
+            <a href="/main" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list-alt" aria-hidden="true"></i> Kuro ataskaita </a>
+            <a href="/main" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list-alt" aria-hidden="true"></i> Pajamų ataskaita </a>
+            <a href="/main" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list-alt" aria-hidden="true"></i> Ridų ataskaita </a>
+            <a href="/main" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list-alt" aria-hidden="true"></i> Tabeliai </a>
+            <!-- <a href="/test" class="landbtn btn btn-default btn-lg">
+                <i class="fa fa-list-alt" aria-hidden="true"></i> TEST !</a> -->
+            <hr>
         </div>
     </div>
 
