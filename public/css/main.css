@@ -3,37 +3,9 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
-
-/* html {
-  font-size: 62.5%; } */
-
-body {
   box-sizing: border-box;
-  letter-spacing: .025rem;
 }
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #e2e2e2;
-  padding: 3rem; }
-
-.landbtn {
-  width:100%;
-}
-
-.col-md-12{
-width: 25%;
-}
-.wrapper{
-  width: 1400px;
-  margin: 0 auto;
-}
-.center{
-text-align:center;
-}
-
-h1{
-  letter-spacing: .5rem;
+html {
+  font: normal 62.5% sans-serif;
+  color: #555;
 }
