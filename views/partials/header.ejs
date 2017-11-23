@@ -24,7 +24,7 @@
                         <use xlink:href="img/sprite.svg#icon-search" </svg>
                 </button>
             </form>
-            <nav class="user_nav">
+            <nav class="user-nav">
                 <% if(!currentUser){ %>
                     <div class="user-nav__icon-box">
                         <a class="nav-link" href="/login">
@@ -45,16 +45,16 @@
                                 <use xlink:href="img/sprite.svg#icon-user2">
                             </svg>
                             <a class="nav-link">
-                                <strong>
+                                <span>
                                     <%= currentUser.username %>
-                                </strong>
+                                </span>
                             </a>
                         </div>
                         <div class="user-nav__icon-box">
+                            <svg class="user-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-exit">
+                            </svg>
                             <a href="/logout">Išeiti
-                                <svg class="user-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-exit">
-                                </svg>
                             </a>
                         </div>
                         <% } %>

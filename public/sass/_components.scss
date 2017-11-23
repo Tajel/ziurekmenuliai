@@ -52,10 +52,23 @@
 
 //  USER NAV
 .user-nav {
-    background-color: green;
-    &__icon-box {}
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    &__icon-box {
+        display: flex;
+        align-items: center;
+        padding: 0 .8rem;
+        cursor: pointer;
+        height: 100%;
+        &:hover {
+            background-color: var(--f3-color);
+        }
+    }
     &__icon {
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--d2-color)
     }
 }

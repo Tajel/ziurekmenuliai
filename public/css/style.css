@@ -9,7 +9,7 @@
   --f8-color: #B3EBFF;
   --f9-color: #bde5f3;
   --d1-color: #80674f;
-  --d2-color: #694d3c;
+  --d2-color: #491f05;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 * {
@@ -23,7 +23,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: normal 62.5%;
+  font-size: 62.5%;
   color: var(--d2-color); }
 
 body {
@@ -37,15 +37,15 @@ body {
   min-height: 100vh; }
 
 .container {
-  max-width: 75rem;
-  margin: 3rem auto;
+  max-width: 120rem;
+  margin: 8rem auto;
   background-color: var(--f1-color);
   box-shadow: var(--f2-color);
   min-height: 50rem; }
 
 .header {
-  font-size: 1.4rem;
-  height: 7rem;
+  font-size: 2.2rem;
+  height: 6rem;
   background-color: var(--f2-color);
   border-bottom: var(--f6-color);
   display: flex;
@@ -63,6 +63,10 @@ body {
 .kellap-content {
   background-color: var(--f5-color);
   flex: 1; }
+
+a {
+  text-decoration: none;
+  color: var(--d2-color); }
 
 .logo {
   height: 3.25rem;
@@ -105,7 +109,19 @@ body {
     fill: var(--d2-color); }
 
 .user-nav {
-  background-color: green; }
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center; }
+  .user-nav__icon-box {
+    display: flex;
+    align-items: center;
+    padding: 0 .8rem;
+    cursor: pointer;
+    height: 100%; }
+    .user-nav__icon-box:hover {
+      background-color: var(--f3-color); }
   .user-nav__icon {
     height: 2.25rem;
-    width: 2.25rem; }
+    width: 2.25rem;
+    fill: var(--d2-color); }
