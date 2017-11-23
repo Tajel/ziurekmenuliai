@@ -38,7 +38,7 @@ body {
 
 .container {
   max-width: 120rem;
-  margin: 8rem auto;
+  margin: 3rem auto;
   background-color: var(--f1-color);
   box-shadow: var(--f2-color);
   min-height: 50rem; }
@@ -70,7 +70,7 @@ a {
 
 .logo {
   height: 3.25rem;
-  margin-left: 3rem; }
+  margin-left: 1rem; }
 
 .search {
   flex: 0 0 40%;
@@ -116,7 +116,7 @@ a {
   .user-nav__icon-box {
     display: flex;
     align-items: center;
-    padding: 0 .8rem;
+    margin: 0 .8rem;
     cursor: pointer;
     height: 100%; }
     .user-nav__icon-box:hover {
