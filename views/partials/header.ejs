@@ -27,34 +27,34 @@
             <nav class="user-nav">
                 <% if(!currentUser){ %>
                     <div class="user-nav__icon-box">
-                        <a class="nav-link" href="/login">
+                        <a class="user-nav__link" href="/login">
                             <svg class="user-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-enter">
                             </svg>
                             Prisijungti</a>
                     </div>
                     <div class="user-nav__icon-box">
-                        <a class="nav-link" href="/register">
+                        <a class="user-nav__link" href="/register">
                             <svg class="user-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-user-plus">
                             </svg>Registruotis</a>
                     </div>
                     <% } else { %>
                         <div class="user-nav__icon-box">
-                            <svg class="user-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-user2">
-                            </svg>
-                            <a class="nav-link">
+                            <a class="user-nav__link">
+                                <svg class="user-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-user2">
+                                </svg>
                                 <span>
                                     <%= currentUser.username %>
                                 </span>
                             </a>
                         </div>
                         <div class="user-nav__icon-box">
-                            <svg class="user-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-exit">
-                            </svg>
-                            <a href="/logout">Išeiti
+                            <a class="user-nav__link" href="/logout">
+                                <svg class="user-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-exit">
+                                </svg>Išeiti
                             </a>
                         </div>
                         <% } %>
@@ -71,7 +71,7 @@
                         </a>
                     </li>
                     <li class="side-nav__item">
-                        <a href="#" class="cide-nav__link">
+                        <a href="#" class="side-nav__link">
                             <svg class="side-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-file-text" </use>
                             </svg>
@@ -79,7 +79,7 @@
                         </a>
                     </li>
                     <li class="side-nav__item">
-                        <a href="#" class="cide-nav__link">
+                        <a href="#" class="side-nav__link">
                             <svg class="side-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-truck" </use>
                             </svg>
@@ -87,7 +87,7 @@
                         </a>
                     </li>
                     <li class="side-nav__item">
-                        <a href="#" class="cide-nav__link">
+                        <a href="#" class="side-nav__link">
                             <svg class="side-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-calendar" </use>
                             </svg>
@@ -95,12 +95,11 @@
                         </a>
                     </li>
                     <li class="side-nav__item">
-                        <a href="#" class="cide-nav__link">
+                        <a href="#" class="side-nav__link">
                             <svg class="side-nav__icon">
-                                <use xlink:href="<img src=" " alt=" ">
-                                <sprite class="svg " id=" "></sprite>icon-database" </use>
+                                <use xlink:href="img/sprite.svg#icon-database" </use>
                             </svg>
-                            <span>Pagrindiniai duomenys</span>
+                            <span>Duomenys</span>
                         </a>
                     </li>
                 </ul>

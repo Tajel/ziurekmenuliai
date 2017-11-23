@@ -24,7 +24,7 @@
 .sidebar {
     display: flex;
     background-color: var(--f1-color);
-    flex: 0 0 15%;
+    flex: 0 0 19%;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -36,6 +36,6 @@
 }
 
 a {
-    text-decoration: none;
-    color: var(--d2-color);
+    // text-decoration: none;
+    // color: var(--d2-color);
 }

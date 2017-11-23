@@ -59,7 +59,7 @@ body {
 .sidebar {
   display: flex;
   background-color: var(--f1-color);
-  flex: 0 0 15%;
+  flex: 0 0 19%;
   flex-direction: column;
   justify-content: space-between; }
 
@@ -67,10 +67,6 @@ body {
   background-color: var(--f5-color);
   flex: 1;
   height: 80rem; }
-
-a {
-  text-decoration: none;
-  color: var(--d2-color); }
 
 .logo {
   height: 3.25rem;
@@ -129,10 +125,24 @@ a {
     height: 2.25rem;
     width: 2.25rem;
     fill: var(--d2-color); }
+  .user-nav__link {
+    text-decoration: none;
+    color: var(--d2-color); }
 
-.side-nav__icon {
-  width: 1.75rem;
-  height: 1.75rem; }
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem; }
+  .side-nav__link {
+    color: var(--f5-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 1rem; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 1rem;
+    fill: currentColor; }
 
 .legal {
   font-size: 1.7rem;
