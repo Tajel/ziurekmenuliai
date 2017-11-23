@@ -22,13 +22,17 @@
 }
 
 .sidebar {
+    display: flex;
     background-color: var(--f1-color);
     flex: 0 0 15%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .kellap-content {
     background-color: var(--f5-color);
     flex: 1;
+    height: 80rem;
 }
 
 a {

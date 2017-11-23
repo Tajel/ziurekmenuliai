@@ -57,12 +57,16 @@ body {
   display: flex; }
 
 .sidebar {
+  display: flex;
   background-color: var(--f1-color);
-  flex: 0 0 15%; }
+  flex: 0 0 15%;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .kellap-content {
   background-color: var(--f5-color);
-  flex: 1; }
+  flex: 1;
+  height: 80rem; }
 
 a {
   text-decoration: none;
@@ -125,3 +129,13 @@ a {
     height: 2.25rem;
     width: 2.25rem;
     fill: var(--d2-color); }
+
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.legal {
+  font-size: 1.7rem;
+  color: var(--f5-color);
+  text-emphasis: center;
+  padding: 2.5rem; }

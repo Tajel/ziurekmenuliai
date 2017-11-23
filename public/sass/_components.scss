@@ -77,5 +77,16 @@
 .side-nav {
     &__item {}
     &__link {}
-    &__icon {}
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+// LEGAL TEXT
+.legal {
+    font-size: 1.7rem;
+    color: var(--f5-color);
+    text-emphasis: center;
+    padding: 2.5rem;
 }
