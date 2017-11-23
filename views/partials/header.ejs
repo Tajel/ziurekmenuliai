@@ -5,32 +5,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>tKellAP</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/css.old/bootstrap1.css"> -->
     <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h2>
-            <a href="#">tKellAPP</a>
-        </h2>
-        <nav>
-            <li>
-                <a href="#">Naujas keliones lapas</a>
-            </li>
-            <li>
-                <a href="#">Tr. priem. apskaita</a>
-            </li>
-            <li>
-                <a href="#">Darbuotoju apskaita</a>
-            </li>
-            <li>
-                <a href="#">Transporto priemones</a>
-            </li>
-            <li>
-                <a href="#">Pagrindiniai duomenys</a>
-            </li>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="header">
+            <img src="img/logo.png" alt="tkellap logo">
+            <form action="/" class="search__input" placeholder="Search bar">
+                <input type="text" name="search__input" id="" placeholder="Search kellap">
+                <button class="search__buttons">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-search" </svg>
+                </button>
+            </form>
+            <nav class="user_nav">
+                <div class="user-nav__nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-enter"></use>
+                    </svg>
+                </div>
+                <div class="user-nav__nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-user-plus"></use>
+                    </svg>
+                </div>
+                <div class="user-nav__nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg# icon-user2"></use>
+                    </svg>
+                </div>
+                <div class="user-nav__nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#  icon-exit"></use>
+                    </svg>
+                </div>
+            </nav>
+
+            <div class="account">
+                <li>
+                    <% if(!currentUser){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i> Prisijungti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">
+                                <i class="fa fa-user-plus"></i> Registruotis</a>
+                        </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <strong>
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        <%= currentUser.username %>
+                                    </strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i> Išeiti
+                                </a>
+                            </li>
+                            <% } %>
+                </li>
+            </div>
+        </header>
+        <div class="content">
+            <nav class="sidebar">Navigation
+                <div>
+                    <a href="#">Keliones lapai</a>
+                </div>
+                <div>
+                    <a href="#">Transporto priemones</a>
+                </div>
+                <div>
+                    <a href="#">Darbuotoju apskaita</a>
+                </div>
+                <div>
+                    <a href="#">Pagrindiniai duomenys</a>
+                </div>
+            </nav>
+            <main class="kellap-content">

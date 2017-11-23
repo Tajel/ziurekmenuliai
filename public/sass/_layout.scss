@@ -1,0 +1,27 @@
+.container {
+    max-width: 75rem;
+    margin: 3rem auto;
+    background-color: var(--f1-color);
+    box-shadow: var(--f2-color);
+    min-height: 50rem;
+}
+
+.header {
+    height: 7rem;
+    background-color: var(--f2-color);
+    border-bottom: var(--f6-color);
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--f1-color);
+    flex: 0 0 18%;
+}
+
+.kellap-content {
+    background-color: var(--f5-color);
+    flex: 1;
+}
