@@ -69,9 +69,10 @@
     &__icon {
         height: 2.25rem;
         width: 2.25rem;
-        fill: var(--d2-color);
+        fill: currentColor;
     }
-    &__link {
+    &__link:link,
+    &__link:visited {
         text-decoration: none;
         color: var(--d2-color);
     }
@@ -83,11 +84,14 @@
     list-style: none;
     margin-top: 3.5rem;
     &__item {}
-    &__link {
+    &__link:link,
+    &__link:visited {
         color: var(--f5-color);
         text-decoration: none;
         text-transform: uppercase;
-        padding: 1.5rem 1rem;
+        padding: .8rem 1rem;
+        display: flex;
+        align-items: center;
     }
     &__icon {
         width: 1.75rem;

@@ -124,8 +124,8 @@ body {
   .user-nav__icon {
     height: 2.25rem;
     width: 2.25rem;
-    fill: var(--d2-color); }
-  .user-nav__link {
+    fill: currentColor; }
+  .user-nav__link:link, .user-nav__link:visited {
     text-decoration: none;
     color: var(--d2-color); }
 
@@ -133,11 +133,13 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
-  .side-nav__link {
+  .side-nav__link:link, .side-nav__link:visited {
     color: var(--f5-color);
     text-decoration: none;
     text-transform: uppercase;
-    padding: 1.5rem 1rem; }
+    padding: .8rem 1rem;
+    display: flex;
+    align-items: center; }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
