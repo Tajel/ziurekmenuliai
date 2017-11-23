@@ -59,38 +59,59 @@
                         </div>
                         <% } %>
             </nav>
-
-            <!-- <div class="account">
-                <li>
-                    <% if(!currentUser){ %>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login">
-                                <i class="fa fa-sign-in" aria-hidden="true"></i> Prisijungti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register">
-                                <i class="fa fa-user-plus"></i> Registruotis</a>
-                        </li>
-                        <% } else { %>
-                            <li class="nav-item">
-                                <a class="nav-link">
-                                    <strong>
-                                        <i class="fa fa-user-o" aria-hidden="true"></i>
-                                        <%= currentUser.username %>
-                                    </strong>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/logout">
-                                    <i class="fa fa-sign-out" aria-hidden="true"></i> Išeiti
-                                </a>
-                            </li>
-                            <% } %>
-                </li>
-            </div> -->
         </header>
         <div class="content">
-            <nav class="sidebar">Navigation
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item">
+                        <a href="#" class="cide-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href: "img/sprite.svg#icon-home"</use>
+                            </svg>
+                            <span>Pagrindinis</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="cide-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href: "img/sprite.svg#icon-home"</use>
+                            </svg>
+                            <span>Keliones lapai</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="cide-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href: "img/sprite.svg# icon-truck"</use>
+                            </svg>
+                            <span>Transporto priemones</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="cide-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href: "img/sprite.svg#  icon-calendar"</use>
+                            </svg>
+                            <span>Darbuotoju ataskaita</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="cide-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href: "img/sprite.svg#  icon-database"</use>
+                            </svg>
+                            <span>Pagrindiniai duomenys</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+
+
+            <!-- <div class="">Navigation
                 <div>
                     <a href="#">Keliones lapai</a>
                 </div>
@@ -103,5 +124,5 @@
                 <div>
                     <a href="#">Pagrindiniai duomenys</a>
                 </div>
-            </nav>
+            </div> -->
             <main class="kellap-content">
