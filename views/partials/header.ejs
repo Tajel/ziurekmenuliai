@@ -17,37 +17,50 @@
     <div class="container">
         <header class="header">
             <img src="img/logo.png" alt="tkellap logo">
-            <form action="/" class="search__input" placeholder="Search bar">
-                <input type="text" name="search__input" id="" placeholder="Search kellap">
+            <form action="/" class="search" placeholder="Search bar">
+                <input type="text" class="search__input" id="" placeholder="Search kellap">
                 <button class="search__buttons">
                     <svg class="search__icon">
                         <use xlink:href="img/sprite.svg#icon-search" </svg>
                 </button>
             </form>
             <nav class="user_nav">
-                <div class="user-nav__nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-enter"></use>
-                    </svg>
-                </div>
-                <div class="user-nav__nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-user-plus"></use>
-                    </svg>
-                </div>
-                <div class="user-nav__nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg# icon-user2"></use>
-                    </svg>
-                </div>
-                <div class="user-nav__nav__icon-box">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#  icon-exit"></use>
-                    </svg>
-                </div>
+                <% if(!currentUser){ %>
+                    <div class="user-nav__icon-box">
+                        <a class="nav-link" href="/login">
+                            <svg class="user-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-enter">
+                            </svg>
+                            Prisijungti</a>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <a class="nav-link" href="/register">
+                            <svg class="user-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-user-plus">
+                            </svg>Registruotis</a>
+                    </div>
+                    <% } else { %>
+                        <div class="user-nav__icon-box">
+                            <svg class="user-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-user2">
+                            </svg>
+                            <a class="nav-link">
+                                <strong>
+                                    <%= currentUser.username %>
+                                </strong>
+                            </a>
+                        </div>
+                        <div class="user-nav__icon-box">
+                            <a href="/logout">Išeiti
+                                <svg class="user-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-exit">
+                                </svg>
+                            </a>
+                        </div>
+                        <% } %>
             </nav>
 
-            <div class="account">
+            <!-- <div class="account">
                 <li>
                     <% if(!currentUser){ %>
                         <li class="nav-item">
@@ -74,7 +87,7 @@
                             </li>
                             <% } %>
                 </li>
-            </div>
+            </div> -->
         </header>
         <div class="content">
             <nav class="sidebar">Navigation

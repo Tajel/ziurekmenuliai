@@ -1,0 +1,42 @@
+//  LOGO
+.logo {
+    height: 3.25rem;
+    margin-left: 3rem;
+}
+
+// SEARCH BOX
+.search {
+    background-color: orange;
+    flex: 0 0 40%;
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(f4-color);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(f3-color);
+        }
+    }
+    &__button {}
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+//  USER NAV
+.user-nav {
+    background-color: green;
+    &__icon-box {}
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+}

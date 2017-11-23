@@ -46,7 +46,10 @@ body {
 .header {
   height: 7rem;
   background-color: var(--f2-color);
-  border-bottom: var(--f6-color); }
+  border-bottom: var(--f6-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
@@ -58,3 +61,34 @@ body {
 .kellap-content {
   background-color: var(--f5-color);
   flex: 1; }
+
+.logo {
+  height: 3.25rem;
+  margin-left: 3rem; }
+
+.search {
+  background-color: orange;
+  flex: 0 0 40%; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(f4-color);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .2s; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(f3-color); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem; }
+
+.user-nav {
+  background-color: green; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem; }

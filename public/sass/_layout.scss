@@ -10,6 +10,9 @@
     height: 7rem;
     background-color: var(--f2-color);
     border-bottom: var(--f6-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
