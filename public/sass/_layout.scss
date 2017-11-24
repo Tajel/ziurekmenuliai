@@ -1,7 +1,6 @@
 .container {
-    max-width: 120rem;
-    margin: 3rem auto;
-    background-color: var(--f1-color);
+    width: 100%; // margin: 3rem auto;
+    background-color: var(--d3-color);
     box-shadow: var(--f2-color);
     min-height: 50rem;
 }
@@ -9,12 +8,12 @@
 .header {
     font-size: 2.2rem;
     height: 6rem;
-    background-color: var(--f2-color);
-    border-bottom: var(--f6-color);
+    background-color: var(--d1-color);
+    border-bottom: 1px solid var(--f6-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--d2-color);
+    color: var(--f1-color);
 }
 
 .content {
@@ -23,19 +22,14 @@
 
 .sidebar {
     display: flex;
-    background-color: var(--d1-color);
+    background-color: var(--f9-color);
     flex: 0 0 19%;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .kellap-content {
-    background-color: var(--f5-color);
+    background-color: var(--d3-color);
     flex: 1;
     height: 80rem;
-}
-
-a {
-    // text-decoration: none;
-    // color: var(--d2-color);
 }

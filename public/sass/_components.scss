@@ -14,8 +14,9 @@
         font-family: inherit;
         font-size: inherit;
         color: inherit;
-        background-color: var(--f3-color);
-        border: none;
+        background-color: var(--d1-color);
+        border: 1px solid;
+        border-color: var(--f2-color);
         padding: .7rem 2rem;
         border-radius: 100px;
         width: 90%;
@@ -24,18 +25,18 @@
         &:focus {
             outline: none;
             width: 100%;
-            background-color: var(--f4-color);
+            background-color: var(--d3-color);
             &::-webkit-input-placeholder {
                 font-weight: 100;
             }
         }
     }
     &__input:focus+&__button {
-        background-color: var(--f4-color);
+        background-color: var(--d3-color);
     }
     &__button {
         border: none;
-        background-color: var(--f3-color);
+        background-color: var(--d1-color);
         &:focus {
             outline: none;
         }
@@ -46,7 +47,7 @@
     &__icon {
         height: 2rem;
         width: 2rem;
-        fill: var(--d2-color)
+        fill: var(--f1-color);
     }
 }
 
@@ -56,14 +57,16 @@
     align-self: stretch;
     justify-content: center;
     align-items: center;
+    color: var(--f1-color);
     &__icon-box {
         display: flex;
         align-items: center;
-        margin: 0 .8rem;
+        padding: 0 .8rem;
         cursor: pointer;
         height: 100%;
         &:hover {
-            background-color: var(--f3-color);
+            background-color: var(--d2-color);
+            color: #fff;
         }
     }
     &__icon {
@@ -74,7 +77,10 @@
     &__link:link,
     &__link:visited {
         text-decoration: none;
-        color: var(--d2-color);
+        color: var(--f1-color);
+    }
+    &__link:hover {
+        color: #fff;
     }
 }
 
@@ -97,18 +103,21 @@
         left: 0;
         height: 100%;
         width: 3px;
-        background-color: var(--f5-color);
+        background-color: var(--d1-color);
         transform: scaleY(0);
-        transition: transform .15s, width .1s cubic-bezier(1, 0, 0, 1) .2s;
+        transition: transform .15s, width .1s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s;
     }
     &__item:hover::before,
     &__item--active::before {
         transform: scaleY(1);
         width: 100%;
     }
+    &__item:active::before {
+        background-color: var(--f2-color);
+    }
     &__link:link,
     &__link:visited {
-        color: var(--d2-color);
+        color: var(--f4-color);
         text-decoration: none;
         text-transform: uppercase;
         padding: .8rem 1rem;
@@ -121,7 +130,7 @@
         width: 1.75rem;
         height: 1.75rem;
         margin-right: 1rem;
-        fill: currentColor; //  sets color as side element
+        fill: var(--f1-color);
     }
 }
 
@@ -129,6 +138,6 @@
 .legal {
     font-size: 1.7rem;
     color: var(--f5-color);
-    text-emphasis: center;
+    text-align: center;
     padding: 2.5rem;
 }

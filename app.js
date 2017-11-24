@@ -108,5 +108,5 @@ app.use("/kellap/:id/vair", kellapvairRoutes);
 //    console.log("TRANSPORT Server Has Started!");
 
 app.listen(3000, "127.0.0.1", function () {
-    console.log("TRANSOPORTO MODULIS server started");
+    console.log("TRANSOPORTO MODULIS server started port:3000");
 });
