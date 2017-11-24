@@ -7,8 +7,8 @@
   --f6-color: #7B8994;
   --f7-color: #47525D;
   --f8-color: #3D464D;
-  --f9-color: #F7F9FA;
-  --d1-color: #C1C7CD;
+  --f9-color: #f7f9fa;
+  --d1-color: #eeeded;
   --d2-color: #6a7c8f;
   --d3-color: #fff;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
@@ -47,8 +47,8 @@ body {
 .header {
   font-size: 2.2rem;
   height: 6rem;
-  background-color: var(--d1-color);
-  border-bottom: 1px solid var(--f6-color);
+  background-color: var(--f9-color);
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +83,7 @@ body {
     font-size: inherit;
     color: inherit;
     background-color: var(--d1-color);
-    border: 1px solid;
+    border: none;
     border-color: var(--f2-color);
     padding: .7rem 2rem;
     border-radius: 100px;
@@ -171,7 +171,7 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 1rem;
-    fill: var(--f1-color); }
+    fill: var(--f2-color); }
 
 .legal {
   font-size: 1.7rem;

@@ -15,7 +15,7 @@
         font-size: inherit;
         color: inherit;
         background-color: var(--d1-color);
-        border: 1px solid;
+        border: none;
         border-color: var(--f2-color);
         padding: .7rem 2rem;
         border-radius: 100px;
@@ -130,7 +130,7 @@
         width: 1.75rem;
         height: 1.75rem;
         margin-right: 1rem;
-        fill: var(--f1-color);
+        fill: var(--f2-color);
     }
 }
 

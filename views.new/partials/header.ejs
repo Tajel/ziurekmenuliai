@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tKellAP</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/css.old/bootstrap1.css"> -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="img/logo.png" alt="tkellap logo" class="logo">
+            <form action="/" class="search" placeholder="Search bar">
+                <input type="text" class="search__input" id="" placeholder="Search kellap">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-search" </svg>
+                </button>
+            </form>
+            <nav class="user-nav">
+                <% if(!currentUser){ %>
+                    <div class="user-nav__icon-box">
+                        <a class="user-nav__link" href="/login">
+                            <svg class="user-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-enter">
+                            </svg>
+                            Prisijungti</a>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <a class="user-nav__link" href="/register">
+                            <svg class="user-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-user-plus">
+                            </svg>Registruotis</a>
+                    </div>
+                    <% } else { %>
+                        <div class="user-nav__icon-box">
+                            <a class="user-nav__link">
+                                <svg class="user-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-user2">
+                                </svg>
+                                <span>
+                                    <%= currentUser.username %>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="user-nav__icon-box">
+                            <a class="user-nav__link" href="/logout">
+                                <svg class="user-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-exit">
+                                </svg>Išeiti
+                            </a>
+                        </div>
+                        <% } %>
+            </nav>
+        </header>
+        <div class="content">
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class=" side-nav__item side-nav__item--active">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-home" </svg>
+                                    <span>Pagrindinis</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-file-text" </use>
+                            </svg>
+                            <span>Keliones lapai</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                            </svg>
+                            <span>Transporto priemones</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-calendar" </use>
+                            </svg>
+                            <span>Darbuotoju ataskaita</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                            </svg>
+                            <span>Duomenys</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="legal">
+                    &copy: 2017 11 24 tKellAP. All rights reserved.
+                </div>
+            </nav>
+            <main class="kellap-content">
