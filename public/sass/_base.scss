@@ -1,6 +1,6 @@
 :root {
     --f1-color: #007ee5;
-    --f2-color: #7b8994;
+    --f2-color: #e2e7eb;
     --f3-color: #47525d;
     --f4-color: #3d464d;
     --f5-color: #007EE5;
@@ -28,14 +28,14 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    color: var(--f1-color);
+    color: var(--f4-color);
 }
 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: var(--f1-color);
+    color: var(--f4-color);
     background-image: linear-gradient(to right bottom, var(--d1-color), var(--d2-color));
     background-size: cover;
     background-repeat: no-repeat;

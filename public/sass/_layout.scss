@@ -2,7 +2,7 @@
     width: 100%; // margin: 3rem auto;
     background-color: var(--d3-color);
     box-shadow: var(--f2-color);
-    min-height: 50rem;
+    min-height: 40rem;
 }
 
 .header {
@@ -23,7 +23,7 @@
 .sidebar {
     display: flex;
     background-color: var(--f9-color);
-    flex: 0 0 19%;
+    flex: 0 0 18%;
     flex-direction: column;
     justify-content: space-between;
 }

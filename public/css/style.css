@@ -1,6 +1,6 @@
 :root {
   --f1-color: #007ee5;
-  --f2-color: #7b8994;
+  --f2-color: #e2e7eb;
   --f3-color: #47525d;
   --f4-color: #3d464d;
   --f5-color: #007EE5;
@@ -25,13 +25,13 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  color: var(--f1-color); }
+  color: var(--f4-color); }
 
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--f1-color);
+  color: var(--f4-color);
   background-image: linear-gradient(to right bottom, var(--d1-color), var(--d2-color));
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body {
   width: 100%;
   background-color: var(--d3-color);
   box-shadow: var(--f2-color);
-  min-height: 50rem; }
+  min-height: 40rem; }
 
 .header {
   font-size: 2.2rem;
@@ -60,7 +60,7 @@ body {
 .sidebar {
   display: flex;
   background-color: var(--f9-color);
-  flex: 0 0 19%;
+  flex: 0 0 18%;
   flex-direction: column;
   justify-content: space-between; }
 
@@ -166,15 +166,125 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 10; }
+    z-index: 1; }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 1rem;
     fill: var(--f2-color); }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%; }
+
+.dropdown-content {
+  padding-left: 2rem;
+  display: none;
+  position: absolute;
+  background-color: var(--f9-color);
+  z-index: 2;
+  width: 100%; }
+
+.show {
+  display: block; }
+
 .legal {
   font-size: 1.7rem;
   color: var(--f5-color);
   text-align: center;
   padding: 2.5rem; }
+
+.pad__page-header {
+  display: flex;
+  flex-direction: column; }
+  .pad__page-header--main {
+    letter-spacing: .4rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    font-size: 4rem;
+    font-weight: 700; }
+  .pad__page-header--second {
+    font-size: 1.7rem;
+    font-weight: 400; }
+  .pad__page-header--icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0 1rem;
+    fill: var(--d1-color); }
+  .pad__page-header--new-item {
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    display: flex;
+    background-color: var(--f8-color); }
+  .pad__page-header--link {
+    display: flex;
+    flex: 1;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--d1-color);
+    align-items: center; }
+
+.pad__page-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+  .pad__page-data__main-tab:hover {
+    background-color: var(--f2-color); }
+  .pad__page-data__main-tab {
+    border-radius: 5px;
+    margin: 2rem;
+    display: flex;
+    flex-basis: 21%;
+    flex-direction: column;
+    background-color: var(--f9-color); }
+    .pad__page-data__main-tab--header {
+      margin-bottom: .5rem;
+      margin-top: .5rem;
+      padding-left: 1.5rem;
+      font-size: 2.2rem;
+      font-weight: 700; }
+    .pad__page-data__main-tab--content {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      font-size: 1.7rem;
+      font-weight: 100; }
+    .pad__page-data__main-tab--buttons {
+      height: 4rem;
+      border-radius: 1px;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      color: var(--f4-color);
+      background-color: var(--d1-color); }
+      .pad__page-data__main-tab--buttons--edit {
+        align-items: center;
+        height: 100%;
+        text-decoration: none;
+        color: var(--f4-color);
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        flex-basis: 50%; }
+      .pad__page-data__main-tab--buttons--edit:hover {
+        background-color: var(--f2-color); }
+      .pad__page-data__main-tab--buttons--del {
+        display: flex;
+        justify-content: center;
+        flex-basis: 50%;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--f4-color); }
+        .pad__page-data__main-tab--buttons--del :hover {
+          background-color: var(--f2-color); }
+      .pad__page-data__main-tab--buttons--btn {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        border: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--f4-color);
+        background-color: inherit; }

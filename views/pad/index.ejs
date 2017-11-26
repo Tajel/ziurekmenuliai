@@ -1,42 +1,37 @@
 <% include ../partials/header %>
 
-    <div class="page-header">
-        <h1>PADALINIAI
-            <small>Sukurti naują, redaguoti, trinti</small>
-        </h1>
-        <p>
-            <a class="btn btn-primary btn-large" href="/pad/new">
-                <i class="fa fa-plus" aria-hidden="true"></i> Naujas padalinys</a>
+    <div class="pad">
+        <div class="pad__page-header--main">PADALINIAI
+            <small class="pad__page-header--second">Sukurti naują, redaguoti, trinti</small>
+        </div>
+        <p class="pad__page-header--new-item">
+            <a class="pad__page-header--link" href="/pad/new">
+                <svg class="pad__page-header--icon">
+                    <use xlink:href="img/sprite.svg#icon-publish">
+                </svg>Naujas padalinys</a>
         </p>
-        <hr>
     </div>
-    <div class="row">
+    <div class="pad__page-data">
         <% allpads.forEach(function(allpads){ %>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>
-                            <strong>
-                                <%= allpads.padkodas %>
-                            </strong>
-                        </h3>
-                        <h4>
-                            <%= allpads.padpavadinimas %>
-                        </h4>
-                        <p>
-                            <% if(currentUser && allpads.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a href="/pad/<%= allpads._id%>/edit" class="btn btn-primary" role="button">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                                <form id="delete-form" action="/pad/<%=allpads._id%>?_method=DELETE" , method=POST>
-                                    <button class="btn btn-danger">
-                                        <i class="fa fa-trash-o"></i>
-                                        TRINTI</button>
-                                </form>
-                                <% }%>
-                        </p>
-                    </div>
+            <div class="pad__page-data__main-tab">
+                <div class="pad__page-data__main-tab--header">
+                    <%= allpads.padkodas %>
                 </div>
+                <div class="pad__page-data__main-tab--content">
+                    <%= allpads.padpavadinimas %>
+                </div>
+                <% if(currentUser && allpads.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                    <div class="pad__page-data__main-tab--buttons">
+                        <a class="pad__page-data__main-tab--buttons--edit" href="/pad/<%= allpads._id%>/edit">
+                            REDAGUOTI</a>
+                        <form class="pad__page-data__main-tab--buttons--del" action="/pad/<%=allpads._id%>?_method=DELETE" , method=POST>
+                            <button class="pad__page-data__main-tab--buttons--btn">
+                                TRINTI</button>
+                        </form>
+                    </div>
+                    <% }%>
             </div>
             <% }); %>
     </div>
+
     <% include ../partials/footer %>
