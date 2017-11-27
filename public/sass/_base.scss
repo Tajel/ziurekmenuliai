@@ -3,7 +3,7 @@
     --f2-color: #e2e7eb;
     --f3-color: #47525d;
     --f4-color: #3d464d;
-    --f5-color: #007EE5;
+    --f5-color: #0d87e4;
     --f6-color: #7B8994;
     --f7-color: #47525D;
     --f8-color: #3D464D;
@@ -35,8 +35,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: var(--f4-color);
-    background-image: linear-gradient(to right bottom, var(--d1-color), var(--d2-color));
+    color: var(--f4-color); // background-image: linear-gradient(to right bottom, var(--d1-color), var(--d2-color));
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;

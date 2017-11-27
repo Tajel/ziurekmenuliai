@@ -3,7 +3,7 @@
   --f2-color: #e2e7eb;
   --f3-color: #47525d;
   --f4-color: #3d464d;
-  --f5-color: #007EE5;
+  --f5-color: #0d87e4;
   --f6-color: #7B8994;
   --f7-color: #47525D;
   --f8-color: #3D464D;
@@ -32,7 +32,6 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--f4-color);
-  background-image: linear-gradient(to right bottom, var(--d1-color), var(--d2-color));
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -68,6 +67,104 @@ body {
   background-color: var(--d3-color);
   flex: 1;
   height: 80rem; }
+
+.login {
+  height: 100%;
+  margin-top: 3rem;
+  font-size: 1.7rem; }
+  .login__form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-basis: 100%; }
+    .login__form--legend {
+      font-family: OpenSans;
+      font-size: 2.5rem;
+      display: flex;
+      margin-left: 10rem;
+      margin-bottom: 7rem; }
+    .login__form__icon {
+      height: 3rem;
+      width: 3rem;
+      padding-right: 1rem;
+      fill: var(--f1-color); }
+    .login__form--userform {
+      margin-left: 30rem;
+      margin-bottom: 5rem;
+      display: flex;
+      align-items: flex-start; }
+      .login__form--userform__label {
+        display: flex;
+        align-items: center;
+        font-size: 1.7rem;
+        padding: .7rem 2rem;
+        width: 33rem; }
+      .login__form--userform__input {
+        font-size: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%; }
+        .login__form--userform__input--text {
+          font-family: inherit;
+          font-size: inherit;
+          color: inherit;
+          border: none;
+          padding: .7rem 2rem;
+          border-radius: 100px;
+          width: 40%; }
+        .login__form--userform__input--span {
+          padding: .7rem 2rem;
+          font-size: 1.4rem;
+          font-family: Quicksand; }
+    .login__form--pswform {
+      margin-left: 30rem;
+      margin-bottom: 5rem;
+      display: flex;
+      align-items: flex-start; }
+      .login__form--pswform__label {
+        display: flex;
+        align-items: center;
+        padding: .7rem 2rem;
+        font-size: 1.7rem;
+        width: 33rem; }
+      .login__form--pswform__input {
+        font-size: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%; }
+        .login__form--pswform__input--text {
+          font-family: inherit;
+          font-size: inherit;
+          color: inherit;
+          border: none;
+          padding: .7rem 2rem;
+          border-radius: 100px;
+          width: 40%; }
+        .login__form--pswform__input--span {
+          padding: .7rem 2rem;
+          font-size: 1.4rem;
+          font-family: Quicksand; }
+    .login__form__btnform {
+      margin-left: 30rem;
+      margin-bottom: 5rem;
+      display: flex;
+      align-items: flex-start; }
+      .login__form__btnform__label {
+        display: flex;
+        align-items: center;
+        padding: .7rem 2rem;
+        font-size: 1.7rem;
+        width: 27rem; }
+      .login__form__btnform--submit {
+        background-color: var(--f5-color);
+        border: none;
+        border-radius: 5px;
+        font-size: 2.2rem;
+        color: var(--f2-color);
+        padding: 1rem;
+        width: 20rem;
+        text-align: center;
+        cursor: pointer; }
 
 .logo {
   height: 3.25rem;
@@ -171,7 +268,7 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 1rem;
-    fill: var(--f2-color); }
+    fill: var(--f1-color); }
 
 .dropdown {
   position: relative;
@@ -217,7 +314,7 @@ body {
     text-transform: uppercase;
     margin: 0 1rem;
     display: flex;
-    background-color: var(--f8-color); }
+    background-color: var(--f5-color); }
   .pad__page-header--link {
     display: flex;
     flex: 1;

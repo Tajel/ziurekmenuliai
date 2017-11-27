@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>tKellAP</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,200,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:100,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="/css.old/bootstrap1.css"> -->
     <link href="/css/style.css" rel="stylesheet">
@@ -60,179 +60,184 @@
                         <% } %>
             </nav>
         </header>
-        <div class="content">
-            <nav class="sidebar">
-                <ul class="side-nav">
-                    <li class=" side-nav__item side-nav__item--active">
-                        <a href="/" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-home" </svg>
-                                    <span>Pagrindinis</span>
-                        </a>
-                    </li>
-                    <li class="side-nav__item">
-                        <a href="/kellap" class="side-nav__link">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-file-text" </use>
-                            </svg>
-                            <span>Keliones lapai</span>
-                        </a>
-                    </li>
-                    <div class="dropdown">
-                        <li class="side-nav__item">
-                            <a href="#" class="side-nav__link">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-truck" </use>
-                                </svg>
-                                <span class="dropbtn" onclick="myFunctiondrop1()">Transporto priemones</span>
-                            </a>
-                        </li>
-                        <div id="myDropdown1" class="dropdown-content">
-                            <li class="side-nav__item">
-                                <a href="/autokrov" class="side-nav__link">
+        <% if(!currentUser){ %>
+            <span></span>
+            <% } else { %>
+
+                <div class="content">
+                    <nav class="sidebar">
+                        <ul class="side-nav">
+                            <li class=" side-nav__item side-nav__item--active">
+                                <a href="/" class="side-nav__link">
                                     <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-truck" </use>
-                                    </svg>
-                                    <span>Krovininiai</span>
+                                        <use xlink:href="img/sprite.svg#icon-home" </svg>
+                                            <span>Pagrindinis</span>
                                 </a>
                             </li>
                             <li class="side-nav__item">
-                                <a href="/automech" class="side-nav__link">
+                                <a href="/kellap" class="side-nav__link">
                                     <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                        <use xlink:href="img/sprite.svg#icon-file-text" </use>
                                     </svg>
-                                    <span>Mechanizmai</span>
+                                    <span>Keliones lapai</span>
                                 </a>
                             </li>
+                            <div class="dropdown">
+                                <li class="side-nav__item">
+                                    <a href="#" class="side-nav__link">
+                                        <svg class="side-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                        </svg>
+                                        <span class="dropbtn" onclick="myFunctiondrop1()">Transporto priemones</span>
+                                    </a>
+                                </li>
+                                <div id="myDropdown1" class="dropdown-content">
+                                    <li class="side-nav__item">
+                                        <a href="/autokrov" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                            </svg>
+                                            <span>Krovininiai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/automech" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                            </svg>
+                                            <span>Mechanizmai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/autolen" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                            </svg>
+                                            <span>Lengvieji</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/automm" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                            </svg>
+                                            <span>Mazoji mechanizacija</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/autonuoma" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                            </svg>
+                                            <span>Nuomotos tr. priemones</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
                             <li class="side-nav__item">
-                                <a href="/autolen" class="side-nav__link">
+                                <a href="#" class="side-nav__link link1">
                                     <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                        <use xlink:href="img/sprite.svg#icon-calendar" </use>
                                     </svg>
-                                    <span>Lengvieji</span>
+                                    <span>Darbuotoju ataskaita</span>
                                 </a>
                             </li>
-                            <li class="side-nav__item">
-                                <a href="/automm" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-truck" </use>
-                                    </svg>
-                                    <span>Mazoji mechanizacija</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/autonuoma" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-truck" </use>
-                                    </svg>
-                                    <span>Nuomotos tr. priemones</span>
-                                </a>
-                            </li>
+                            <div class="dropdown">
+                                <li class="side-nav__item">
+                                    <a href="#" class="side-nav__link">
+                                        <svg class="side-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                        </svg>
+                                        <span class="dropbtn" onclick="myFunctiondrop2()">Duomenys</span>
+                                    </a>
+                                </li>
+                                <div id="myDropdown2" class="dropdown-content">
+                                    <li class="side-nav__item">
+                                        <a href="/pad" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Padaliniai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/dv" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>darbu vadovai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/vair" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Vairuotojai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/obj" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Objektai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/trrus" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Transporto rušis</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/trtip" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Transporto tipas</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/kurrus" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Kuro rūšys</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/kuruzp" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Kuro šaltiniai</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/darbrus" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>darbo rūšis</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav__item">
+                                        <a href="/imones" class="side-nav__link">
+                                            <svg class="side-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            </svg>
+                                            <span>Įmonės</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                        <div class="legal">
+                            &copy: 2017 11 24 tKellAP. All rights reserved.
                         </div>
-                    </div>
-                    <li class="side-nav__item">
-                        <a href="#" class="side-nav__link link1">
-                            <svg class="side-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-calendar" </use>
-                            </svg>
-                            <span>Darbuotoju ataskaita</span>
-                        </a>
-                    </li>
-                    <div class="dropdown">
-                        <li class="side-nav__item">
-                            <a href="#" class="side-nav__link">
-                                <svg class="side-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-truck" </use>
-                                </svg>
-                                <span class="dropbtn" onclick="myFunctiondrop2()">Duomenys</span>
-                            </a>
-                        </li>
-                        <div id="myDropdown2" class="dropdown-content">
-                            <li class="side-nav__item">
-                                <a href="/pad" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Padaliniai</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/dv" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>darbu vadovai</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/vair" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Vairuotojai</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/obj" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Objektai</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/trrus" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Transporto rušis</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/trtip" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Transporto tipas</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/kurrus" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Kuro rūšys</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/kuruzp" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Kuro šaltiniai</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/darbrus" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>darbo rūšis</span>
-                                </a>
-                            </li>
-                            <li class="side-nav__item">
-                                <a href="/imones" class="side-nav__link">
-                                    <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-database" </use>
-                                    </svg>
-                                    <span>Įmonės</span>
-                                </a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-                <div class="legal">
-                    &copy: 2017 11 24 tKellAP. All rights reserved.
-                </div>
-            </nav>
-            <main class="kellap-content">
+                    </nav>
+                    <main class="kellap-content">
+                        <% } %>
