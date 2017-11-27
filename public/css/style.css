@@ -108,10 +108,20 @@ body {
           font-family: inherit;
           font-size: inherit;
           color: inherit;
+          background-color: var(--d1-color);
           border: none;
+          border-color: var(--f2-color);
           padding: .7rem 2rem;
           border-radius: 100px;
-          width: 40%; }
+          width: 38%;
+          transition: all .2s;
+          letter-spacing: 2px; }
+          .login__form--userform__input--text:focus {
+            outline: none;
+            width: 40%;
+            background-color: var(--d3-color); }
+            .login__form--userform__input--text:focus:-webkit-input-placeholder {
+              font-weight: 400; }
         .login__form--userform__input--span {
           padding: .7rem 2rem;
           font-size: 1.4rem;
@@ -136,10 +146,20 @@ body {
           font-family: inherit;
           font-size: inherit;
           color: inherit;
+          background-color: var(--d1-color);
           border: none;
+          border-color: var(--f2-color);
           padding: .7rem 2rem;
           border-radius: 100px;
-          width: 40%; }
+          width: 38%;
+          transition: all .2s;
+          letter-spacing: 2px; }
+          .login__form--pswform__input--text:focus {
+            outline: none;
+            width: 40%;
+            background-color: var(--d3-color); }
+            .login__form--pswform__input--text:focus:-webkit-input-placeholder {
+              font-weight: 400; }
         .login__form--pswform__input--span {
           padding: .7rem 2rem;
           font-size: 1.4rem;
@@ -152,19 +172,29 @@ body {
       .login__form__btnform__label {
         display: flex;
         align-items: center;
-        padding: .7rem 2rem;
+        padding: .95rem 2rem;
         font-size: 1.7rem;
         width: 27rem; }
       .login__form__btnform--submit {
-        background-color: var(--f5-color);
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--d1-color);
         border: none;
-        border-radius: 5px;
-        font-size: 2.2rem;
-        color: var(--f2-color);
-        padding: 1rem;
-        width: 20rem;
-        text-align: center;
-        cursor: pointer; }
+        height: 3.6rem;
+        border-color: var(--f2-color);
+        padding: .7rem 2rem;
+        margin-left: 2rem;
+        border-radius: 100px;
+        width: 20%;
+        transition: all .2s;
+        letter-spacing: 2px; }
+        .login__form__btnform--submit:focus {
+          outline: none;
+          transform: translateY(2px);
+          background-color: var(--d1-color); }
+          .login__form__btnform--submit:focus:-webkit-input-placeholder {
+            font-weight: 400; }
 
 .logo {
   height: 3.25rem;
@@ -192,7 +222,7 @@ body {
       width: 100%;
       background-color: var(--d3-color); }
       .search__input:focus::-webkit-input-placeholder {
-        font-weight: 100; }
+        font-weight: 4 00; }
   .search__input:focus + .search__button {
     background-color: var(--d3-color); }
   .search__button {
@@ -385,3 +415,17 @@ body {
         font-weight: 400;
         color: var(--f4-color);
         background-color: inherit; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #b5b9bb;
+  -webkit-text-fill-color: #303033;
+  transition: background-color 5000s ease-in-out 0s; }

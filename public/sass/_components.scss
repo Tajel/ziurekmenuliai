@@ -42,10 +42,22 @@
                     font-family: inherit;
                     font-size: inherit;
                     color: inherit;
+                    background-color: var(--d1-color);
                     border: none;
+                    border-color: var(--f2-color);
                     padding: .7rem 2rem;
                     border-radius: 100px;
-                    width: 40%;
+                    width: 38%;
+                    transition: all .2s;
+                    letter-spacing: 2px;
+                    &:focus {
+                        outline: none;
+                        width: 40%;
+                        background-color: var(--d3-color);
+                        &:-webkit-input-placeholder {
+                            font-weight: 400;
+                        }
+                    }
                 }
                 &--span {
                     padding: .7rem 2rem;
@@ -75,10 +87,22 @@
                     font-family: inherit;
                     font-size: inherit;
                     color: inherit;
+                    background-color: var(--d1-color);
                     border: none;
+                    border-color: var(--f2-color);
                     padding: .7rem 2rem;
                     border-radius: 100px;
-                    width: 40%;
+                    width: 38%;
+                    transition: all .2s;
+                    letter-spacing: 2px;
+                    &:focus {
+                        outline: none;
+                        width: 40%;
+                        background-color: var(--d3-color);
+                        &:-webkit-input-placeholder {
+                            font-weight: 400;
+                        }
+                    }
                 }
                 &--span {
                     padding: .7rem 2rem;
@@ -95,21 +119,32 @@
             &__label {
                 display: flex;
                 align-items: center;
-                padding: .7rem 2rem;
+                padding: .95rem 2rem;
                 font-size: 1.7rem;
                 width: 27rem;
             }
             &--submit {
-                // display: flex;
-                background-color: var(--f5-color);
+                font-family: inherit;
+                font-size: inherit;
+                color: inherit;
+                background-color: var(--d1-color);
                 border: none;
-                border-radius: 5px;
-                font-size: 2.2rem;
-                color: var(--f2-color);
-                padding: 1rem;
-                width: 20rem;
-                text-align: center;
-                cursor: pointer;
+                height: 3.6rem;
+                border-color: var(--f2-color);
+                padding: .7rem 2rem;
+                margin-left: 2rem;
+                border-radius: 100px;
+                width: 20%;
+                transition: all .2s;
+                letter-spacing: 2px;
+                &:focus {
+                    outline: none;
+                    transform: translateY(2px);
+                    background-color: var(--d1-color);
+                    &:-webkit-input-placeholder {
+                        font-weight: 400;
+                    }
+                }
             }
         }
     }
@@ -119,9 +154,7 @@
 .logo {
     height: 3.25rem;
     margin-left: 1rem;
-}
-
-// SEARCH BOX
+} // SEARCH BOX
 .search {
     flex: 0 0 40%;
     display: flex;
@@ -144,7 +177,7 @@
             width: 100%;
             background-color: var(--d3-color);
             &::-webkit-input-placeholder {
-                font-weight: 100;
+                font-weight: 4 00;
             }
         }
     }
@@ -166,9 +199,7 @@
         width: 2rem;
         fill: var(--f1-color);
     }
-}
-
-//  USER NAV
+} //  USER NAV
 .user-nav {
     display: flex;
     align-self: stretch;
@@ -199,9 +230,7 @@
     &__link:hover {
         color: #fff;
     }
-}
-
-//  NAVIGATION SIDEBAR
+} //  NAVIGATION SIDEBAR
 .side-nav {
     font-size: 1.4rem;
     list-style: none;
@@ -268,17 +297,13 @@
 
 .show {
     display: block;
-}
-
-// LEGAL TEXT
+} // LEGAL TEXT
 .legal {
     font-size: 1.7rem;
     color: var(--f5-color);
     text-align: center;
     padding: 2.5rem; // display: none;
-}
-
-// PADALINIAI
+} // PADALINIAI
 .pad {
     &__page-header {
         display: flex;
@@ -389,4 +414,19 @@
             }
         }
     }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #b5b9bb;
+    -webkit-text-fill-color: rgb(48, 48, 51);
+    transition: background-color 5000s ease-in-out 0s;
 }
