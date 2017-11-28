@@ -1,9 +1,13 @@
 <% include ../partials/header %>
+
     <form action="/kuruzp/<%= kuruzp._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/kuruzp"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro šaltinių sąrašą </a>
+            <a href="/kuruzp">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro šaltinių sąrašą </a>
             <!-- Form Name -->
-            <legend>Redaguoto Kuro šaltinį</legend> <hr>
+            <legend>Redaguoto Kuro šaltinį</legend>
+            //
+            <hr>
 
             <!-- Text input-->
             <div class="form-group" hidden>
@@ -18,7 +22,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="kuruzp[kurouzpkodas]">Trumpas kodas</label>
                 <div class="col-md-4">
-                    <input id="kurouzpkodas" name="kuruzp[kurouzpkodas]" type="text" placeholder="Trumpas kodas" class="form-control input-md" value="<%= kuruzp.kurouzpkodas %>">
+                    <input id="kurouzpkodas" name="kuruzp[kurouzpkodas]" type="text" placeholder="Trumpas kodas" class="form-control input-md"
+                        value="<%= kuruzp.kurouzpkodas %>">
                     <span class="help-block">Įrašykite trumpą kodą</span>
                 </div>
             </div>
@@ -36,7 +41,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="kuruzp[kurouzpkortnr]">Kortelės numeris</label>
                 <div class="col-md-4">
-                    <input id="kurouzpkortnr" name="kuruzp[kurouzpkortnr]" type="text" placeholder="Kortelės numeris" class="form-control input-md"value="<%= kuruzp.kurouzpkortnr %>">
+                    <input id="kurouzpkortnr" name="kuruzp[kurouzpkortnr]" type="text" placeholder="Kortelės numeris" class="form-control input-md"
+                        value="<%= kuruzp.kurouzpkortnr %>">
                     <span class="help-block">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
                 </div>
             </div>
@@ -45,7 +51,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                    <button id="submit" name="submit" class="btn btn-info">
+                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                 </div>
             </div>
 

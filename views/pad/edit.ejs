@@ -1,5 +1,6 @@
 <% include ../partials/header %>
 
+
     <form action="/pad/<%= pad._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
             <a href="/pad">
@@ -8,6 +9,7 @@
             <legend>Redaguoti Padalinį:
                 <%= pad.padpavadinimas %>
             </legend>
+            //
             <hr>
 
             <!-- Text input-->

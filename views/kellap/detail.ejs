@@ -7,7 +7,7 @@
                     <%= kellap.modelis %>
                         <%= kellap.valstnr %>
                             <%= kellap.inventnr %>
-                                <hr>
+                                <!--  <hr> -->
                                 <h2>Keliones lapo data
                                     <%= kellap.data %>
                                 </h2>
@@ -15,10 +15,10 @@
                                 <a class='btn btn-info btn-sm' href='/kellap'>Atgal</a>
                                 <br></br>
                                 <label class="custom-control custom-checkbox"> Suvestas keliones lapas
-  <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction1()" name='suvestas'>
-  <span class="custom-control-indicator"></span>
-  <span class="custom-control-description"></span>
-</label> Pajamos is objekto:
+                                    <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction1()" name='suvestas'>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description"></span>
+                                </label> Pajamos is objekto:
                                 <h6 style='display:inline;' readonly></h6> EUR; Uzpilta kuro:
                                 <h6 style='display:inline;' readonly></h6> Litr
     </div>
@@ -28,12 +28,24 @@
                 <div>PAJAMOS
                     <a class="btn btn-sm btn-success" href="/kellap/<%=kellap._id%>/paj/new">Suvesti pajamas</a>
                 </div>
-                <td><strong>Darbo rusis</strong></td>
-                <td><strong>Kiekis</strong></td>
-                <td><strong>Suma EUR</strong></td>
-                <td><strong>Objekto kodas, Pagr Darbu vadovas</strong></td>
-                <td><strong>Darbu vadovo Parasas</strong></td>
-                <td><strong>Imone</strong></td>
+                <td>
+                    <strong>Darbo rusis</strong>
+                </td>
+                <td>
+                    <strong>Kiekis</strong>
+                </td>
+                <td>
+                    <strong>Suma EUR</strong>
+                </td>
+                <td>
+                    <strong>Objekto kodas, Pagr Darbu vadovas</strong>
+                </td>
+                <td>
+                    <strong>Darbu vadovo Parasas</strong>
+                </td>
+                <td>
+                    <strong>Imone</strong>
+                </td>
             </thead>
             <tbody>
                 <% kellap.pajamos.forEach(function(pajamos){ %>
@@ -58,13 +70,15 @@
                         </td>
                         <td>
                             <% if(currentUser && pajamos.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>/edit">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && pajamos.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/kellap/<%= kellap._id %>/paj/<%=pajamos._id%>?_method=DELETE" method="POST">
-                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
                                 </form>
                                 <% }%>
                     </tr>
@@ -99,13 +113,15 @@
                         <td>Norma</td>
                         <td>
                             <% if(currentUser && kuras.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+                                <a class="btn btn-sm btn-warning" href="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>/edit">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
                                 <% }%>
                         </td>
                         <td>
                             <% if(currentUser && kuras.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                 <form id="delete-form" action="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>?_method=DELETE" method="POST">
-                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash-o"></i> TRINTI</button>
                                 </form>
                                 <% }%>
                     </tr>

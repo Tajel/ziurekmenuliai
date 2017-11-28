@@ -1,48 +1,41 @@
 <% include ../partials/header %>
 
-    <div class="page-header">
-        <h1>VAIRUOTOJAI
-            <small>Sukurti naują, redaguoti, trinti</small>
-            <p>
-        </h1>
-        <a class="btn btn-primary btn-large" href="/vair/new">
-            <i class="fa fa-plus" aria-hidden="true"></i> Naujas vairuotojas</a>
-        <a class="btn btn-primary btn-large" href="/vair/import">Importuoti Vairuotojus</a>
+    <div class="data">
+        <div class="data__page-header--main">VAIRUOTOJAI
+            <small class="data__page-header--second">Sukurti naują, redaguoti, trinti</small>
+        </div>
+        <p class="data__page-header--new-item">
+            <a class="data__page-header--link" href="/vair/new">
+                <svg class="data__page-header--icon">
+                    <use xlink:href="img/sprite.svg#icon-publish">
+                </svg>Naujas vairuotojas</a>
+            <a class="data__page-header--link" href="/vair/import">
+                <svg class="data__page-header--icon">
+                    <use xlink:href="img/sprite.svg#icon-publish">
+                </svg>Importuoti Vairuotojus</a>
         </p>
-        <hr>
     </div>
-    <div class="row">
+    <div class="data__page-data">
         <% allvair.forEach(function(allvair){ %>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>
-                            <strong>
-                                <%= allvair.vairVardPav %>
-                            </strong>
-                        </h3>
-                        <h4>
-                            <p>Tabelio Nr:
-                                <%= allvair.vairkodas %>
-                            </p>
-                            <p> Padalinio kodas:
-                                <%= allvair.ipadkodas %>
-                            </p>
-                        </h4>
-                        <p>
-                            <% if(currentUser && allvair.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a href="/vair/<%= allvair._id%>/edit" class="btn btn-primary" role="button">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                                <form id="delete-form" action="/vair/<%=allvair._id%>?_method=DELETE" method=POST>
-                                    <button class="btn btn-danger">
-                                        <i class="fa fa-trash-o"></i> TRINTI</button>
-                                </form>
-                                <% }%>
-                                    <a href="/vair/<%= allvair._id %>" class="btn btn-primary">
-                                        <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
-                        </p>
-                    </div>
+            <div class="data__page-data__main-tab">
+                <div class="data__page-data__main-tab--header">
+                    <%= allvair.vairVardPav %>
                 </div>
+                <div class="data__page-data__main-tab--content">Tabelio Nr:
+                    <%= allvair.vairkodas %>
+                </div>
+                <div class="data__page-data__main-tab--content"> Padalinio kodas:
+                    <%= allvair.ipadkodas %>
+                </div>
+                <a class="data__page-data__main-tab--detail" href="/vair/<%= allvair._id %>"> Detali informacija</a>
+                <% if(currentUser && allvair.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                    <div class="data__page-data__main-tab--buttons">
+                        <a class="data__page-data__main-tab--buttons--edit" href="/vair/<%= allvair._id%>/edit"> REDAGUOTI</a>
+                        <form class="data__page-data__main-tab--buttons--del" action="/vair/<%=allvair._id%>?_method=DELETE" method=POST>
+                            <button class="data__page-data__main-tab--buttons--btn"> TRINTI</button>
+                        </form>
+                    </div>
+                    <% }%>
             </div>
             <% }); %>
     </div>

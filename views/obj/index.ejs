@@ -1,46 +1,39 @@
 <% include ../partials/header %>
 
-    <div class="page-header">
-        <h1>OBJEKTAI
-            <small>Sukurti naują, redaguoti, trinti</small>
-            <p>
-        </h1>
-        <a class="btn btn-primary btn-large" href="/obj/new">
-            <i class="fa fa-plus" aria-hidden="true"></i> Naujas objektas</a>
+    <div class="data">
+        <div class="data__page-header--main">OBJEKTAI
+            <small class="data__page-header--second">Sukurti naują, redaguoti, trinti</small>
+        </div>
+        <p class="data__page-header--new-item">
+            <a class="data__page-header--link" href="/obj/new">
+                <svg class="data__page-header--icon">
+                    <use xlink:href="img/sprite.svg#icon-publish">
+                </svg>Naujas objektas</a>
         </p>
-        <hr>
     </div>
-    <div class="row">
+    <div class="data__page-data">
         <% allobjekt.forEach(function(allobj){ %>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3>
-                            <strong>
-                                <%= allobj.objpav %>
-                            </strong>
-                        </h3>
-                        <h4>
-                            <p>Objekto kodas:
-                                <%= allobj.objkodas %>
-                            </p>
-                            <p> Pagr. DV:
-                                <%= allobj.dvVadasPav %>
-                            </p>
-                        </h4>
-                        <p>
-                            <% if(currentUser && allobj.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn btn-primary" href="/obj/<%= allobj._id%>/edit">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                                <form id="delete-form" action="/obj/<%=allobj._id%>?_method=DELETE" , method=POST>
-                                    <button class="btn btn-danger">
-                                        <i class="fa fa-trash-o"></i> TRINTI</button>
-                                </form>
-                                <% }%>
-                        </p>
-                    </div>
+            <div class="data__page-data__main-tab">
+                <div class="data__page-data__main-tab--header">
+                    <%= allobj.objpav %>
                 </div>
+                <div class="data__page-data__main-tab--content">Objekto kodas:
+                    <%= allobj.objkodas %>
+                </div>
+                <div class="data__page-data__main-tab--content">Pagr. DV:
+                    <%= allobj.dvVadasPav %>
+                </div>
+                <% if(currentUser && allobj.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                    <div class="data__page-data__main-tab--buttons">
+                        <a class="data__page-data__main-tab--buttons--edit" href="/obj/<%= allobj._id%>/edit">
+                            REDAGUOTI</a>
+                        <form class="data__page-data__main-tab--buttons--del" action="/obj/<%=allobj._id%>?_method=DELETE" method=POST>
+                            <button class="data__page-data__main-tab--buttons--btn">TRINTI</button>
+                        </form>
+                    </div>
+                    <% }%>
             </div>
+
             <% }); %>
     </div>
     <% include ../partials/footer %>

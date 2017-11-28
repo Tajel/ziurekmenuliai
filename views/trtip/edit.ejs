@@ -1,15 +1,17 @@
 <% include ../partials/header %>
+
     <form action="/trtip/<%= trtip._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
             <a href="/trtip">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į transporto priemonių sąrašą </a>
             <!-- Form Name -->
             <legend>Redaguoti transporto priemonės tipą</legend>
+            //
             <hr>
 
             <!-- Text input-->
             <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="trtip[doc]" >trantipas</label>
+                <label class="col-md-4 control-label" for="trtip[doc]">trantipas</label>
                 <div class="col-md-4">
                     <input id="doc" name="doc" type="text" placeholder="trantipas" class="form-control input-md" value="trantipas">
                     <span class="help-block">trantipas</span>
@@ -20,7 +22,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="trtip[trtipas]">Transporto priemonės tipas</label>
                 <div class="col-md-4">
-                    <input id="trtip[trtipas]" name="trtip[trtipas]" type="text" placeholder="Transporto priemonės tipas" class="form-control input-md" required="" value="<%= trtip.trtipas %>">
+                    <input id="trtip[trtipas]" name="trtip[trtipas]" type="text" placeholder="Transporto priemonės tipas" class="form-control input-md"
+                        required="" value="<%= trtip.trtipas %>">
                     <span class="help-block">Įrašykite transporto priemonės tipą</span>
                 </div>
             </div>

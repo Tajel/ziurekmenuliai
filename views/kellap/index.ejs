@@ -8,7 +8,7 @@
         <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
         <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
         <a class="btn btn-primary btn-large" href="/kellap/newmm">Naujas MM keliones lapas</a>
-        <!--<hr>-->
+        <!--<!--  <hr> -->-->
         <!--<a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>-->
         <!--<a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>-->
         <!--<a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>-->
@@ -18,7 +18,7 @@
 
 
     </header>
-    <hr>
+    <!--  <hr> -->
 
     <form>
         <table table class="table table-responsive">
@@ -135,12 +135,14 @@
                 <td style="text-align: center;">
                     <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                         <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                            <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                            <button class="btn   btn-danger">
+                                <i class="fa fa-trash-o"></i> TRINTI</button>
                         </form>
                         <% }%>
                 </td style="text-align: center;">
                 <td style="text-align: center;">
-                    <a href="/kellap/<%= kellap._id %>/detail" class="btn   btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
+                    <a href="/kellap/<%= kellap._id %>/detail" class="btn   btn-primary">
+                        <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
                 </td>
                 <% }); %>
             </tr>

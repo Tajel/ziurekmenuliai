@@ -1,31 +1,31 @@
 <% include ../partials/header %>
 
-    <div class="pad">
-        <div class="pad__page-header--main">PADALINIAI
-            <small class="pad__page-header--second">Sukurti naują, redaguoti, trinti</small>
+    <div class="data">
+        <div class="data__page-header--main">PADALINIAI
+            <small class="data__page-header--second">Sukurti naują, redaguoti, trinti</small>
         </div>
-        <p class="pad__page-header--new-item">
-            <a class="pad__page-header--link" href="/pad/new">
-                <svg class="pad__page-header--icon">
+        <p class="data__page-header--new-item">
+            <a class="data__page-header--link" href="/pad/new">
+                <svg class="data__page-header--icon">
                     <use xlink:href="img/sprite.svg#icon-publish">
                 </svg>Naujas padalinys</a>
         </p>
     </div>
-    <div class="pad__page-data">
+    <div class="data__page-data">
         <% allpads.forEach(function(allpads){ %>
-            <div class="pad__page-data__main-tab">
-                <div class="pad__page-data__main-tab--header">
+            <div class="data__page-data__main-tab">
+                <div class="data__page-data__main-tab--header">
                     <%= allpads.padkodas %>
                 </div>
-                <div class="pad__page-data__main-tab--content">
+                <div class="data__page-data__main-tab--content">
                     <%= allpads.padpavadinimas %>
                 </div>
                 <% if(currentUser && allpads.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                    <div class="pad__page-data__main-tab--buttons">
-                        <a class="pad__page-data__main-tab--buttons--edit" href="/pad/<%= allpads._id%>/edit">
+                    <div class="data__page-data__main-tab--buttons">
+                        <a class="data__page-data__main-tab--buttons--edit" href="/pad/<%= allpads._id%>/edit">
                             REDAGUOTI</a>
-                        <form class="pad__page-data__main-tab--buttons--del" action="/pad/<%=allpads._id%>?_method=DELETE" , method=POST>
-                            <button class="pad__page-data__main-tab--buttons--btn">
+                        <form class="data__page-data__main-tab--buttons--del" action="/pad/<%=allpads._id%>?_method=DELETE" , method=POST>
+                            <button class="data__page-data__main-tab--buttons--btn">
                                 TRINTI</button>
                         </form>
                     </div>

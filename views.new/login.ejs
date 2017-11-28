@@ -2,45 +2,41 @@
 
     <div class=' container'>
         <form class="form-horizontal" action="/login" method="POST">
-            <fieldset>
+            <!-- Form Name -->
+            <legend>Suveskite prisijungimo duomenis</legend>
 
-                <!-- Form Name -->
-                <legend>Suveskite prisijungimo duomenis</legend>
-
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="name">
-                        <i class="fa fa-user"></i>
-                    </label>
-                    <div class="col-md-4">
-                        <input name="username" type="text" placeholder="vardas" class="form-control input-md" required="">
-                        <span class="help-block">įveskite prisijungimo vardą</span>
-                    </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="name">
+                    <i class="fa fa-user"></i>
+                </label>
+                <div class="col-md-4">
+                    <input name="username" type="text" placeholder="vardas" class="form-control input-md" required="">
+                    <span class="help-block">įveskite prisijungimo vardą</span>
                 </div>
+            </div>
 
-                <!-- Password input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="password">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                    </label>
-                    <div class="col-md-4">
-                        <input name="password" type="password" placeholder="slaptažodis" class="form-control input-md" required="">
-                        <span class="help-block">įveskite slaptažodį</span>
-                    </div>
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="password">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </label>
+                <div class="col-md-4">
+                    <input name="password" type="password" placeholder="slaptažodis" class="form-control input-md" required="">
+                    <span class="help-block">įveskite slaptažodį</span>
                 </div>
+            </div>
 
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="Prisijungti">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i>
-                    </label>
-                    <div class="col-md-4">
-                        <button type="submit" id="Prisijungti" name="Prisijungti" class="btn btn-primary">
-                            Prisijungti</button>
-                    </div>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Prisijungti">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </label>
+                <div class="col-md-4">
+                    <button type="submit" id="Prisijungti" name="Prisijungti" class="btn btn-primary">
+                        Prisijungti</button>
                 </div>
-
-            </fieldset>
+            </div>
         </form>
     </div>
     <% include ./partials/footer %>

@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
   width: 100%; }
 
-.container {
+.maincontainer {
   width: 100%;
   background-color: var(--d3-color);
   box-shadow: var(--f2-color);
@@ -322,100 +322,6 @@ body {
   text-align: center;
   padding: 2.5rem; }
 
-.pad__page-header {
-  display: flex;
-  flex-direction: column; }
-  .pad__page-header--main {
-    letter-spacing: .4rem;
-    margin-top: .5rem;
-    margin-left: 1rem;
-    font-size: 4rem;
-    font-weight: 700; }
-  .pad__page-header--second {
-    font-size: 1.7rem;
-    font-weight: 400; }
-  .pad__page-header--icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    margin: 0 1rem;
-    fill: var(--d1-color); }
-  .pad__page-header--new-item {
-    border-radius: 2px;
-    text-transform: uppercase;
-    margin: 0 1rem;
-    display: flex;
-    background-color: var(--f5-color); }
-  .pad__page-header--link {
-    display: flex;
-    flex: 1;
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: var(--d1-color);
-    align-items: center; }
-
-.pad__page-data {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap; }
-  .pad__page-data__main-tab:hover {
-    background-color: var(--f2-color); }
-  .pad__page-data__main-tab {
-    border-radius: 5px;
-    margin: 2rem;
-    display: flex;
-    flex-basis: 21%;
-    flex-direction: column;
-    background-color: var(--f9-color); }
-    .pad__page-data__main-tab--header {
-      margin-bottom: .5rem;
-      margin-top: .5rem;
-      padding-left: 1.5rem;
-      font-size: 2.2rem;
-      font-weight: 700; }
-    .pad__page-data__main-tab--content {
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-      font-size: 1.7rem;
-      font-weight: 100; }
-    .pad__page-data__main-tab--buttons {
-      height: 4rem;
-      border-radius: 1px;
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-      color: var(--f4-color);
-      background-color: var(--d1-color); }
-      .pad__page-data__main-tab--buttons--edit {
-        align-items: center;
-        height: 100%;
-        text-decoration: none;
-        color: var(--f4-color);
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: center;
-        flex-basis: 50%; }
-      .pad__page-data__main-tab--buttons--edit:hover {
-        background-color: var(--f2-color); }
-      .pad__page-data__main-tab--buttons--del {
-        display: flex;
-        justify-content: center;
-        flex-basis: 50%;
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: var(--f4-color); }
-        .pad__page-data__main-tab--buttons--del :hover {
-          background-color: var(--f2-color); }
-      .pad__page-data__main-tab--buttons--btn {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-        border: none;
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: var(--f4-color);
-        background-color: inherit; }
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -429,3 +335,113 @@ select:-webkit-autofill:focus {
   border: 1px solid #b5b9bb;
   -webkit-text-fill-color: #303033;
   transition: background-color 5000s ease-in-out 0s; }
+
+.data__page-header {
+  display: flex;
+  flex-direction: column; }
+  .data__page-header--main {
+    letter-spacing: .4rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    font-size: 4rem;
+    font-weight: 700; }
+  .data__page-header--second {
+    font-size: 1.7rem;
+    font-weight: 400; }
+  .data__page-header--icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0 1rem;
+    fill: var(--d1-color); }
+  .data__page-header--new-item {
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    display: flex;
+    background-color: var(--f5-color); }
+  .data__page-header--link {
+    display: flex;
+    flex: 1;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--d1-color);
+    align-items: center; }
+
+.data__page-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .data__page-data__main-tab:hover {
+    background-color: var(--f2-color); }
+  .data__page-data__main-tab {
+    border-radius: 5px;
+    margin: 2rem;
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    background-color: var(--f9-color); }
+    .data__page-data__main-tab--header {
+      margin-bottom: .5rem;
+      margin-top: .5rem;
+      padding: 0 1rem;
+      font-size: 2.2rem;
+      font-weight: 700; }
+    .data__page-data__main-tab--content {
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      font-size: 1.7rem;
+      font-weight: 400; }
+    .data__page-data__main-tab--detail {
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+      color: var(--f2-color);
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      flex-basis: 20%;
+      background-color: var(--f6-color); }
+      .data__page-data__main-tab--detail:hover {
+        background-color: var(--f5-color);
+        color: var(--d3-color); }
+    .data__page-data__main-tab--buttons {
+      height: 4rem;
+      border-radius: 1px;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      color: var(--f4-color);
+      background-color: var(--d1-color); }
+      .data__page-data__main-tab--buttons--edit {
+        align-items: center;
+        height: 100%;
+        text-decoration: none;
+        color: var(--f4-color);
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        flex-basis: 50%; }
+        .data__page-data__main-tab--buttons--edit:hover {
+          background-color: var(--f5-color);
+          color: var(--d3-color);
+          text-decoration: none; }
+      .data__page-data__main-tab--buttons--del {
+        display: flex;
+        justify-content: center;
+        flex-basis: 50%;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--f4-color); }
+        .data__page-data__main-tab--buttons--del:hover {
+          background-color: var(--f5-color);
+          color: var(--d3-color); }
+      .data__page-data__main-tab--buttons--btn {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        border: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--f4-color);
+        background-color: inherit; }

@@ -20,82 +20,146 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>Markė:</td>
-                    <td><strong><%=automech.marke%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.marke%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Modelis:</td>
-                    <td><strong><%=automech.modelis%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.modelis%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Valstybinis numers:</td>
-                    <td><strong><%=automech.valstnr%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.valstnr%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">7</th>
                     <td>ID:</td>
-                    <td><strong><%=automech.id%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.id%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">8</th>
                     <td>Inventorinis numeris:</td>
-                    <td><strong><%=automech.inventnr%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.inventnr%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">9</th>
                     <td>Gamybos metai:</td>
-                    <td><strong><%=automech.gammetai%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.gammetai%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">10</th>
                     <td>Atsakingas asmuo:</td>
-                    <td><strong><%=automech.atsaking%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.atsaking%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">13</th>
                     <td>bazė:</td>
-                    <td><strong><%=automech.baze%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.baze%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">14</th>
                     <td>Civilinis draudimas:</td>
-                    <td><strong><%=automech.drcivil%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.drcivil%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">15</th>
                     <td>Kasko drudimas:</td>
-                    <td><strong><%=automech.drkasko%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.drkasko%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">17</th>
                     <td>Euro taršos lygis:</td>
-                    <td><strong><%=automech.euro%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.euro%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">12</th>
                     <td>Kuro rūšis:</td>
-                    <td><strong><%=automech.ikurrusis%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.ikurrusis%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">11</th>
                     <td>Padalinys:</td>
-                    <td><strong><%=automech.ipadkodas%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.ipadkodas%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">18</th>
                     <td>Pagrindinis paskirtas vairuotojas:</td>
-                    <td><strong><%=automech.ipagvair%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.ipagvair%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">5</th>
                     <td>Transporto pr rūšis:</td>
-                    <td><strong><%=automech.itrrus%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.itrrus%>
+                        </strong>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
                     <td>Transporto pr tipas:</td>
-                    <td><strong><%=automech.itrtipas%></strong></td>
+                    <td>
+                        <strong>
+                            <%=automech.itrtipas%>
+                        </strong>
+                    </td>
                 </tr>
                 <!--<tr>-->
                 <!--  <th scope="row">16</th>-->
@@ -104,15 +168,24 @@
                 <!--</tr>-->
             </tbody>
         </table>
-        <hr>
+        <!--  <hr> -->
         <% if(currentUser && automech.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-            <a class="btn   btn-warning" href="/automech/<%= automech._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
+            <a class="btn   btn-warning" href="/automech/<%= automech._id %>/edit">
+                <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
             <form id="delete-form" action="/automech/<%= automech._id %>?_method=DELETE" method="POST">
-                <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                <button class="btn   btn-danger">
+                    <i class="fa fa-trash-o"></i> TRINTI</button>
             </form>
             <% }%>
-                <a href="/automech"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+                <a href="/automech">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
     </div>
-    <p><em> Sukurė <a href="/users/<%= automech.author.id %>"><%= automech.author.username %></a></em></p>
+    <p>
+        <em> Sukurė
+            <a href="/users/<%= automech.author.id %>">
+                <%= automech.author.username %>
+            </a>
+        </em>
+    </p>
 
     <% include ../partials/footer %>

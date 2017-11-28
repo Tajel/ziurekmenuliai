@@ -1,4 +1,5 @@
 <% include ../partials/header %>
+
     <form action="/obj/<%= obj._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
             <a href="/obj">
@@ -6,6 +7,7 @@
             <!-- Form Name -->
             <legend>Redaguoti
                 <%= obj.objkodas %> Objektą</legend>
+            //
             <hr>
 
             <!-- Text input-->

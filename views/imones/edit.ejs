@@ -1,9 +1,15 @@
 <% include ../partials/header %>
+
     <form action="/imones/<%= imone._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/imones"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Įmonių katalogą</a>
+            <a href="/imones">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Įmonių katalogą</a>
             <!-- Form Name -->
-            <legend>Redaguoti Įmonę   <%= imone.imonespavadinimas %></legend> <hr>
+            <legend>Redaguoti Įmonę
+                <%= imone.imonespavadinimas %>
+            </legend>
+            //
+            <hr>
 
             <!-- Text input-->
             <div class="form-group" hidden>
@@ -18,7 +24,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="imone[imonessutrumpkodas]">Kodinis pavadinimas</label>
                 <div class="col-md-4">
-                    <input id="imone[imonessutrumpkodas]" name="imone[imonessutrumpkodas]" type="text" placeholder="Kodinis pavadinimas" class="form-control input-md" value="<%= imone.imonessutrumpkodas %>">
+                    <input id="imone[imonessutrumpkodas]" name="imone[imonessutrumpkodas]" type="text" placeholder="Kodinis pavadinimas" class="form-control input-md"
+                        value="<%= imone.imonessutrumpkodas %>">
                     <span class="help-block">Įrašykite trumpą įimonės pavadinimą</span>
                 </div>
             </div>
@@ -27,7 +34,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="imone[imonespavadinimas]">Pilnas įmonės pavadinimas</label>
                 <div class="col-md-4">
-                    <input id="imone[imonespavadinimas]" name="imone[imonespavadinimas]" type="text" placeholder="Pilnas įmonės pavadinimas" class="form-control input-md" value="<%= imone.imonespavadinimas %>">
+                    <input id="imone[imonespavadinimas]" name="imone[imonespavadinimas]" type="text" placeholder="Pilnas įmonės pavadinimas"
+                        class="form-control input-md" value="<%= imone.imonespavadinimas %>">
                     <span class="help-block">Įrašykite pilną įmonės pavadinimą</span>
                 </div>
             </div>
@@ -36,7 +44,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="imone[imonesimkodas]">Registracijos kodas, įk.</label>
                 <div class="col-md-4">
-                    <input id="imone[imonesimkodas]" name="imone[imonesimkodas]" type="text" placeholder="Registracijos kodas, įk." class="form-control input-md" value="<%= imone.imonesimkodas %>">
+                    <input id="imone[imonesimkodas]" name="imone[imonesimkodas]" type="text" placeholder="Registracijos kodas, įk." class="form-control input-md"
+                        value="<%= imone.imonesimkodas %>">
                     <span class="help-block">Įrašykite registracijos kodą</span>
                 </div>
             </div>
@@ -45,7 +54,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="imone[imonespvmkodas]">PVM kodas</label>
                 <div class="col-md-4">
-                    <input id="imone[imonespvmkodas]" name="imone[imonespvmkodas]" type="text" placeholder="PVM kodas" class="form-control input-md" value="<%= imone.imonespvmkodas %>">
+                    <input id="imone[imonespvmkodas]" name="imone[imonespvmkodas]" type="text" placeholder="PVM kodas" class="form-control input-md"
+                        value="<%= imone.imonespvmkodas %>">
                     <span class="help-block">Įrašykite PVM kodą</span>
                 </div>
             </div>
@@ -54,7 +64,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="imone[imonesadresas]">Adresas</label>
                 <div class="col-md-4">
-                    <input id="imone[imonesadresas]" name="imone[imonesadresas]" type="text" placeholder="Adresas" class="form-control input-md" value="<%= imone.imonesadresas %>">
+                    <input id="imone[imonesadresas]" name="imone[imonesadresas]" type="text" placeholder="Adresas" class="form-control input-md"
+                        value="<%= imone.imonesadresas %>">
                     <span class="help-block">Įrašykite įmonės adresą</span>
                 </div>
             </div>
@@ -63,7 +74,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
                 <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                    <button id="submit" name="submit" class="btn btn-info">
+                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                 </div>
             </div>
         </fieldset>

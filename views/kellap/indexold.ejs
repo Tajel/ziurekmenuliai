@@ -8,7 +8,7 @@
                     <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas kr keliones lapas</a>
                     <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
                     <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
-                    <hr>
+                    <!--  <hr> -->
                     <a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>
                     <a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>
                     <a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>
@@ -38,12 +38,36 @@
                 <% console.log(allkellap) %>
                     <% allkellap.forEach(function(kellap){ %>
                         <tr>
-                            <td><strong><%=kellap.data%></strong></td>
-                            <td><strong><%=kellap.marke%></strong></td>
-                            <td><strong><%=kellap.modelis%></strong></td>
-                            <td><strong><%=kellap.valstnr%></strong></td>
-                            <td><strong><%=kellap.inventnr%></strong></td>
-                            <td><strong><%=kellap.ipagvair%></strong></td>
+                            <td>
+                                <strong>
+                                    <%=kellap.data%>
+                                </strong>
+                            </td>
+                            <td>
+                                <strong>
+                                    <%=kellap.marke%>
+                                </strong>
+                            </td>
+                            <td>
+                                <strong>
+                                    <%=kellap.modelis%>
+                                </strong>
+                            </td>
+                            <td>
+                                <strong>
+                                    <%=kellap.valstnr%>
+                                </strong>
+                            </td>
+                            <td>
+                                <strong>
+                                    <%=kellap.inventnr%>
+                                </strong>
+                            </td>
+                            <td>
+                                <strong>
+                                    <%=kellap.ipagvair%>
+                                </strong>
+                            </td>
                             <td>
                                 <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                     <a class="btn   btn-warning" href="/kellap/<%= kellap._id %>/edit">Pildyti keliones lapa</a>
@@ -52,11 +76,15 @@
                             <td>
                                 <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                                     <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                                        <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
+                                        <button class="btn   btn-danger">
+                                            <i class="fa fa-trash-o"></i> TRINTI</button>
                                     </form>
                                     <% }%>
                             </td>
-                            <td><a href="/kellap/<%= kellap._id %>" class="btn   btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
+                            <td>
+                                <a href="/kellap/<%= kellap._id %>" class="btn   btn-primary">
+                                    <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
+                            </td>
                             <% }); %>
                         </tr>
             </tbody>

@@ -2,11 +2,13 @@
 
     <form action="/dv/<%= dv._id %>?_method=PUT" method="POST" class="form-horizontal">
         <fieldset>
-            <a href="/dv"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Darbų Vadovų sąrašą </a>
+            <a href="/dv">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Darbų Vadovų sąrašą </a>
             <!-- Form Name -->
             <legend>Redaguoti Darbų Vadovo duomenis:
                 <%= dv.dvVadasPav %>
             </legend>
+            //
             <hr>
 
             <!-- Text input-->
@@ -57,7 +59,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton"> Redaguoti</label>
                 <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
+                    <button id="singlebutton" name="singlebutton" class="btn btn-info">
+                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
                 </div>
             </div>
 
