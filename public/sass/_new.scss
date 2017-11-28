@@ -1,0 +1,123 @@
+.data-newForm {
+    display: flex;
+    flex-direction: column;
+    &__legend {
+        align-items: baseline;
+        letter-spacing: .4rem;
+        margin-top: .5rem;
+        margin-left: 1rem;
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: 1.7rem;
+        text-decoration: none;
+        color: var(--d1-color);
+        align-items: center;
+        background-color: var(--f5-color);
+        border-radius: 2px;
+        text-transform: uppercase;
+        margin: 0 1rem;
+        &__icon {
+            margin-right: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: var(--d3-color);
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        margin-left: 20rem;
+        &__input {
+            margin: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            &--hidden {
+                display: none;
+            }
+            &--label {
+                margin-bottom: .5rem;
+                margin-top: .5rem;
+                margin-right: 5rem;
+                width: 33rem;
+                padding: 0 1rem;
+                font-size: 1.7rem;
+                font-weight: 400;
+            }
+            &--body {
+                align-items: baseline;
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                &--text {
+                    background-color: var(--d1-color);
+                    border: none;
+                    border-color: var(--f2-color);
+                    padding: .7rem 2rem;
+                    border-radius: 100px;
+                    width: 90%;
+                    transition: all .2s;
+                    margin-right: -2.7rem;
+                    &:focus {
+                        outline: none;
+                        width: 100%;
+                        background-color: var(--f2-color);
+                        &::-webkit-input-placeholder {
+                            font-weight: 4 00;
+                        }
+                    }
+                    &--span {
+                        padding-top: .7rem;
+                        padding-right: 4rem;
+                        font-size: 1.4rem;
+                        font-family: Quicksand;
+                    }
+                    &::placeholder {
+                        padding-left: 10px;
+                        font-family: Quicksand;
+                    }
+                }
+            }
+        }
+        &__button {
+            margin: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            &--label {
+                margin-bottom: .5rem;
+                margin-top: .5rem;
+                margin-right: 5rem;
+                width: 30rem;
+                padding: 0 1rem;
+                font-size: 1.7rem;
+                font-weight: 400;
+            }
+            &--submit {
+                display: flex;
+                width: 10rem;
+                height: 3.5rem;
+                border-radius: 15px;
+                justify-content: space-evenly;
+                font-size: 1.7rem;
+                &--icon {
+                    height: 1.75rem;
+                    width: 1.75rem;
+                    fill: var(--f1-color);
+                }
+                &:focus {
+                    outline: none;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

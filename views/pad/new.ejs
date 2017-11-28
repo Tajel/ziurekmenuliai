@@ -1,53 +1,56 @@
 <% include ../partials/header %>
 
 
-    <form action="/pad" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/pad">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Padalinių sąrašą</a>
-            <!-- Form Name -->
-            <legend>Naujas Padalinys</legend>
-            //
-            <hr>
-
+    <form action="/pad" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas Padalinys</legend>
+        <a href="/pad" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Padalinių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">Text Input</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" value="padalinys" type="text" placeholder="placeholder" class="form-control input-md">
-                    <span class="help-block">help</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">Text Input</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" value="padalinys" type="text" placeholder="placeholder" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="padkodas">Padalinio kodas</label>
-                <div class="col-md-4">
-                    <input id="padkodas" name="padkodas" type="text" placeholder="Padalinio kodas" class="form-control input-md" required="">
-                    <span class="help-block">Įrašykite padalinio kodą</span>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="padpavadinimas">Padalinio pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="padpavadinimas" name="padpavadinimas" type="text" placeholder="Padalinio pavadinimas" class="form-control input-md"
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="padkodas">Padalinio kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="padkodas" name="padkodas" type="text" placeholder="Padalinio kodas" class="data-newForm__content__input--body--text"
                         required="">
-                    <span class="help-block">Įrašykite padalinio pavadinimą</span>
+                    <span class="data-newForm__content__input--body--span">Įrašykite padalinio kodą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="padpavadinimas">Padalinio pavadinimas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="padpavadinimas" name="padpavadinimas" type="text" placeholder="Padalinio pavadinimas" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">Įrašykite padalinio pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
+            <div class="data-newForm__content__button">
+                <label class="data-newForm__content__button--label" for="submit">
                     </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
+                <div class="data-newForm__content__button--body">
+                    <button name="submit" class="data-newForm__content__button--submit ">
+                        <svg class="data-newForm__content__button--submit--icon">
+                            <use xlink:href="/img/sprite.svg#icon-new-message">
+                        </svg> Sukurti
+                    </button>
                 </div>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>

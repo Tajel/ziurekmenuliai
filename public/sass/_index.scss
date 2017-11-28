@@ -41,16 +41,17 @@
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        &__main-tab:hover {
-            background-color: var(--f2-color);
-        }
         &__main-tab {
             border-radius: 5px;
+            padding: .2rem;
             margin: 2rem;
             display: flex;
             flex-basis: 25%;
             flex-direction: column;
             background-color: var(--f9-color);
+            &:hover {
+                background-color: var(--f2-color);
+            }
             &--header {
                 margin-bottom: .5rem;
                 margin-top: .5rem;
@@ -109,10 +110,6 @@
                     font-size: 1.4rem;
                     font-weight: 400;
                     color: var(--f4-color);
-                    &:hover {
-                        background-color: var(--f5-color);
-                        color: var(--d3-color);
-                    }
                 }
                 &--btn {
                     display: flex;
@@ -123,6 +120,10 @@
                     font-weight: 400;
                     color: var(--f4-color);
                     background-color: inherit;
+                    &:hover {
+                        background-color: var(--f5-color);
+                        color: var(--d3-color);
+                    }
                 }
             }
         }
