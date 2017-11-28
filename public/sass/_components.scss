@@ -5,9 +5,10 @@
     font-size: 1.7rem;
     &__form {
         display: flex;
-        justify-content: flex-start;
+        align-items: stretch;
         flex-direction: column;
         flex-basis: 100%;
+        margin: 0 35rem;
         &--legend {
             font-family: OpenSans;
             font-size: 2.5rem;
@@ -22,7 +23,7 @@
             fill: var(--f1-color);
         }
         &--userform {
-            margin-left: 30rem;
+            // margin-left: 30rem;
             margin-bottom: 5rem;
             display: flex;
             align-items: flex-start;
@@ -46,13 +47,14 @@
                     border: none;
                     border-color: var(--f2-color);
                     padding: .7rem 2rem;
-                    border-radius: 100px;
-                    width: 38%;
+                    border-radius: 100px; // width: 38%;
                     transition: all .2s;
                     letter-spacing: 2px;
+                    &:hover {
+                        transform: translateY(-1px);
+                    }
                     &:focus {
-                        outline: none;
-                        width: 40%;
+                        outline: none; // width: 40%;
                         background-color: var(--d3-color);
                         &:-webkit-input-placeholder {
                             font-weight: 400;
@@ -67,15 +69,15 @@
             }
         }
         &--pswform {
-            margin-left: 30rem;
+            // margin-left: 30rem;
             margin-bottom: 5rem;
             display: flex;
             align-items: flex-start;
             &__label {
                 display: flex;
                 align-items: center;
-                padding: .7rem 2rem;
                 font-size: 1.7rem;
+                padding: .7rem 2rem;
                 width: 33rem;
             }
             &__input {
@@ -91,13 +93,14 @@
                     border: none;
                     border-color: var(--f2-color);
                     padding: .7rem 2rem;
-                    border-radius: 100px;
-                    width: 38%;
+                    border-radius: 100px; // width: 38%;
                     transition: all .2s;
                     letter-spacing: 2px;
+                    &:hover {
+                        transform: translateY(-1px);
+                    }
                     &:focus {
-                        outline: none;
-                        width: 40%;
+                        outline: none; // width: 40%;
                         background-color: var(--d3-color);
                         &:-webkit-input-placeholder {
                             font-weight: 400;
@@ -112,39 +115,50 @@
             }
         }
         &__btnform {
-            margin-left: 30rem;
+            // margin-left: 30rem;
             margin-bottom: 5rem;
             display: flex;
             align-items: flex-start;
             &__label {
                 display: flex;
                 align-items: center;
-                padding: .95rem 2rem;
                 font-size: 1.7rem;
-                width: 27rem;
-            }
-            &--submit {
-                font-family: inherit;
-                font-size: inherit;
-                color: inherit;
-                background-color: var(--d1-color);
-                border: none;
-                height: 3.6rem;
-                border-color: var(--f2-color);
                 padding: .7rem 2rem;
-                margin-left: 2rem;
-                border-radius: 100px;
-                width: 20%;
-                transition: all .2s;
-                letter-spacing: 2px;
-                &:focus {
-                    outline: none;
-                    transform: translateY(2px);
+                width: 33rem;
+            }
+            &__button {
+                font-size: 1.7rem;
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                &--submit {
+                    font-family: inherit;
+                    font-size: inherit;
+                    color: inherit;
                     background-color: var(--d1-color);
-                    &:-webkit-input-placeholder {
-                        font-weight: 400;
+                    border: none;
+                    border-color: var(--f2-color);
+                    padding: .7rem 2rem;
+                    border-radius: 100px; // width: 38%;
+                    transition: all .2s;
+                    letter-spacing: 2px;
+                    &:hover {
+                        outline: none; // width: 52%;
+                        background-color: var(--f1-color);
+                        color: var(--d3-color);
+                        transform: translateY(-1px);
+                    }
+                    &:active {
+                        background-color: var(--f1-color);
+                        color: var(--d3-color);
+                        transform: translateY(1px);
                     }
                 }
+            }
+            &--span {
+                padding: .7rem 2rem;
+                font-size: 1.4rem;
+                font-family: Quicksand;
             }
         }
     }

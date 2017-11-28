@@ -74,9 +74,10 @@ body {
   font-size: 1.7rem; }
   .login__form {
     display: flex;
-    justify-content: flex-start;
+    align-items: stretch;
     flex-direction: column;
-    flex-basis: 100%; }
+    flex-basis: 100%;
+    margin: 0 35rem; }
     .login__form--legend {
       font-family: OpenSans;
       font-size: 2.5rem;
@@ -89,7 +90,6 @@ body {
       padding-right: 1rem;
       fill: var(--f1-color); }
     .login__form--userform {
-      margin-left: 30rem;
       margin-bottom: 5rem;
       display: flex;
       align-items: flex-start; }
@@ -113,12 +113,12 @@ body {
           border-color: var(--f2-color);
           padding: .7rem 2rem;
           border-radius: 100px;
-          width: 38%;
           transition: all .2s;
           letter-spacing: 2px; }
+          .login__form--userform__input--text:hover {
+            transform: translateY(-1px); }
           .login__form--userform__input--text:focus {
             outline: none;
-            width: 40%;
             background-color: var(--d3-color); }
             .login__form--userform__input--text:focus:-webkit-input-placeholder {
               font-weight: 400; }
@@ -127,15 +127,14 @@ body {
           font-size: 1.4rem;
           font-family: Quicksand; }
     .login__form--pswform {
-      margin-left: 30rem;
       margin-bottom: 5rem;
       display: flex;
       align-items: flex-start; }
       .login__form--pswform__label {
         display: flex;
         align-items: center;
-        padding: .7rem 2rem;
         font-size: 1.7rem;
+        padding: .7rem 2rem;
         width: 33rem; }
       .login__form--pswform__input {
         font-size: 1.7rem;
@@ -151,12 +150,12 @@ body {
           border-color: var(--f2-color);
           padding: .7rem 2rem;
           border-radius: 100px;
-          width: 38%;
           transition: all .2s;
           letter-spacing: 2px; }
+          .login__form--pswform__input--text:hover {
+            transform: translateY(-1px); }
           .login__form--pswform__input--text:focus {
             outline: none;
-            width: 40%;
             background-color: var(--d3-color); }
             .login__form--pswform__input--text:focus:-webkit-input-placeholder {
               font-weight: 400; }
@@ -165,36 +164,44 @@ body {
           font-size: 1.4rem;
           font-family: Quicksand; }
     .login__form__btnform {
-      margin-left: 30rem;
       margin-bottom: 5rem;
       display: flex;
       align-items: flex-start; }
       .login__form__btnform__label {
         display: flex;
         align-items: center;
-        padding: .95rem 2rem;
         font-size: 1.7rem;
-        width: 27rem; }
-      .login__form__btnform--submit {
-        font-family: inherit;
-        font-size: inherit;
-        color: inherit;
-        background-color: var(--d1-color);
-        border: none;
-        height: 3.6rem;
-        border-color: var(--f2-color);
         padding: .7rem 2rem;
-        margin-left: 2rem;
-        border-radius: 100px;
-        width: 20%;
-        transition: all .2s;
-        letter-spacing: 2px; }
-        .login__form__btnform--submit:focus {
-          outline: none;
-          transform: translateY(2px);
-          background-color: var(--d1-color); }
-          .login__form__btnform--submit:focus:-webkit-input-placeholder {
-            font-weight: 400; }
+        width: 33rem; }
+      .login__form__btnform__button {
+        font-size: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%; }
+        .login__form__btnform__button--submit {
+          font-family: inherit;
+          font-size: inherit;
+          color: inherit;
+          background-color: var(--d1-color);
+          border: none;
+          border-color: var(--f2-color);
+          padding: .7rem 2rem;
+          border-radius: 100px;
+          transition: all .2s;
+          letter-spacing: 2px; }
+          .login__form__btnform__button--submit:hover {
+            outline: none;
+            background-color: var(--f1-color);
+            color: var(--d3-color);
+            transform: translateY(-1px); }
+          .login__form__btnform__button--submit:active {
+            background-color: var(--f1-color);
+            color: var(--d3-color);
+            transform: translateY(1px); }
+      .login__form__btnform--span {
+        padding: .7rem 2rem;
+        font-size: 1.4rem;
+        font-family: Quicksand; }
 
 .logo {
   height: 3.25rem;

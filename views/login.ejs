@@ -1,5 +1,5 @@
 <% include ./partials/header %>
-    <iv class="login">
+    <div class="login">
         <form class="login__form" action="/login" method="POST">
             <!-- Form Name -->
             <legend class="login__form--legend">Suveskite prisijungimo duomenis:</legend>
@@ -7,8 +7,9 @@
             <div class="login__form--userform">
                 <label class="login__form--userform__label" for="name">
                     <svg class="login__form__icon">
-                        <use xlink:href="img/sprite.svg#icon-user" </svg>
-                            <span>Vardas</span>
+                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                    </svg>
+                    <span>Vardas</span>
                 </label>
                 <div class="login__form--userform__input">
                     <input name="username" type="text" placeholder="vardas" class="login__form--userform__input--text" required="">
@@ -20,23 +21,31 @@
             <div class="login__form--pswform">
                 <label class="login__form--pswform__label" for="password">
                     <svg class="login__form__icon">
-                        <use xlink:href="img/sprite.svg#icon-key" </svg>
-                            <span>Slaptažodis</span>
+                        <use xlink:href="img/sprite.svg#icon-key"></use>
+                    </svg>
+                    <span>Slaptažodis</span>
                 </label>
                 <div class="login__form--pswform__input">
-                    <input name="password" type="password" placeholder="slaptažodis" class="login__form--pswform__input--text" required="">
+                    <input name="password" type="password" placeholder="slaptažodis" class="login__form--pswform__input--text" required=""></input>
                     <span class="login__form--pswform__input--span">įveskite slaptažodį</span>
                 </div>
             </div>
-
             <!-- Button -->
-            <bu class="login__form__btnform">
-                <label class="login__form__btnform__label" for="Prisijungti">
+            <div class="login__form__btnform">
+                <label class="login__form__btnform__label" for="submit">
                     <svg class="login__form__icon">
-                        <use xlink:href="img/sprite.svg#icon-login" </svg>
-                            <span>Prisijungti</span>
+                        <use xlink:href="img/sprite.svg#icon-login"></use>
+                    </svg>
+                    <span>Prisijungti</span>
                 </label>
-                <button type="submit" class="login__form__btnform--submit">Prisijungti</button>
-    </iv>
-    </form>
+                <div class="login__form__btnform__button">
+                    <button class="login__form__btnform__button--submit">
+
+                        Prisijungti
+                    </button>
+                    <span class="login__form--pswform__input--span">Prisijungti</span>
+                </div>
+            </div>
+        </form>
+    </div>
     <% include ./partials/footer %>
