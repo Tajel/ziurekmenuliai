@@ -555,14 +555,15 @@ select:-webkit-autofill:focus {
       fill: var(--d3-color); }
   .data-editForm__content {
     display: flex;
+    height: inherit;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center; }
+    margin-left: 20rem; }
     .data-editForm__content__input {
       margin: 2rem;
       display: flex;
       flex-direction: row;
-      align-items: baseline; }
+      align-self: inherit; }
       .data-editForm__content__input--hidden {
         display: none; }
       .data-editForm__content__input--label {
@@ -577,7 +578,7 @@ select:-webkit-autofill:focus {
         align-items: baseline;
         display: flex;
         flex-direction: column;
-        flex-basis: 100%; }
+        flex-basis: 50%; }
         .data-editForm__content__input--body--text {
           background-color: var(--d1-color);
           border: none;

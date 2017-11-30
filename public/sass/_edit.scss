@@ -31,17 +31,17 @@
   }
   &__content {
     display: flex;
-    // height: inherit;
+    height: inherit;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    margin-left: 20rem;
+    // align-items: center;
     // margin-left: 20rem;
     &__input {
       margin: 2rem;
       display: flex;
       flex-direction: row;
-
-      align-items: baseline;
+      align-self: inherit;
       &--hidden {
         display: none;
       }
@@ -58,7 +58,7 @@
         align-items: baseline;
         display: flex;
         flex-direction: column;
-        flex-basis: 100%;
+        flex-basis: 50%;
         &--text {
           background-color: var(--d1-color);
           border: none;
