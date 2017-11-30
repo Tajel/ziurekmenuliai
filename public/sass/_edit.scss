@@ -31,7 +31,7 @@
   }
   &__content {
     display: flex;
-    height: inherit;
+    // height: inherit;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -40,6 +40,7 @@
       margin: 2rem;
       display: flex;
       flex-direction: row;
+
       align-items: baseline;
       &--hidden {
         display: none;
@@ -63,7 +64,7 @@
           border: none;
           border-color: var(--f2-color);
           padding: 0.5rem 2rem;
-          border-radius: 100px;
+          border-radius: 5px;
           width: 90%;
           padding-left: 3.5rem;
           height: 4rem;

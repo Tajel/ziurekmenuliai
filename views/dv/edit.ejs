@@ -1,71 +1,70 @@
 <% include ../partials/header %>
 
-    <form action="/dv/<%= dv._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/dv">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Darbų Vadovų sąrašą </a>
-            <!-- Form Name -->
-            <legend>Redaguoti Darbų Vadovo duomenis:
-                <%= dv.dvVadasPav %>
-            </legend>
-            //
-            <hr>
-
+    <form action="/dv/<%= dv._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti Darbų Vadovo duomenis:
+            <%= dv.dvVadasPav %>
+        </legend>
+        <a href="/dv" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Darbų Vadovų sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">darbvad</label>
-                <div class="col-md-4">
-                    <input id="doc" name="dv[doc]" type="text" placeholder="darbvad" class="form-control input-md" value="darbvad">
-                    <span class="help-block">darbvad</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="doc">Text Input</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="doc" name="dv[doc]" type="text" placeholder="darbvad" class="data-editForm__content__input--body--text" value="darbvad">
+                    <span class="data-editForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[dvVadasPav]">Darbų vadovo vardas pavardė</label>
-                <div class="col-md-4">
-                    <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbu vadovo vardas pavarde" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="dv[dvVadasPav]">DV vardas pavardė</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbu vadovo vardas pavardė" class="data-editForm__content__input--body--text" required=""
                         value="<%= dv.dvVadasPav %>">
-                    <span class="help-block">Įrašykite darbų vadovo vardą ir pavardę</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite darbų vadovo vardą ir pavardę</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[dvkodas]">Darbų vadovo kodas</label>
-                <div class="col-md-4">
-                    <input id="dv[dvkodas]" name="dv[dvkodas]" type="text" placeholder="Darbu vadovo kodas" class="form-control input-md" value="<%= dv.dvkodas %>">
-                    <span class="help-block">Įrašykite darbų vadovo kodą</span>
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label"
+                 for="dv[dvkodas]">DV kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="dv[dvkodas]" name="dv[dvkodas]" type="text" placeholder="Darbu vadovo kodas" class="data-editForm__content__input--body--text"
+                        value="<%= dv.dvkodas %>">
+                    <span class="data-editForm__content__input--body--span">Įrašykite darbų vadovo kodą</span>
                 </div>
             </div>
 
             <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[ipadkodas]">Darbu vadovo padalinys</label>
-                <div class="col-md-4">
-                    <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="form-control">
-                        <option value="<%= dv.ipadkodas %>">
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="dv[ipadkodas]">DV padalinys</label>
+                <div class="data-editForm__content__input--body">
+                    <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="data-editForm__content__input--body--text">
+                        <option  value="<%= dv.ipadkodas %>">
                             <% pad.forEach(function(pad){ %>
                                 <option value="<%= pad.padkodas %>">
                                     <%= pad.padkodas %>
                                 </option>
                                 <% }); %>
                     </select>
-                    <span class="help-block">Pasirinkite padalinio kodą</span>
+                    <span class="data-editForm__content__input--body--span">Pasirinkite padalinio kodą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="singlebutton"> Redaguoti</label>
-                <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
+            <div class="data-editForm__content__button">
+                <button name="submit" class="data-editForm__content__button--submit ">
+                    <svg class="data-editForm__content__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
-    <%= console.log(dv) %>
-
-        <% include ../partials/footer %>
+    <% include ../partials/footer %>
