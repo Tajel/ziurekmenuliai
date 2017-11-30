@@ -16,12 +16,13 @@
 <body>
     <div class="maincontainer">
         <header class="header">
-            <img src="img/logo.png" alt="tkellap logo" class="logo">
+            <img src="/img/logo.png" alt="tkellap logo" class="logo">
             <form action="/" class="search" placeholder="Search bar">
                 <input type="text" class="search__input" id="" placeholder="Search kellap">
                 <button class="search__button">
                     <svg class="search__icon">
-                        <use xlink:href="img/sprite.svg#icon-search" </svg>
+                        <use xlink:href="/img/sprite.svg#icon-search"></use>
+                    </svg>
                 </button>
             </form>
             <nav class="user-nav">
@@ -29,21 +30,21 @@
                     <div class="user-nav__icon-box">
                         <a class="user-nav__link" href="/login">
                             <svg class="user-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-login">
+                                <use xlink:href="/img/sprite.svg#icon-login">
                             </svg>
                             Prisijungti</a>
                     </div>
                     <div class="user-nav__icon-box">
                         <a class="user-nav__link" href="/register">
                             <svg class="user-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-add-user">
+                                <use xlink:href="/img/sprite.svg#icon-add-user">
                             </svg>Registruotis</a>
                     </div>
                     <% } else { %>
                         <div class="user-nav__icon-box">
                             <a class="user-nav__link">
                                 <svg class="user-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-user">
+                                    <use xlink:href="/img/sprite.svg#icon-user">
                                 </svg>
                                 <span>
                                     <%= currentUser.username %>
@@ -53,7 +54,7 @@
                         <div class="user-nav__icon-box">
                             <a class="user-nav__link" href="/logout">
                                 <svg class="user-nav__icon">
-                                    <use xlink:href="img/sprite.svg#icon-log-out">
+                                    <use xlink:href="/img/sprite.svg#icon-log-out">
                                 </svg>Išeiti
                             </a>
                         </div>
@@ -70,14 +71,14 @@
                             <li class=" side-nav__item side-nav__item--active">
                                 <a href="/" class="side-nav__link">
                                     <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-home" </svg>
+                                        <use xlink:href="/img/sprite.svg#icon-home" </svg>
                                             <span>Pagrindinis</span>
                                 </a>
                             </li>
                             <li class="side-nav__item">
                                 <a href="/kellap" class="side-nav__link">
                                     <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-text" </use>
+                                        <use xlink:href="/img/sprite.svg#icon-text" </use>
                                     </svg>
                                     <span>Keliones lapai</span>
                                 </a>
@@ -86,7 +87,7 @@
                                 <li class="side-nav__item">
                                     <a href="#" class="side-nav__link">
                                         <svg class="side-nav__icon">
-                                            <use xlink:href="img/sprite.svg#icon-text" </use>
+                                            <use xlink:href="/img/sprite.svg#icon-text" </use>
                                         </svg>
                                         <span class="dropbtn" onclick="myFunctiondrop1()">Transporto priemones</span>
                                     </a>
@@ -95,7 +96,7 @@
                                     <li class="side-nav__item">
                                         <a href="/autokrov" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-truck" </use>
                                             </svg>
                                             <span>Krovininiai</span>
                                         </a>
@@ -103,7 +104,7 @@
                                     <li class="side-nav__item">
                                         <a href="/automech" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-truck" </use>
                                             </svg>
                                             <span>Mechanizmai</span>
                                         </a>
@@ -111,7 +112,7 @@
                                     <li class="side-nav__item">
                                         <a href="/autolen" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-truck" </use>
                                             </svg>
                                             <span>Lengvieji</span>
                                         </a>
@@ -119,7 +120,7 @@
                                     <li class="side-nav__item">
                                         <a href="/automm" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-truck" </use>
                                             </svg>
                                             <span>Mazoji mechanizacija</span>
                                         </a>
@@ -127,7 +128,7 @@
                                     <li class="side-nav__item">
                                         <a href="/autonuoma" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-truck" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-truck" </use>
                                             </svg>
                                             <span>Nuomotos tr. priemones</span>
                                         </a>
@@ -137,7 +138,7 @@
                             <li class="side-nav__item">
                                 <a href="#" class="side-nav__link link1">
                                     <svg class="side-nav__icon">
-                                        <use xlink:href="img/sprite.svg#icon-calendar" </use>
+                                        <use xlink:href="/img/sprite.svg#icon-calendar" </use>
                                     </svg>
                                     <span>Darbuotoju ataskaita</span>
                                 </a>
@@ -146,7 +147,7 @@
                                 <li class="side-nav__item">
                                     <a href="#" class="side-nav__link">
                                         <svg class="side-nav__icon">
-                                            <use xlink:href="img/sprite.svg#icon-database" </use>
+                                            <use xlink:href="/img/sprite.svg#icon-database" </use>
                                         </svg>
                                         <span class="dropbtn" onclick="myFunctiondrop2()">Duomenys</span>
                                     </a>
@@ -155,7 +156,7 @@
                                     <li class="side-nav__item">
                                         <a href="/pad" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Padaliniai</span>
                                         </a>
@@ -163,7 +164,7 @@
                                     <li class="side-nav__item">
                                         <a href="/dv" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>darbu vadovai</span>
                                         </a>
@@ -171,7 +172,7 @@
                                     <li class="side-nav__item">
                                         <a href="/vair" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Vairuotojai</span>
                                         </a>
@@ -179,7 +180,7 @@
                                     <li class="side-nav__item">
                                         <a href="/obj" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Objektai</span>
                                         </a>
@@ -187,7 +188,7 @@
                                     <li class="side-nav__item">
                                         <a href="/trrus" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Transporto rušis</span>
                                         </a>
@@ -195,7 +196,7 @@
                                     <li class="side-nav__item">
                                         <a href="/trtip" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Transporto tipas</span>
                                         </a>
@@ -203,7 +204,7 @@
                                     <li class="side-nav__item">
                                         <a href="/kurrus" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Kuro rūšys</span>
                                         </a>
@@ -211,7 +212,7 @@
                                     <li class="side-nav__item">
                                         <a href="/kuruzp" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Kuro šaltiniai</span>
                                         </a>
@@ -219,7 +220,7 @@
                                     <li class="side-nav__item">
                                         <a href="/darbrus" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>darbo rūšis</span>
                                         </a>
@@ -227,7 +228,7 @@
                                     <li class="side-nav__item">
                                         <a href="/imones" class="side-nav__link">
                                             <svg class="side-nav__icon">
-                                                <use xlink:href="img/sprite.svg#icon-database" </use>
+                                                <use xlink:href="/img/sprite.svg#icon-database" </use>
                                             </svg>
                                             <span>Įmonės</span>
                                         </a>

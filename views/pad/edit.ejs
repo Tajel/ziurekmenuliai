@@ -1,80 +1,53 @@
 <% include ../partials/header %>
 
-
-    <form action="/pad/<%= pad._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/pad">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Padalinių sąrašą</a>
-            <!-- Form Name -->
-            <legend>Redaguoti Padalinį:
-                <%= pad.padpavadinimas %>
-            </legend>
-            //
-            <hr>
-
+    <form action="/pad/<%= pad._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti Padalinį:
+            <%= pad.padpavadinimas %>
+        </legend>
+        <a href="/pad" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Padalinių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">Text Input</label>
-                <div class="col-md-4">
-                    <input id="doc" name="pad[doc]" value="padalinys" type="text" placeholder="placeholder" class="form-control input-md">
-                    <span class="help-block">help</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="doc">Text Input</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="doc" name="pad[doc]" value="padalinys" type="text" placeholder="placeholder" class="data-editForm__content__input--body--text">
+                    <span class="data-editForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="padkodas">Padalinio kodas</label>
-                <div class="col-md-4">
-                    <input id="padkodas" name="pad[padkodas]" readonly value="<%= pad.padkodas %>" type="text" placeholder="Padalinio kodas"
-                        class="form-control input-md" required="">
-                    <span class="help-block">Įrašykite padalinio kodą</span>
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="padkodas">Padalinio kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="padkodas" name="pad[padkodas]" type="text" placeholder="Padalinio kodas" class="data-editForm__content__input--body--text"
+                        required="" value="<%= pad.padkodas %>" readonly>
+                    <span class="data-editForm__content__input--body--span">Įrašykite padalinio kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="padpavadinimas">Padalinio pavadinimas</label>
-                <div class="col-md-4">
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="padpavadinimas">Padalinio pavadinimas</label>
+                <div class="data-editForm__content__input--body">
                     <input id="padpavadinimas" name="pad[padpavadinimas]" value="<%= pad.padpavadinimas %>" type="text" placeholder="Padalinio pavadinimas"
-                        class="form-control input-md" required="">
-                    <span class="help-block">Įrašykite adalinio pavadinimą</span>
+                        class="data-editForm__content__input--body--text" required="">
+                    <span class="data-editForm__content__input--body--span">Įrašykite padalinio pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"></label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
-            </div>
-
-        </fieldset>
-    </form>
-
-    <!-- <div class="container">
-        <div class="row">
-            <h1 style="text-align: center">Edit
-                <%= pad.padpavadinimas %>
-            </h1>
-            <div style="width: 30%; margin: 25px auto;">
-                <form action="/pad/<%= pad._id %>?_method=PUT" method="POST">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="pad[padkodas]" readonly value="<%= pad.padkodas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="pad[padpavadinimas]" value="<%= pad.padpavadinimas %>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="pad[doc]" hidden value="<%= pad.doc %>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-lg btn-primary btn-block">Pakeisti !</button>
-                    </div>
-                </form>
-                <a href="/pad"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+            <div class="data-editForm__content__button">
+                <button name="submit" class="data-editForm__content__button--submit ">
+                    <svg class="data-editForm__content__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
         </div>
-    </div> -->
+    </form>
     <% include ../partials/footer %>

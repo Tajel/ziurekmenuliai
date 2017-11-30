@@ -1,6 +1,4 @@
 <% include ../partials/header %>
-
-
     <form action="/pad" method="POST" class="data-newForm">
         <legend class="data-newForm__legend">Naujas Padalinys</legend>
         <a href="/pad" class="data-newForm__link">
@@ -41,15 +39,11 @@
 
             <!-- Button -->
             <div class="data-newForm__content__button">
-                <label class="data-newForm__content__button--label" for="submit">
-                    </i>Sukurti</label>
-                <div class="data-newForm__content__button--body">
-                    <button name="submit" class="data-newForm__content__button--submit ">
-                        <svg class="data-newForm__content__button--submit--icon">
-                            <use xlink:href="/img/sprite.svg#icon-new-message">
-                        </svg> Sukurti
-                    </button>
-                </div>
+                <button name="submit" class="data-newForm__content__button--submit ">
+                    <svg class="data-newForm__content__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
         </div>
     </form>

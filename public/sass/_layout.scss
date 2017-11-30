@@ -1,35 +1,36 @@
 .maincontainer {
-    width: 100%; // margin: 3rem auto;
-    background-color: var(--d3-color);
-    box-shadow: var(--f2-color);
-    min-height: 40rem;
+  width: 100%; // margin: 3rem auto;
+  background-color: var(--d3-color);
+  box-shadow: var(--f2-color);
+  min-height: 40rem;
 }
 
 .header {
-    font-size: 2.2rem;
-    height: 6rem;
-    background-color: var(--f9-color);
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--f1-color);
+  font-size: 2.2rem;
+  height: 6rem;
+  background-color: var(--f9-color);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--f1-color);
 }
 
 .content {
-    display: flex;
+  display: flex;
 }
 
 .sidebar {
-    display: flex;
-    background-color: var(--f9-color);
-    flex: 0 0 18%;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  background-color: var(--f9-color);
+  flex: 0 0 18%;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95vh;
 }
 
 .kellap-content {
-    background-color: var(--d3-color);
-    flex: 1;
-    height: 80rem;
+  background-color: var(--d3-color);
+  flex: 1;
+  height: 80rem;
 }
