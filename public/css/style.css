@@ -167,6 +167,31 @@ body {
           padding: 0.7rem 2rem;
           font-size: 1.4rem;
           font-family: Quicksand; }
+    .login__form__button {
+      margin-bottom: 5rem;
+      display: flex;
+      align-items: flex-start; }
+      .login__form__button--submit {
+        background-color: var(--d1-color);
+        border: none;
+        display: flex;
+        width: 12rem;
+        height: 3.5rem;
+        border-radius: 15px;
+        justify-content: space-evenly;
+        font-size: 1.7rem; }
+        .login__form__button--submit--icon {
+          height: 1.75rem;
+          width: 1.75rem;
+          fill: var(--f1-color); }
+        .login__form__button--submit:hover {
+          cursor: pointer;
+          background-color: var(--d2-color);
+          color: var(--d3-color); }
+        .login__form__button--submit:focus {
+          outline: none;
+          text-decoration: none;
+          background-color: var(--d2-color); }
 
 .logo {
   height: 3.25rem;

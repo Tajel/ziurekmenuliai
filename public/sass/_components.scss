@@ -7,8 +7,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex-basis: 100%;
-    // margin: 0 35rem;
+    flex-basis: 100%; // margin: 0 35rem;
     &--legend {
       font-family: OpenSans;
       font-size: 2.5rem;
@@ -115,6 +114,36 @@
           padding: 0.7rem 2rem;
           font-size: 1.4rem;
           font-family: Quicksand;
+        }
+      }
+    }
+    &__button {
+      margin-bottom: 5rem;
+      display: flex;
+      align-items: flex-start;
+      &--submit {
+        background-color: var(--d1-color);
+        border: none;
+        display: flex;
+        width: 12rem;
+        height: 3.5rem;
+        border-radius: 15px;
+        justify-content: space-evenly;
+        font-size: 1.7rem;
+        &--icon {
+          height: 1.75rem;
+          width: 1.75rem;
+          fill: var(--f1-color);
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: var(--d2-color);
+          color: var(--d3-color);
+        }
+        &:focus {
+          outline: none;
+          text-decoration: none;
+          background-color: var(--d2-color);
         }
       }
     }
