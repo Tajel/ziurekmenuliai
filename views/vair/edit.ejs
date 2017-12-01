@@ -1,30 +1,32 @@
 <% include ../partials/header %>
 
-    <form action="/vair/<%= vair._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/vair">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į vairuotojų sąrašą </a>
-            <!-- Form Name -->
-            <legend>Redaguoti Vairuotojo
-                <%= vair.vairVardPav %> duomenis:
-            </legend>
-            //
-            <hr>
+    <form action="/vair/<%= vair._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti vairuotojo duomenis:
+            <%= vair.vairVardPav %>
+        </legend>
+        <a href="/vair" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Vairuotojų sąrašą</a>
+        </a>
+        <!-- Form Name -->
 
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="vair[doc]">vairuot</label>
-                <div class="col-md-4">
-                    <input id="vair[doc]" name="vair[doc]" type="text" placeholder="vairuot" class="form-control input-md" value="vairuot">
-                    <span class="help-block">vairuot</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="doc">Text Input</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="vair[doc]" name="vair[doc]" type="text" placeholder="vairuot" class="data-editForm__content__input--body--text"
+                        value="vairuot">
+                    <span class="data-editForm__content__input--body--span">vairuot</span>
                 </div>
             </div>
 
             <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vair[ipadkodas]">Padlinys</label>
-                <div class="col-md-4">
-                    <select id="vair[ipadkodas]" name="vair[ipadkodas]" class="form-control">
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="vair[ipadkodas]">Padlinys</label>
+                <div class="data-editForm__content__input--body">
+                    <select id="vair[ipadkodas]" name="vair[ipadkodas]" class="data-editForm__content__input--body--text">
                         <option value="<%= vair.ipadkodas %>">
                             <% pad.forEach(function(pad){ %>
                                 <option value="<%= pad.padkodas %>">
@@ -32,66 +34,64 @@
                                 </option>
                                 <% }); %>
                     </select>
-                    <span class="help-block">Pasirinkite padalinį</span>
+                    <span class="data-editForm__content__input--body--span">pasirinkite padalinį</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vair[vairkodas]">Vairuotojo kodas</label>
-                <div class="col-md-4">
-                    <input id="vair[vairkodas]" name="vair[vairkodas]" type="text" placeholder="Vairuotojo kodas" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="vair[vairkodas]">Vairuotojo kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="vair[vairkodas]" name="vair[vairkodas]" type="text" placeholder="Vairuotojo kodas" class="data-editForm__content__input--body--text input-md"
                         value="<%= vair.vairkodas %>">
-                    <span class="help-block">Įrašykite vairuotojo kodą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite vairuotojo kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vair[vairVardPav]">Vairuotojo vardas pavarde</label>
-                <div class="col-md-4">
-                    <input id="vair[vairVardPav]" name="vair[vairVardPav]" type="text" placeholder="Vairuotojo vardas pavarde" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="vair[vairVardPav]">Vairuotojo vardas pavardė</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="vair[vairVardPav]" name="vair[vairVardPav]" type="text" placeholder="Vairuotojo vardas pavardė" class="data-editForm__content__input--body--text input-md"
                         value="<%= vair.vairVardPav %>">
-                    <span class="help-block">Įrašykite vardą ir pavardę</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite vardą ir pavardę</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vair[vairVard]">Vairuotojo vardas</label>
-                <div class="col-md-4">
-                    <input id="vair[vairVard]" name="vair[vairVard]" type="text" placeholder="Vairuotojo vardas" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="vair[vairVard]">Vairuotojo vardas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="vair[vairVard]" name="vair[vairVard]" type="text" placeholder="Vairuotojo vardas" class="data-editForm__content__input--body--text input-md"
                         value=" <%= vair.vairVard %>">
-                    <span class="help-block">Įrašykite Vardą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite vardą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vair[vairPav]">Vairuotojo pavardė</label>
-                <div class="col-md-4">
-                    <input id="vair[vairPav]" name="vair[vairPav]" type="text" placeholder="Vairuotojo pavardė" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="vair[vairPav]">Vairuotojo pavardė</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="vair[vairPav]" name="vair[vairPav]" type="text" placeholder="Vairuotojo pavardė" class="data-editForm__content__input--body--text input-md"
                         value="<%= vair.vairPav %>">
-                    <span class="help-block">Įrašykite Pavardę</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite pavardę</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
-
     <small> Sukūrė
         <a href="/users/<%= vair.author.id %>">
             <%= vair.author.username %>
         </a>
     </small>
-    </p>
+
     <% include ../partials/footer %>

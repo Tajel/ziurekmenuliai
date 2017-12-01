@@ -1,10 +1,12 @@
 <% include ../partials/header %>
-    <h1>
+    <legend class="data-editForm__legend">
         <%=vair.vairVardPav%>
-    </h1>
-    <a href="/vair">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į vairuotojų sąrašą </a>
-    <!--  <hr> -->
+    </legend>
+    <a href="/dv" class="data-editForm__link">
+        <svg class="data-editForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-back"></use>
+        </svg> Atgal į vairuotojų sąrašą</a>
+    </a>
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">
