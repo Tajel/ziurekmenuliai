@@ -1,65 +1,64 @@
 <% include ../partials/header %>
 
-    <form action="/obj" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/obj">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Objektų sąrašą</a>
-            <!-- Form Name -->
-            <legend>Naujas Objektas</legend>
-            //
-            <hr>
+    <form action="/obj" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas Objektas</legend>
+        <a href="/vair" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Objektų sąrašą </a>
+        <!-- Form Name -->
+
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">objektas</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="objektas" class="form-control input-md" value="objektas">
-                    <span class="help-block">objektas</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">objektas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="objektas" class="data-newForm__content__input--body--text" value="objektas">
+                    <span class="data-newForm__content__input--body--span">objektas</span>
                 </div>
             </div>
 
             <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dvVadasPav">Darbų vadovas</label>
-                <div class="col-md-4">
-                    <select id="dvVadasPav" name="dvVadasPav" class="form-control">
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="dvVadasPav">Darbų vadovas</label>
+                <div class="data-newForm__content__input--body">
+                    <select id="dvVadasPav" name="dvVadasPav" class="data-newForm__content__input--body--text">
                         <% allDv.forEach(function(dv){ %>
-                            <option value="<%= dv.dvVadasPav %>">
+                            <option value="<%= dv.dvVadasPav %>" class="data-newForm__content__input--body--text">
                                 <%= dv.dvVadasPav %>
                             </option>
                             <% }); %>
                     </select>
-                    <span class="help-block">Pasirinkite darbų vadovą</span>
+                    <span class="data-newForm__content__input--body--span">pasirinkite darbų vadovą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="objkodas">Objekto kodas</label>
-                <div class="col-md-4">
-                    <input id="objkodas" name="objkodas" type="text" placeholder="Objekto kodas pvz: v001/17" class="form-control input-md">
-                    <span class="help-block">Įrašykite objekto kodą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="objkodas">Objekto kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="objkodas" name="objkodas" type="text" placeholder="Objekto kodas pvz: v001/17" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">rašykite objekto kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="objpav">Objekto pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="objpav" name="objpav" type="text" placeholder="Objekto pavadinimas" class="form-control input-md">
-                    <span class="help-block">Įrašykite objekto pavadinimą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="objpav">Objekto pavadinimas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="objpav" name="objpav" type="text" placeholder="Objekto pavadinimas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">įrašykite objekto pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>

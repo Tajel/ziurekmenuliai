@@ -1,29 +1,29 @@
 <% include ../partials/header %>
 
-    <form action="/obj/<%= obj._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/obj">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Objektų sąrašą</a>
-            <!-- Form Name -->
-            <legend>Redaguoti
-                <%= obj.objkodas %> Objektą</legend>
-            //
-            <hr>
+    <form action="/obj/<%= obj._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti:
+            <%= obj.objkodas %> Objektą</legend>
+        <a href="/obj" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal į Objektų sąrašą</a>
 
+        <!-- Form Name -->
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">objektas</label>
-                <div class="col-md-4">
-                    <input id="doc" name="obj[doc]" type="text" placeholder="objektas" class="form-control input-md" value="objektas">
-                    <span class="help-block">objektas</span>
+            <div class="data-editForm__content__input--hidden" hidden>
+                <label class="data-editForm__content__input--label" for="doc">objektas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="doc" name="obj[doc]" type="text" placeholder="objektas" class="data-editForm__content__input--body--text" value="objektas">
+                    <span class="data-editForm__content__input--body--span">objektas</span>
                 </div>
             </div>
 
             <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dvVadasPav">Darbų vadovas</label>
-                <div class="col-md-4">
-                    <select id="dvVadasPav" name="obj[dvVadasPav]" class="form-control">
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="dvVadasPav">Darbų vadovas</label>
+                <div class="data-editForm__content__input--body">
+                    <select id="dvVadasPav" name="obj[dvVadasPav]" class="data-editForm__content__input--body--text">
                         <option value="<%= obj.dvVadasPav %>">
                         </option>
                         <% allDv.forEach(function(dv){ %>
@@ -32,37 +32,38 @@
                             </option>
                             <% }); %>
                     </select>
-                    <span class="help-block">Pasirinkite darbų vadovą</span>
+                    <span class="data-editForm__content__input--body--span">pasirinkite darbų vadovą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="objkodas">Objekto kodas</label>
-                <div class="col-md-4">
-                    <input id="objkodas" name="obj[objkodas]" type="text" placeholder="Objekto kodas pvz: v001/17" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="objkodas">Objekto kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="objkodas" name="obj[objkodas]" type="text" placeholder="Objekto kodas pvz: v001/17" class="data-editForm__content__input--body--text"
                         value="<%= obj.objkodas %>">
-                    <span class="help-block">Įrašykite objekto kodą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite objekto kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="objpav">Objekto pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="objpav" name="obj[objpav]" type="text" placeholder="Objekto pavadinimas" class="form-control input-md" value="<%= obj.objpav %>">
-                    <span class="help-block">Įrašykite objekto pavadinimą</span>
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="objpav">Objekto pavadinimas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="objpav" name="obj[objpav]" type="text" placeholder="Objekto pavadinimas" class="data-editForm__content__input--body--text"
+                        value="<%= obj.objpav %>">
+                    <span class="data-editForm__content__input--body--span">Įrašykite objekto pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
             </div>
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>
