@@ -1,51 +1,48 @@
 <% include ../partials/header %>
-
-    <form action="/darbrus" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/darbrus">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro rūšių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Nauja darbo rūšis</legend>
-            //
-            <hr>
-
+    <form action="/darbrus" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Nauja darbo rūšis</legend>
+        <a href="/darbrus" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Kuro rūšių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">darbrus</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="darbrus" class="form-control input-md" value="darbrus">
-                    <span class="help-block">darbrus</span>
+            <div class="data-newForm__content__input--hidden">>
+                <label class="data-newForm__content__input--label" for="doc">darbrus</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="darbrus" class="data-newForm__content__input--body--text" value="darbrus">
+                    <span class="data-newForm__content__input--body--span">darbrus</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="darbrus">Darbo rūšis</label>
-                <div class="col-md-4">
-                    <input id="darbrus" name="darbrus" type="text" placeholder="Darbo rūšis" class="form-control input-md">
-                    <span class="help-block">Įrašykite darbo rūšį</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="darbrus">Darbo rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="darbrus" name="darbrus" type="text" placeholder="Darbo rūšis" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite darbo rūšį</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vnt">Mato vienetas</label>
-                <div class="col-md-4">
-                    <input id="vnt" name="vnt" type="text" placeholder="Mato vienetas" class="form-control input-md">
-                    <span class="help-block">Įrašykite mato vienetą, Val, Mėn, tkm, d ...</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="vnt">Mato vienetas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="vnt" name="vnt" type="text" placeholder="Mato vienetas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite mato vienetą, Val, Mėn, tkm, d ...</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>
