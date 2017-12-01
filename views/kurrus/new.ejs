@@ -1,51 +1,49 @@
 <% include ../partials/header %>
 
-    <form action="/kurrus" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/kurrus">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro rūšių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Nauja kuro rūšis</legend>
-            //
-            <hr>
+    <form action="/kurrus" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Nauja kuro rūšis</legend>
+        <a href="/kurrus" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Kuro rūšių sąrašą </a>
+        <!-- Form Name -->
 
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">kurorusis</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="kurorusis" class="form-control input-md" value="kurorusis">
-                    <span class="help-block">help</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">kurorusis</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="kurorusis" class="data-newForm__content__input--body--text" value="kurorusis">
+                    <span class="data-newForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurorusiskodas">Kuro rūšies kodas</label>
-                <div class="col-md-4">
-                    <input id="kurorusiskodas" name="kurorusiskodas" type="text" placeholder="Kodas" class="form-control input-md">
-                    <span class="help-block">Įrašykite kuro rūšies kodą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kurorusiskodas">Kuro rūšies kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="kurorusiskodas" name="kurorusiskodas" type="text" placeholder="Kodas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite kuro rūšies kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurrusis">Pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="kurrusis" name="kurrusis" type="text" placeholder="Pavadinimas" class="form-control input-md">
-                    <span class="help-block">Įrašykite kuro rūšies pavadinimą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kurrusis">Pavadinimas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="kurrusis" name="kurrusis" type="text" placeholder="Pavadinimas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite kuro rūšies pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>

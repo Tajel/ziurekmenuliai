@@ -1,50 +1,52 @@
 <% include ../partials/header %>
 
-    <form action="/kurrus/<%= kurrus._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/kurrus">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro rūšių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Redaguoti kuro rūšį</legend>
-            //
-            <hr>
+    <form action="/kurrus/<%= kurrus._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti kuro rūšį </legend>
+        <a href="/kurrus" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Kuro rūšių sąrašą</a>
+        </a>
 
+        <!-- Form Name -->
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">kurorusis</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="kurorusis" class="form-control input-md" value="kurorusis">
-                    <span class="help-block">help</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="doc">kurorusis</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="kurorusis" class="data-editForm__content__input--body--text" value="kurorusis">
+                    <span class="data-editForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurrus[kurorusiskodas]">Kodas</label>
-                <div class="col-md-4">
-                    <input id="kurorusiskodas" name="kurrus[kurorusiskodas]" type="text" placeholder="Kodas" class="form-control input-md" value="<%= kurrus.kurorusiskodas %>">
-                    <span class="help-block">Įrašykite kuro rūšies kodą</span>
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="kurrus[kurorusiskodas]">Kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="kurorusiskodas" name="kurrus[kurorusiskodas]" type="text" placeholder="Kodas" class="data-editForm__content__input--body--text"
+                        value="<%= kurrus.kurorusiskodas %>">
+                    <span class="data-editForm__content__input--body--span">Įrašykite kuro rūšies kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurrus[kurrusis]">Pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="kurrusis" name="kurrus[kurrusis]" type="text" placeholder="Pavadinimas" class="form-control input-md" value="<%= kurrus.kurrusis %>">
-                    <span class="help-block">Įrašykite kuro rūšies pavadinimą</span>
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="kurrus[kurrusis]">Pavadinimas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="kurrusis" name="kurrus[kurrusis]" type="text" placeholder="Pavadinimas" class="data-editForm__content__input--body--text"
+                        value="<%= kurrus.kurrusis %>">
+                    <span class="data-editForm__content__input--body--span">Įrašykite kuro rūšies pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>
