@@ -338,8 +338,8 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column; }
   .data__page-header--main {
-    letter-spacing: .4rem;
-    margin-top: .5rem;
+    letter-spacing: 0.4rem;
+    margin-top: 0.5rem;
     margin-left: 1rem;
     font-size: 4rem;
     font-weight: 700; }
@@ -372,7 +372,7 @@ select:-webkit-autofill:focus {
   flex-wrap: wrap; }
   .data__page-data__main-tab {
     border-radius: 5px;
-    padding: .2rem;
+    padding: 0.2rem;
     margin: 2rem;
     display: flex;
     flex-basis: 25%;
@@ -381,8 +381,8 @@ select:-webkit-autofill:focus {
     .data__page-data__main-tab:hover {
       background-color: var(--f2-color); }
     .data__page-data__main-tab--header {
-      margin-bottom: .5rem;
-      margin-top: .5rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
       padding: 0 1rem;
       font-size: 2.2rem;
       font-weight: 700; }
@@ -390,7 +390,8 @@ select:-webkit-autofill:focus {
       margin-bottom: 1rem;
       padding: 0 1rem;
       font-size: 1.7rem;
-      font-weight: 400; }
+      font-weight: 400;
+      text-transform: capitalize; }
     .data__page-data__main-tab--detail {
       align-items: center;
       height: 100%;
@@ -487,8 +488,8 @@ select:-webkit-autofill:focus {
       margin: 2rem;
       display: flex;
       flex-direction: row;
-      align-self: flex-start;
-      width: 100%; }
+      align-self: center;
+      width: 80%; }
       .data-newForm__content__input--hidden {
         display: none; }
       .data-newForm__content__input--label {
@@ -496,12 +497,14 @@ select:-webkit-autofill:focus {
         margin-left: 10rem;
         padding: 0 1rem;
         font-size: 1.7rem;
-        font-weight: 400; }
+        font-weight: 400;
+        text-transform: uppercase; }
       .data-newForm__content__input--body {
         width: 50%;
         align-items: flex-start;
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        text-transform: capitalize; }
         .data-newForm__content__input--body--text {
           background-color: var(--d1-color);
           border: none;
@@ -510,7 +513,8 @@ select:-webkit-autofill:focus {
           border-radius: 5px;
           width: 90%;
           height: 4rem;
-          font-size: 1.7rem; }
+          font-size: 1.7rem;
+          text-transform: capitalize; }
           .data-newForm__content__input--body--text:focus {
             outline: none;
             outline-offset: none;
@@ -531,7 +535,8 @@ select:-webkit-autofill:focus {
           padding-right: 4rem;
           font-size: 1.5rem;
           font-family: Quicksand;
-          margin-left: 2rem; }
+          margin-left: 2rem;
+          text-transform: lowercase; }
   .data-newForm__button {
     margin: 2rem;
     display: flex;
@@ -602,8 +607,8 @@ select:-webkit-autofill:focus {
       margin: 2rem;
       display: flex;
       flex-direction: row;
-      align-self: flex-start;
-      width: 100%; }
+      align-self: center;
+      width: 80%; }
       .data-editForm__content__input--hidden {
         display: none; }
       .data-editForm__content__input--label {
@@ -647,7 +652,8 @@ select:-webkit-autofill:focus {
           padding-right: 4rem;
           font-size: 1.5rem;
           font-family: Quicksand;
-          margin-left: 2rem; }
+          margin-left: 2rem;
+          text-transform: lowercase; }
   .data-editForm__button {
     margin: 2rem;
     display: flex;
