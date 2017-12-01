@@ -10,54 +10,54 @@
             <!-- Text input-->
             <div class="data-newForm__content__input--hidden">
                 <label class="data-newForm__content__input--label" for="doc">darbvad</label>
-                <divclass="data-newForm__content__input--body">
+                <div class="data-newForm__content__input--body">
                     <input id="doc" name="dv[doc]" type="text" placeholder="darbvad" class="data-newForm__content__input--body--text" value="darbvad">
-                    <class="data-newForm__content__input--body--span">darbvad</span>
+                    <sppan class="data-newForm__content__input--body--span">darbvad</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="data-newForm__content__input">
-            <label class="data-newForm__content__input--label" for="dv[dvVadasPav]">Darbu vadovo vardas pavardė</label>
-            <div class="data-newForm__content__input--body">
-                <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbu vadovo vardas pavarde" class="data-newForm__content__input--body--text"
-                    required="">
-                <span class="data-newForm__content__input--body--span">Darbu vadovo vardas pavarde</span>
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="dv[dvVadasPav]">Darbų vadovo vardas pavardė</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbų vadovo vardas pavardė" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">Darbų vadovo vardas pavardė</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="data-newForm__content__input">
-            <label class="data-newForm__content__input--label" for="dv[dvkodas]">Darbu vadovo kodas</label>
-            <div class="data-newForm__content__input--body">
-                <input id="dv[dvkodas]" name="dv[dvkodas]" type="text" placeholder="Darbu vadovo kodas" class="data-newForm__content__input--body--text"
-                    required="">
-                <span class="data-newForm__content__input--body--span">Darbu vadovo kodas</span>
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="dv[dvkodas]">Darbų vadovo kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="dv[dvkodas]" name="dv[dvkodas]" type="text" placeholder="Darbų vadovo kodas" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">Darbų vadovo kodas</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Select Basic -->
-        <div class="data-newForm__content__input">
-            <label class="data-newForm__content__input--label" for="dv[ipadkodas]">Darbu vadovo padalinys</label>
-            <div class="data-newForm__content__input--body">
-                <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="data-newForm__content__input--body--text">
-                    <% pad.forEach(function(pad){ %>
-                        <option class="data-newForm__content__input--body--text" value="<%= pad.padkodas %>">
-                            <%= pad.padkodas %>
-                        </option>
-                        <% }); %>
-                </select>
+            <!-- Select Basic -->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="dv[ipadkodas]">Darbų vadovo padalinys</label>
+                <div class="data-newForm__content__input--body">
+                    <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="data-newForm__content__input--body--text">
+                        <% pad.forEach(function(pad){ %>
+                            <option class="data-newForm__content__input--body--text" value="<%= pad.padkodas %>">
+                                <%= pad.padkodas %>
+                            </option>
+                            <% }); %>
+                    </select>
+                </div>
             </div>
-        </div>
 
-        <!-- Button -->
-        <div class="data-editForm__button">
-            <button name="submit" class="data-editForm__button--submit ">
-                <svg class="data-editForm__button--submit--icon">
-                    <use xlink:href="/img/sprite.svg#icon-new-message">
-                </svg> Redaguoti
-            </button>
-        </div>
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
+            </div>
         </div>
     </form>
     <% include ../partials/footer %>
