@@ -1,65 +1,63 @@
 <% include ../partials/header %>
-
-    <form action="/dv" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/dv">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Darbų Vadovų sąrašą </a>
-            <!-- Form Name -->
-            <legend>Naujas Darbų Vadovas</legend>
-            //
-            <hr>
-
+    <form action="/dv" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas Darbų Vadovas</legend>
+        <a href="/dv" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Darbų Vadovų sąrašą </a>
+        <!-- Form Name -->
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">darbvad</label>
-                <div class="col-md-4">
-                    <input id="doc" name="dv[doc]" type="text" placeholder="darbvad" class="form-control input-md" value="darbvad">
-                    <span class="help-block">darbvad</span>
-                </div>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">darbvad</label>
+                <divclass="data-newForm__content__input--body">
+                    <input id="doc" name="dv[doc]" type="text" placeholder="darbvad" class="data-newForm__content__input--body--text" value="darbvad">
+                    <class="data-newForm__content__input--body--span">darbvad</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[dvVadasPav]">Darbu vadovo vardas pavardė</label>
-                <div class="col-md-4">
-                    <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbu vadovo vardas pavarde" class="form-control input-md">
-                    <span class="help-block">Darbu vadovo vardas pavarde</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="dv[dvVadasPav]">Darbu vadovo vardas pavardė</label>
+            <div class="data-newForm__content__input--body">
+                <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbu vadovo vardas pavarde" class="data-newForm__content__input--body--text"
+                    required="">
+                <span class="data-newForm__content__input--body--span">Darbu vadovo vardas pavarde</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[dvkodas]">Darbu vadovo kodas</label>
-                <div class="col-md-4">
-                    <input id="dv[dvkodas]" name="dv[dvkodas]" type="text" placeholder="Darbu vadovo kodas" class="form-control input-md">
-                    <span class="help-block">Darbu vadovo kodas</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="dv[dvkodas]">Darbu vadovo kodas</label>
+            <div class="data-newForm__content__input--body">
+                <input id="dv[dvkodas]" name="dv[dvkodas]" type="text" placeholder="Darbu vadovo kodas" class="data-newForm__content__input--body--text"
+                    required="">
+                <span class="data-newForm__content__input--body--span">Darbu vadovo kodas</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="dv[ipadkodas]">Darbu vadovo padalinys</label>
-                <div class="col-md-4">
-                    <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="form-control">
-                        <% pad.forEach(function(pad){ %>
-                            <option value="<%= pad.padkodas %>">
-                                <%= pad.padkodas %>
-                            </option>
-                            <% }); %>
-                    </select>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="dv[ipadkodas]">Darbu vadovo padalinys</label>
+            <div class="data-newForm__content__input--body">
+                <select id="dv[ipadkodas]" name="dv[ipadkodas]" class="data-newForm__content__input--body--text">
+                    <% pad.forEach(function(pad){ %>
+                        <option class="data-newForm__content__input--body--text" value="<%= pad.padkodas %>">
+                            <%= pad.padkodas %>
+                        </option>
+                        <% }); %>
+                </select>
             </div>
+        </div>
 
-            <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="singlebutton">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
-            </div>
-
-        </fieldset>
+        <!-- Button -->
+        <div class="data-editForm__button">
+            <button name="submit" class="data-editForm__button--submit ">
+                <svg class="data-editForm__button--submit--icon">
+                    <use xlink:href="/img/sprite.svg#icon-new-message">
+                </svg> Redaguoti
+            </button>
+        </div>
+        </div>
     </form>
     <% include ../partials/footer %>

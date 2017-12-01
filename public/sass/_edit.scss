@@ -72,11 +72,19 @@
           font-size: 1.7rem;
           &:focus {
             outline: none;
+            outline-offset: none;
             width: 100%;
             background-color: var(--f2-color);
-            &::-webkit-input-placeholder {
+            -webkit-input-placeholder {
+              border-color: var(--f1-color);
+              border: none;
               font-weight: 400;
             }
+          }
+          &:active {
+            outline: none;
+            border-color: var(--f1-color);
+            border: none;
           }
           &::placeholder {
             font-family: Quicksand;
@@ -94,7 +102,6 @@
   }
 
   &__button {
-    // background-color: green;
     margin: 2rem;
     display: flex;
     flex-direction: row-reverse;

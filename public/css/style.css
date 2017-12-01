@@ -66,7 +66,8 @@ body {
 
 .kellap-content {
   background-color: var(--d3-color);
-  flex: 1; }
+  flex: 1;
+  height: 80rem; }
 
 .login {
   height: 100%;
@@ -422,7 +423,9 @@ select:-webkit-autofill:focus {
 .data-newForm {
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  align-items: flex-start;
+  height: 100%;
+  flex-wrap: wrap; }
   .data-newForm__legend {
     align-items: baseline;
     letter-spacing: 0.4rem;
@@ -430,14 +433,15 @@ select:-webkit-autofill:focus {
     margin-left: 1rem;
     font-size: 4rem;
     font-weight: 700;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    flex-wrap: wrap; }
   .data-newForm__link {
     display: flex;
+    width: 100%;
     align-items: center;
     font-size: 1.7rem;
     text-decoration: none;
     color: var(--d1-color);
-    align-items: center;
     background-color: var(--f5-color);
     border-radius: 2px;
     text-transform: uppercase;
@@ -448,81 +452,88 @@ select:-webkit-autofill:focus {
       height: 2.5rem;
       fill: var(--d3-color); }
   .data-newForm__content {
+    margin-top: 5%;
     display: flex;
-    height: inherit;
+    flex-wrap: wrap;
+    align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; }
+    width: 85%; }
     .data-newForm__content__input {
       margin: 2rem;
       display: flex;
       flex-direction: row;
-      align-items: baseline; }
+      align-self: flex-start;
+      width: 100%; }
       .data-newForm__content__input--hidden {
         display: none; }
       .data-newForm__content__input--label {
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
-        margin-right: 5rem;
-        width: 33rem;
+        width: 50%;
+        margin-left: 10rem;
         padding: 0 1rem;
         font-size: 1.7rem;
         font-weight: 400; }
       .data-newForm__content__input--body {
-        align-items: baseline;
+        width: 50%;
+        align-items: flex-start;
         display: flex;
-        flex-direction: column;
-        flex-basis: 100%; }
+        flex-direction: column; }
         .data-newForm__content__input--body--text {
           background-color: var(--d1-color);
           border: none;
           border-color: var(--f2-color);
           padding: 0.5rem 2rem;
-          border-radius: 100px;
+          border-radius: 5px;
           width: 90%;
-          padding-left: 3.5rem;
           height: 4rem;
-          transition: all 0.2s;
           font-size: 1.7rem; }
           .data-newForm__content__input--body--text:focus {
             outline: none;
+            outline-offset: none;
             width: 100%;
             background-color: var(--f2-color); }
-            .data-newForm__content__input--body--text:focus::-webkit-input-placeholder {
+            .data-newForm__content__input--body--text:focus -webkit-input-placeholder {
+              border-color: var(--f1-color);
+              border: none;
               font-weight: 400; }
+          .data-newForm__content__input--body--text:active {
+            outline: none;
+            border-color: var(--f1-color);
+            border: none; }
           .data-newForm__content__input--body--text::placeholder {
             font-family: Quicksand; }
         .data-newForm__content__input--body--span {
           padding-top: 0.2rem;
           padding-right: 4rem;
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           font-family: Quicksand;
-          margin-left: 3rem; }
-    .data-newForm__content__button {
-      margin: 2rem;
+          margin-left: 2rem; }
+  .data-newForm__button {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    width: 45%; }
+    .data-newForm__button--submit {
+      background-color: var(--d1-color);
+      border: none;
       display: flex;
-      flex-direction: row;
-      align-items: baseline; }
-      .data-newForm__content__button--submit {
-        background-color: var(--d1-color);
-        border: none;
-        display: flex;
-        width: 10rem;
-        height: 3.5rem;
-        border-radius: 15px;
-        justify-content: space-evenly;
-        font-size: 1.7rem; }
-        .data-newForm__content__button--submit--icon {
-          height: 1.75rem;
-          width: 1.75rem;
-          fill: var(--f1-color); }
-        .data-newForm__content__button--submit:hover {
-          cursor: pointer;
-          background-color: var(--d2-color);
-          color: var(--d3-color); }
-        .data-newForm__content__button--submit:focus {
-          outline: none;
-          text-decoration: none; }
+      width: 12rem;
+      height: 3.5rem;
+      border-radius: 15px;
+      justify-content: space-evenly;
+      font-size: 1.7rem; }
+      .data-newForm__button--submit--icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--f1-color); }
+      .data-newForm__button--submit:hover {
+        cursor: pointer;
+        background-color: var(--d2-color);
+        color: var(--d3-color); }
+      .data-newForm__button--submit:focus {
+        outline: none;
+        text-decoration: none;
+        background-color: var(--d2-color); }
 
 .data-editForm {
   display: flex;
@@ -593,10 +604,17 @@ select:-webkit-autofill:focus {
           font-size: 1.7rem; }
           .data-editForm__content__input--body--text:focus {
             outline: none;
+            outline-offset: none;
             width: 100%;
             background-color: var(--f2-color); }
-            .data-editForm__content__input--body--text:focus::-webkit-input-placeholder {
+            .data-editForm__content__input--body--text:focus -webkit-input-placeholder {
+              border-color: var(--f1-color);
+              border: none;
               font-weight: 400; }
+          .data-editForm__content__input--body--text:active {
+            outline: none;
+            border-color: var(--f1-color);
+            border: none; }
           .data-editForm__content__input--body--text::placeholder {
             font-family: Quicksand; }
         .data-editForm__content__input--body--span {

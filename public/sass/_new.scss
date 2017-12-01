@@ -1,7 +1,9 @@
 .data-newForm {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   height: 100%;
+  flex-wrap: wrap;
   &__legend {
     align-items: baseline;
     letter-spacing: 0.4rem;
@@ -10,14 +12,15 @@
     font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
+    flex-wrap: wrap;
   }
   &__link {
     display: flex;
+    width: 100%;
     align-items: center;
     font-size: 1.7rem;
     text-decoration: none;
     color: var(--d1-color);
-    align-items: center;
     background-color: var(--f5-color);
     border-radius: 2px;
     text-transform: uppercase;
@@ -30,53 +33,57 @@
     }
   }
   &__content {
+    margin-top: 5%;
     display: flex;
-    height: inherit;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
-    // margin-left: 20rem;
+    flex-direction: column;
+    width: 85%;
     &__input {
       margin: 2rem;
       display: flex;
       flex-direction: row;
-      align-items: baseline;
+      align-self: flex-start;
+      width: 100%;
       &--hidden {
         display: none;
       }
       &--label {
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
-        margin-right: 5rem;
-        width: 33rem;
+        width: 50%;
+        margin-left: 10rem;
         padding: 0 1rem;
         font-size: 1.7rem;
         font-weight: 400;
       }
       &--body {
-        align-items: baseline;
+        width: 50%;
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
-        flex-basis: 100%;
         &--text {
           background-color: var(--d1-color);
           border: none;
           border-color: var(--f2-color);
           padding: 0.5rem 2rem;
-          border-radius: 100px;
+          border-radius: 5px;
           width: 90%;
-          padding-left: 3.5rem;
           height: 4rem;
-          transition: all 0.2s;
-          //   margin-right: -2.7rem;
           font-size: 1.7rem;
           &:focus {
             outline: none;
+            outline-offset: none;
             width: 100%;
             background-color: var(--f2-color);
-            &::-webkit-input-placeholder {
+            -webkit-input-placeholder {
+              border-color: var(--f1-color);
+              border: none;
               font-weight: 400;
             }
+          }
+          &:active {
+            outline: none;
+            border-color: var(--f1-color);
+            border: none;
           }
           &::placeholder {
             font-family: Quicksand;
@@ -85,41 +92,42 @@
         &--span {
           padding-top: 0.2rem;
           padding-right: 4rem;
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           font-family: Quicksand;
-          margin-left: 3rem;
+          margin-left: 2rem;
         }
       }
     }
-    &__button {
-      margin: 2rem;
+  }
+  &__button {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    width: 45%;
+    &--submit {
+      background-color: var(--d1-color);
+      border: none;
       display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      &--submit {
-        // border-color: var(--d1-color);
-        background-color: var(--d1-color);
-        border: none;
-        display: flex;
-        width: 10rem;
-        height: 3.5rem;
-        border-radius: 15px;
-        justify-content: space-evenly;
-        font-size: 1.7rem;
-        &--icon {
-          height: 1.75rem;
-          width: 1.75rem;
-          fill: var(--f1-color);
-        }
-        &:hover {
-          cursor: pointer;
-          background-color: var(--d2-color);
-          color: var(--d3-color);
-        }
-        &:focus {
-          outline: none;
-          text-decoration: none;
-        }
+      width: 12rem;
+      height: 3.5rem;
+      border-radius: 15px;
+      justify-content: space-evenly;
+      font-size: 1.7rem;
+      &--icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var(--f1-color);
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: var(--d2-color);
+        color: var(--d3-color);
+      }
+      &:focus {
+        outline: none;
+        text-decoration: none;
+        background-color: var(--d2-color);
       }
     }
   }
