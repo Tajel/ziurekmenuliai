@@ -1,40 +1,41 @@
 <% include ../partials/header %>
 
-    <form action="/trtip" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/trtip">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į transporto priemonių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Naujas transporto priemonės tipas</legend>
-            //
-            <hr>
+    <form action="/trtip" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas transporto priemonės tipas</legend>
+        <a href="/trtip" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į transporto priemonių sąrašą </a>
 
+        <!-- Form Name -->
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">trantipas</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="trantipas" class="form-control input-md" value="trantipas">
-                    <span class="help-block">trantipas</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">trantipas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="trantipas" class="data-newForm__content__input--body--text" value="trantipas">
+                    <span class="data-newForm__content__input--body--span">trantipas</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="trtipas">Transporto priemonės tipas</label>
-                <div class="col-md-4">
-                    <input id="trtipas" name="trtipas" type="text" placeholder="Transporto priemonės tipas" class="form-control input-md" required="">
-                    <span class="help-block">Įrašykite transporto priemonės tipą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="trtipas">Transporto priemonės tipas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="trtipas" name="trtipas" type="text" placeholder="Transporto priemonės tipas" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">Įrašykite transporto priemonės tipą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>
