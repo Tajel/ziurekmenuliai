@@ -1,83 +1,84 @@
 <% include ../partials/header %>
 
-    <form action="/imones/<%= imone._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/imones">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Įmonių katalogą</a>
-            <!-- Form Name -->
-            <legend>Redaguoti Įmonę
-                <%= imone.imonespavadinimas %>
-            </legend>
-            //
-            <hr>
-
+    <form action="/imones/<%= imone._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti Įmonę
+            <%= imone.imonespavadinimas %>
+        </legend>
+        <a href="/imones" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal į Įmonių katalogą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="imone[doc]">imone</label>
-                <div class="col-md-4">
-                    <input id="imone[doc]" name="imone[doc]" type="text" placeholder="imone" class="form-control input-md" value="imone">
-                    <span class="help-block">imone</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="imone[doc]">imone</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="imone[doc]" name="imone[doc]" type="text" placeholder="imone" class="data-editForm__content__input--body--text"
+                        value="imone">
+                    <span class="data-editForm__content__input--body--span">imone</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="imone[imonessutrumpkodas]">Kodinis pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="imone[imonessutrumpkodas]" name="imone[imonessutrumpkodas]" type="text" placeholder="Kodinis pavadinimas" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="imone[imonessutrumpkodas]">Kodinis pavadinimas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="imone[imonessutrumpkodas]" name="imone[imonessutrumpkodas]" type="text" placeholder="Kodinis pavadinimas" class="data-editForm__content__input--body--text"
                         value="<%= imone.imonessutrumpkodas %>">
-                    <span class="help-block">Įrašykite trumpą įimonės pavadinimą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite trumpą įimonės pavadinimą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="imone[imonespavadinimas]">Pilnas įmonės pavadinimas</label>
-                <div class="col-md-4">
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="imone[imonespavadinimas]">Pilnas įmonės pavadinimas</label>
+                <div class="data-editForm__content__input--body">
                     <input id="imone[imonespavadinimas]" name="imone[imonespavadinimas]" type="text" placeholder="Pilnas įmonės pavadinimas"
-                        class="form-control input-md" value="<%= imone.imonespavadinimas %>">
-                    <span class="help-block">Įrašykite pilną įmonės pavadinimą</span>
+                        class="data-editForm__content__input--body--text" value="<%= imone.imonespavadinimas %>">
+                    <span class="data-editForm__content__input--body--span">Įrašykite pilną įmonės pavadinimą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="imone[imonesimkodas]">Registracijos kodas, įk.</label>
-                <div class="col-md-4">
-                    <input id="imone[imonesimkodas]" name="imone[imonesimkodas]" type="text" placeholder="Registracijos kodas, įk." class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="imone[imonesimkodas]">Registracijos kodas, įk.</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="imone[imonesimkodas]" name="imone[imonesimkodas]" type="text" placeholder="Registracijos kodas, įk." class="data-editForm__content__input--body--text"
                         value="<%= imone.imonesimkodas %>">
-                    <span class="help-block">Įrašykite registracijos kodą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite registracijos kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="imone[imonespvmkodas]">PVM kodas</label>
-                <div class="col-md-4">
-                    <input id="imone[imonespvmkodas]" name="imone[imonespvmkodas]" type="text" placeholder="PVM kodas" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="imone[imonespvmkodas]">PVM kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="imone[imonespvmkodas]" name="imone[imonespvmkodas]" type="text" placeholder="PVM kodas" class="data-editForm__content__input--body--text"
                         value="<%= imone.imonespvmkodas %>">
-                    <span class="help-block">Įrašykite PVM kodą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite PVM kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="imone[imonesadresas]">Adresas</label>
-                <div class="col-md-4">
-                    <input id="imone[imonesadresas]" name="imone[imonesadresas]" type="text" placeholder="Adresas" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="imone[imonesadresas]">Adresas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="imone[imonesadresas]" name="imone[imonesadresas]" type="text" placeholder="Adresas" class="data-editForm__content__input--body--text"
                         value="<%= imone.imonesadresas %>">
-                    <span class="help-block">Įrašykite įmonės adresą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite įmonės adresą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
             </div>
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>

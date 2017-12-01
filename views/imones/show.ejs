@@ -1,94 +1,65 @@
 <% include ../partials/header %>
-    <h1>
-        <%=imone.imonespavadinimas%>
-    </h1>
-    <a href="/imones">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į įmonių sąrašą </a>
-    <!--  <hr> -->
-    <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">
-
-            <h1> Detalūs įmonės rekvizitai
-
-            </h1>
-            <!-- <p> -->
-            <div class="panel-footer">
-                <% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                    <form id="delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger">
-                            <i class="fa fa-trash-o"></i> TRINTI</button>
-                        <a class="btn btn-primary" role="button" href="/imones/<%= imone._id %>/edit">
-                            <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-
-                    </form>
-                    <% }%>
-            </div>
-            </p>
-        </div>
-        <!-- Table -->
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Eil. Nr.</th>
-                    <th>Pavadinimas </th>
-                    <th>Duomenys </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Trumpas įmonės kodas:</td>
-                    <td>
-                        <strong>
-                            <%=imone.imonessutrumpkodas%>
-                        </strong>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Pilnas pavadinimas:</td>
-                    <td>
-                        <strong>
-                            <%=imone.imonespavadinimas%>
-                        </strong>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Registracijos kodas</td>
-                    <td>
-                        <strong>
-                            <%=imone.imonesimkodas%>
-                        </strong>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>PVM kodas:</td>
-                    <td>
-                        <strong>
-                            <%=imone.imonespvmkodas%>
-                        </strong>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Adresas:</td>
-                    <td>
-                        <strong>
-                            <%=imone.imonesadresas%>
-                        </strong>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!--  <hr> -->
-    <small> Sukūrė
-        <a href="/users/<%= imone.author.id %>">
-            <%= imone.author.username %>
+    <div class="detailed-info">
+        <legend class="data-editForm__legend">
+            <%=imone.imonespavadinimas%>
+        </legend>
+        <a href="/imones" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal į Įmonių katalogą</a>
         </a>
-    </small>
-    </p>
+        <div class="detailed-info__content">
+            <header class="detailed-info__content__header">
+                <span class="detailed-info__content__header--main">
+                    Detalūs įmonės rekvizitai
+                </span>
+                <% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                    <div class="detailed-info__content__header__buttons">
+                        <form class="detailed-info__content__header__buttons--delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">
+                            <button class="detailed-info__content__header__buttons--delbtn">
+                                TRINTI</button>
+                        </form>
+                        <a class="detailed-info__content__header__buttons--edit" role="button" href="/imones/<%= imone._id %>/edit">REDAGUOTI</a>
+                    </div>
+                    <% }%>
+            </header>
+            <!-- Text input-->
+            <div class="detailed-info__content__info">
+                <label class="detailed-info__content__info--label" for="Trumpasįmonėskodas">Trumpas įmonės kodas</label>
+                <div class="detailed-info__content__info--body" name="Trumpasįmonėskodas">
+                    <%=imone.imonessutrumpkodas%>
+                </div>
+            </div>
+            <div class="detailed-info__content__info">
+                <label class="detailed-info__content__info--label" for="Pilnaspavadinimas">Pilnas pavadinimas</label>
+                <div class="detailed-info__content__info--body" name="Pilnaspavadinimas">
+                    <%=imone.imonespavadinimas%>
+                </div>
+            </div>
+            <div class="detailed-info__content__info">
+                <label class="detailed-info__content__info--label" for="Registracijoskodas">Registracijos kodas</label>
+                <div class="detailed-info__content__info--body" name="Registracijoskodas">
+                    <%=imone.imonesimkodas%>
+                </div>
+            </div>
+            <div class="detailed-info__content__info">
+                <label class="detailed-info__content__info--label" for="PVMkodas">PVM kodas</label>
+                <div class="detailed-info__content__info--body" name="PVMkodas">
+                    <%=imone.imonespvmkodas%>
+                </div>
+            </div>
+            <div class="detailed-info__content__info">
+                <label class="detailed-info__content__info--label" for="Adresas">Adresas</label>
+                <div class="detailed-info__content__info--body" name="Adresas">
+                    <%=imone.imonesadresas%>
+                </div>
+            </div>
+
+            <small> Sukūrė
+                <a href="/users/<%= imone.author.id %>">
+                    <%= imone.author.username %>
+                </a>
+            </small>
+        </div>
+    </div>
     <% include ../partials/footer %>
