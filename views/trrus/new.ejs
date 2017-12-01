@@ -1,51 +1,49 @@
 <% include ../partials/header %>
 
-    <form action="/trrus" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/trrus">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Transporto rūšių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Nauja transporto rūšis</legend>
-            //
-            <hr>
+    <form action="/trrus" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Nauja transporto rūšis</legend>
+        <a href="/vair" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Transporto rūšių sąrašą </a>
+        <!-- Form Name -->
 
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">trrusis</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="trrusis" class="form-control input-md" value="trrusis">
-                    <span class="help-block">trrusis</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">trrusis</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="trrusis" class="data-newForm__content__input--body--text" value="trrusis">
+                    <span class="data-newForm__content__input--body--span">trrusis</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="trruskodas">Transporto rūšies kodas</label>
-                <div class="col-md-4">
-                    <input id="trruskodas" name="trruskodas" type="text" placeholder="Transporto rūšies kodas" class="form-control input-md">
-                    <span class="help-block">Įrašykite transporto rūšies kodą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="trruskodas">Transporto rūšies kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="trruskodas" name="trruskodas" type="text" placeholder="Transporto rūšies kodas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite transporto rūšies kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="trrus">Transporto rūšies pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="trrus" name="trrus" type="text" placeholder="Transporto rūšies pavadinimas" class="form-control input-md">
-                    <span class="help-block">Įrašykite transporto rūšies pavadinimą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="trrus">Transporto rūšies pavadinimas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="trrus" name="trrus" type="text" placeholder="Transporto rūšies pavadinimas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite transporto rūšies pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>

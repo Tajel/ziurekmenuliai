@@ -1,54 +1,51 @@
 <% include ../partials/header %>
 
-    <form action="/trrus/<%= trrus._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/trrus">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Transporto rūšių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Redaguoti transporto rūšį
-            </legend>
-            //
-            <hr>
+    <form action="/trrus/<%= trrus._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti transporto rūšį </legend>
+        <a href="/trrus" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Transporto rūšių sąrašą</a>
+        </a>
 
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">trrusis</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="trrusis" class="form-control input-md" value="trrusis">
-                    <span class="help-block">trrusis</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="doc">trrusis</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="trrusis" class="data-editForm__content__input--body--text" value="trrusis">
+                    <span class="data-editForm__content__input--body--span">trrusis</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="trrus[trruskodas]">Transporto rūšies kodas</label>
-                <div class="col-md-4">
-                    <input id="trruskodas" name="trrus[trruskodas]" type="text" placeholder="Transporto rūšies kodas" class="form-control input-md"
+            <div class="data-newForm__content__input">
+                <label class="data-editForm__content__input--label" for="trrus[trruskodas]">Transporto rūšies kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="trruskodas" name="trrus[trruskodas]" type="text" placeholder="Transporto rūšies kodas" class="data-editForm__content__input--body--text"
                         value="<%= trrus.trruskodas %>">
-                    <span class="help-block">Įrašykite transporto rūšies kodą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite transporto rūšies kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="trrus[trrus]">Transporto rūšies pavadinimas</label>
-                <div class="col-md-4">
-                    <input id="trrus" name="trrus[trrus]" type="text" placeholder="Transporto rūšies pavadinimas" class="form-control input-md"
+            <div class="data-newForm__content__input">
+                <label class="data-editForm__content__input--label" for="trrus[trrus]">Transporto rūšies pavadinimas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="trrus" name="trrus[trrus]" type="text" placeholder="Transporto rūšies pavadinimas" class="data-editForm__content__input--body--text"
                         value="<%= trrus.trrus %>">
-                    <span class="help-block">Įrašykite transporto rūšies pavadinimą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite transporto rūšies pavadinimą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>
