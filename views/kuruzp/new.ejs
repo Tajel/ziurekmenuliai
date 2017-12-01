@@ -1,60 +1,58 @@
 <% include ../partials/header %>
 
-    <form action="/kuruzp" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/kuruzp">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro šaltinių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Naujas Kuro šaltinis</legend>
-            //
-            <hr>
-
+    <form action="/kuruzp" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas Kuro šaltinis</legend>
+        <a href="/kuruzp" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Kuro šaltinių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">kurosaltinis</label>
-                <div class="col-md-4">
-                    <input id="doc" name="doc" type="text" placeholder="placeholder" class="form-control input-md" value="kurosaltinis">
-                    <span class="help-block">help</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">kurosaltinis</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="doc" type="text" placeholder="placeholder" class="data-newForm__content__input--body--text" value="kurosaltinis">
+                    <span class="data-newForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurouzpkodas">Trumpas kodas</label>
-                <div class="col-md-4">
-                    <input id="kurouzpkodas" name="kurouzpkodas" type="text" placeholder="Trumpas kodas" class="form-control input-md">
-                    <span class="help-block">Įrašykite trumpą kodą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kurouzpkodas">Trumpas kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="kurouzpkodas" name="kurouzpkodas" type="text" placeholder="Trumpas kodas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite trumpą kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurouzppav">Tiekėjas</label>
-                <div class="col-md-4">
-                    <input id="kurouzppav" name="kurouzppav" type="text" placeholder="Tiekėjas" class="form-control input-md">
-                    <span class="help-block">Įrašykite tiekėją</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kurouzppav">Tiekėjas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="kurouzppav" name="kurouzppav" type="text" placeholder="Tiekėjas" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite tiekėją</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kurouzpkortnr">Kortelės numeris</label>
-                <div class="col-md-4">
-                    <input id="kurouzpkortnr" name="kurouzpkortnr" type="text" placeholder="Kortelės numeris" class="form-control input-md">
-                    <span class="help-block">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kurouzpkortnr">Kortelės numeris</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="kurouzpkortnr" name="kurouzpkortnr" type="text" placeholder="Kortelės numeris" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>

@@ -1,0 +1,56 @@
+.detailed-info {
+  &__content {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    &__header {
+      margin: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      width: 60%;
+      &--main {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        font-size: 2.2rem;
+        color: var(--d1-color);
+        background-color: var(--f6-color);
+        border-radius: 2px;
+        text-transform: capitalize;
+        // margin: 0 1rem;
+      }
+      &__buttons {
+        background-color: brown;
+        display: flex;
+        flex-direction: row;
+        height: 3rem;
+        &--delete-form {
+          width: 50%;
+          &--delbtn {
+            height: 100%;
+          }
+        }
+        &--edit {
+          width: 50%;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      align-self: center;
+      margin: 2rem;
+      width: 60%;
+      font-size: 1.7rem;
+      &--label {
+        width: 40%;
+        font-weight: 700;
+      }
+      &--body {
+      }
+    }
+  }
+}
