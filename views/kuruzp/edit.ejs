@@ -1,61 +1,63 @@
 <% include ../partials/header %>
 
-    <form action="/kuruzp/<%= kuruzp._id %>?_method=PUT" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/kuruzp">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Kuro šaltinių sąrašą </a>
-            <!-- Form Name -->
-            <legend>Redaguoto Kuro šaltinį</legend>
-            //
-            <hr>
+    <form action="/kuruzp/<%= kuruzp._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoto Kuro šaltinį</legend>
+        <a href="/kuruzp" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į Kuro šaltinių sąrašą</a>
+        </a>
 
+        <!-- Form Name -->
+        <div class="data-editForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="doc">kuruzp[doc]</label>
-                <div class="col-md-4">
-                    <input id="doc" name="kuruzp[doc]" type="text" placeholder="placeholder" class="form-control input-md" value="kurosaltinis">
-                    <span class="help-block">help</span>
+            <div class="data-editForm__content__input--hidden">
+                <label class="data-editForm__content__input--label" for="doc">kuruzp[doc]</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="doc" name="kuruzp[doc]" type="text" placeholder="placeholder" class="data-editForm__content__input--body--text"
+                        value="kurosaltinis">
+                    <span class="data-editForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kuruzp[kurouzpkodas]">Trumpas kodas</label>
-                <div class="col-md-4">
-                    <input id="kurouzpkodas" name="kuruzp[kurouzpkodas]" type="text" placeholder="Trumpas kodas" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="kuruzp[kurouzpkodas]">Trumpas kodas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="kurouzpkodas" name="kuruzp[kurouzpkodas]" type="text" placeholder="Trumpas kodas" class="data-editForm__content__input--body--text"
                         value="<%= kuruzp.kurouzpkodas %>">
-                    <span class="help-block">Įrašykite trumpą kodą</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite trumpą kodą</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kuruzp[kurouzppav]">Tiekėjas</label>
-                <div class="col-md-4">
-                    <input id="kurouzppav" name="kuruzp[kurouzppav]" type="text" placeholder="Tiekėjas" class="form-control input-md" value="<%= kuruzp.kurouzppav %>">
-                    <span class="help-block">Įrašykite tiekėją</span>
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="kuruzp[kurouzppav]">Tiekėjas</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="kurouzppav" name="kuruzp[kurouzppav]" type="text" placeholder="Tiekėjas" class="data-editForm__content__input--body--text"
+                        value="<%= kuruzp.kurouzppav %>">
+                    <span class="data-editForm__content__input--body--span">Įrašykite tiekėją</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="kuruzp[kurouzpkortnr]">Kortelės numeris</label>
-                <div class="col-md-4">
-                    <input id="kurouzpkortnr" name="kuruzp[kurouzpkortnr]" type="text" placeholder="Kortelės numeris" class="form-control input-md"
+            <div class="data-editForm__content__input">
+                <label class="data-editForm__content__input--label" for="kuruzp[kurouzpkortnr]">Kortelės numeris</label>
+                <div class="data-editForm__content__input--body">
+                    <input id="kurouzpkortnr" name="kuruzp[kurouzpkortnr]" type="text" placeholder="Kortelės numeris" class="data-editForm__content__input--body--text"
                         value="<%= kuruzp.kurouzpkortnr %>">
-                    <span class="help-block">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
+                    <span class="data-editForm__content__input--body--span">Įrašykite kortelės numerį paskutinius 4 skaičius</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit"> Redaguoti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
     <% include ../partials/footer %>
