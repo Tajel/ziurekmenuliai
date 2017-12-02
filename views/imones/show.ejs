@@ -15,11 +15,12 @@
                 </span>
                 <% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                     <div class="detailed-info__content__header__buttons">
+                        <a class="detailed-info__content__header__buttons--editbtn" role="button" href="/imones/<%= imone._id %>/edit">REDAGUOTI</a>
+
                         <form class="detailed-info__content__header__buttons--delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">
                             <button class="detailed-info__content__header__buttons--delbtn">
                                 TRINTI</button>
                         </form>
-                        <a class="detailed-info__content__header__buttons--edit" role="button" href="/imones/<%= imone._id %>/edit">REDAGUOTI</a>
                     </div>
                     <% }%>
             </header>
@@ -55,11 +56,11 @@
                 </div>
             </div>
 
-            <small> Sukūrė
-                <a href="/users/<%= imone.author.id %>">
-                    <%= imone.author.username %>
-                </a>
-            </small>
         </div>
+        <small class="author"> Sukūrė
+            <a class="author--link" href="/users/<%= imone.author.id %>">
+                <%= imone.author.username %>
+            </a>
+        </small>
     </div>
     <% include ../partials/footer %>
