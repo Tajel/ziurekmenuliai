@@ -1,66 +1,66 @@
 <% include ../partials/header %>
-    <div class="detailed-info">
-        <legend class="data-editForm__legend">
-            <%=imone.imonespavadinimas%>
-        </legend>
-        <a href="/imones" class="data-editForm__link">
-            <svg class="data-editForm__link__icon">
-                <use xlink:href="/img/sprite.svg#icon-back"></use>
-            </svg>Atgal į Įmonių katalogą</a>
-        </a>
-        <div class="detailed-info__content">
-            <header class="detailed-info__content__header">
-                <span class="detailed-info__content__header--main">
+    <legend class="data-editForm__legend">
+        <%=imone.imonespavadinimas%>
+    </legend>
+    <a href="/imones" class="data-editForm__link">
+        <svg class="data-editForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-back"></use>
+        </svg>Atgal į Įmonių katalogą</a>
+    </a>
+    <div class="detailed-info__content">
+        <div class="detailed-info__content__main">
+            <header class="detailed-info__content__main__header">
+                <span class="detailed-info__content__main__header--main">
                     Detalūs įmonės rekvizitai
                 </span>
+                </span>
                 <% if(currentUser && imone.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                    <div class="detailed-info__content__header__buttons">
-                        <a class="detailed-info__content__header__buttons--editbtn" role="button" href="/imones/<%= imone._id %>/edit">REDAGUOTI</a>
-
-                        <form class="detailed-info__content__header__buttons--delete-form" action="/imones/<%= imone._id %>?_method=DELETE" method="POST">
-                            <button class="detailed-info__content__header__buttons--delbtn">
+                    <div class="detailed-info__content__main__header__buttons">
+                        <a class="detailed-info__content__main__header__buttons--editbtn" role="button" href="/imones/<%= imone._id %>/edit">REDAGUOTI</a>
+                        <form class="detailed-info__content__main__header__buttons--delete-form" action="/imones/<%= imone._id %>?_method=DELETE"
+                            method="POST">
+                            <button class="detailed-info__content__main__header__buttons--delbtn">
                                 TRINTI</button>
                         </form>
                     </div>
                     <% }%>
             </header>
             <!-- Text input-->
-            <div class="detailed-info__content__info">
-                <label class="detailed-info__content__info--label" for="Trumpasįmonėskodas">Trumpas įmonės kodas</label>
-                <div class="detailed-info__content__info--body" name="Trumpasįmonėskodas">
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Trumpasįmonėskodas">Trumpas įmonės kodas</label>
+                <div class="detailed-info__content__main__info--body" name="Trumpasįmonėskodas">
                     <%=imone.imonessutrumpkodas%>
                 </div>
             </div>
-            <div class="detailed-info__content__info">
-                <label class="detailed-info__content__info--label" for="Pilnaspavadinimas">Pilnas pavadinimas</label>
-                <div class="detailed-info__content__info--body" name="Pilnaspavadinimas">
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Pilnaspavadinimas">Pilnas pavadinimas</label>
+                <div class="detailed-info__content__main__info--body" name="Pilnaspavadinimas">
                     <%=imone.imonespavadinimas%>
                 </div>
             </div>
-            <div class="detailed-info__content__info">
-                <label class="detailed-info__content__info--label" for="Registracijoskodas">Registracijos kodas</label>
-                <div class="detailed-info__content__info--body" name="Registracijoskodas">
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Registracijoskodas">Registracijos kodas</label>
+                <div class="detailed-info__content__main__info--body" name="Registracijoskodas">
                     <%=imone.imonesimkodas%>
                 </div>
             </div>
-            <div class="detailed-info__content__info">
-                <label class="detailed-info__content__info--label" for="PVMkodas">PVM kodas</label>
-                <div class="detailed-info__content__info--body" name="PVMkodas">
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="PVMkodas">PVM kodas</label>
+                <div class="detailed-info__content__main__info--body" name="PVMkodas">
                     <%=imone.imonespvmkodas%>
                 </div>
             </div>
-            <div class="detailed-info__content__info">
-                <label class="detailed-info__content__info--label" for="Adresas">Adresas</label>
-                <div class="detailed-info__content__info--body" name="Adresas">
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Adresas">Adresas</label>
+                <div class="detailed-info__content__main__info--body" name="Adresas">
                     <%=imone.imonesadresas%>
                 </div>
             </div>
-
         </div>
-        <small class="author"> Sukūrė
-            <a class="author--link" href="/users/<%= imone.author.id %>">
-                <%= imone.author.username %>
-            </a>
-        </small>
     </div>
+    <small class="author"> Sukūrė
+        <a class="author--link" href="/users/<%= imone.author.id %>">
+            <%= imone.author.username %>
+        </a>
+    </small>
     <% include ../partials/footer %>
