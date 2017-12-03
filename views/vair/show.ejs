@@ -57,13 +57,13 @@
             </div>
         </div>
         <div class="detailed-info__content__ikainis">
-            <header class="detailed-info__content__main__header">
+            <hevader class="detailed-info__content__main__header">
                 <span class="detailed-info__content__main__header--main">
                     Įkainis
                 </span>
                 <a class="detailed-info__content__main__header__buttons--editbtn" href="/vair/<%= vair._id %>/vairik/new">
                     Naujas Įkainis</a>
-            </header>
+            </hevader>
 
             <% vair.ikainis.forEach(function(ikainis){ %>
                 <div class="detailed-info__content__ikainis__content">
@@ -97,12 +97,9 @@
                 <% }) %>
         </div>
     </div>
-
-
-    <small> Sukūrė
-        <a href="/users/<%= vair.author.id %>">
+    <small class="author"> Sukūrė
+        <a class="author--link" href="/users/<%= vair.author.id %>">
             <%= vair.author.username %>
         </a>
     </small>
-    </p>
     <% include ../partials/footer %>

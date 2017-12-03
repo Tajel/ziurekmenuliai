@@ -1,73 +1,79 @@
 <% include ../partials/header %>
 
-    <form action="/vair/<%= vair._id %>/vairik" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/vair/<%= vair._id %>">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal į Vairuotojo duomenis</a>
-            <!-- Form Name -->
-            <legend>Naujas Vairuotojo įkainis</legend>
+    <form action="/vair/<%=vair._id%>/vairik" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas Vairuotojo įkainis</legend>
+        <a href="/vair/<%= vair._id %>" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back">
+                </use>
+            </svg>
+            Atgal į Vairuotojo duomenis
+        </a>
 
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="vairik[vairid]">Text Input</label>
-                <div class="col-md-4">
-                    <input id="vairik[vairid]" name="vairik[vairid]" type="text" placeholder="<%= vair._id %>" class="form-control input-md"
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="vairik[vairid]">Text Input</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="vairik[vairid]" name="vairik[vairid]" type="text" placeholder="<%= vair._id %>" class="data-newForm__content__input--body--text"
                         value="<%= vair._id %>">
-                    <span class="help-block">help</span>
+                    <span class="data-newForm__content__input--body--span">help</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="vairik[doc]">vairik</label>
-                <div class="col-md-4">
-                    <input id="vairik[doc]" name="vairik[doc]" type="text" placeholder="vairik" class="form-control input-md" value="vairik">
+            <div class="data-newForm__content__input--hidden" hidden>
+                <label class="data-newForm__content__input--label" for="vairik[doc]">vairik</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="vairik[doc]" name="vairik[doc]" type="text" placeholder="vairik" class="data-newForm__content__input--body--text"
+                        value="vairik">
                 </div>
             </div>
 
             <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vairik[idarbrus]">Darbo rūšis</label>
-                <div class="col-md-4">
-                    <select id="vairik[idarbrus]" name="vairik[idarbrus]" class="form-control">
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="vairik[idarbrus]">Darbo rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select id="vairik[idarbrus]" name="vairik[idarbrus]" class="data-newForm__content__input--body--text">
                         <% darbrus.forEach(function(data){ %>
                             <% if(data.darbrus !== undefined){ %>
-                                <option value="<%= data.darbrus %>">&lt;%= data.darbrus %&gt;</option>
+                                <option value="<%= data.darbrus %>">
+                                    <%= data.darbrus %>
+                                </option>
                                 <% } %>
                                     <% }); %>
                     </select>
-                    <span class="help-block">Pasirinkite darbo rūšį</span>
+                    <span class="data-newForm__content__input--body--span">Pasirinkite darbo rūšį</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vairik[vairikain]">Įkainis</label>
-                <div class="col-md-4">
-                    <input id="vairik[vairikain]" name="vairik[vairikain]" type="text" placeholder="Įkainis" class="form-control input-md">
-                    <span class="help-block">Įrašykite įkainį</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="vairik[vairikain]">Įkainis</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="vairik[vairikain]" name="vairik[vairikain]" type="text" placeholder="Įkainis" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite įkainį</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="vairik[idarbvnt]">Mato vienetas</label>
-                <div class="col-md-4">
-                    <input id="vairik[idarbvnt]" name="vairik[idarbvnt]" type="text" placeholder="Val, d., tkm." class="form-control input-md">
-                    <span class="help-block">Įrašykite mato vienetą</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="vairik[idarbvnt]">Mato vienetas</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="vairik[idarbvnt]" name="vairik[idarbvnt]" type="text" placeholder="Val, d., tkm." class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite mato vienetą</span>
                 </div>
             </div>
 
             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">
-                    </i>Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
             </div>
-
-        </fieldset>
+        </div>
     </form>
+
     <% include ../partials/footer %>
