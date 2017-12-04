@@ -1,78 +1,75 @@
 <% include ./partials/header %>
+    <div class="login">
+        <form action="/register" method="POST" class="login__form">
+            <!-- Form Name -->
+            <legend class="login__form--legend">Naujo vartotojo registracija:</legend>
 
-
-    <div class=' container'>
-        <form action="/register" method="POST" class="form-horizontal">
-            <fieldset>
-
-                <!-- Form Name -->
-                <legend>Naujo vartotojo registracija:</legend>
-
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="username">Prisijungimo vardas</label>
-                    <div class="col-md-4">
-                        <input id="username" name="username" type="text" placeholder="Prisijungimo vardas" class="form-control input-md" required="">
-                        <span class="help-block">Prisijungimo vardas</span>
-                    </div>
+            <!-- Text input-->
+            <div class="login__form--userform">
+                <label class="login__form--userform__label" for="username">Prisijungimo vardas</label>
+                <div class="login__form--userform__input">
+                    <input id="username" name="username" type="text" placeholder="Prisijungimo vardas" class="login__form--userform__input--text"
+                        required="">
+                    <span class="login__form--userform__input--span">Prisijungimo vardas</span>
                 </div>
+            </div>
 
-                <!-- Password input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="password">Slaptažodis</label>
-                    <div class="col-md-4">
-                        <input id="password" name="password" type="password" placeholder="Slaptažodis" class="form-control input-md" required="">
-                        <span class="help-block">Slaptažodis</span>
-                    </div>
+            <!-- Password input-->
+            <div class="login__form--userform">
+                <label class="login__form--userform__label" for="password">Slaptažodis</label>
+                <div class="login__form--userform__input">
+                    <input id="password" name="password" type="password" placeholder="Slaptažodis" class="login__form--userform__input--text"
+                        required="">
+                    <span class="login__form--userform__input--span">Slaptažodis</span>
                 </div>
+            </div>
 
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="firstName">Vardas</label>
-                    <div class="col-md-4">
-                        <input id="firstName" name="firstName" type="text" placeholder="Vardas" class="form-control input-md" required="">
-                        <span class="help-block">Vardas</span>
-                    </div>
+            <!-- Text input-->
+            <div class="login__form--userform">
+                <label class="login__form--userform__label" for="firstName">Vardas</label>
+                <div class="login__form--userform__input">
+                    <input id="firstName" name="firstName" type="text" placeholder="Vardas" class="login__form--userform__input--text" required="">
+                    <span class="login__form--userform__input--span">Vardas</span>
                 </div>
+            </div>
 
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="lastName">Pavardė</label>
-                    <div class="col-md-4">
-                        <input id="lastName" name="lastName" type="text" placeholder="Pavardė" class="form-control input-md" required="">
-                        <span class="help-block">Pavardė</span>
-                    </div>
+            <!-- Text input-->
+            <div class="login__form--userform">
+                <label class="login__form--userform__label" for="lastName">Pavardė</label>
+                <div class="login__form--userform__input">
+                    <input id="lastName" name="lastName" type="text" placeholder="Pavardė" class="login__form--userform__input--text" required="">
+                    <span class="login__form--userform__input--span">Pavardė</span>
                 </div>
+            </div>
 
-                <!-- Prepended text-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="email">El. paštas</label>
-                    <div class="col-md-4">
-                        <div class="input-group">
-                            <span class="input-group-addon">@</span>
-                            <input id="email" name="email" class="form-control" placeholder="El. paštas" type="text" required="">
-                        </div>
-                        <p class="help-block">El. paštas</p>
+            <!-- Prepended text-->
+            <div class="login__form--userform">
+                <label class="login__form--userform__label" for="email">El. paštas</label>
+                <div class="login__form--userform__input">
+                    <div class="input-group">
+                        <input id="email" name="email" class="login__form--userform__input--text" placeholder="El. paštas" type="text" required="">
                     </div>
+                    <p class="login__form--userform__input--span">El. paštas</p>
                 </div>
+            </div>
 
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="adminCode"></label>
-                    <div class="col-md-4">
-                        <input id="adminCode" name="adminCode" type="text" placeholder="" class="form-control input-md">
-                        <span class="help-block">Admin</span>
-                    </div>
+            <!-- Text input-->
+            <div class="login__form--userform">
+                <label class="login__form--userform__label" for="adminCode"></label>
+                <div class="login__form--userform__input">
+                    <input id="adminCode" name="adminCode" type="text" placeholder="" class="login__form--userform__input--text">
+                    <span class="login__form--userform__input--span">Admin</span>
                 </div>
+            </div>
 
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="submit">Registruoti</label>
-                    <div class="col-md-4">
-                        <button id="submit" name="submit" class="btn btn-success">Registruoti</button>
-                    </div>
-                </div>
-
-            </fieldset>
+            <!-- Button -->
+            <div class="login__form__button">
+                <button name="submit" class="login__form__button--submit ">
+                    <svg class="login__form__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-login"></use>
+                    </svg> Registruoti
+                </button>
+            </div>
         </form>
-        <% include ./partials/footer %>
+    </div>
+    <% include ./partials/footer %>
