@@ -13,6 +13,12 @@
     font-weight: 700;
     text-transform: uppercase;
     flex-wrap: wrap;
+    &__sub {
+      font-size: 2.2rem;
+      font-weight: 400;
+      text-transform: lowercase;
+      flex-wrap: wrap;
+    }
   }
   &__link {
     display: flex;

@@ -79,18 +79,18 @@ body {
     flex-direction: column;
     flex-basis: 100%; }
     .login__form--legend {
-      font-family: OpenSans;
       font-size: 2.5rem;
       display: flex;
       margin-left: 10rem;
-      margin-bottom: 7rem; }
+      margin-bottom: 4rem;
+      text-transform: uppercase; }
     .login__form__icon {
       height: 3rem;
       width: 3rem;
       padding-right: 1rem;
       fill: var(--f1-color); }
     .login__form--userform {
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
       display: flex;
       align-items: flex-start; }
       .login__form--userform__label {
@@ -98,7 +98,8 @@ body {
         align-items: center;
         font-size: 1.7rem;
         padding: 0.7rem 2rem;
-        width: 33rem; }
+        width: 33rem;
+        text-transform: uppercase; }
       .login__form--userform__input {
         font-size: 1.7rem;
         display: flex;
@@ -253,6 +254,8 @@ body {
     height: 2.25rem;
     width: 2.25rem;
     fill: var(--f1-color); }
+  .user-nav .nav-user {
+    text-transform: capitalize; }
   .user-nav__link:link, .user-nav__link:visited {
     text-decoration: none;
     color: var(--f1-color); }
@@ -579,6 +582,11 @@ select:-webkit-autofill:focus {
     font-weight: 700;
     text-transform: uppercase;
     flex-wrap: wrap; }
+    .data-editForm__legend__sub {
+      font-size: 2.2rem;
+      font-weight: 400;
+      text-transform: lowercase;
+      flex-wrap: wrap; }
   .data-editForm__link {
     display: flex;
     width: 100%;
