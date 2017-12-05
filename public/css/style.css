@@ -41,7 +41,7 @@ body {
   width: 100%;
   background-color: var(--d3-color);
   box-shadow: var(--f2-color);
-  min-height: 40rem; }
+  min-height: inherit; }
 
 .header {
   font-size: 2.2rem;
@@ -62,7 +62,8 @@ body {
   flex: 0 0 16%;
   flex-direction: column;
   justify-content: space-between;
-  height: 95vh; }
+  height: inherit;
+  min-height: 90vh; }
 
 .kellap-content {
   background-color: var(--d3-color);
