@@ -48,10 +48,18 @@
             font-size: 1.7rem;
             background-color: var(--f9-color);
             color: var(--f1-color);
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
             &:hover {
               background-color: var(--f5-color);
               color: var(--d3-color);
               text-transform: uppercase;
+              box-shadow: 0 5px 10px 0 rgba(34, 148, 229, 0.35),
+                0 4px 10px 0 rgba(34, 148, 229, 0.1);
+              // transform: translateY(-1px);
+            }
+            &:active {
+              transform: translateY(1px);
             }
           }
           &--editbtn {
@@ -63,9 +71,17 @@
             color: var(--f1-color);
             text-transform: uppercase;
             height: 3rem;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
             &:hover {
               background-color: var(--f5-color);
               color: var(--d3-color);
+              box-shadow: 0 5px 10px 0 rgba(34, 148, 229, 0.35),
+                0 4px 10px 0 rgba(34, 148, 229, 0.1);
+              // transform: translateY(-1px);
+            }
+            &:active {
+              transform: translateY(1px);
             }
           }
         }

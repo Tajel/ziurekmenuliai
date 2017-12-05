@@ -1,6 +1,7 @@
 <% include ../partials/header %>
     <div class="data">
         <div class="data__page-header--main">KROVINIAI AUTOMOBILIAI
+            <br>
             <small class="data__page-header--second">Sukurti naują, redaguoti, trinti</small>
         </div>
         <p class="data__page-header--new-item">
@@ -38,7 +39,7 @@
                     <%=trans.inventnr%>
                 </div>
                 <a href="/autokrov/<%= trans._id %>" class="data__page-data__main-tab--detail">
-                    <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
+                    Detali informacija</a>
                 <a href="/autokrov/<%= trans._id %>/kellap" class="data__page-data__main-tab--detail">Kelionės lapai</a>
 
                 <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>

@@ -25,6 +25,19 @@
     border-radius: 2px;
     text-transform: uppercase;
     margin: 0 1rem;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    &:hover {
+      background-color: var(--f5-color);
+      color: var(--d3-color);
+      text-transform: uppercase;
+      box-shadow: 0 5px 10px 0 rgba(34, 148, 229, 0.35),
+        0 4px 10px 0 rgba(34, 148, 229, 0.1);
+      // transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(1px);
+    }
     &__icon {
       margin-right: 1rem;
       width: 2.5rem;
@@ -109,6 +122,8 @@
     flex-direction: row-reverse;
     align-items: baseline;
     width: 45%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
     &--submit {
       background-color: var(--d1-color);
       border: none;
