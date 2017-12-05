@@ -1,58 +1,56 @@
 <% include ../partials/header %>
-    <div class="container">
-        <header class="jumbotron">
-            <div class="container">
-                <h1>Transporto valdymo modulis!</h1>
-                <p>LENGVOSIOS Transporto priemonės</p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="/autolen/new"><i class="fa fa-plus" aria-hidden="true"></i> Nauja transporto priemone</a>
-                    <a class="btn btn-primary btn-large" href="/kellap">Lengvuju transporto pr keliones lapai</a>
-                    <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas keliones lapas</a>
-
-                </p>
-            </div>
-        </header>
-        <div class="container">
-
+    <div class="data">
+        <div class="data__page-header--main">LENGVIEJI automobiliai
+            <br>
+            <small class="data__page-header--second">Sukurti naują, redaguoti, trinti</small>
         </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                    <th>7</th>
-                    <th>8</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% alltrlen.forEach(function(trans){ %>
-                    <tr>
-                        <td><strong><%=trans.marke%></strong></td>
-                        <td><strong><%=trans.modelis%></strong></td>
-                        <td><strong><%=trans.valstnr%></strong></td>
-                        <td><strong><%=trans.inventnr%></strong></td>
-                        <td>
-                            <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <a class="btn   btn-warning" href="/autolen/<%= trans._id %>/edit"><i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                                <% }%>
-                        </td>
-                        <td>
-                            <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                <form id="delete-form" action="/autolen/<%= trans._id %>?_method=DELETE" method="POST">
-                                    <button class="btn   btn-danger"><i class="fa fa-trash-o"></i>  TRINTI</button>
-                                </form>
-                                <% }%>
-                        </td>
-                        <td><a href="/autolen/<%= trans._id %>" class="btn   btn-primary"><i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a></td>
-                        <td><a href="/autolen/<%= trans._id %>/krovkellap" class="btn   btn-primary">Kelionės lapai</a></td>
-                        <% }); %>
-                    </tr>
-            </tbody>
-        </table>
-        <% include ../partials/footer %>
-
+        <p class="data__page-header--new-item">
+            <a class="data__page-header--link" href="/autolen/new">
+                <svg class="data__page-header--icon">
+                    <use xlink:href="/img/sprite.svg#icon-new-message">
+                </svg>Nauja transporto priemonė</a>
+        </p>
+        <p class="data__page-header--new-item">
+            <a class="data__page-header--link" href="/kellap">
+                <svg class="data__page-header--icon">
+                    <use xlink:href="/img/sprite.svg#icon-new-message">
+                </svg>Lengvūjų tr. primoenių kelionės lapai</a>
+        </p>
+        <p class="data__page-header--new-item">
+            <a class="data__page-header--link" href="/kellap/newlen">
+                <svg class="data__page-header--icon">
+                    <use xlink:href="/img/sprite.svg#icon-new-message">
+                </svg>Naujas kelionės lapas</a>
+        </p>
     </div>
+    <div class="data__page-data">
+        <% alltrlen.forEach(function(trans){ %>
+            <div class="data__page-data__main-tab">
+                <div class="data__page-data__main-tab--header">
+                    <%= trans.marke %>
+                        <%= trans.modelis %>
+                </div>
+                <div class="data__page-data__main-tab--content">
+                    Valst Nr.:
+                    <%= trans.valstnr %>
+                </div>
+                <div class="data__page-data__main-tab--content">
+                    Invent. Nr.:
+                    <%= trans.inventnr %>
+                </div>
+                <a href="/autolen/<%= trans._id %>" class="data__page-data__main-tab--detail">
+                    Detali informacija</a>
+                <a href="/autolen/<%= trans._id %>/kellap" class="data__page-data__main-tab--detail">Kelionės lapai</a>
+
+                <% if(currentUser && trans.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                    <div class="data__page-data__main-tab--buttons">
+                        <a class="data__page-data__main-tab--buttons--edit" href="/autolen/<%= trans._id %>/edit">REDAGUOTI</a>
+                        <form class="data__page-data__main-tab--buttons--del" action="/autolen/<%= trans._id %>?_method=DELETE" method="POST">
+                            <button class="data__page-data__main-tab--buttons--btn"> TRINTI</button>
+                        </form>
+                    </div>
+                    <% }%>
+            </div>
+            <% }); %>
+    </div>
+    <% include ../partials/footer %>

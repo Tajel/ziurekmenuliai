@@ -1,119 +1,206 @@
 <% include ../partials/header %>
-    <div class="container">
-        <header class="jumbotron">
-            <h1 style="text-align: center">Redaguoti
-                <%= autolen.autolen %>
-                    <%= autolen.modelis %>
-                        <%= autolen.valstnr %>
-            </h1>
-        </header>
-    </div>
-    <div class="container">
-        <div style="width: 40%; margin: 35px auto;">
-            <form action="/autolen/<%= autolen._id %>?_method=PUT" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[doc]" value="autokrov" hidden>
+    <form action="/autolen/<%= autolen._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti
+            <%= autolen.marke %>
+                <%= autolen.modelis %>
+                    <%= autolen.valstnr %>
+        </legend>
+        <a href="/autolen" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į tr. priemonių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-editForm__content">
+            <!-- Text input-->
+            <div class="data-editForm__content__input--hidden">
+                <input class="data-editForm__content__input--body--text" type="text" name="autolen[doc]" value="autolen">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[marke]">Markė</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[marke]" placeholder="markė" value="<%= autolen.marke %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[marke]" placeholder="markė" value="<%= autolen.marke %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[modelis]">Modelis</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[modelis]" placeholder="modelis" value="<%= autolen.modelis %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[modelis]" placeholder="modelis" value="<%= autolen.modelis %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[valstnr]">Valstybinis numeris</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[valstnr]" placeholder="valstybinis numeris"
+                        value="<%= autolen.valstnr %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[valstnr]" placeholder="valstybinis numeris" value="<%= autolen.valstnr %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[id]">ID</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[id]" placeholder="id" value="<%= autolen.id %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[id]" placeholder="id" value="<%= autolen.id %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[inventnr]">Inventorinis numeris</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[inventnr]" placeholder="inventorinis numeris"
+                        value="<%= autolen.inventnr %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[inventnr]" placeholder="inventorinis numeris" value="<%= autolen.inventnr %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[gammetai]">Pagaminimo metai</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[gammetai]" placeholder="gamybos metai"
+                        value="<%= autolen.gammetai %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[gammetai]" placeholder="gamybos metai" value="<%= autolen.gammetai %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[atsaking]">Atsakingas asmuo</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autolen[atsaking]" class="data-editForm__content__input--body--text">
+                        <option selected>
+                            <%= autolen.atsaking %>
+                        </option>
+                        <% data.forEach(function(data){ %>
+                            <% if(data.vairVardPav !== undefined){ %>
+                                <option>
+                                    <%= data.vairVardPav %>
+                                </option>
+                                <!-- ########## reikia sukurti vairuotojus *********** -->
+                                <% } %>
+                                    <% }); %>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autolen[atsaking]" class="custom-select">
-                 <option  selected><%= autolen.atsaking %></option>
-                <% data.forEach(function(data){ %>
-                    <% if(data.vairVardPav !== undefined){ %>
-                    <option><%= data.vairVardPav %></option>  <!-- ########## reikia sukurti vairuotojus *********** -->
-                    <% } %>
-                <% }); %>
-            </select>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[baze]">Bazė</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[baze]" placeholder="bazė" value="<%= autolen.baze %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[baze]" placeholder="bazė" value="<%= autolen.baze %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[drcivil]">TPVCAP</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[drcivil]" placeholder="draudimas civilinis"
+                        value="<%= autolen.drcivil %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[drcivil]" placeholder="draudimas civilinis" value="<%= autolen.drcivil %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[drkasko]">Kasko</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[drkasko]" placeholder="draudimas kasko"
+                        value="<%= autolen.drkasko %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[drkasko]" placeholder="draudimas kasko" value="<%= autolen.drkasko %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[euro]">Euro taršos lygis</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[euro]" placeholder="euro taršos lygis"
+                        value="<%= autolen.euro %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[euro]" placeholder="euro taršos lygis" value="<%= autolen.euro %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[ikurrusis]">Kuro rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autolen[ikurrusis]" class="data-editForm__content__input--body--text">
+                        <option selected>
+                            <%= autolen.ikurrusis %>
+                        </option>
+                        <% data.forEach(function(data){ %>
+                            <% if(data.kurrusis !== undefined){ %>
+                                <% console.log(data.kurrusis) %>
+                                    <option>
+                                        <%= data.kurrusis %>
+                                    </option>
+                                    <% } %>
+                                        <% }); %>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autolen[ikurrusis]" class="custom-select">
-                 <option selected><%= autolen.ikurrusis %></option>
-                <% data.forEach(function(data){ %>
-                    <% if(data.kurrusis !== undefined){ %>
-                    <% console.log(data.kurrusis) %>
-                    <option><%= data.kurrusis %></option>
-                    <% } %>
-                <% }); %>
-            </select>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[ipadkodas]">Padalinys</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autolen[ipadkodas]" class="data-editForm__content__input--body--text">
+                        <option selected>
+                            <%= autolen.ipadkodas %>
+                        </option>
+                        <% data.forEach(function(data){ %>
+                            <% if(data.padkodas !== undefined){ %>
+                                <option>
+                                    <%= data.padkodas %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autolen[ipadkodas]" class="custom-select">
-                 <option  selected><%= autolen.ipadkodas %></option>
-                <% data.forEach(function(data){ %>
-                    <% if(data.padkodas !== undefined){ %>
-                    <option><%= data.padkodas %></option>
-                    <% } %>
-                <% }); %>
-            </select>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[ipagvair]">Paskirtas vairuotojas</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autolen[ipagvair]" class="data-editForm__content__input--body--text">
+                        <option selected>
+                            <%= autolen.ipagvair %>
+                        </option>
+                        <% data.forEach(function(data){ %>
+                            <% if(data.vairVardPav !== undefined){ %>
+                                <option>
+                                    <%= data.vairVardPav %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autolen[ipagvair]" class="custom-select">
-                 <option  selected><%= autolen.ipagvair %></option>
-                <% data.forEach(function(data){ %>
-                    <% if(data.vairVardPav !== undefined){ %>
-                    <option><%= data.vairVardPav %></option>
-                    <% } %>
-                <% }); %>
-            </select>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[itrrus]">Transporto pr. rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autolen[itrrus]" class="data-editForm__content__input--body--text">
+                        <option selected>
+                            <%= autolen.itrrus %>
+                        </option>
+                        <% data.forEach(function(data){ %>
+                            <% if(data.trrus !== undefined){ %>
+                                <option>
+                                    <%= data.trrus %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autolen[itrrus]" class="custom-select">
-                 <option  selected><%= autolen.itrrus %></option>
-                <% data.forEach(function(data){ %>
-                    <% if(data.trrus !== undefined){ %>
-                    <option><%= data.trrus %></option>
-                    <% } %>
-                <% }); %>
-            </select>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[itrtipas]">Transporto priemonės tipas</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autolen[itrtipas]" class="data-editForm__content__input--body--text">
+                        <option selected>
+                            <%= autolen.itrtipas %>
+                        </option>
+                        <% data.forEach(function(data){ %>
+                            <% if(data.trtipas !== undefined){ %>
+                                <option>
+                                    <%= data.trtipas %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autolen[itrtipas]" class="custom-select">
-                 <option  selected><%= autolen.itrtipas %></option>
-                <% data.forEach(function(data){ %>
-                    <% if(data.trtipas !== undefined){ %>
-                    <option><%= data.trtipas %></option>
-                    <% } %>
-                <% }); %>
-            </select>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autolen[vinjet]">Kelių mokestis</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autolen[vinjet]" placeholder="Kelių mokesčiai"
+                        value="<%= autolen.vinjet %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autolen[vinjet]" placeholder="Kelių mokesčiai" value="<%= autolen.vinjet %>">
-                </div>
-                <div>
-                    <button class="btn btn-lg btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
-            </form>
-            <a href="/autolen"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+            </div>
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
+            </div>
         </div>
-    </div>
-
+    </form>
     <% include ../partials/footer %>
