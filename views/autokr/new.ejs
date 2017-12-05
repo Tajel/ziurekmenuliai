@@ -1,238 +1,238 @@
 <% include ../partials/header %>
 
-    <form action="/autokrov" method="POST" class="form-horizontal">
-        <fieldset>
-            <a href="/autokrov">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
-            <!-- Form Name -->
-            <legend>Naujas krovininis automobilis</legend>
-            //
-            <hr>
-
+    <form action="/autokrov" method="POST" class="data-newForm">
+        <legend class="data-newForm__legend">Naujas krovininis automobilis</legend>
+        <a href="/autokrov" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į tr. priemonių sąrašą </a>
+        <!-- Form Name -->
+        <div class="data-newForm__content">
             <!-- Text input-->
-            <div class="form-group" hidden>
-                <label class="col-md-4 control-label" for="autokr[doc]">autokrov</label>
-                <div class="col-md-4">
-                    <input id="autokr[doc]" name="autokr[doc]" type="text" placeholder="autokrov" class="form-control input-md" value="autokrov">
-                    <span class="help-block">autokrov</span>
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="autokr[doc]">autokrov</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="autokr[doc]" name="autokr[doc]" type="text" placeholder="autokrov" class="data-newForm__content__input--body--text"
+                        value="autokrov">
+                    <span class="data-newForm__content__input--body--span">autokrov</span>
                 </div>
             </div>
-
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[marke]">Markė</label>
-                <div class="col-md-4">
-                    <input id="autokr[marke]" name="autokr[marke]" type="text" placeholder="Markė" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio markę</span>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[modelis]">Modelis</label>
-                <div class="col-md-4">
-                    <input id="autokr[modelis]" name="autokr[modelis]" type="text" placeholder="Modelis" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio modelį</span>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="autokr[marke]">Markė</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="autokr[marke]" name="autokr[marke]" type="text" placeholder="Markė" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite automobilio markę</span>
                 </div>
             </div>
 
             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[valstnr]">Valstybinis numeris</label>
-                <div class="col-md-4">
-                    <input id="autokr[valstnr]" name="autokr[valstnr]" type="text" placeholder="Valstybinis numeris" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio valstybinį numerį</span>
-                </div>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="autokr[modelis]">Modelis</label>
+                <d<label class="data-newForm__content__input--label" for="autokr[modelis]">Modelis</label>
+                    iv class="data-newForm__content__input--body">
+                    <input id="autokr[modelis]" name="autokr[modelis]" type="text" placeholder="Modelis" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">Įrašykite automobilio modelį</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[id]">ID</label>
-                <div class="col-md-4">
-                    <input id="autokr[id]" name="autokr[id]" type="text" placeholder="ID" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio ID (17 simbolių)</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[valstnr]">Valstybinis numeris</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[valstnr]" name="autokr[valstnr]" type="text" placeholder="Valstybinis numeris" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio valstybinį numerį</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[inventnr]">Inventorinis numeris</label>
-                <div class="col-md-4">
-                    <input id="autokr[inventnr]" name="autokr[inventnr]" type="text" placeholder="Inventorinis numeris" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio inventorinį numerį</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[id]">ID</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[id]" name="autokr[id]" type="text" placeholder="ID" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio ID (17 simbolių)</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[gammetai]">Pagaminimo metai</label>
-                <div class="col-md-4">
-                    <input id="autokr[gammetai]" name="autokr[gammetai]" type="text" placeholder="Pagaminimo metai" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio pagaminimo metus</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[inventnr]">Inventorinis numeris</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[inventnr]" name="autokr[inventnr]" type="text" placeholder="Inventorinis numeris" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio inventorinį numerį</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[atsaking]">Atsakingas asmuo</label>
-                <div class="col-md-4">
-                    <select id="autokr[atsaking]" name="autokr[atsaking]" class="form-control">
-                        <% data.forEach(function(data){ %>
-                            <% if(data.vairVardPav !== undefined){ %>
-                                <% console.log('Atsakingas: '+data.vairVardPav) %>
-                                    <option value="<%= data.vairVardPav %>">
-                                        <%= data.vairVardPav %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                    <span class="help-block">Pasirinkite atsakingą asmenį</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[gammetai]">Pagaminimo metai</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[gammetai]" name="autokr[gammetai]" type="text" placeholder="Pagaminimo metai" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio pagaminimo metus</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[baze]">Bazė</label>
-                <div class="col-md-4">
-                    <input id="autokr[baze]" name="autokr[baze]" type="text" placeholder="Bazė" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio bazę (G12, L13)</span>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[atsaking]">Atsakingas asmuo</label>
+            <div class="data-newForm__content__input--body">
+                <select id="autokr[atsaking]" name="autokr[atsaking]" class="data-newForm__content__input--body--text">
+                    <% data.forEach(function(data){ %>
+                        <% if(data.vairVardPav !== undefined){ %>
+                            <% console.log('Atsakingas: '+data.vairVardPav) %>
+                                <option value="<%= data.vairVardPav %>">
+                                    <%= data.vairVardPav %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                </select>
+                <span class="data-newForm__content__input--body--span">Pasirinkite atsakingą asmenį</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[drcivil]">TPVCAP</label>
-                <div class="col-md-4">
-                    <input id="autokr[drcivil]" name="autokr[drcivil]" type="text" placeholder="TPVCAP" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio Civilinio draudiko pavadinimą</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[baze]">Bazė</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[baze]" name="autokr[baze]" type="text" placeholder="Bazė" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio bazę (G12, L13)</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[drkasko]">Kasko</label>
-                <div class="col-md-4">
-                    <input id="autokr[drkasko]" name="autokr[drkasko]" type="text" placeholder="Kasko" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio Kasko draudiko pavadinimas</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[drcivil]">TPVCAP</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[drcivil]" name="autokr[drcivil]" type="text" placeholder="TPVCAP" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio Civilinio draudiko pavadinimą</span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[euro]">Euro taršos lygis</label>
-                <div class="col-md-4">
-                    <input id="autokr[euro]" name="autokr[euro]" type="text" placeholder="Euro taršos lygis" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio trašos lygį</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[drkasko]">Kasko</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[drkasko]" name="autokr[drkasko]" type="text" placeholder="Kasko" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio Kasko draudiko pavadinimas</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[ikurrusis]">Kuro rūšis</label>
-                <div class="col-md-4">
-                    <select id="autokr[ikurrusis]" name="autokr[ikurrusis]" class="form-control">
-                        <% data.forEach(function(data){ %>
-                            <% if(data.kurrusis !== undefined){ %>
-                                <% console.log('Kuro rusis: '+data.kurrusis) %>
-                                    <option value="<%= data.kurrusis %>">
-                                        <%= data.kurrusis %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                    <span class="help-block">Pasirinkite kuro rūšį</span>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[euro]">Euro taršos lygis</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[euro]" name="autokr[euro]" type="text" placeholder="Euro taršos lygis" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio trašos lygį</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[ipadkodas]">Padalinys</label>
-                <div class="col-md-4">
-                    <select id="autokr[ipadkodas]" name="autokr[ipadkodas]" class="form-control">
-                        <% data.forEach(function(data){ %>
-                            <% if(data.padkodas !== undefined){ %>
-                                <% console.log('Padalinio Kodas: '+data.padkodas) %>
-                                    <option value="<%= data.padkodas %>">
-                                        <%= data.padkodas %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                    <span class="help-block">Pasirinkite padalinio kodą</span>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[ikurrusis]">Kuro rūšis</label>
+            <div class="data-newForm__content__input--body">
+                <select id="autokr[ikurrusis]" name="autokr[ikurrusis]" class="data-newForm__content__input--body--text">
+                    <% data.forEach(function(data){ %>
+                        <% if(data.kurrusis !== undefined){ %>
+                            <% console.log('Kuro rusis: '+data.kurrusis) %>
+                                <option value="<%= data.kurrusis %>">
+                                    <%= data.kurrusis %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                </select>
+                <span class="data-newForm__content__input--body--span">Pasirinkite kuro rūšį</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[ipagvair]">Paskirtas vairuotojas</label>
-                <div class="col-md-4">
-                    <select id="autokr[ipagvair]" name="autokr[ipagvair]" class="form-control">
-                        <% data.forEach(function(data){ %>
-                            <% if(data.vairVardPav !== undefined){ %>
-                                <% console.log('Pagrindinis Vairuotojas: '+data.vairVardPav) %>
-                                    <option value="<%= data.vairVardPav %>">
-                                        <%= data.vairVardPav %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                    <span class="help-block">Paskirkite pagrindinį vairuotoją</span>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[ipadkodas]">Padalinys</label>
+            <div class="data-newForm__content__input--body">
+                <select id="autokr[ipadkodas]" name="autokr[ipadkodas]" class="data-newForm__content__input--body--text">
+                    <% data.forEach(function(data){ %>
+                        <% if(data.padkodas !== undefined){ %>
+                            <% console.log('Padalinio Kodas: '+data.padkodas) %>
+                                <option value="<%= data.padkodas %>">
+                                    <%= data.padkodas %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                </select>
+                <span class="data-newForm__content__input--body--span">Pasirinkite padalinio kodą</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[itrrus]">Transporto pr. rūšis</label>
-                <div class="col-md-4">
-                    <select id="autokr[itrrus]" name="autokr[itrrus]" class="form-control">
-                        <% data.forEach(function(data){ %>
-                            <% if(data.trrus !== undefined){ %>
-                                <% console.log('Transporto rusis: '+data.trrus) %>
-                                    <option value="<%= data.trrus %>">
-                                        <%= data.trrus %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                    <span class="help-block">Pasirinkite transporto priemonės rūšį </span>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[ipagvair]">Paskirtas vairuotojas</label>
+            <div class="data-newForm__content__input--body">
+                <select id="autokr[ipagvair]" name="autokr[ipagvair]" class="data-newForm__content__input--body--text">
+                    <% data.forEach(function(data){ %>
+                        <% if(data.vairVardPav !== undefined){ %>
+                            <% console.log('Pagrindinis Vairuotojas: '+data.vairVardPav) %>
+                                <option value="<%= data.vairVardPav %>">
+                                    <%= data.vairVardPav %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                </select>
+                <span class="data-newForm__content__input--body--span">Paskirkite pagrindinį vairuotoją</span>
             </div>
+        </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[itrtipas]">Transporto priemonės tipas</label>
-                <div class="col-md-4">
-                    <select id="autokr[itrtipas]" name="autokr[itrtipas]" class="form-control">
-                        <% data.forEach(function(data){ %>
-                            <% if(data.trtipas !== undefined){ %>
-                                <% console.log('Transporto TIPAS: '+data.trtipas) %>
-                                    <option value="<%= data.trtipas %>">
-                                        <%= data.trtipas %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                    <span class="help-block">Pasirinkite transporto priemonės tipą</span>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[itrrus]">Transporto pr. rūšis</label>
+            <div class="data-newForm__content__input--body">
+                <select id="autokr[itrrus]" name="autokr[itrrus]" class="data-newForm__content__input--body--text">
+                    <% data.forEach(function(data){ %>
+                        <% if(data.trrus !== undefined){ %>
+                            <% console.log('Transporto rusis: '+data.trrus) %>
+                                <option value="<%= data.trrus %>">
+                                    <%= data.trrus %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                </select>
+                <span class="data-newForm__content__input--body--span">Pasirinkite transporto priemonės rūšį </span>
             </div>
+        </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="autokr[vinjet]">Kelių mokestis</label>
-                <div class="col-md-4">
-                    <input id="autokr[vinjet]" name="autokr[vinjet]" type="text" placeholder="Kelių mokestis" class="form-control input-md">
-                    <span class="help-block">Įrašykite automobilio kelių mokesčio duomenis (kaina, galiojimo data...)</span>
-                </div>
+        <!-- Select Basic -->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[itrtipas]">Transporto priemonės tipas</label>
+            <div class="data-newForm__content__input--body">
+                <select id="autokr[itrtipas]" name="autokr[itrtipas]" class="data-newForm__content__input--body--text">
+                    <% data.forEach(function(data){ %>
+                        <% if(data.trtipas !== undefined){ %>
+                            <% console.log('Transporto TIPAS: '+data.trtipas) %>
+                                <option value="<%= data.trtipas %>">
+                                    <%= data.trtipas %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                </select>
+                <span class="data-newForm__content__input--body--span">Pasirinkite transporto priemonės tipą</span>
             </div>
+        </div>
 
-            <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="submit">Sukurti</label>
-                <div class="col-md-4">
-                    <button id="submit" name="submit" class="btn btn-info">Sukurti</button>
-                </div>
+        <!-- Text input-->
+        <div class="data-newForm__content__input">
+            <label class="data-newForm__content__input--label" for="autokr[vinjet]">Kelių mokestis</label>
+            <div class="data-newForm__content__input--body">
+                <input id="autokr[vinjet]" name="autokr[vinjet]" type="text" placeholder="Kelių mokestis" class="data-newForm__content__input--body--text">
+                <span class="data-newForm__content__input--body--span">Įrašykite automobilio kelių mokesčio duomenis (kaina, galiojimo data...)</span>
             </div>
+        </div>
 
-        </fieldset>
+        <!-- Button -->
+        <div class="data-editForm__button">
+            <button name="submit" class="data-editForm__button--submit ">
+                <svg class="data-editForm__button--submit--icon">
+                    <use xlink:href="/img/sprite.svg#icon-new-message">
+                </svg> Sukurti
+            </button>
+        </div>
+        </div>
     </form>
     <% include ../partials/footer %>

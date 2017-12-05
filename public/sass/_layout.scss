@@ -23,7 +23,7 @@
 .sidebar {
   display: flex;
   background-color: var(--f9-color);
-  flex: 0 0 18%;
+  flex: 0 0 16%;
   flex-direction: column;
   justify-content: space-between;
   height: 95vh;
@@ -32,5 +32,5 @@
 .kellap-content {
   background-color: var(--d3-color);
   flex: 1;
-  height: 80rem;
+  // height: 80rem;
 }

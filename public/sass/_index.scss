@@ -1,13 +1,17 @@
 // PADALINIAI
 .data {
+  // display: flex;
+  // justify-content: space-between;
   &__page-header {
     display: flex;
     flex-direction: column;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    flex-wrap: wrap;
+    flex-basis: 75%;
     &--main {
       letter-spacing: 0.4rem;
-      margin-top: 0.5rem;
-      margin-left: 1rem;
-      font-size: 4rem;
+      font-size: 3.6rem;
       font-weight: 700;
     }
     &--second {
@@ -21,16 +25,17 @@
       fill: var(--d1-color);
     }
     &--new-item {
-      border-radius: 2px;
+      border-radius: 3px;
       text-transform: uppercase;
-      margin: 0 1rem;
+      text-align: center;
+      margin: 0.1rem 0.1rem;
       display: flex;
       background-color: var(--f5-color);
     }
     &--link {
       display: flex;
       flex: 1;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       text-decoration: none;
       color: var(--d1-color);
       align-items: center;
@@ -70,15 +75,25 @@
         align-items: center;
         height: 100%;
         text-decoration: none;
-        color: var(--f2-color);
         font-size: 1.4rem;
         display: flex;
         justify-content: center;
         flex-basis: 20%;
-        background-color: var(--f6-color);
-        &:hover {
-          background-color: var(--f5-color);
-          color: var(--d3-color);
+        &:nth-child(1n) {
+          background-color: var(--f6-color);
+          color: var(--f4-color);
+          &:hover {
+            background-color: var(--f5-color);
+            color: var(--d3-color);
+          }
+        }
+        &:nth-child(2n) {
+          background-color: var(--f3-color);
+          color: var(--f4-color);
+          &:hover {
+            background-color: var(--f5-color);
+            color: var(--d3-color);
+          }
         }
       }
       &--buttons {

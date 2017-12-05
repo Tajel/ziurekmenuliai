@@ -1,7 +1,6 @@
 <% include ../partials/header %>
     <legend class="data-editForm__legend">
         Transporto valdymo modulis
-
     </legend>
     <a href="/autokrov" class="data-editForm__link">
         <svg class="data-editForm__link__icon">
@@ -69,154 +68,111 @@
                     <%=autokrov.atsaking%>
                 </div>
             </div>
-
-
-            <th scope="row">13</th>
-            <td>bazė:</td>
-            <td>
-                <strong>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="bazė">bazė</label>
+                <div class="detailed-info__content__main__info--body" name="bazė">
                     <%=autokrov.baze%>
-                </strong>
-            </td>
-            </tr>
-            <tr>
-                <th scope="row">14</th>
-                <td>Civilinis draudimas:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.drcivil%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">15</th>
-                <td>Kasko drudimas:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.drkasko%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">17</th>
-                <td>Euro taršos lygis:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.euro%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">12</th>
-                <td>Kuro rūšis:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.ikurrusis%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">11</th>
-                <td>Padalinys:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.ipadkodas%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">18</th>
-                <td>Pagrindinis paskirtas vairuotojas:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.ipagvair%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Transporto pr rūšis:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.itrrus%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Transporto pr tipas:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.itrtipas%>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">16</th>
-                <td>Kelių mokestis - Vinjetė:</td>
-                <td>
-                    <strong>
-                        <%=autokrov.vinjet%>
-                    </strong>
-                </td>
-            </tr>
-            </tbody>
-            </table>
-            //
-            <hr>
-            <% if(currentUser && autokrov.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                <a class="btn   btn-warning" href="/autokrov/<%= autokrov._id %>/edit">
-                    <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                <form id="delete-form" action="/autokrov/<%= autokrov._id %>?_method=DELETE" method="POST">
-                    <button class="btn   btn-danger">
-                        <i class="fa fa-trash-o"></i> TRINTI</button>
-                </form>
-                <% }%>
-                    <a href="/autokrov">
-                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
-        </div>
-        <div class='col'>
-            <div class="well">
-                <h2>IKAINIAI</h2>
-                <div class="text-right">
-                    <a class="btn btn-success" href="/autokrov/<%= autokrov._id %>/autoik/new">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Naujas Įkainis</a>
                 </div>
-                //
-                <hr>
-                <% autokrov.ikainis.forEach(function(ikainis){ %>
-                    <div>
-                        <div>
-                            <strong>
-                                <a href="/users/<%= ikainis.author.id %>">
-                                    <%= ikainis.author.username %>
-                                </a>
-                            </strong>
-                        </div>
-                        <%= ikainis.idarbrus %>
-                            <%= ikainis.idarbvnt %>
-                                <%= ikainis.trikain %>
-                                    <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                                        <form style="display: inline" class="pull-right" action="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>?_method=DELETE"
-                                            method="POST">
-                                            <button class="btn   btn-danger">
-                                                <i class="fa fa-trash-o"></i> TRINTI</button>
-                                            <a href="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>/edit" class="btn   btn-info">
-                                                <i class="fa fa-pencil" aria-hidden="true"></i> REDAGUOTI</a>
-                                        </form>
-                                        <% } %>
-                                            <% }) %>
-                    </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Civilinisdraudimas">Civilinis draudimas</label>
+                <div class="detailed-info__content__main__info--body" name="Civilinisdraudimas">
+                    <%=autokrov.drcivil%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Kaskodraudimas">Kasko draudimas</label>
+                <div class="detailed-info__content__main__info--body" name="Kaskodraudimas">
+                    <%=autokrov.drkasko%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Eurotaršoslygis">Euro taršos lygis</label>
+                <div class="detailed-info__content__main__info--body" name="Eurotaršoslygis">
+                    <%=autokrov.euro%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Kurorūšis">Kuro rūšis</label>
+                <div class="detailed-info__content__main__info--body" name="Kurorūšis">
+                    <%=autokrov.ikurrusis%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Padalinys">Padalinys</label>
+                <div class="detailed-info__content__main__info--body" name="Padalinys">
+                    <%=autokrov.ipadkodas%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Pagrpaskivair">Pagr. paskirtas vairuotojas</label>
+                <div class="detailed-info__content__main__info--body" name="Pagrpaskivair">
+                    <%=autokrov.ipagvair%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Transpprrūšis">Transporto pr rūšis</label>
+                <div class="detailed-info__content__main__info--body" name="Transpprrūšis">
+                    <%=autokrov.itrrus%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Transpprtipas">Transporto pr tipas</label>
+                <div class="detailed-info__content__main__info--body" name="Transpprtipas">
+                    <%=autokrov.itrtipas%>
+                </div>
+            </div>
+            <div class="detailed-info__content__main__info">
+                <label class="detailed-info__content__main__info--label" for="Vinjetė">Kelių mokestis - Vinjetė</label>
+                <div class="detailed-info__content__main__info--body" name="Vinjetė">
+                    <%=autokrov.vinjet%>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="detailed-info__content__ikainis">
+            <header class="detailed-info__content__main__header">
+                <span class="detailed-info__content__main__header--main">
+                    Įkainis
+                </span>
+                <a class="detailed-info__content__main__header__buttons--editbtn" href="/autokrov/<%= autokrov._id %>/autoik/new">
+                    Naujas Įkainis</a>
+            </header>
+            <% autokrov.ikainis.forEach(function(ikainis){ %>
+                <div class="detailed-info__content__ikainis__content">
+                    <div class="detailed-info__content__ikainis__content__main">
+                        <label class="detailed-info__content__ikainis__content__main--label" for="darborusis">Darbo rūšis</label>
+                        <div class="detailed-info__content__ikainis__content__main--body" name="darborusis">
+                            <%= ikainis.idarbrus %>
+                        </div>
+                    </div>
+                    <div class="detailed-info__content__ikainis__content__sub">
+                        <label class="detailed-info__content__ikainis__content__sub--label" for="darboVntIkainis">Darbo įkainis
 
-    <p>
-        <em> Sukurė
-            <a href="/users/<%= autokrov.author.id %>">
-                <%= autokrov.author.username %>
-            </a>
-        </em>
-    </p>
+                        </label>
+                        <div class="detailed-info__content__ikainis__content__main--body" name="darboVntIkainis">
+                            <%= ikainis.idarbvnt %>
+                                <%= ikainis.trikain %>
+                        </div>
+                    </div>
+                    <div class="detailed-info__content__main__header--main">
+                        <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                            <form style="display: inline" class="detailed-info__content__main__header__buttons--delete-form" action="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>?_method=DELETE"
+                                method="POST">
+                                <button class="detailed-info__content__main__header__buttons--delbtn">TRINTI</button>
+                            </form>
+                            <a href="/autokrov/<%=autokrov._id%>/autoik/<%=ikainis._id%>/edit" class="detailed-info__content__main__header__buttons--editbtn">
+                                REDAGUOTI
+                            </a>
+                            <% } %>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <small class="author"> Sukūrė
+        <a href="/users/<%= autokrov.author.id %>">
+            <%= autokrov.author.username %>
+        </a>
+    </small>
 
     <% include ../partials/footer %>

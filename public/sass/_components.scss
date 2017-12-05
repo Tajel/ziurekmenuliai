@@ -82,6 +82,7 @@
         font-size: 1.7rem;
         padding: 0.7rem 2rem;
         width: 33rem;
+        text-transform: uppercase;
       }
       &__input {
         font-size: 1.7rem;
@@ -237,7 +238,7 @@
   }
 } //  NAVIGATION SIDEBAR
 .side-nav {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   list-style: none;
   margin-top: 3.5rem;
   &__item {
@@ -272,7 +273,7 @@
     color: var(--f4-color);
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -284,6 +285,9 @@
     margin-right: 1rem;
     fill: var(--f1-color);
   }
+}
+span {
+  width: 100%;
 }
 
 .dropdown {
@@ -324,5 +328,5 @@ select:-webkit-autofill:focus {
   border: 1px solid #b5b9bb;
   -webkit-text-fill-color: #1616af;
   transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: var(--d3-color);
+  -webkit-text-fill-color: var(--f1-color);
 }
