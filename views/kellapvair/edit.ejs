@@ -41,18 +41,18 @@
                         <% data.objektas.forEach(function(data){ %>
                             <% if(data.objkodas !== undefined){ %>
                             <option>
-                              <%= data.objkodas %>, <%= data.dvVadasPav %></option>
+                              <%= data.objkodas %>, <%= data.dvVardasPav %></option>
                           <% } %>
                         <% }); %>
                       </select>
                     </div>
 
                     <div class="col">
-                        <select id='dv1' class="custom-select" name="kellap[idvVadasPav]">
-                        <option id ='dv' selected ><%= data.kellapPajamos.idvVadasPav%></option>
+                        <select id='dv1' class="custom-select" name="kellap[idvVardasPav]">
+                        <option id ='dv' selected ><%= data.kellapPajamos.idvVardasPav%></option>
                         <% data.dv.forEach(function(data){ %>
-                          <% if(data.dvVadasPav !== undefined){ %>
-                          <option><%= data.dvVadasPav %></option>
+                          <% if(data.dvVardasPav !== undefined){ %>
+                          <option><%= data.dvVardasPav %></option>
                           <% } %>
                         <% }); %>
                       </select>
@@ -62,7 +62,7 @@
                         <input id='ojektas' class="form-control" type="text" placeholder="Objektas" name="kellap[iobjkodas]">
                     </div>
                     <div class="col" style="display: none;">
-                        <input id='darbvvad' class="form-control" type="text" placeholder="DV" name="kellap[idvVadasPav]">
+                        <input id='darbvvad' class="form-control" type="text" placeholder="DV" name="kellap[idvVardasPav]">
                     </div>
 
                     <!--*****************************************************-->

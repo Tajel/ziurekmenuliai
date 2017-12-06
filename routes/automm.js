@@ -8,26 +8,19 @@ var middleware = require("../middleware");
 //INDEX - show all Automm
 router.get("/", middleware.isLoggedIn, function(req, res) {
   // Get all Automm from DB
-  Automm.find(
-    {
-      doc: "automm"
-    },
-    function(err, alltrmm) {
-      if (err) {
-        console.log(err);
-      } else {
-        alltrmm.sort(function(a, b) {
-          var textA = a.vairVardPav.toUpperCase();
-          var textB = b.vairVardPav.toUpperCase();
-          return textA < textB ? -1 : textA > textB ? 1 : 0;
-        });
-        // console.log("Suvesti lengvieji automobiliai"+alltrlen);
-        res.render("automm/index", {
-          alltrmm: alltrmm
-        });
-      }
+  Automm.find({ doc: "automm" }, function(err, alltrmm) {
+    if (err) {
+      console.log(err);
+    } else {
+      alltrmm.sort(function(a, b) {
+        var textA = a.idvVardasPav.toUpperCase();
+        var textB = b.idvVardasPav.toUpperCase();
+        return textA < textB ? -1 : textA > textB ? 1 : 0;
+      });
+      // console.log("Suvesti lengvieji automobiliai"+alltrlen);
+      res.render("automm/index", { alltrmm: alltrmm });
     }
-  );
+  });
 });
 
 //CREATE - add new Automm to DB
@@ -40,52 +33,42 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
   var automm = req.body.automm;
   automm.author = author;
   // Create a new Automm and save to DB
-  Autokellap.findOne(
-    {
-      doc: "automm"
-    },
-    function(err, result) {
-      if (err) {
-        console.log(err);
-      }
-      if (!result) {
-        Autokellap.create(
-          {
-            doc: "automm"
-          },
-          function(err, auto) {
-            if (!err) {
-              Automm.create(automm, function(err, newlyCreated) {
-                if (err) {
-                  console.log(err);
-                } else {
-                  newlyCreated.save();
-                  //redirect back to Automm page
-                  console.log(newlyCreated);
-                  auto.auto.push(newlyCreated);
-                  auto.save();
-                  res.redirect("/automm");
-                }
-              });
-            }
-          }
-        );
-      } else {
-        Automm.create(automm, function(err, newlyCreated) {
-          if (err) {
-            console.log(err);
-          } else {
-            newlyCreated.save();
-            //redirect back to automm page
-            console.log(newlyCreated);
-            result.auto.push(newlyCreated);
-            result.save();
-            res.redirect("/automm");
-          }
-        });
-      }
+  Autokellap.findOne({ doc: "automm" }, function(err, result) {
+    if (err) {
+      console.log(err);
     }
-  );
+    if (!result) {
+      Autokellap.create({ doc: "automm" }, function(err, auto) {
+        if (!err) {
+          Automm.create(automm, function(err, newlyCreated) {
+            if (err) {
+              console.log(err);
+            } else {
+              newlyCreated.save();
+              //redirect back to Automm page
+              console.log(newlyCreated);
+              auto.auto.push(newlyCreated);
+              auto.save();
+              res.redirect("/automm");
+            }
+          });
+        }
+      });
+    } else {
+      Automm.create(automm, function(err, newlyCreated) {
+        if (err) {
+          console.log(err);
+        } else {
+          newlyCreated.save();
+          //redirect back to automm page
+          console.log(newlyCreated);
+          result.auto.push(newlyCreated);
+          result.save();
+          res.redirect("/automm");
+        }
+      });
+    }
+  });
 });
 
 //NEW - show form to create new Automm
@@ -108,17 +91,12 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
         }
       },
       {
-        vairVardPav: {
-          $exists: true
-        }
-      },
-      {
         kurrusis: {
           $exists: true
         }
       },
       {
-        dvVadasPav: {
+        dvVardasPav: {
           $exists: true
         }
       }
@@ -126,9 +104,7 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
   }).exec(function(err, dataSum) {
     if (!err) {
       // console.log("rasti Automm: " + dataSum);
-      res.render("automm/new", {
-        data: dataSum
-      });
+      res.render("automm/new", { data: dataSum });
       // console.log("rasti Automm: " + dataSum);
     }
   });
@@ -185,17 +161,12 @@ router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
             }
           },
           {
-            vairVardPav: {
-              $exists: true
-            }
-          },
-          {
             kurrusis: {
               $exists: true
             }
           },
           {
-            dvVadasPav: {
+            dvVardasPav: {
               $exists: true
             }
           }

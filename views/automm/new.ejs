@@ -11,13 +11,13 @@
                         <input class="form-control" type="text" name="automm[doc]" value="automm" hidden>
                     </div>
                     <div class="form-group">
-                        <select style="width: 100%; height: 34px" name="automm[idvVadasPav]" class="custom-select">
+                        <select style="width: 100%; height: 34px" name="automm[idvVardasPav]" class="custom-select">
                             <option selected>Pasirinkite ATSAKINGĄ asmenį</option>
                             <% data.forEach(function(data){ %>
-                                <% if(data.dvVadasPav !== undefined){ %>
-                                    <% console.log('Atsakingas: '+data.dvVadasPav) %>
+                                <% if(data.dvVardasPav !== undefined){ %>
+                                    <% console.log('Atsakingas: '+data.dvVardasPav) %>
                                         <option>
-                                            <%= data.dvVadasPav %>
+                                            <%= data.dvVardasPav %>
                                         </option>
                                         <% } %>
                                             <% }); %>

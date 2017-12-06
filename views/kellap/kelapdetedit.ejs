@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col">
                         <select class="custom-select" id='ikainis' name="kellap[iadarbrus]">
-            <option  selected >Darbo rusis, vnt, kaina</option> 
+            <option  selected >Darbo rusis, vnt, kaina</option>
             <% console.log(data.ikainis) %>
             <% data.ikainis.forEach(function(data){ %>
               <% if(data.idarbrus !== undefined){ %>
@@ -31,7 +31,7 @@
         </div>
         <div class="col">
           <select class="custom-select" name="kellap[iobjkodas]">
-            <option  selected>Objektas</option> 
+            <option  selected>Objektas</option>
             <% data.objektas.forEach(function(data){ %>
                 <% if(data.objkodas !== undefined){ %>
                 <option><%= data.objkodas %></option>
@@ -40,18 +40,18 @@
           </select>
         </div>
         <div class="col">
-          <select class="custom-select" name="kellap[idvVadasPav]">
-            <option  selected>Darbu Vadovas</option> 
+          <select class="custom-select" name="kellap[idvVardasPav]">
+            <option  selected>Darbu Vadovas</option>
             <% data.dv.forEach(function(data){ %>
-              <% if(data.dvVadasPav !== undefined){ %>
-              <option><%= data.dvVadasPav %></option>
+              <% if(data.dvVardasPav !== undefined){ %>
+              <option><%= data.dvVardasPav %></option>
               <% } %>
             <% }); %>
           </select>
         </div>
         <div class="col">
           <select class="custom-select" name="kellap[imonkodas]">
-            <option  selected>Imone</option> 
+            <option  selected>Imone</option>
             <% data.imone.forEach(function(data){ %>
               <% if(data.imonessutrumpkodas !== undefined){ %>
               <option><%= data.imonessutrumpkodas %></option>
@@ -64,10 +64,10 @@
         </div>
       </div>
     </form>
-  
+
   </div>
-  
-  
+
+
   <div class="col-5">
     <form>
       <div class="row">
@@ -82,7 +82,7 @@
         </div>
         <div class="col">
           <select class="custom-select" name="kellap[kurouzpkodas]">
-            <option  selected>Kuro saltinis</option> 
+            <option  selected>Kuro saltinis</option>
             <% data.kuruzp.forEach(function(data){ %>
               <% if(data.kurouzpkodas !== undefined){ %>
               <option><%= data.kurouzpkodas %></option>

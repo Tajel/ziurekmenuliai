@@ -28,7 +28,7 @@ var dataSchema = new mongoose.Schema({
     imonesadresas: String,
     ivedimodata: Date,
     dvkodas: String,
-    dvVadasPav: String,
+    dvVardasPav: String,
     darbpavadinimas: String,
     objkodas: String,
     objpav: String,

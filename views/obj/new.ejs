@@ -20,14 +20,17 @@
 
             <!-- Select Basic -->
             <div class="data-newForm__content__input">
-                <label class="data-newForm__content__input--label" for="dvVadasPav">Darbų vadovas</label>
+                <label class="data-newForm__content__input--label" for="idvVardasPav">Darbų vadovas</label>
                 <div class="data-newForm__content__input--body">
-                    <select id="dvVadasPav" name="dvVadasPav" class="data-newForm__content__input--body--text">
+                    <select id="idvVardasPav" name="idvVardasPav" class="data-newForm__content__input--body--text">
                         <% allDv.forEach(function(dv){ %>
-                            <option value="<%= dv.dvVadasPav %>" class="data-newForm__content__input--body--text">
-                                <%= dv.dvVadasPav %>
-                            </option>
-                            <% }); %>
+                            <% console.log("jau ateina i new forma"+ dv) %>
+                                <% if(dv.dvVardasPav !== undefined){ %>
+                                    <option value="<%= dv.dvVardasPav %>" class="data-newForm__content__input--body--text">
+                                        <%= dv.dvVardasPav %>
+                                    </option>
+                                    <% }; %>
+                                        <% }); %>
                     </select>
                     <span class="data-newForm__content__input--body--span">pasirinkite darbų vadovą</span>
                 </div>

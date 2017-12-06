@@ -21,14 +21,14 @@
 
             <!-- Select Basic -->
             <div class="data-editForm__content__input">
-                <label class="data-editForm__content__input--label" for="dvVadasPav">Darbų vadovas</label>
+                <label class="data-editForm__content__input--label" for="idvVardasPav">Darbų vadovas</label>
                 <div class="data-editForm__content__input--body">
-                    <select id="dvVadasPav" name="obj[dvVadasPav]" class="data-editForm__content__input--body--text">
-                        <option value="<%= obj.dvVadasPav %>">
+                    <select id="idvVardasPav" name="obj[idvVardasPav]" class="data-editForm__content__input--body--text">
+                        <option value="<%= obj.idvVardasPav %>">
                         </option>
                         <% allDv.forEach(function(dv){ %>
-                            <option value="<%= dv.dvVadasPav %>">
-                                <%= dv.dvVadasPav %>
+                            <option value="<%= dv.dvVardasPav %>">
+                                <%= dv.dvVardasPav %>
                             </option>
                             <% }); %>
                     </select>

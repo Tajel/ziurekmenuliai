@@ -14,8 +14,8 @@ router.get("/", middleware.isLoggedIn, function (req, res) {
             console.log(err);
         } else {
             alldv.sort(function (a, b) {
-                var textA = a.dvVadasPav.toUpperCase();
-                var textB = b.dvVadasPav.toUpperCase();
+                var textA = a.dvVardasPav.toUpperCase();
+                var textB = b.dvVardasPav.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
             });
             // console.log(alldv);

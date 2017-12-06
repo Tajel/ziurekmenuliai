@@ -5,8 +5,7 @@ var dvSchema = new mongoose.Schema({
   padkodas: String,
   ipadkodas: String,
   dvkodas: String,
-  dvVadasPav: String,
-  idvVadasPav: String,
+  dvVardasPav: String,
   author: {
     id: {
       type: mongoose.Schema.Types.ObjectId,

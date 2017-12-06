@@ -2,7 +2,7 @@
 
     <form action="/dv/<%= dv._id %>?_method=PUT" method="POST" class="data-editForm">
         <legend class="data-editForm__legend">Redaguoti Darbų Vadovo duomenis:
-            <%= dv.dvVadasPav %>
+            <%= dv.dvVardasPav %>
         </legend>
         <a href="/dv" class="data-editForm__link">
             <svg class="data-editForm__link__icon">
@@ -22,10 +22,10 @@
 
             <!-- Text input-->
             <div class="data-editForm__content__input">
-                <label class="data-editForm__content__input--label" for="dv[dvVadasPav]">DV vardas pavardė</label>
+                <label class="data-editForm__content__input--label" for="dv[dvVardasPav]">DV vardas pavardė</label>
                 <div class="data-editForm__content__input--body">
-                    <input id="dv[dvVadasPav]" name="dv[dvVadasPav]" type="text" placeholder="Darbu vadovo vardas pavardė" class="data-editForm__content__input--body--text"
-                        required="" value="<%= dv.dvVadasPav %>">
+                    <input id="dv[dvVardasPav]" name="dv[dvVardasPav]" type="text" placeholder="Darbu vadovo vardas pavardė" class="data-editForm__content__input--body--text"
+                        required="" value="<%= dv.dvVardasPav %>">
                     <span class="data-editForm__content__input--body--span">Įrašykite darbų vadovo vardą ir pavardę</span>
                 </div>
             </div>
