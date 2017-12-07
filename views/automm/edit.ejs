@@ -1,57 +1,49 @@
 <% include ../partials/header %>
-    <div class="container">
-        <header class="jumbotron">
-            <h1 style="text-align: center">Redaguoti
-                <%= automm.vairVardPav %>
-                    <%= automm.ikurrusis %>
-                        <%= automm.ipadkodas %>
-            </h1>
-        </header>
-    </div>
-    <div class="container">
-        <div style="width: 40%; margin: 35px auto;">
-            <form action="/automm/<%= automm._id %>?_method=PUT" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="automm[doc]" value="automm" hidden>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="automm[idvVardasPav]" class="custom-select">
+    <form action="/automm/<%= automm._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti
+            <%= automm.marke %>
+                <%= automm.modelis %>
+                    <%= automm.valstnr %>
+        </legend>
+        <a href="/automm" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į tr. priemonių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-editForm__content">
+            <!-- Text input-->
+            <div class="data-editForm__content__input--hidden">
+                <input class="data-editForm__content__input--body--text" type="text" name="automm[doc]" value="automm">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="automm[idvVardasPav]">Atsakingas asmuo</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="automm[idvVardasPav]" class="data-editForm__content__input--body--text">
                         <option selected>
-                            <%=automm.idvVardasPav%>
+                            <%= automm.idvVardasPav %>
                         </option>
                         <% data.forEach(function(data){ %>
                             <% if(data.dvVardasPav !== undefined){ %>
-                                <% console.log('Atsakingas: '+data.dvVardasPav) %>
-                                    <option>
-                                        <%= data.dvVardasPav %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
+                                <option>
+                                    <%= data.dvVardasPav %>
+                                </option>
+                                <!-- ########## reikia sukurti vairuotojus *********** -->
+                                <% } %>
+                                    <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="automm[vairVardPav]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="automm[ikurrusis]">Kuro rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="automm[ikurrusis]" class="data-editForm__content__input--body--text">
                         <option selected>
-                            <%=automm.vairVardPav%>
-                        </option>
-                        <% data.forEach(function(data){ %>
-                            <% if(data.vairVardPav !== undefined){ %>
-                                <% console.log('Atsakingas: '+data.vairVardPav) %>
-                                    <option>
-                                        <%= data.vairVardPav %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="automm[ikurrusis]" class="custom-select">
-                        <option selected>
-                            <%=automm.ikurrusis%>
+                            <%= automm.ikurrusis %>
                         </option>
                         <% data.forEach(function(data){ %>
                             <% if(data.kurrusis !== undefined){ %>
-                                <% console.log('Kuro rusis: '+data.kurrusis) %>
+                                <% console.log(data.kurrusis) %>
                                     <option>
                                         <%= data.kurrusis %>
                                     </option>
@@ -59,44 +51,49 @@
                                         <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="automm[ipadkodas]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="automm[ipadkodas]">Padalinys</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="automm[ipadkodas]" class="data-editForm__content__input--body--text">
                         <option selected>
-                            <%=automm.ipadkodas%>
+                            <%= automm.ipadkodas %>
                         </option>
                         <% data.forEach(function(data){ %>
                             <% if(data.padkodas !== undefined){ %>
-                                <% console.log('Padalinio Kodas: '+data.padkodas) %>
-                                    <option>
-                                        <%= data.padkodas %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
+                                <option>
+                                    <%= data.padkodas %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="automm[itrrus]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="automm[itrrus]">Transporto pr. rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="automm[itrrus]" class="data-editForm__content__input--body--text">
                         <option selected>
-                            <%=automm.itrrus%>
+                            <%= automm.itrrus %>
                         </option>
                         <% data.forEach(function(data){ %>
                             <% if(data.trrus !== undefined){ %>
-                                <% console.log('Transporto rusis: '+data.trrus) %>
-                                    <option>
-                                        <%= data.trrus %>
-                                    </option>
-                                    <% } %>
-                                        <% }); %>
+                                <option>
+                                    <%= data.trrus %>
+                                </option>
+                                <% } %>
+                                    <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                </div>
-            </form>
-            <a href="/automm">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+            </div>
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
+            </div>
         </div>
-    </div>
-
+    </form>
     <% include ../partials/footer %>
