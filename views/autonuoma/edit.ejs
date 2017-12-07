@@ -1,69 +1,109 @@
 <% include ../partials/header %>
-    <div class="container">
-        <header class="jumbotron">
-            <h1 style="text-align: center">Redaguoti
-                <%= autonuoma.autolen %>
-                    <%= autonuoma.modelis %>
-                        <%= autonuoma.valstnr %>
-            </h1>
-        </header>
-    </div>
-    <div class="container">
-        <div style="width: 40%; margin: 35px auto;">
-            <form action="/autonuoma/<%= autonuoma._id %>?_method=PUT" method="POST">
-                <div class="form-group" hidden>
-                    <input class="form-control" type="text" name="autonuoma[doc]" value="autonuoma">
+    <form action="/autonuoma/<%= autonuoma._id %>?_method=PUT" method="POST" class="data-editForm">
+        <legend class="data-editForm__legend">Redaguoti
+            <%= autonuoma.marke %>
+                <%= autonuoma.modelis %>
+                    <%= autonuoma.valstnr %>
+        </legend>
+        <a href="/autonuoma" class="data-editForm__link">
+            <svg class="data-editForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg> Atgal į tr. priemonių sąrašą</a>
+        </a>
+        <!-- Form Name -->
+        <div class="data-editForm__content">
+            <!-- Text input-->
+            <div class="data-editForm__content__input--hidden">
+                <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[doc]" value="autonuoma">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[marke]">Markė</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[marke]" placeholder="markė" value="<%= autonuoma.marke %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[marke]" placeholder="markė" value="<%= autonuoma.marke %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[modelis]">Modelis</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[modelis]" placeholder="modelis" value="<%= autonuoma.modelis %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[imone]" placeholder="imone" value="<%= autonuoma.imone %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[valstnr]">Valstybinis numeris</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[valstnr]" placeholder="valstybinis numeris"
+                        value="<%= autonuoma.valstnr %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[modelis]" placeholder="modelis" value="<%= autonuoma.modelis %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[id]">ID</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[id]" placeholder="id" value="<%= autonuoma.id %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[valstnr]" placeholder="valstybinis numeris" value="<%= autonuoma.valstnr %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[inventnr]">Inventorinis numeris</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[inventnr]" placeholder="inventorinis numeris"
+                        value="<%= autonuoma.inventnr %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[id]" placeholder="id" value="<%= autonuoma.id %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[gammetai]">Pagaminimo metai</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[gammetai]" placeholder="gamybos metai"
+                        value="<%= autonuoma.gammetai %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[inventnr]" placeholder="inventorinis numeris" value="<%= autonuoma.inventnr %>">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[gammetai]" placeholder="gamybos metai" value="<%= autonuoma.gammetai %>">
-                </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[atsaking]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[atsaking]">Atsakingas asmuo</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autonuoma[atsaking]" class="data-editForm__content__input--body--text">
                         <option selected>
                             <%= autonuoma.atsaking %>
                         </option>
                         <% data.forEach(function(data){ %>
-                            <% if(data.vairVardPav !== undefined){ %>
+                            <% if(data.dvVardasPav !== undefined){ %>
                                 <option>
-                                    <%= data.vairVardPav %>
+                                    <%= data.dvVardasPav %>
                                 </option>
                                 <!-- ########## reikia sukurti vairuotojus *********** -->
                                 <% } %>
                                     <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[baze]" placeholder="bazė" value="<%= autonuoma.baze %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[baze]">Bazė</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[baze]" placeholder="bazė" value="<%= autonuoma.baze %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[drcivil]" placeholder="draudimas civilinis" value="<%= autonuoma.drcivil %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[drcivil]">TPVCAP</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[drcivil]" placeholder="draudimas civilinis"
+                        value="<%= autonuoma.drcivil %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[drkasko]" placeholder="draudimas kasko" value="<%= autonuoma.drkasko %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[drkasko]">Kasko</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[drkasko]" placeholder="draudimas kasko"
+                        value="<%= autonuoma.drkasko %>">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="autonuoma[euro]" placeholder="euro taršos lygis" value="<%= autonuoma.euro %>">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[euro]">Euro taršos lygis</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[euro]" placeholder="euro taršos lygis"
+                        value="<%= autonuoma.euro %>">
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[ikurrusis]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[ikurrusis]">Kuro rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autonuoma[ikurrusis]" class="data-editForm__content__input--body--text">
                         <option selected>
                             <%= autonuoma.ikurrusis %>
                         </option>
@@ -77,8 +117,11 @@
                                         <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[ipadkodas]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[ipadkodas]">Padalinys</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autonuoma[ipadkodas]" class="data-editForm__content__input--body--text">
                         <option selected>
                             <%= autonuoma.ipadkodas %>
                         </option>
@@ -91,8 +134,11 @@
                                     <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[ipagvair]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[ipagvair]">Paskirtas vairuotojas</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autonuoma[ipagvair]" class="data-editForm__content__input--body--text">
                         <option selected>
                             <%= autonuoma.ipagvair %>
                         </option>
@@ -105,8 +151,11 @@
                                     <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[itrrus]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[itrrus]">Transporto pr. rūšis</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autonuoma[itrrus]" class="data-editForm__content__input--body--text">
                         <option selected>
                             <%= autonuoma.itrrus %>
                         </option>
@@ -119,8 +168,11 @@
                                     <% }); %>
                     </select>
                 </div>
-                <div class="form-group">
-                    <select style="width: 100%; height: 34px" name="autonuoma[itrtipas]" class="custom-select">
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[itrtipas]">Transporto priemonės tipas</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="autonuoma[itrtipas]" class="data-editForm__content__input--body--text">
                         <option selected>
                             <%= autonuoma.itrtipas %>
                         </option>
@@ -133,15 +185,22 @@
                                     <% }); %>
                     </select>
                 </div>
-                <!--<div class="form-group">-->
-                <!--    <input class="form-control" type="text" name="autonuoma[vinjet]" placeholder="Kelių mokesčiai" value="<%= autonuoma.vinjet %>">-->
-                <!--</div>-->
-                <!--<div>-->
-                <button class="btn btn-lg btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
+            </div>
+            <div class="data-editForm__content__input">
+                <label class="data-newForm__content__input--label" for="autonuoma[vinjet]">Kelių mokestis</label>
+                <div class="data-newForm__content__input--body">
+                    <input class="data-editForm__content__input--body--text" type="text" name="autonuoma[vinjet]" placeholder="Kelių mokesčiai"
+                        value="<%= autonuoma.vinjet %>">
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Redaguoti
+                </button>
+            </div>
         </div>
-        </form>
-        <a href="/autonuoma"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
-    </div>
-    </div>
-
+    </form>
     <% include ../partials/footer %>
