@@ -393,6 +393,7 @@ select:-webkit-autofill:focus {
     padding: 0.2rem;
     margin: 2rem;
     display: flex;
+    align-self: flex-start;
     flex-basis: 25%;
     flex-direction: column;
     background-color: var(--f9-color);

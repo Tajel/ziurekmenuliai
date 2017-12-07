@@ -77,10 +77,10 @@
                 <div class="data-newForm__content__input--body">
                     <select id="autokr[atsaking]" name="autokr[atsaking]" class="data-newForm__content__input--body--text">
                         <% data.forEach(function(data){ %>
-                            <% if(data.vairVardPav !== undefined){ %>
-                                <% console.log('Atsakingas: '+data.vairVardPav) %>
-                                    <option value="<%= data.vairVardPav %>">
-                                        <%= data.vairVardPav %>
+                            <% if(data.dvVardasPav !== undefined){ %>
+                                <% console.log('Atsakingas: '+data.dvVardasPav) %>
+                                    <option value="<%= data.dvVardasPav %>">
+                                        <%= data.dvVardasPav %>
                                     </option>
                                     <% } %>
                                         <% }); %>
