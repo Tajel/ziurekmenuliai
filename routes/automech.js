@@ -173,17 +173,21 @@ router.get("/:id/krovkellap", function(req, res) {
 // SHOW - shows detailed info about Automech
 router.get("/:id", function(req, res) {
   //find the Automech with provided ID
-  Automech.findById(req.params.id).exec(function(err, foundtransport) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(foundtransport);
-      //render show template with that Automech
-      res.render("automech/show", {
-        automech: foundtransport
-      });
-    }
-  });
+  Automech.findById(req.params.id)
+    .populate("ikainis")
+    .exec(function(err, foundtransport) {
+      if (err || !foundtransport) {
+        console.log(err);
+        req.flash("error", "tokio iraso nera!");
+        res.redirect("/automech");
+      } else {
+        console.log(foundtransport);
+        //render show template with that Autokrov
+        res.render("automech/show", {
+          automech: foundtransport
+        });
+      }
+    });
 });
 
 // EDIT Automech ROUTE
@@ -238,7 +242,10 @@ router.get("/:id/edit", middleware.checkOwnership, function(req, res) {
 });
 
 // UPDATE Automech ROUTE
-router.put("/:id", middleware.checkOwnership, function(req, res) {
+router.put("/:id", middleware.isLoggedIn, middleware.checkOwnership, function(
+  req,
+  res
+) {
   // find and update the correct Aotokrov
   Automech.findByIdAndUpdate(req.params.id, req.body.automech, function(
     err,
