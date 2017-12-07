@@ -15,7 +15,8 @@ var autokrovRoutes = require("./routes/autokrov"),
   automechRoutes = require("./routes/automech"),
   autommRoutes = require("./routes/automm"),
   autonuomaRoutes = require("./routes/autonuoma"),
-  autoikRoutes = require("./routes/autoik"),
+  autokrovikRoutes = require("./routes/autokrovik"),
+  automechikRoutes = require("./routes/automechik"),
   vairRoutes = require("./routes/vair"),
   vairikRoutes = require("./routes/vairik"),
   dvRoutes = require("./routes/dv"),
@@ -87,10 +88,11 @@ app.use("/darbrus", darbrusRoutes);
 app.use("/kuruzp", kuruzpRoutes);
 app.use("/imones", imonesRoutes);
 app.use("/autokrov", autokrovRoutes);
-app.use("/autokrov/:id/autoik", autoikRoutes);
+app.use("/autokrov/:id/autoik", autokrovikRoutes);
 app.use("/autokrov/:id/kellap", kellapRoutes);
 app.use("/autolen", autolenRoutes);
 app.use("/automech", automechRoutes);
+app.use("/automech/:id/autoik", automechikRoutes);
 app.use("/automm", autommRoutes);
 app.use("/autonuoma", autonuomaRoutes);
 app.use("/kellap", kellapRoutes);
