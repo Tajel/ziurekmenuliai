@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+    <div class="row">
+        <h1 style="text-align: center">Redaguoti ikaini</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/autokrov/<%= autoid %>/autoik/<%=ikainis._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <select style="width: 100%; height: 34px" name="autokrovik[idarbrus]" class="custom-select">
+                        <option selected>
+                            <%= ikainis.idarbrus %>
+                        </option>
+                        <% darbrus.forEach(function(data){ %>
+                            <% if(data.darbrus !== undefined){ %>
+                                <option value="<%= data.darbrus %>">
+                                    <%= data.darbrus %>
+                                        "
+                                        <%= data.vnt %>"
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select style="width: 100%; height: 34px" name="autokrovik[idarbvnt]" class="custom-select">
+                        <option selected>
+                            <%= ikainis.idarbvnt %>
+                        </option>
+                        <% darbrus.forEach(function(data){ %>
+                            <% if(data.darbrus !== undefined){ %>
+                                <option value="<%= data.vnt %>">
+                                    <%= data.vnt %>
+                                        "
+                                        <%= data.darbrus %>"
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="autokrovik[trikain]" placeholder="Ikainis" value="<%= ikainis.trikain %>">
+                </div>
+                <div class="form-group" hidden>
+                    <input class="form-control" type="text" name="autokrovik[autoid]" placeholder="Auto" readonly value="<%= ikainis.autoid %>"
+                        hidden>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
+                </div>
+            </form>
+            <a href="/autokrov/<%= autoid %>">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+        </div>
+    </div>
+    <% include ../partials/footer %>
