@@ -12,7 +12,7 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
   Auto.findById(req.params.id, function(err, auto) {
     if (err || !auto) {
       req.flash("error", "nerastas irasas");
-      res.redirect("/automech");
+      res.redirect("/autonuoma");
     } else {
       console.log("found auto");
     }
@@ -23,11 +23,11 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
       function(err, darbrus) {
         if (err || !darbrus) {
           req.flash("error", "nerastas irasas");
-          res.redirect("/automech");
+          res.redirect("/autonuoma");
         } else {
           console.log("found darbrus");
         }
-        res.render("automechik/new", {
+        res.render("autonuomaik/new", {
           auto: auto,
           darbrus: darbrus
         });
@@ -42,22 +42,22 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
   Auto.findById(req.params.id, function(err, auto) {
     if (err) {
       console.log(err);
-      res.redirect("/automech");
+      res.redirect("/autonuoma");
     } else {
-      Ikainis.create(req.body.automechik, function(err, automechik) {
+      Ikainis.create(req.body.autonuomaik, function(err, autonuomaik) {
         if (err) {
           console.log(err);
         } else {
           //add ikainis and id to auto
-          automechik.author.id = req.user._id;
-          automechik.author.username = req.user.username;
+          autonuomaik.author.id = req.user._id;
+          autonuomaik.author.username = req.user.username;
           //save ikainis
-          automechik.save();
-          auto.ikainis.push(automechik);
+          autonuomaik.save();
+          auto.ikainis.push(autonuomaik);
           auto.save();
-          console.log(automechik);
+          console.log(autonuomaik);
           req.flash("success", "Sukurtas naujas ikainis!");
-          res.redirect("/automech/" + auto._id);
+          res.redirect("/autonuoma/" + auto._id);
         }
       });
     }
@@ -78,7 +78,7 @@ router.get("/:ikainisId/edit", middleware.checkikainisOwnership, function(
     Ikainis.findById(req.params.ikainisId, function(err, ikainis) {
       if (err || !ikainis) {
         req.flash("error", "nerastas irasas");
-        res.redirect("/automech");
+        res.redirect("/autonuoma");
         console.log(err);
       } else {
         Data.find(
@@ -88,11 +88,11 @@ router.get("/:ikainisId/edit", middleware.checkikainisOwnership, function(
           function(err, darbrus) {
             if (err || !darbrus) {
               req.flash("error", "nerastas irasas");
-              res.redirect("/automech");
+              res.redirect("/autonuoma");
             } else {
               console.log("found darbrus");
             }
-            res.render("automechik/edit", {
+            res.render("autonuomaik/edit", {
               autoid: req.params.id,
               ikainis: ikainis,
               darbrus: darbrus
@@ -105,16 +105,17 @@ router.get("/:ikainisId/edit", middleware.checkikainisOwnership, function(
 });
 //  UPDATE Edited ikainis
 router.put("/:ikainisId", function(req, res) {
-  Ikainis.findByIdAndUpdate(req.params.ikainisId, req.body.automechik, function(
-    err,
-    ikainis
-  ) {
-    if (err) {
-      res.render("edit");
-    } else {
-      res.redirect("/automech/" + req.body.automechik.autoid);
+  Ikainis.findByIdAndUpdate(
+    req.params.ikainisId,
+    req.body.autonuomaik,
+    function(err, ikainis) {
+      if (err) {
+        res.render("edit");
+      } else {
+        res.redirect("/autonuoma/" + req.body.autonuomaik.autoid);
+      }
     }
-  });
+  );
 });
 //  DELETE Ikainis
 router.delete("/:ikainisId", middleware.isLoggedIn, function(req, res) {
@@ -122,7 +123,7 @@ router.delete("/:ikainisId", middleware.isLoggedIn, function(req, res) {
     if (err) {
       console.log("PROBLEM!");
     } else {
-      res.redirect("/automech/" + req.params.id);
+      res.redirect("/autonuoma/" + req.params.id);
     }
   });
 });

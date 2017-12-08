@@ -1,0 +1,92 @@
+<% include ../partials/header %>
+    <form action="/autonuoma/<%= auto._id %>/autoik" method="POST" class="form-horizontal">
+        <fieldset>
+            <a href="/autonuoma/<%= auto._id %>">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+            <!-- Form Name -->
+            <legend>Ivesti nauja ikaini
+                <%= auto.marke %>
+                    <%= auto.modelis %>
+                        <%= auto.valstnr %>
+            </legend>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="autonuomaik[doc]">autonuomaik</label>
+                <div class="col-md-4">
+                    <input id="autonuomaik[doc]" name="autonuomaik[doc]" type="text" placeholder="autonuomaik" class="form-control input-md"
+                        value="autonuomaik">
+
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autonuomaik[idarbrus]">Darbo rusis</label>
+                <div class="col-md-4">
+                    <select id="autonuomaik[idarbrus]" name="autonuomaik[idarbrus]" class="form-control">
+                        <% darbrus.forEach(function(data){ %>
+                            <% if(data.darbrus !== undefined){ %>
+                                <option value="<%= data.darbrus %>">
+                                    <%= data.darbrus %>
+                                        "
+                                        <%= data.vnt %>"
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
+                    <span class="help-block">Pasirinikite darbo rusi</span>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autonuomaik[idarbvnt]">Darbo vnt</label>
+                <div class="col-md-4">
+                    <select id="autonuomaik[idarbvnt]" name="autonuomaik[idarbvnt]" class="form-control">
+                        <% darbrus.forEach(function(data){ %>
+                            <% if(data.darbrus !== undefined){ %>
+                                <option value="<%= data.vnt %>">
+                                    <%= data.vnt %>
+                                        "
+                                        <%= data.darbrus %>"
+                                </option>
+                                <% } %>
+                                    <% }); %>
+                    </select>
+                    <span class="help-block">Pasirinikite darbo vnt.</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group" hidden>
+                <label class="col-md-4 control-label" for="autonuomaik[autoid]">Text Input</label>
+                <div class="col-md-4">
+                    <input id="autonuomaik[autoid]" name="autonuomaik[autoid]" type="text" value="<%= auto._id %>" class="form-control input-md">
+                    <span class="help-block">help</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autonuomaik[trikain]">Ikainis</label>
+                <div class="col-md-4">
+                    <input id="autonuomaik[trikain]" name="autonuomaik[trikain]" type="text" placeholder="Ikainis" class="form-control input-md">
+                    <span class="help-block">Irasykite ikaini</span>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">
+                    </i>Sukurti</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <% include ../partials/footer %>

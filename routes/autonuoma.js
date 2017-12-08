@@ -154,17 +154,21 @@ router.get("/:id/krovkellap", function(req, res) {
 //  SHOW - shows detailed info about Automech
 router.get("/:id", function(req, res) {
   //find the Automech with provided ID
-  Autonuoma.findById(req.params.id).exec(function(err, foundtransport) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(foundtransport);
-      //render show template with that Automech
-      res.render("autonuoma/show", {
-        autonuoma: foundtransport
-      });
-    }
-  });
+  Autonuoma.findById(req.params.id)
+    .populate("ikainis")
+    .exec(function(err, foundtransport) {
+      if (err || !foundtransport) {
+        console.log(err);
+        req.flash("error", "tokio iraso nera!");
+        res.redirect("/autonuoma");
+      } else {
+        console.log(foundtransport);
+        //render show template with that Autokrov
+        res.render("autonuoma/show", {
+          autonuoma: foundtransport
+        });
+      }
+    });
 });
 
 // EDIT Autonuoma ROUTE
