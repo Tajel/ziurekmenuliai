@@ -30,6 +30,7 @@ var autokrovRoutes = require("./routes/autokrov"),
   kuruzpRoutes = require("./routes/kuruzp"),
   imonesRoutes = require("./routes/imones"),
   kellapRoutes = require("./routes/kellap"),
+  kellapkrovregRoutes = require("./routes/kellapkrovreg"),
   kellapajamosRoutes = require("./routes/kellapajamos"),
   kellapkurasRoutes = require("./routes/kellapkuras"),
   kellapvairRoutes = require("./routes/kellapvair"),
@@ -98,6 +99,7 @@ app.use("/automm", autommRoutes);
 app.use("/autonuoma", autonuomaRoutes);
 app.use("/autonuoma/:id/autoik", autonuomaikRoutes);
 app.use("/kellap", kellapRoutes);
+app.use("/kellap/krovreg", kellapkrovregRoutes);
 app.use("/kellap/:id/paj", kellapajamosRoutes);
 app.use("/kellap/:id/kur", kellapkurasRoutes);
 app.use("/kellap/:id/vair", kellapvairRoutes);
