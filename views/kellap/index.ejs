@@ -1,14 +1,29 @@
 <% include ../partials/header %>
-
-
-    <h1> TRANSPORTO VALDYMO MODULIS </h1>
-    <h2>kelionės lapai</h2>
+    <legend class="data-editForm__legend">
+        KELIONĖS LAPAI
+    </legend>
+    <a href="/kellap/newkr" class="data-editForm__link">
+        <svg class="data-editForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+        </svg> Naujas krovininio automobilio kelionės lapas</a>
+    </a>
+    <a href="/kellap/newmech" class="data-editForm__link">
+        <svg class="data-editForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+        </svg> Naujas mechanizmo kelionės lapas</a>
+    </a>
+    <a href="/kellap/newlen" class="data-editForm__link">
+        <svg class="data-editForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+        </svg> Naujas lengvojo automobilio kelionės lapas</a>
+    </a>
+    <a href="/kellap/newmm" class="data-editForm__link">
+        <svg class="data-editForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+        </svg> Naujas MM kelionės lapas</a>
+    </a>
     <div>
-        <a class="btn btn-primary btn-large" href="/kellap/newkr">Naujas kr keliones lapas</a>
-        <a class="btn btn-primary btn-large" href="/kellap/newmech">Naujas mech keliones lapas</a>
-        <a class="btn btn-primary btn-large" href="/kellap/newlen">Naujas len keliones lapas</a>
-        <a class="btn btn-primary btn-large" href="/kellap/newmm">Naujas MM keliones lapas</a>
-        <!--<!--  <hr> -->-->
+        <!--<!--  <hr> -->
         <!--<a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>-->
         <!--<a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>-->
         <!--<a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>-->
@@ -16,139 +31,91 @@
         <!--<a class="btn btn-primary btn-large" href="/kellap/nuomkellap">nuomotu auto keliones lapai</a>-->
     </div>
 
-
-    </header>
-    <!--  <hr> -->
-
-    <form>
-        <table table class="table table-responsive">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th scope="col">Įrašykite datą</th>
-                    <th scope="col">Įrašykite Valst Nr</th>
-                    <th scope="col">Įrašykite Invent. Nr.</th>
-                    <th scope="col">Įrašykite bazę</th>
-                    <th scope="col">Įrašykite Tr rušį</th>
-                    <th scope="col">Įrašykite autorių</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <label class="custom-control custom-checkbox">
-                            <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction7()">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Data" title="Įrašykite datą">
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Valst Nr." title="Įrašykite Valst Nr">
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" id="myInput6" onkeyup="myFunction6()" placeholder="Invent. Nr." title="Įrašykite Invent. Nr.">
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Bazė" title="Įrašykite bazę">
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Tr rūšį" title="Įrašykite Tr rušį">
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" id="myInput5" onkeyup="myFunction5()" placeholder="Sukūrė" title="Įrašykite autorių">
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-
-    </form>
+    <div class="kellap-filter">
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox"></label>
+            <input name="chekckbox" id="myInput7" type="checkbox" class="kellap-filter__element__body" onclick="myFunction7()">
+        </div>
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox">Data</label>
+            <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Data" class="kellap-filter__element__body">
+        </div>
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox">Valst Nr.</label>
+            <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Valst Nr." class="kellap-filter__element__body">
+        </div>
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox">Invent. Nr.</label>
+            <input type="text" id="myInput6" onkeyup="myFunction6()" placeholder="Invent. Nr." class="kellap-filter__element__body">
+        </div>
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox">Bazė</label>
+            <input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Bazė" class="kellap-filter__element__body">
+        </div>
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox">Tr. rūšis</label>
+            <input type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Tr. rūšis" class="kellap-filter__element__body">
+        </div>
+        <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for="chekckbox">Autorius</label>
+            <input type="text" id="myInput5" onkeyup="myFunction5()" placeholder="Autorius" class="kellap-filter__element__body">
+        </div>
+    </div>
 
 
-    <table id="myTable" table class="table table-responsive">
-        <tr class="header">
-            <th>#</th>
-            <th style="text-align: center;">1</th>
-            <th style="text-align: center;">2</th>
-            <th style="text-align: center;">3</th>
-            <th style="text-align: center;">4</th>
-            <th style="text-align: center;">5</th>
-            <th style="text-align: center;">6</th>
-            <th style="text-align: center;">7</th>
-            <th style="text-align: center;">8</th>
-            <th style="text-align: center;">9</th>
-            <th style="text-align: center;">10</th>
-
-        </tr>
+    <div class="kellap-data">
+        <div class="kellap-data__header">
+            <span class="kellap-data__header--ellement--b">Data</span>
+            <span class="kellap-data__header--ellement">Markė</span>
+            <span class="kellap-data__header--ellement">Modelis</span>
+            <span class="kellap-data__header--ellement--b">Valst. Nr.</span>
+            <span class="kellap-data__header--ellement--b">Invent. Nr.</span>
+            <span class="kellap-data__header--ellement--a">Pag. Vair</span>
+            <span class="kellap-data__header--ellement--b">Bazė</span>
+            <span class="kellap-data__header--ellement--a">Transp. Rūšis</span>
+            <span class="kellap-data__header--ellement">Detali informacija</span>
+            <span class="kellap-data__header--ellement">Trinti</span>
+        </div>
         <% allkellap.forEach(function(kellap){ %>
-            <tr>
-                <td>
-                    <label class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" checked>
-                        <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description"></span>
-                    </label>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.data%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.marke%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.modelis%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.valstnr%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.inventnr%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.ipagvair%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.baze%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
-                    <strong>
-                        <%=kellap.itrrus%>
-                    </strong>
-                </td>
-                <td style="text-align: center;">
+            <div class="kellap-data__row">
+                <div class="kellap-data__row__element--b">
+                    <%=kellap.data%>
+                </div>
+                <div class="kellap-data__row__element">
+                    <%=kellap.marke%>
+                </div>
+                <div class="kellap-data__row__element">
+                    <%=kellap.modelis%>
+                </div>
+                <div class="kellap-data__row__element--b">
+                    <%=kellap.valstnr%>
+                </div>
+                <div class="kellap-data__row__element--b">
+                    <%=kellap.inventnr%>
+                </div>
+                <div class="kellap-data__row__element--a">
+                    <%=kellap.ipagvair%>
+                </div>
+                <div class="kellap-data__row__element--b">
+                    <%=kellap.baze%>
+                </div>
+                <div class="kellap-data__row__element--a">
+                    <%=kellap.itrrus%>
+                </div>
+                <div class="kellap-data__row__element">
+                    <a href="/kellap/<%= kellap._id %>/detail" class="kellap-data__row__element--detail">
+                        Detali informacija</a>
+                </div>
+                <div class="kellap-data__row__element">
                     <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                        <form id="delete-form" action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                            <button class="btn   btn-danger">
-                                <i class="fa fa-trash-o"></i> TRINTI</button>
+                        <form action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
+                            <button class="kellap-data__row__button--del">
+                                TRINTI</button>
                         </form>
                         <% }%>
-                </td style="text-align: center;">
-                <td style="text-align: center;">
-                    <a href="/kellap/<%= kellap._id %>/detail" class="btn   btn-primary">
-                        <i class="fa fa-info" aria-hidden="true"></i> Detali informacija</a>
-                </td>
-                <% }); %>
-            </tr>
-            </tr>
-    </table>
-
+                </div>
+            </div>
+            <% }); %>
+    </div>
     <script src='/scripts/kellapfilter.js'></script>
-
     <% include ../partials/footer %>

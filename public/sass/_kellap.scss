@@ -1,0 +1,102 @@
+.kellap-filter {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-around;
+  &__element {
+    margin: 1rem 0.1rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    &__label {
+      text-align: left;
+      padding: 0 2rem;
+      font-size: 1.7rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    &__body {
+      border: none;
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+      font-size: 1.7rem;
+      text-transform: capitalize;
+      background-color: var(--f2-color);
+      &:focus {
+        outline: none;
+        outline-offset: none;
+        background-color: var(--f2-color);
+        -webkit-input-placeholder {
+          border-color: var(--f1-color);
+          border: none;
+          font-weight: 400;
+        }
+      }
+      &:active {
+        outline: none;
+        border-color: var(--f1-color);
+        border: none;
+      }
+      &::placeholder {
+        text-align: left;
+        font-family: Quicksand;
+      }
+    }
+  }
+}
+.kellap-data {
+  display: flex;
+  flex-direction: column;
+  &__header {
+    justify-content: space-around;
+    display: flex;
+    &--ellement {
+      background-color: blueviolet;
+      width: 10%;
+      text-align: center;
+      margin: 0.5rem;
+      &--b {
+        background-color: blueviolet;
+        width: 5%;
+        text-align: center;
+        margin: 0.5rem;
+      }
+      &--a {
+        background-color: blueviolet;
+        width: 15%;
+        text-align: center;
+        margin: 0.5rem;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    &__element {
+      background-color: greenyellow;
+      width: 10%;
+      text-align: center;
+      margin: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      &--b {
+        background-color: greenyellow;
+        width: 5%;
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      &--a {
+        background-color: greenyellow;
+        width: 15%;
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

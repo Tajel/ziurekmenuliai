@@ -651,7 +651,6 @@ select:-webkit-autofill:focus {
       flex-wrap: wrap; }
   .data-editForm__link {
     display: flex;
-    width: 100%;
     align-items: center;
     font-size: 1.7rem;
     text-decoration: none;
@@ -902,3 +901,90 @@ select:-webkit-autofill:focus {
 
 .element.style {
   display: flex; }
+
+.kellap-filter {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-around; }
+  .kellap-filter__element {
+    margin: 1rem 0.1rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center; }
+    .kellap-filter__element__label {
+      text-align: left;
+      padding: 0 2rem;
+      font-size: 1.7rem;
+      font-weight: 400;
+      text-transform: uppercase; }
+    .kellap-filter__element__body {
+      border: none;
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+      font-size: 1.7rem;
+      text-transform: capitalize;
+      background-color: var(--f2-color); }
+      .kellap-filter__element__body:focus {
+        outline: none;
+        outline-offset: none;
+        background-color: var(--f2-color); }
+        .kellap-filter__element__body:focus -webkit-input-placeholder {
+          border-color: var(--f1-color);
+          border: none;
+          font-weight: 400; }
+      .kellap-filter__element__body:active {
+        outline: none;
+        border-color: var(--f1-color);
+        border: none; }
+      .kellap-filter__element__body::placeholder {
+        text-align: left;
+        font-family: Quicksand; }
+
+.kellap-data {
+  display: flex;
+  flex-direction: column; }
+  .kellap-data__header {
+    justify-content: space-around;
+    display: flex; }
+    .kellap-data__header--ellement {
+      background-color: blueviolet;
+      width: 10%;
+      text-align: center;
+      margin: 0.5rem; }
+      .kellap-data__header--ellement--b {
+        background-color: blueviolet;
+        width: 5%;
+        text-align: center;
+        margin: 0.5rem; }
+      .kellap-data__header--ellement--a {
+        background-color: blueviolet;
+        width: 15%;
+        text-align: center;
+        margin: 0.5rem; }
+  .kellap-data__row {
+    display: flex;
+    justify-content: space-around; }
+    .kellap-data__row__element {
+      background-color: greenyellow;
+      width: 10%;
+      text-align: center;
+      margin: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase; }
+      .kellap-data__row__element--b {
+        background-color: greenyellow;
+        width: 5%;
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase; }
+      .kellap-data__row__element--a {
+        background-color: greenyellow;
+        width: 15%;
+        text-align: center;
+        margin: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase; }
