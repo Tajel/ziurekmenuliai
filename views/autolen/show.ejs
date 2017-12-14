@@ -154,7 +154,7 @@
                                 <%= ikainis.trikain %>
                         </div>
                     </div>
-                    <div class="detailed-info__content__main__header--main">
+                    <div class="detailed-info__content__ikainis__buttons">
                         <% if(currentUser && ikainis.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                             <form style="display: inline" class="detailed-info__content__main__header__buttons--delete-form" action="/autolen/<%=autolen._id%>/autoik/<%=ikainis._id%>?_method=DELETE"
                                 method="POST">
