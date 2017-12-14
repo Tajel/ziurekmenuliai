@@ -5,15 +5,16 @@
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
-    margin-left: 1rem;
     flex-wrap: wrap;
     flex-basis: 75%;
     &--main {
+      margin-left: 1rem;
       letter-spacing: 0.4rem;
       font-size: 3.6rem;
       font-weight: 700;
     }
     &--second {
+      margin-left: 1rem;
       font-size: 1.7rem;
       font-weight: 400;
     }
@@ -27,7 +28,7 @@
       border-radius: 3px;
       text-transform: uppercase;
       text-align: center;
-      margin: 0.2rem 0.2rem;
+      margin: 0.2rem 1rem;
       display: flex;
       background-color: var(--f5-color);
       -webkit-transition-duration: 0.4s; /* Safari */

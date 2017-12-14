@@ -2,65 +2,65 @@
     <legend class="data-editForm__legend">
         KELIONĖS LAPAI
     </legend>
-    <a href="/kellap/newkr" class="data-editForm__link">
-        <svg class="data-editForm__link__icon">
-            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
-        </svg> Naujas krovininio automobilio kelionės lapas</a>
-    </a>
-    <a href="/kellap/newmech" class="data-editForm__link">
-        <svg class="data-editForm__link__icon">
-            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
-        </svg> Naujas mechanizmo kelionės lapas</a>
-    </a>
-    <a href="/kellap/newlen" class="data-editForm__link">
-        <svg class="data-editForm__link__icon">
-            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
-        </svg> Naujas lengvojo automobilio kelionės lapas</a>
-    </a>
-    <a href="/kellap/newmm" class="data-editForm__link">
-        <svg class="data-editForm__link__icon">
-            <use xlink:href="/img/sprite.svg#icon-new-message"></use>
-        </svg> Naujas MM kelionės lapas</a>
-    </a>
-    <div>
-        <!--<!--  <hr> -->
-        <!--<a class="btn btn-primary btn-large" href="/kellap/krkellap">Krovininiu transporto pr keliones lapai</a>-->
-        <!--<a class="btn btn-primary btn-large" href="/kellap/mechkellap">mechanizmu keliones lapai</a>-->
-        <!--<a class="btn btn-primary btn-large" href="/kellap/lenkellap">lengvuju auto keliones lapai</a>-->
-        <!--<a class="btn btn-primary btn-large" href="/kellap/mmkellap">mazoji tech, savaieigestr pr. keliones lapai</a>-->
-        <!--<a class="btn btn-primary btn-large" href="/kellap/nuomkellap">nuomotu auto keliones lapai</a>-->
-    </div>
-
+    <p class="data__page-header--new-item">
+        <a href="/kellap/newkr" class="data__page-header--link">
+            <svg class="data__page-header--icon">
+                <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+            </svg> Naujas krovininio automobilio kelionės lapas</a>
+        </a>
+    </p>
+    <p class="data__page-header--new-item">
+        <a href="/kellap/newmech" class="data__page-header--link">
+            <svg class="data__page-header--icon">
+                <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+            </svg> Naujas mechanizmo kelionės lapas</a>
+        </a>
+    </p>
+    <p class="data__page-header--new-item">
+        <a href="/kellap/newlen" class="data__page-header--link">
+            <svg class="data__page-header--icon">
+                <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+            </svg> Naujas lengvojo automobilio kelionės lapas</a>
+        </a>
+    </p>
+    <p class="data__page-header--new-item">
+        <a href="/kellap/newmm" class="data__page-header--link">
+            <svg class="data__page-header--icon">
+                <use xlink:href="/img/sprite.svg#icon-new-message"></use>
+            </svg> Naujas MM kelionės lapas</a>
+        </a>
+    </p>
     <div class="kellap-filter">
-        <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox"></label>
+        <!-- <div class="kellap-filter__element">
+            <label class="kellap-filter__element__label" for=""></label>
             <input name="chekckbox" id="myInput7" type="checkbox" class="kellap-filter__element__body" onclick="myFunction7()">
-        </div>
+        </div> -->
         <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox">Data</label>
+            <label class="kellap-filter__element__label" for="">Data</label>
             <input type="text" id="myInput1" onkeyup="myFunction1()" placeholder="Data" class="kellap-filter__element__body">
         </div>
         <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox">Valst Nr.</label>
+            <label class="kellap-filter__element__label" for="">Valst Nr.</label>
             <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Valst Nr." class="kellap-filter__element__body">
         </div>
         <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox">Invent. Nr.</label>
+            <label class="kellap-filter__element__label" for="">Invent. Nr.</label>
             <input type="text" id="myInput6" onkeyup="myFunction6()" placeholder="Invent. Nr." class="kellap-filter__element__body">
         </div>
         <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox">Bazė</label>
+            <label class="kellap-filter__element__label" for="">Bazė</label>
             <input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Bazė" class="kellap-filter__element__body">
         </div>
         <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox">Tr. rūšis</label>
+            <label class="kellap-filter__element__label" for="">Tr. rūšis</label>
             <input type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Tr. rūšis" class="kellap-filter__element__body">
         </div>
         <div class="kellap-filter__element">
-            <label class="kellap-filter__element__label" for="chekckbox">Autorius</label>
+            <label class="kellap-filter__element__label" for="">Autorius</label>
             <input type="text" id="myInput5" onkeyup="myFunction5()" placeholder="Autorius" class="kellap-filter__element__body">
         </div>
     </div>
+
 
 
     <div class="kellap-data">
@@ -77,7 +77,7 @@
             <span class="kellap-data__header--ellement">Trinti</span>
         </div>
         <% allkellap.forEach(function(kellap){ %>
-            <div class="kellap-data__row">
+            <div id="myData" class="kellap-data__row">
                 <div class="kellap-data__row__element--b">
                     <%=kellap.data%>
                 </div>
@@ -103,18 +103,18 @@
                     <%=kellap.itrrus%>
                 </div>
                 <div class="kellap-data__row__element">
-                    <a href="/kellap/<%= kellap._id %>/detail" class="kellap-data__row__element--detail">
-                        Detali informacija</a>
+                    <a href="/kellap/<%= kellap._id %>/detail" class="kellap-data__row__element--link">Detali informacija</a>
                 </div>
                 <div class="kellap-data__row__element">
                     <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                        <form action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST">
-                            <button class="kellap-data__row__button--del">
+                        <form action="/kellap/<%= kellap._id %>?_method=DELETE" method="POST" class="kellap-data__row__element--delform">
+                            <button class="kellap-data__row__element--delbtn">
                                 TRINTI</button>
                         </form>
                         <% }%>
                 </div>
             </div>
+            <hr>
             <% }); %>
     </div>
     <script src='/scripts/kellapfilter.js'></script>
