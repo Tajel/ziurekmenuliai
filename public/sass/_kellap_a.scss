@@ -1,0 +1,21 @@
+.kellap_new {
+  display: flex;
+  margin: 0.5rem 1rem;
+  width: 80%;
+
+  &__body {
+    // background-color: blueviolet;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &__data {
+    }
+  }
+  &__btn {
+    border: none;
+    margin: 0 1rem;
+    text-transform: uppercase;
+  }
+}

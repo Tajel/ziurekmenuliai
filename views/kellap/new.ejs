@@ -1,19 +1,25 @@
 <% include ../partials/header %>
+    <legend class="data-newForm__legend">Naujas krovininio automobilio kelionės lapas</legend>
+    <a href="/kellap" class="data-newForm__link">
+        <svg class="data-newForm__link__icon">
+            <use xlink:href="/img/sprite.svg#icon-back"></use>
+        </svg> Atgal į kelionės lapų registrą </a>
+    <!-- Form Name -->
     <% data.forEach(function(data1){ %>
-        <form action="/kellap" method="POST" onsubmit="button.disabled = true; return true;">
-            <input class="form-control" type="text" name="kellap[doc]" value="<%= data1.itrrus %>" hidden>
-            <input class="form-control" type="text" name="kellap[kellap]" value="kellapas" hidden>
-            <input class="form-control" type="text" name="kellap[autoObjectId]" value="<%= data1._id %>" hidden>
-            <input class="form-control" type="text" name="kellap[baze]" value="<%= data1.baze %>" hidden>
-            <input style="display:inline" type="text" name="kellap[marke]" value="<%= data1.marke %>" readonly>
-            <input style="display:inline" type="text" name="kellap[modelis]" value="<%= data1.modelis %>" readonly>
-            <input style="display:inline" type="text" name="kellap[valstnr]" value="<%= data1.valstnr %>" readonly>
-            <input style="display:inline" type="text" name="kellap[ipagvair]" value="<%= data1.ipagvair %>" readonly>
-            <input style="display:inline" type="text" name="kellap[inventnr]" value="<%= data1.inventnr %>" readonly>
-            <input style="display:inline" type="text" name="kellap[itrrus]" value="<%= data1.itrrus %>" readonly>
-            <input style="display:inline" type="text" name="kellap[ikurrusis]" value="<%= data1.ikurrusis %>" readonly>
-            <input style="display:inline" type="text" name="kellap[data]" placeholder="2017.01.01">
-            <input class="btn btn-sm btn-primary" name='button' type="submit" value="OK">
+        <form action="/kellap" method="POST" onsubmit="button.disabled = true; return true;" class="kellap_new">
+            <input type="text" name="kellap[doc]" value="<%= data1.itrrus %>" hidden class="kellap_new__body">
+            <input type="text" name="kellap[kellap]" value="kellapas" hidden class="kellap_new__body">
+            <input type="text" name="kellap[autoObjectId]" value="<%= data1._id %>" hidden class="kellap_new__body">
+            <input type="text" name="kellap[ikurrusis]" value="<%= data1.ikurrusis %>" hidden class="kellap_new__body element-d">
+            <input type="text" name="kellap[baze]" value="<%= data1.baze %>" hidden class="kellap_new__body">
+            <input type="text" name="kellap[marke]" value="<%= data1.marke %>" readonly class="kellap_new__body element-d">
+            <input type="text" name="kellap[modelis]" value="<%= data1.modelis %>" readonly class="kellap_new__body element-c">
+            <input type="text" name="kellap[valstnr]" value="<%= data1.valstnr %>" readonly class="kellap_new__body element-b">
+            <input type="text" name="kellap[inventnr]" value="<%= data1.inventnr %>" readonly class="kellap_new__body element-b">
+            <input type="text" name="kellap[ipagvair]" value="<%= data1.ipagvair %>" readonly class="kellap_new__body element-d">
+            <input type="text" name="kellap[itrrus]" value="<%= data1.itrrus %>" readonly class="kellap_new__body element-a">
+            <input type="text" name="kellap[data]" placeholder="2017.01.01" class="kellap_new__body__data element-c">
+            <input name='button' type="submit" value="Naujas lapas" class="kellap_new__btn element-d">
         </form>
         <% }); %>
             <% include ../partials/footer %>
