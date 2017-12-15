@@ -1060,14 +1060,16 @@ hr {
       .kellap-detail__content__pajamos__header {
         font-weight: 400;
         font-size: 2.2rem;
-        margin: 1rem 0;
-        background-color: var(--f2-color);
-        text-transform: uppercase; }
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        background-color: var(--f3-color);
+        text-transform: uppercase;
+        padding-left: 1rem; }
       .kellap-detail__content__pajamos--newItem {
         border-radius: 3px;
         text-transform: uppercase;
         text-align: center;
-        margin: 0.2rem 0;
+        margin: 1rem 0;
         display: flex;
         background-color: var(--f5-color);
         -webkit-transition-duration: 0.4s;
@@ -1089,10 +1091,92 @@ hr {
         display: flex;
         flex-direction: column; }
         .kellap-detail__content__pajamos__content__header {
+          background-color: var(--f2-color);
           display: flex;
-          flex-direction: row; }
+          flex-direction: row;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          font-weight: 700; }
+        .kellap-detail__content__pajamos__content__body {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 1.7rem; }
+          .kellap-detail__content__pajamos__content__body:hover {
+            background-color: var(--f3-color); }
+        .kellap-detail__content__pajamos__content__buttons {
+          border-radius: 1px;
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+          color: var(--f4-color); }
+          .kellap-detail__content__pajamos__content__buttons--edit {
+            align-items: center;
+            height: 100%;
+            text-decoration: none;
+            color: var(--f4-color);
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: center;
+            flex-basis: 50%;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s; }
+            .kellap-detail__content__pajamos__content__buttons--edit:hover {
+              background-color: var(--f5-color);
+              color: var(--d3-color);
+              text-decoration: none;
+              box-shadow: 0 5px 10px 0 rgba(34, 148, 229, 0.35), 0 4px 10px 0 rgba(34, 148, 229, 0.1); }
+            .kellap-detail__content__pajamos__content__buttons--edit:active {
+              transform: translateY(1px); }
+          .kellap-detail__content__pajamos__content__buttons--del {
+            display: flex;
+            justify-content: center;
+            flex-basis: 50%;
+            font-size: 1.7rem;
+            font-weight: 400;
+            color: var(--f4-color); }
+          .kellap-detail__content__pajamos__content__buttons--btn {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            border: none;
+            font-size: 1.7rem;
+            font-weight: 400;
+            color: var(--f4-color);
+            background-color: inherit;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s; }
+            .kellap-detail__content__pajamos__content__buttons--btn:hover {
+              background-color: var(--f5-color);
+              color: var(--d3-color);
+              box-shadow: 0 5px 10px 0 rgba(34, 148, 229, 0.35), 0 4px 10px 0 rgba(34, 148, 229, 0.1); }
+            .kellap-detail__content__pajamos__content__buttons--btn:active {
+              transform: translateY(1px); }
     .kellap-detail__content__kuras {
       display: flex;
       flex-direction: column;
       background-color: grey;
       padding: 1rem; }
+
+.element {
+  margin: 0.1rem 0.1rem;
+  justify-content: center; }
+
+.element-a {
+  width: 28%;
+  margin: 0.1rem 0.1rem; }
+
+.element-b {
+  width: 8%;
+  margin: 0.1rem 0.1rem; }
+
+.element-c {
+  width: 11%;
+  margin: 0.1rem 0.1rem; }
+
+.element-d {
+  width: 15%;
+  margin: 0.1rem 0.1rem; }
