@@ -30,7 +30,7 @@
             <div class="data-newForm__content__input">
                 <label class="data-newForm__content__input--label" for="idvVardasPav">Darbo rūšis, vnt, kaina</label>
                 <div class="data-newForm__content__input--body">
-                    <select id='ikainis' onchange="myFunction1()" name="kellap[iadarbrus]" class="data-newForm__content__input--body--text">
+                    <select id='ikainis' oninput="myFunction1()" onkeyup="myFunction1()" onchange="myFunction1()" name="kellap[iadarbrus]" class="data-newForm__content__input--body--text">
                         <% data.ikainis.forEach(function(data){ %>
                             <% if(data.idarbrus !== undefined){ %>
                                 <option class="data-newForm__content__input--body--text">
@@ -49,7 +49,8 @@
             <div class="data-newForm__content__input">
                 <label class="data-newForm__content__input--label" for="Kiekis">Kiekis</label>
                 <div class="data-newForm__content__input--body">
-                    <input id="kiekis" name="kellap[kiekis]" onkeyup="myFunction1()" type="text" placeholder="Kiekis" class="data-newForm__content__input--body--text">
+                    <input id="kiekis" name="kellap[kiekis]" oninput="myFunction1()" onkeyup="myFunction1()" onchange="myFunction1()" type="text" placeholder="Kiekis" class="data-newForm__content__input--body--text"
+                        required="">
                     <span class="data-newForm__content__input--body--span">įrašykite darbų kiekį</span>
                 </div>
             </div>
@@ -58,7 +59,8 @@
             <div class="data-newForm__content__input">
                 <label class="data-newForm__content__input--label" for="sumeur">Suma</label>
                 <div class="data-newForm__content__input--body">
-                    <input id="sumeur" name="kellap[sumeur]" type="text" placeholder="Suma" class="data-newForm__content__input--body--text sumeur">
+                    <input id="sumeur" name="kellap[sumeur]" type="text" placeholder="Suma" class="data-newForm__content__input--body--text sumeur"
+                        required="">
                     <span class="data-newForm__content__input--body--span">Suma, EUR </span>
                 </div>
             </div>

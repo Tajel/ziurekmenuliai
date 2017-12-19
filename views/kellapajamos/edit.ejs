@@ -1,81 +1,141 @@
 <% include ../partials/header %>
-    <div class="container-fluid">
-        <header class="jumbotron">
-            <h1 style="text-align: center">Redaguoti
-                <%= data.auto.marke %>
-                    <%= data.auto.modelis %>
-                        <%= data.auto.valstnr %>
-            </h1>
-            <div class="text-right">
-                <a class="btn btn-success" href='/autokrov/<%=data.auto.autoObjectId%>'>Automobilio duomenys</a>
+    <form action="/kellap/<%=kellapId%>/paj/<%=pajamosId%>?_method=PUT" method="POST">
+        <legend class="data-newForm__legend">Redaguoti pajamas
+            <%= data.auto.marke %>
+                <%= data.auto.modelis %>
+                    <%= data.auto.valstnr %>
+        </legend>
+        <a href="/kellap/<%= data.auto._id %>/detail" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal</a>
+        <a href='/autokrov/<%=data.auto.autoObjectId%>' class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Automobilio duomenys</a>
+        <!-- Form Name -->
+
+        <div class="data-newForm__content">
+            <!-- Text input-->
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">kellapajamos</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="kellap[doc]" type="text" placeholder="kellapajamos" class="data-newForm__content__input--body--text"
+                        value="kellapajamos">
+                    <span class="data-newForm__content__input--body--span">kellapajamos</span>
+                </div>
             </div>
-        </header>
-    </div>
-    <div class="container-fluid">
-        <div class="col-12">
-            <form action="/kellap/<%=kellapId%>/paj/<%=pajamosId%>?_method=PUT" method="POST">
-                <div class="row">
-                    <div hidden>
-                        <input class="form-control" type="text" placeholder="doc" name="kellap[doc]" value='kellapajamos' hidden></input>
-                    </div>
-                    <div class="col">
-                        <select onchange="myFunction1()" class="custom-select" id='ikainis' name="kellap[iadarbrus]">
-                        <option selected ><%= data.kellapPajamos.iadarbrus%></option>
+
+            <!-- Select Basic -->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="idvVardasPav">Darbo rūšis, vnt, kaina</label>
+                <div class="data-newForm__content__input--body">
+                    <select id='ikainis' oninput="myFunction1()" onkeyup="myFunction1()" onchange="myFunction1()" name="kellap[iadarbrus]" class="data-newForm__content__input--body--text">
+                        <option selected>
+                            <%= data.kellapPajamos.iadarbrus%>
+                        </option>
                         <% data.ikainis.forEach(function(data){ %>
-                          <% if(data.idarbrus !== undefined){ %>
-                        <option><%= data.idarbrus %>, <%= data.idarbvnt %>, <%= data.trikain %></option>
-                        <% } %>
-                        <% }); %>
-                      </select>
-                    </div>
-                    <div class="col">
-                        <input class="form-control" type="text" placeholder="Kiekis" id='kiekis' onkeyup="myFunction1()" name="kellap[kiekis]" value='<%= data.kellapPajamos.kiekis%>'>
-                    </div>
-                    <div class="col">
-                        <input id='sumeur' class="form-control" type='text' name="kellap[sumeur]" readonly value='<%= data.kellapPajamos.sumeur%>'></input>
-                    </div>
-                    <!--*****************************************************-->
-                    <div class="col">
-                        <select class="custom-select" name="kellap[iobjkodas]">
-                        <option selected><%= data.kellapPajamos.iobjkodas%></option>
+                            <% if(data.idarbrus !== undefined){ %>
+                                <option class="data-newForm__content__input--body--text">
+                                    <%= data.idarbrus %>,
+                                        <%= data.idarbvnt %>,
+                                            <%= data.trikain %>
+                                </option>
+                                <% }; %>
+                                    <% }); %>
+                    </select>
+                    <span class="data-newForm__content__input--body--span">Pasirinkite rūšį, vnt, kainą</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="Kiekis">Kiekis</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="kiekis" name="kellap[kiekis]" oninput="myFunction1()" onchange="myFunction1()" onkeyup="myFunction1()" type="text" placeholder="Kiekis" value='<%=data.kellapPajamos.kiekis%>'
+                        class="data-newForm__content__input--body--text" required="">
+                    <span class="data-newForm__content__input--body--span">įrašykite darbų kiekį</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="sumeur">Suma</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="sumeur" name="kellap[sumeur]" type="text" placeholder="Suma" value='<%= data.kellapPajamos.sumeur%>' class="data-newForm__content__input--body--text sumeur"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">Suma, EUR </span>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[iobjkodas]">Objektas, Pagr. Darbų Vadovas</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="kellap[iobjkodas]" class="data-newForm__content__input--body--text">
+                        <option selected>
+                            <%= data.kellapPajamos.iobjkodas%>
+                        </option>
                         <% data.objektas.forEach(function(data){ %>
                             <% if(data.objkodas !== undefined){ %>
-                            <option>
-                              <%= data.objkodas %>, <%= data.dvVardasPav%></option>
-                          <% } %>
-                        <% }); %>
-                      </select>
-                    </div>
-
-                    <div class="col">
-                        <select id='dv1' class="custom-select" name="kellap[idvVardasPav]">
-                        <option id ='dv' selected ><%= data.kellapPajamos.idvVardasPav%></option>
-                        <% data.dv.forEach(function(data){ %>
-                          <% if(data.dvVardasPav !== undefined){ %>
-                          <option><%=data.dvVardasPav%></option>
-                          <% } %>
-                        <% }); %>
-                      </select>
-                    </div>
-                    <!--*****************************************************-->
-                    <div class="col">
-                        <select class="custom-select" name="kellap[imonkodas]">
-                        <option  selected><%= data.kellapPajamos.imonkodas%></option>
-                        <% data.imone.forEach(function(data){ %>
-                          <% if(data.imonessutrumpkodas !== undefined){ %>
-                          <option><%= data.imonessutrumpkodas %></option>
-                          <% } %>
-                        <% }); %>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                    </div>
+                                <option class="data-newForm__content__input--body--text" value="<%=data.objkodas%>">
+                                    <%=data.objkodas%>,
+                                        <%=data.idvVardasPav%>
+                                </option>
+                                <% }; %>
+                                    <% }); %>
+                    </select>
+                    <span class="data-newForm__content__input--body--span">Pasirinkite Objektą, pagr. Darbų Vadovą</span>
                 </div>
-            </form>
-            <a href="/kellap/<%= kellapId %>/detail"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
-        </div>
-    </div>
+            </div>
+            <!-- Select Basic -->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[idvVardasPav]">Pasirašė dokumentą</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="kellap[idvVardasPav]" class="data-newForm__content__input--body--text">
+                        <option id='dv' selected>
+                            <%= data.kellapPajamos.idvVardasPav%>
+                        </option>
+                        </option>
+                        <% data.dv.forEach(function(data){ %>
+                            <% if(data.dvVardasPav !== undefined){ %>
+                                <option class="data-newForm__content__input--body--text">
+                                    <%=data.dvVardasPav%>
+                                </option>
+                                <% }; %>
+                                    <% }); %>
+                    </select>
+                    <span class="data-newForm__content__input--body--span">Jeigu ne pagr. DV, Pasirinkite Darbų Vadovą kuris pasirašė ant dokumento</span>
+                </div>
+            </div>
+            <!-- Select Basic -->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[imonkodas]">Įmonė</label>
+                <div class="data-newForm__content__input--body">
+                    <select name="kellap[imonkodas]" class="data-newForm__content__input--body--text">
+                        <% data.imone.forEach(function(data){ %>
+                            <% if(data.imonessutrumpkodas !== undefined){ %>
+                                <option class="data-newForm__content__input--body--text">
+                                    <%= data.imonessutrumpkodas %>
+                                </option>
+                                <% }; %>
+                                    <% }); %>
+                    </select>
+                    <span class="data-newForm__content__input--body--span">Pasirinkite Įmonę</span>
+                </div>
+            </div>
 
+
+
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
+            </div>
+        </div>
+    </form>
     <script src='/scripts/ikainisfilter.js'></script>
     <% include ../partials/footer %>

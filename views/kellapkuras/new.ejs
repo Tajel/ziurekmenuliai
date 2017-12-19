@@ -1,51 +1,87 @@
 <% include ../partials/header %>
-    <div class="container-fluid">
-        <header class="jumbotron">
-            <h1 style="text-align: center">Suvesti Kura
+    <form action="/kellap/<%= data._id %>/kur" method="POST">
+        <legend class="data-newForm__legend">Suvesti Kura
                 <%= data.marke %>
                     <%= data.modelis %>
                         <%= data.valstnr %>
-            </h1>
-            <div class="text-right">
-                <a class="btn btn-success" href='/autokrov/<%=data.autoObjectId%>'>Automobilio duomenys</a>
-            </div>
-        </header>
-    </div>
-    <div class="container-fluid">
-        <div class="col-12">
-            <form action="/kellap/<%= data._id %>/kur" method="POST">
-                <div class="row">
-                    <div hidden>
-                        <input class="form-control" type="text" placeholder="doc" name="kellap[doc]" value='kellkuras' hidden></input>
-                    </div>
-                    <div>
-                        <input class="form-control" type="text" placeholder="Kuro rusis" name="kellap[ikurorusis]" value='<%=data.ikurrusis%>'></input>
-                    </div>
-                    <div class="col">
-                        <select class="custom-select" name="kellap[ikurouzpkodas]">
-            <option selected >Kuro korteles kodas</option>
-            <% kuras.forEach(function(data){ %>
-              <% if(data.kurouzpkodas !== undefined){ %>
-            <option><%=data.kurouzpkodas%></option>
-            <% } %>
-            <% }); %>
-          </select>
-                    </div>
-                    <div class="col">
-                        <input class="form-control" type="text" placeholder="Kiekis" name="kellap[kiekiskur]">
-                    </div>
-                    <div class="col">
-                        <input class="form-control" type="date" placeholder="Data" name="kellap[datekur]">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Sukurti</button>
-                    </div>
+        </legend>
+        <a href="/kellap/<%= data._id %>/detail" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal</a>
+        <a href='/autokrov/<%=data.autoObjectId%>' class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Automobilio duomenys</a>
+        <!-- Form Name -->
+
+        <div class="data-newForm__content">
+            <!-- Text input-->
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">kellapajamos</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="kellap[doc]" value='kellkuras' type="text" placeholder="doc" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">kellapajamos</span>
                 </div>
-            </form>
-            <a href="/kellap/<%= data._id %>/detail"><i class="fa fa-arrow-left" aria-hidden="true"></i> Atgal</a>
+            </div>
+
+             <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="Kiekis">Kuro kiekis</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[ikurorusis]" type="text" placeholder="Kuro rūšis" class="data-newForm__content__input--body--text"
+                        required="" value='<%=data.ikurrusis%>'>
+                    <span class="data-newForm__content__input--body--span">įrašykite kuro kiekį</span>
+                </div>
+            </div>
+            <!-- Select Basic -->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="idvVardasPav">Kuro kortelės kodas</label>
+                <div class="data-newForm__content__input--body">
+                    <select id='ikainis' oninput="myFunction1()" onkeyup="myFunction1()" onchange="myFunction1()" name="kellap[ikurouzpkodas]" class="data-newForm__content__input--body--text">
+                        <% kuras.forEach(function(data){ %>
+                        <% if(data.kurouzpkodas !== undefined){ %>
+                                <option class="data-newForm__content__input--body--text">
+                                    <%=data.kurouzpkodas%>
+                                </option>
+                                <% }; %>
+                                    <% }); %>
+                    </select>
+                    <span class="data-newForm__content__input--body--span">Pasirinkite kuro kortelę</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="Kiekis">Kuro kiekis</label>
+                <div class="data-newForm__content__input--body">
+                    <input  name="kellap[kiekiskur]" placeholder="Kiekis" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">įrašykite kuro kiekį</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[datekur]">Pylimo data</label>
+                <div class="data-newForm__content__input--body">
+                    <input input type="text" id="datepicker" name="kellap[datekur]" class="data-newForm__content__input--body--text"
+                        required>
+                    <span class="data-newForm__content__input--body--span">Pylimo data</span>
+                </div>
+            </div>
+
+
+
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
+            </div>
         </div>
-    </div>
-
-    <!--<script src='/scripts/ikainisfilter.js'></script>-->
-
+    </form>
+    <script src='/scripts/date.js'></script>
     <% include ../partials/footer %>

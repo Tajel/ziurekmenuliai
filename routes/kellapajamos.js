@@ -172,8 +172,14 @@ router.get("/:pajamosId/edit", middleware.isLoggedIn, function(req, res) {
             Ikainis.find({
               $and: [
                 {
-                  doc: "autoik"
+                  doc: "autokrovik"
                 },
+                // {
+                //   doc: "automechik"
+                // },
+                // {
+                //   doc: "autonuomaik"
+                // },
                 {
                   autoid: auto.autoObjectId
                 }
