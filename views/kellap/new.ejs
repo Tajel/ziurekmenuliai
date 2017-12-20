@@ -18,8 +18,9 @@
             <input type="text" name="kellap[inventnr]" value="<%= data1.inventnr %>" readonly class="kellap_new__body element-b">
             <input type="text" name="kellap[ipagvair]" value="<%= data1.ipagvair %>" readonly class="kellap_new__body element-d">
             <input type="text" name="kellap[itrrus]" value="<%= data1.itrrus %>" readonly class="kellap_new__body element-a">
-            <input type="text" name="kellap[data]" placeholder="2017.01.01" class="kellap_new__body__data element-c">
+            <input type="date" name="kellap[data]" id="datepicker" class="kellap_new__body__data element-d">
             <input name='button' type="submit" value="Naujas lapas" class="kellap_new__btn element-d">
         </form>
         <% }); %>
+
             <% include ../partials/footer %>

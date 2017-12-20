@@ -1,9 +1,9 @@
 <% include ../partials/header %>
     <form action="/kellap/<%= kellapId %>/kur/<%=kurasId%>?_method=PUT" method="POST">
         <legend class="data-newForm__legend">Redaguoti Kura
-                <%= data.marke %>
-                    <%= data.modelis %>
-                        <%= data.valstnr %>
+            <%= data.marke %>
+                <%= data.modelis %>
+                    <%= data.valstnr %>
         </legend>
         <a href="/kellap/<%= data._id %>/detail" class="data-newForm__link">
             <svg class="data-newForm__link__icon">
@@ -25,12 +25,12 @@
                 </div>
             </div>
 
-             <!-- Text input-->
+            <!-- Text input-->
             <div class="data-newForm__content__input">
                 <label class="data-newForm__content__input--label" for="kellap[ikurorusis]">Kuro kiekis</label>
                 <div class="data-newForm__content__input--body">
-                    <input name="kellap[ikurorusis]" type="text" placeholder="Kuro rūšis" class="data-newForm__content__input--body--text"
-                        required="" value='<%=data.ikurrusis%>'>
+                    <input name="kellap[ikurorusis]" type="text" placeholder="Kuro rūšis" class="data-newForm__content__input--body--text" required=""
+                        value='<%=data.ikurrusis%>'>
                     <span class="data-newForm__content__input--body--span">įrašykite kuro kiekį</span>
                 </div>
             </div>
@@ -39,9 +39,11 @@
                 <label class="data-newForm__content__input--label" for="kellap[ikurouzpkodas]">Kuro kortelės kodas</label>
                 <div class="data-newForm__content__input--body">
                     <select name="kellap[ikurouzpkodas]" class="data-newForm__content__input--body--text">
-                        <option selected ><%=kuras.ikurouzpkodas%></option>
-            <% kurosalt.forEach(function(data){ %>
-              <% if(data.kurouzpkodas !== undefined){ %>
+                        <option selected>
+                            <%=kuras.ikurouzpkodas%>
+                        </option>
+                        <% kurosalt.forEach(function(data){ %>
+                            <% if(data.kurouzpkodas !== undefined){ %>
                                 <option class="data-newForm__content__input--body--text">
                                     <%=data.kurouzpkodas%>
                                 </option>
@@ -56,8 +58,7 @@
             <div class="data-newForm__content__input">
                 <label class="data-newForm__content__input--label" for="Kiekis">Kuro kiekis</label>
                 <div class="data-newForm__content__input--body">
-                    <input  name="kellap[kiekiskur]" placeholder="Kiekis" class="data-newForm__content__input--body--text"
-                        required="" value='<%=kuras.kiekiskur%>'>
+                    <input name="kellap[kiekiskur]" placeholder="Kiekis" class="data-newForm__content__input--body--text" required="" value='<%=kuras.kiekiskur%>'>
                     <span class="data-newForm__content__input--body--span">įrašykite kuro kiekį</span>
                 </div>
             </div>
@@ -66,8 +67,7 @@
             <div class="data-newForm__content__input">
                 <label class="data-newForm__content__input--label" for="sumeur">Pylimo data</label>
                 <div class="data-newForm__content__input--body">
-                    <input id="dateofbirth" name="kellap[datekur]" type="date" class="data-newForm__content__input--body--text"
-                        required="" value='<%=kuras.datekur%>'>
+                    <input id="datepicker" name="kellap[datekur]" type="date" class="data-newForm__content__input--body--text" required="" value='<%=kuras.datekur%>'>
                     <span class="data-newForm__content__input--body--span">Pylimo data</span>
                 </div>
             </div>
