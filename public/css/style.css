@@ -1052,7 +1052,8 @@ hr {
   .kellap-detail__content {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0; }
+    margin: 1rem 0;
+    width: 85%; }
     .kellap-detail__content__pajamos {
       padding: 1rem;
       display: flex;
@@ -1098,6 +1099,15 @@ hr {
           text-transform: uppercase;
           font-size: 1.7rem;
           font-weight: 700; }
+        .kellap-detail__content__pajamos__content__footer {
+          background-color: var(--f2-color);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          font-weight: 700;
+          padding-left: 5rem; }
         .kellap-detail__content__pajamos__content__body {
           display: flex;
           flex-direction: row;

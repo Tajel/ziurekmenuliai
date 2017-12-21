@@ -22,7 +22,7 @@ router.get("/", middleware.isLoggedIn, function(req, res) {
       if (err) {
         console.log(err);
       } else {
-        //   console.log(allkellap);
+        // console.log(allkellap);
         allkellap.sort(function(a, b) {
           //   console.log('rusiavimo elementas: ' +a.data);
           var textA = a.data;
@@ -224,9 +224,17 @@ router.get("/:id/detail", function(req, res) {
   Kellap.findById(req.params.id)
     .populate("pajamos")
     .populate("kuras")
+    .populate("rida")
     .exec(function(err, kellap) {
+      if (!kellap.rida[0]) {
+        return res.redirect("/kellap/" <= kellap.id > +"/rida/new");
+      }
+      if (kellap.rida[0] === null) {
+        return res.redirect("/kellap/" <= kellap.id > +"/rida/new");
+      }
       if (err) {
         console.log(err);
+        return res.redirect("/kellap/" <= kellap.id > +"/rida/new");
       } else {
         console.log("kellap pajamos kuras vair" + kellap);
         //render show template with that KELLAP

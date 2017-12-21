@@ -81,6 +81,12 @@ var kellapSchema = new mongoose.Schema({
       ref: "Kellapkuras"
     }
   ],
+  rida: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Kellaprida"
+    }
+  ],
   vairuotojas: [
     {
       type: mongoose.Schema.Types.ObjectId,

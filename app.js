@@ -33,6 +33,7 @@ var autokrovRoutes = require("./routes/autokrov"),
   kellapkrovregRoutes = require("./routes/kellapkrovreg"),
   kellapajamosRoutes = require("./routes/kellapajamos"),
   kellapkurasRoutes = require("./routes/kellapkuras"),
+  kellapridaRoutes = require("./routes/kellaprida"),
   kellapvairRoutes = require("./routes/kellapvair"),
   testRoutes = require("./routes/test"),
   indexRoutes = require("./routes/index");
@@ -102,6 +103,7 @@ app.use("/kellap", kellapRoutes);
 app.use("/kellap/krovreg", kellapkrovregRoutes);
 app.use("/kellap/:id/paj", kellapajamosRoutes);
 app.use("/kellap/:id/kur", kellapkurasRoutes);
+app.use("/kellap/:id/rida", kellapridaRoutes);
 app.use("/kellap/:id/vair", kellapvairRoutes);
 
 // app.get('/', function (req, res) {

@@ -1,0 +1,91 @@
+<% include ../partials/header %>
+    <form action="/kellap/<%= kellap._id %>/rida" method="POST">
+        <legend class="data-newForm__legend">Suvesti Ridas ir Kuro likučius
+            <%= kellap.marke %>
+                <%= kellap.modelis %>
+                    <%= kellap.valstnr %>
+        </legend>
+        <a href="/kellap/<%= kellap._id %>/detail" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal</a>
+        <a href='/autokrov/<%=kellap.autoObjectId%>' class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Automobilio duomenys</a>
+        <!-- Form Name -->
+
+        <div class="data-newForm__content">
+            <!-- Text input-->
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">kellaprida</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="kellap[doc]" value='kellaprida' type="text" placeholder="doc" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">kellaprida</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[ridapr]">Rida pradžioje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[ridapr]" type="number" placeholder="Rida pradžioje" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">įrašykite ridą pradžioje</span>
+                </div>
+            </div>
+
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[ridapab]">Rida pabaigoje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[ridapab]" type="number" placeholder="Rida pabaigoje" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">įrašykite ridą pabaigoje</span>
+                </div>
+            </div>
+
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[kuraspr]">Kuras pradžioje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[kuraspr]" type="number" placeholder="Kuras pradžioje" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">įrašykite kurą pradžioje</span>
+                </div>
+            </div>
+
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[kuraspab]">Kuras pabaigoje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[kuraspab]" type="number" placeholder="Kuras pabaigoje" class="data-newForm__content__input--body--text"
+                        required="">
+                    <span class="data-newForm__content__input--body--span">įrašykite kurą pabaigoje</span>
+                </div>
+            </div>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[pakelimai]">Pakėlimų skaičius, Vnt</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[pakelimai]" type="number" placeholder="Pakėlimų skaičius" class="data-newForm__content__input--body--text"
+                        required="" value="0">
+                    <span class="data-newForm__content__input--body--span">įrašykite pakėlimų skaičių</span>
+                </div>
+            </div>
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="kellap[siurblys]">Siurblio darbas, Val</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[siurblys]" type="number" placeholder="Kuras pabaigoje" class="data-newForm__content__input--body--text"
+                        required="" value="0">
+                    <span class="data-newForm__content__input--body--span">įrašykite siurblio darbą</span>
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
+            </div>
+        </div>
+    </form>
+    <!-- <script src='/scripts/date.js'></script> -->
+    <% include ../partials/footer %>

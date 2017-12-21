@@ -50,7 +50,7 @@
                         <div class="kellap-detail__content__pajamos__content__body--main element-b">
                             <%=pajamos.kiekis%>
                         </div>
-                        <div class="kellap-detail__content__pajamos__content__body--main element-b">
+                        <div class="kellap-detail__content__pajamos__content__body--main  pajamos element-b">
                             <%=pajamos.sumeur%>
                         </div>
                         <div class="kellap-detail__content__pajamos__content__body--main element-b">
@@ -75,6 +75,81 @@
                     </div>
                     <hr>
                     <% }); %>
+                        <div class="kellap-detail__content__pajamos__content__footer">
+                            <span>Gautų pajamų suma:
+                                <span class="pajsuma"></span>
+                                EUR
+                            </span>
+
+                        </div>
+
+
+            </div>
+        </div>
+        <div class="kellap-detail__content__pajamos">
+            <div class="kellap-detail__content__pajamos__header">
+                KILOMTRAŽO PARODYMAI, KURO LIKUČIAI
+            </div>
+            <div class="kellap-detail__content__pajamos__content">
+                <p class="kellap-detail__content__pajamos--newItem">
+                    <a class="kellap-detail__content__pajamos--link" href="/kellap/<%=kellap._id%>/rida/new">
+                        <svg class="data__page-header--icon">
+                            <use xlink:href="/img/sprite.svg#icon-new-message">
+                        </svg>Suvesti kilometražą ir kuro likučius</a>
+                </p>
+                <div class="kellap-detail__content__pajamos__content__header">
+                    <span class="kellap-detail__content__pajamos__content__header element-d">Rida pr.</span>
+                    <span class="kellap-detail__content__pajamos__content__header element-d">Rida pab.</span>
+                    <span class="kellap-detail__content__pajamos__content__header element-d">Kuro kiekis pr.</span>
+                    <span class="kellap-detail__content__pajamos__content__header element-d">Kuro kiekis pab.</span>
+                    <span class="kellap-detail__content__pajamos__content__header element-d">Pakėlimų skaič.</span>
+                    <span class="kellap-detail__content__pajamos__content__header element-d">Siurblio darbas val.</span>
+                    <span class="kellap-detail__content__pajamos__content__header element-d">
+                        <span class="kellap-detail__content__pajamos__content__header element">Redaguoti</span>
+                        <span class="kellap-detail__content__pajamos__content__header element">Trinti</span>
+                    </span>
+                </div>
+
+                <div id="myData" class="kellap-detail__content__pajamos__content__body">
+                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                        <%=kellap.rida[0].ridapr%>
+                    </div>
+                    <div class="kellap-detail__content__pajamos__content__body--main kuras element-d">
+                        <%=kellap.rida[0].ridapab%>
+                    </div>
+                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                        <%=kellap.rida[0].kuraspr%>
+                    </div>
+                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                        <%=kellap.rida[0].kuraspab%>
+                    </div>
+                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                        <%=kellap.rida[0].pakelimai%>
+                    </div>
+                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                        <%=kellap.rida[0].siurblys%>
+                    </div>
+                    <% if(currentUser && kellap.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                        <div class="kellap-detail__content__pajamos__content__buttons element-d">
+                            <a class=" kellap-detail__content__pajamos__content__buttons--edit kellap-detail__content__pajamos__content__buttons" href="/kellap/<%= kellap._id %>/rida/<%=kellap.rida[0]._id%>/edit">
+                                REDAGUOTI</a>
+                            <form class="kellap-detail__content__pajamos__content__buttons--del " action="/kellap/<%= kellap._id %>/rida/<%=kellap.rida[0]._id%>?_method=DELETE"
+                                method="POST">
+                                <button class="kellap-detail__content__pajamos__content__buttons--btn kellap-detail__content__pajamos__content__buttons">TRINTI</button>
+                            </form>
+                        </div>
+                        <% }%>
+                </div>
+                <hr>
+
+                <div class="kellap-detail__content__pajamos__content__footer">
+                    <span>Kuro norma:
+                        <span class="kurnorma"></span>
+                        Litr/100km
+                    </span>
+
+                </div>
+
             </div>
         </div>
         <div class="kellap-detail__content__pajamos">
@@ -103,7 +178,7 @@
                         <div class="kellap-detail__content__pajamos__content__body--main element-d">
                             <%=kuras.datekur%>
                         </div>
-                        <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                        <div class="kellap-detail__content__pajamos__content__body--main kuras element-d">
                             <%=kuras.kiekiskur%>
                         </div>
                         <div class="kellap-detail__content__pajamos__content__body--main element-d">
@@ -125,34 +200,22 @@
                     </div>
                     <hr>
                     <% }); %>
+                        <div class="kellap-detail__content__pajamos__content__footer">
+                            <span>Užpilta kuro:
+                                <span class="kursuma"></span>
+                                Litr
+                            </span>
+
+                        </div>
+
             </div>
         </div>
     </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <div class="container" onloadeddata="myFunction2()">
-        <header class="jumbotron">
+    <!-- <div class="container">
+        <header class=" jumbotron ">
             <h1>
                 <%= kellap.marke %>
                     <%= kellap.modelis %>
@@ -165,19 +228,19 @@
 
                                 <a class='btn btn-info btn-sm' href='/kellap'>Atgal</a>
                                 <br></br>
-                                <label class="custom-control custom-checkbox"> Suvestas keliones lapas
-                                    <input id="myInput7" type="checkbox" class="custom-control-input" onclick="myFunction1()" name='suvestas'>
-                                    <span class="custom-control-indicator"></span>
-                                    <span class="custom-control-description"></span>
+                                <label class="custom-control custom-checkbox "> Suvestas keliones lapas
+                                    <input id="myInput7 " type="checkbox" class="custom-control-input " onclick="myFunction1() " name='suvestas'>
+                                    <span class="custom-control-indicator "></span>
+                                    <span class="custom-control-description "></span>
                                 </label> Pajamos is objekto:
                                 <h6 style='display:inline;' readonly></h6> EUR; Uzpilta kuro:
                                 <h6 style='display:inline;' readonly></h6> Litr
     </div>
     <div class='container'>
-        <table id='myTable' class="table table-hover">
+        <table id='myTable' class="table table-hover ">
             <thead>
                 <div>PAJAMOS
-                    <a class="btn btn-sm btn-success" href="/kellap/<%=kellap._id%>/paj/new">Suvesti pajamas</a>
+                    <a class="btn btn-sm btn-success " href="/kellap/<%=kellap._id%>/paj/new">Suvesti pajamas</a>
                 </div>
                 <td>
                     <strong>Darbo rusis</strong>
@@ -280,8 +343,8 @@
                     <% }); %>
             </tbody>
         </table> -->
+    <script src='/scripts/kellapdetailkuras.js'></script>
+    <script language="JavaScript" type="text/javascript" src='/scripts/suvestaskellapas.js'></script>
 
-    <!-- <onload="myFunction2(); myFunction3();"> -->
-    <!-- <script src='/scripts/kellapdetailkuras.js'></script> -->
-    <!-- <script language="JavaScript" type="text/javascript" src='/scripts/suvestaskellapas.js'></script> -->
-    <% include ../partials/footer %>
+    <body onload="myFunction2(); myFunction3();">
+        <% include ../partials/footer %>

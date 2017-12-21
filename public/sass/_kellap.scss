@@ -170,6 +170,7 @@ hr {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
+    width: 85%;
     //
     //  PAJAMOS
     //
@@ -223,6 +224,16 @@ hr {
           text-transform: uppercase;
           font-size: 1.7rem;
           font-weight: 700;
+        }
+        &__footer {
+          background-color: var(--f2-color);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-size: 1.7rem;
+          font-weight: 700;
+          padding-left: 5rem;
         }
         &__body {
           display: flex;

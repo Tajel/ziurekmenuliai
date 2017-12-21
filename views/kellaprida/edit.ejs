@@ -1,0 +1,74 @@
+<% include ../partials/header %>
+    <form action="/kellap/<%= kellapId %>/rida/<%=ridaID%>?_method=PUT" method="POST">
+        <legend class="data-newForm__legend">Redaguoti Ridas ir kuro likučius
+            <%= data.marke %>
+                <%= data.modelis %>
+                    <%= data.valstnr %>
+        </legend>
+        <a href="/kellap/<%= data._id %>/detail" class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Atgal</a>
+        <a href='/autokrov/<%=data.autoObjectId%>' class="data-newForm__link">
+            <svg class="data-newForm__link__icon">
+                <use xlink:href="/img/sprite.svg#icon-back"></use>
+            </svg>Automobilio duomenys</a>
+        <!-- Form Name -->
+
+        <div class="data-newForm__content">
+            <!-- Text input-->
+            <div class="data-newForm__content__input--hidden">
+                <label class="data-newForm__content__input--label" for="doc">kellaprida</label>
+                <div class="data-newForm__content__input--body">
+                    <input id="doc" name="kellap[doc]" value='kellaprida' type="text" placeholder="doc" class="data-newForm__content__input--body--text">
+                    <span class="data-newForm__content__input--body--span">kellaprida</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="ridapr">Rida pradžioje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[ridapr]" type="number" placeholder="Rida pradžioje" class="data-newForm__content__input--body--text"
+                        required="" value="<%=data.ridapr%>">
+                    <span class="data-newForm__content__input--body--span">įrašykite ridą pradžioje</span>
+                </div>
+            </div>
+
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="ridapab">Rida pabaigoje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[ridapab]" type="number" placeholder="Rida pabaigoje" class="data-newForm__content__input--body--text"
+                        required="" value="<%=data.ridapab%>">
+                    <span class="data-newForm__content__input--body--span">įrašykite ridą pabaigoje</span>
+                </div>
+            </div>
+
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="Rida pr">Kuras pradžioje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[kuraspr]" type="number" placeholder="Kuras pradžioje" class="data-newForm__content__input--body--text"
+                        required="" value="<%=data.kuraspr%>">
+                    <span class="data-newForm__content__input--body--span">įrašykite kurą pradžioje</span>
+                </div>
+            </div>
+
+            <div class="data-newForm__content__input">
+                <label class="data-newForm__content__input--label" for="Rida pr">Kuras pabaigoje</label>
+                <div class="data-newForm__content__input--body">
+                    <input name="kellap[kuraspab]" type="number" placeholder="Kuras pabaigoje" class="data-newForm__content__input--body--text"
+                        required="" value="<%=data.kuraspab%>">
+                    <span class="data-newForm__content__input--body--span">įrašykite kurą pabaigoje</span>
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="data-editForm__button">
+                <button name="submit" class="data-editForm__button--submit ">
+                    <svg class="data-editForm__button--submit--icon">
+                        <use xlink:href="/img/sprite.svg#icon-new-message">
+                    </svg> Sukurti
+                </button>
+            </div>
+        </div>
+    </form>
+    <% include ../partials/footer %>
