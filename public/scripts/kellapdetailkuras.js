@@ -43,3 +43,21 @@ function myFunction3() {
     }
   }
 }
+
+function myFunction4() {
+  var rida, data1, data2;
+  var rida = new Number();
+  data1 = new Number(document.getElementById("ridapr").innerText);
+  data2 = new Number(document.getElementById("ridapab").innerText);
+  rida = data2 - data1;
+  $("#rida")[0].innerText = rida;
+}
+
+// function myFunction5() {
+//   var rida, data1, data2;
+//   var rida = new Number();
+//   data1 = new Number(document.getElementById("ridapr").innerText);
+//   data2 = new Number(document.getElementById("ridapab").innerText);
+//   rida = data2 - data1;
+//   $("#rida")[0].innerText = rida;
+// }

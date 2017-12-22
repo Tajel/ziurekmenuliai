@@ -9,6 +9,7 @@ var DV = require("../models/dv");
 var KurUzp = require("../models/kuruzp");
 var Imone = require("../models/imones");
 var Ikainis = require("../models/autoik");
+var KellapKuras = require("../models/kellapkuras");
 var middleware = require("../middleware");
 
 //INDEX - show all KR Kellaps
@@ -43,13 +44,10 @@ router.get("/", middleware.isLoggedIn, function(req, res) {
 //CREATE - add new Kellap to DB
 router.post("/", middleware.isLoggedIn, function(req, res) {
   // get data from form and add to Kellap toss array
-  var author = {
-    id: req.user._id,
-    username: req.user.username
-  };
+  var author = { id: req.user._id, username: req.user.username };
   var kellap = req.body.kellap;
   kellap.author = author;
-  // Create a new kellap and save to DB
+  // Create a new kellap and save t:authoro DB
   Kellap.create(kellap, function(err, newlykellap) {
     if (err) {
       console.log(err);
@@ -226,12 +224,6 @@ router.get("/:id/detail", function(req, res) {
     .populate("kuras")
     .populate("rida")
     .exec(function(err, kellap) {
-      if (!kellap.rida[0]) {
-        return res.redirect("/kellap/" <= kellap.id > +"/rida/new");
-      }
-      if (kellap.rida[0] === null) {
-        return res.redirect("/kellap/" <= kellap.id > +"/rida/new");
-      }
       if (err) {
         console.log(err);
         return res.redirect("/kellap/" <= kellap.id > +"/rida/new");
