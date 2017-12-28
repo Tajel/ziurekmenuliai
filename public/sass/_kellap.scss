@@ -224,8 +224,10 @@ hr {
           background-color: var(--f2-color);
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
-          text-transform: uppercase;
+          justify-content: flex-start;
+          flex-grow: 0;
+          flex-shrink: 0;
+          // text-transform: uppercase;
           font-size: 1.7rem;
           font-weight: 700;
         }
@@ -242,9 +244,13 @@ hr {
         &__body {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           font-size: 1.7rem;
           // text-transform: uppercase;
+          &--main {
+            flex-grow: 0;
+            flex-shrink: 0;
+          }
           &:hover {
             background-color: var(--f3-color);
           }
@@ -331,7 +337,7 @@ hr {
   justify-content: center;
 }
 .element-a {
-  width: 28%;
+  width: 15%;
   margin: 0.1rem 0.1rem;
 }
 .element-b {
@@ -343,7 +349,10 @@ hr {
   margin: 0.1rem 0.1rem;
 }
 .element-d {
-  // height: auto;
-  width: 15%;
+  width: 10%;
+  margin: 0.1rem 0.1rem;
+}
+.element-e {
+  width: 20%;
   margin: 0.1rem 0.1rem;
 }

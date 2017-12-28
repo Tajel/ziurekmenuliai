@@ -185,8 +185,7 @@
                     <span class="kellap-detail__content__pajamos__content__header element-d">Data</span>
                     <span class="kellap-detail__content__pajamos__content__header element-d">Kiekis litr.</span>
                     <span class="kellap-detail__content__pajamos__content__header element-d">Kuro šaltinis</span>
-                    <span class="kellap-detail__content__pajamos__content__header element-d">Kuro norma</span>
-                    <span class="kellap-detail__content__pajamos__content__header element-d">
+                    <span class="kellap-detail__content__pajamos__content__header element-e">
                         <span class="kellap-detail__content__pajamos__content__header element">Redaguoti</span>
                         <span class="kellap-detail__content__pajamos__content__header element">Trinti</span>
                     </span>
@@ -202,11 +201,8 @@
                         <div class="kellap-detail__content__pajamos__content__body--main element-d">
                             <%=kuras.ikurouzpkodas%>
                         </div>
-                        <div class="kellap-detail__content__pajamos__content__body--main element-d">
-                            Norma
-                        </div>
                         <% if(currentUser && kuras.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-                            <div class="kellap-detail__content__pajamos__content__buttons element-d">
+                            <div class="kellap-detail__content__pajamos__content__buttons element-e">
                                 <a class=" kellap-detail__content__pajamos__content__buttons--edit kellap-detail__content__pajamos__content__buttons" href="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>/edit">
                                     REDAGUOTI</a>
                                 <form class="kellap-detail__content__pajamos__content__buttons--del " action="/kellap/<%= kellap._id %>/kur/<%=kuras._id%>?_method=DELETE"

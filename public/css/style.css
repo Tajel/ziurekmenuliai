@@ -45,7 +45,7 @@ body {
 
 .header {
   font-size: 2.2rem;
-  height: 5vh;
+  height: 8vh;
   background-color: var(--f9-color);
   border: none;
   display: flex;
@@ -1097,8 +1097,9 @@ hr {
           background-color: var(--f2-color);
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
-          text-transform: uppercase;
+          justify-content: flex-start;
+          flex-grow: 0;
+          flex-shrink: 0;
           font-size: 1.7rem;
           font-weight: 700; }
         .kellap-detail__content__pajamos__content__footer {
@@ -1113,8 +1114,11 @@ hr {
         .kellap-detail__content__pajamos__content__body {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           font-size: 1.7rem; }
+          .kellap-detail__content__pajamos__content__body--main {
+            flex-grow: 0;
+            flex-shrink: 0; }
           .kellap-detail__content__pajamos__content__body:hover {
             background-color: var(--f3-color); }
         .kellap-detail__content__pajamos__content__buttons {
@@ -1178,7 +1182,7 @@ hr {
   justify-content: center; }
 
 .element-a {
-  width: 28%;
+  width: 15%;
   margin: 0.1rem 0.1rem; }
 
 .element-b {
@@ -1190,13 +1194,16 @@ hr {
   margin: 0.1rem 0.1rem; }
 
 .element-d {
-  width: 15%;
+  width: 10%;
+  margin: 0.1rem 0.1rem; }
+
+.element-e {
+  width: 20%;
   margin: 0.1rem 0.1rem; }
 
 .kellap_new {
   display: flex;
-  margin: 0.5rem 1rem;
-  width: 80%; }
+  margin: 0.5rem 1rem; }
   .kellap_new__body {
     border: none;
     font-size: 1.7rem;
