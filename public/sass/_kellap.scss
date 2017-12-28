@@ -1,9 +1,12 @@
 .kellap-filter {
   display: flex;
-  margin: 1rem 1rem;
+  margin: 0.2rem 1rem;
   justify-content: space-between;
+  flex-wrap: wrap;
   &__element {
     display: flex;
+    flex-grow: 0;
+    width: 16%;
     flex-direction: column;
     align-self: center;
     &__label {
@@ -42,6 +45,7 @@
     }
   }
 }
+
 .kellap-data {
   display: flex;
   flex-direction: column;

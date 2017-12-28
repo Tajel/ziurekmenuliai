@@ -913,10 +913,13 @@ select:-webkit-autofill:focus {
 
 .kellap-filter {
   display: flex;
-  margin: 1rem 1rem;
-  justify-content: space-between; }
+  margin: 0.2rem 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap; }
   .kellap-filter__element {
     display: flex;
+    flex-grow: 0;
+    width: 16%;
     flex-direction: column;
     align-self: center; }
     .kellap-filter__element__label {
