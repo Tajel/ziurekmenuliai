@@ -31,7 +31,8 @@ function myFunction2() {
 }
 
 function myFunction3() {
-  var kuras, data, td;
+  var data, td, data3, data4, data5;
+  var kuras = new Number();
   var suma = new Number();
   row = document.getElementsByClassName("kuras");
   for (i = 0; i < row.length; i++) {
@@ -42,6 +43,11 @@ function myFunction3() {
       $(".kursuma")[0].innerText = suma;
     }
   }
+  data3 = new Number(document.getElementById("kuraspr").innerText);
+  data4 = new Number(document.getElementById("kurasab").innerText);
+  data5 = suma;
+  kuras = data3 + data5 - data4;
+  $("#sunaudotaskuras")[0].innerText = kuras;
 }
 
 function myFunction4() {
@@ -52,12 +58,3 @@ function myFunction4() {
   rida = data2 - data1;
   $("#rida")[0].innerText = rida;
 }
-
-// function myFunction5() {
-//   var rida, data1, data2;
-//   var rida = new Number();
-//   data1 = new Number(document.getElementById("ridapr").innerText);
-//   data2 = new Number(document.getElementById("ridapab").innerText);
-//   rida = data2 - data1;
-//   $("#rida")[0].innerText = rida;
-// }

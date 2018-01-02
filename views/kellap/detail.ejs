@@ -8,10 +8,10 @@
                     <%= kellap.valstnr %>
                         <%= kellap.inventnr %>
                             <br>
-                            <small class="data__page-header--second">Keliones lapo data
+                            <small class="data__page-header--second">Kelionės lapo data
                                 <%= kellap.data %>
                             </small>
-                            <p class="data__page-header--second">Kelionės lapo paskaita, pajamos iš objektų, kuro apskaita</p>
+                            <p class="data__page-header--second">Kelionės lapo apskaita, pajamos iš objektų, kuro apskaita</p>
         </div>
         <a href="/kellap" class="data-editForm__link">
             <svg class="data-editForm__link__icon">
@@ -104,9 +104,9 @@
                                 <span class="kellap-detail__content__pajamos__content__header element-d">Spidomtras pr.</span>
                                 <span class="kellap-detail__content__pajamos__content__header element-d">Spidomtras pab.</span>
                                 <span class="kellap-detail__content__pajamos__content__header element-d">Rida km.</span>
-                                <span class="kellap-detail__content__pajamos__content__header element-d">Kuro kiekis pr.</span>
+                                <span class="kellap-detail__content__pajamos__content__header element-d">Kuro kiekis pr. </span>
                                 <span class="kellap-detail__content__pajamos__content__header element-d">Kuro kiekis pab.</span>
-                                <span class="kellap-detail__content__pajamos__content__header element-d">Kuro norma</span>
+                                <span class="kellap-detail__content__pajamos__content__header element-d">Sunaudotas kuras</span>
                                 <span class="kellap-detail__content__pajamos__content__header element-d">Pakėlimų skaič.</span>
                                 <span class="kellap-detail__content__pajamos__content__header element-d">Siurblio darbas val.</span>
                                 <span class="kellap-detail__content__pajamos__content__header element-d">
@@ -126,14 +126,14 @@
                                     <div id="rida" class="kellap-detail__content__pajamos__content__body--main element-d">
                                         <span>RIDA</span>
                                     </div>
-                                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                                    <div id="kuraspr" class="kellap-detail__content__pajamos__content__body--main element-d kuraspr">
                                         <%=rida.kuraspr%>
                                     </div>
-                                    <div class="kellap-detail__content__pajamos__content__body--main element-d">
+                                    <div id="kurasab" class="kellap-detail__content__pajamos__content__body--main element-d kurasab">
                                         <%=rida.kuraspab%>
                                     </div>
                                     <div class="kellap-detail__content__pajamos__content__body--main element-d">
-                                        <span>KURO Norma</span>
+                                        <span id="sunaudotaskuras"></span>
                                     </div>
                                     <div class="kellap-detail__content__pajamos__content__body--main element-d">
                                         <%=rida.pakelimai%>
@@ -156,7 +156,7 @@
                                     <hr>
 
                                     <div class="kellap-detail__content__pajamos__content__footer">
-                                        <span>Kuro norma:
+                                        <span>Kuro norma1:
                                             <span class="kurnorma"></span>
                                             Litr/100km
                                         </span>
@@ -225,7 +225,7 @@
             </div>
         </div>
     </div>
-    <script src='/scripts/kellapdetailkuras.js'></script>
+    <script language="JavaScript" type="text/javascript" src='/scripts/kellapdetailkuras.js'></script>
     <script language="JavaScript" type="text/javascript" src='/scripts/suvestaskellapas.js'></script>
 
     <body onload="myFunction2(); myFunction3(); myFunction4(); myFunction5();">
